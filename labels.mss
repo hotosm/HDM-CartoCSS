@@ -386,7 +386,7 @@
   text-placement:line;
   text-fill:@road_text;
   text-halo-fill:@road_halo;
-  text-halo-radius:1;
+  text-halo-radius:1.3;
   text-min-distance:60;
   text-size:11;
 }
