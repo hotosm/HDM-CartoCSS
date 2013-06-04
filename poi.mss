@@ -2,6 +2,7 @@
     [zoom>=15][zoom<=16] {
         [amenity='school'],
         [amenity='university'],
+        [amenity='police'],
         [amenity='hospital'] {
             marker-file: url('icons/poi/[amenity]-12.png');
         }
@@ -10,6 +11,7 @@
         [amenity='hospital'],
         [amenity='school'],
         [amenity='university'],
+        [amenity='police'],
         [amenity='drinking_water'],
         [amenity='gambling'],
         [amenity='grave_yard'],
