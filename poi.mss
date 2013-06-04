@@ -13,6 +13,7 @@
         [amenity='drinking_water'],
         [amenity='gambling'],
         [amenity='grave_yard'],
+        [amenity='cinema'],
         [amenity='place_of_worship'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }
@@ -59,6 +60,7 @@
         }
     }
     [zoom>=19] {
+        [amenity='cinema'],
         [shop!=null] {
             text-name: "[name]";
             text-fill: @poi_text2;
