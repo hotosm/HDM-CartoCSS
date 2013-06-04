@@ -14,6 +14,7 @@
         [amenity='gambling'],
         [amenity='grave_yard'],
         [amenity='cinema'],
+        [amenity='cafe'],
         [amenity='place_of_worship'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }
