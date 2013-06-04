@@ -232,10 +232,15 @@ come in as well.
     line-width: 0;
   }
   [stylegroup='service'],
+  [stylegroup='urbanroad'],
   [stylegroup='minorroad'],
   [stylegroup='mainroad'],
   [stylegroup='motorway'] {
-    line-cap: round;
+    line-cap: butt;
+    [zoom>=16][bridge=0][condition  ='bad'] {
+      line-dasharray: 1,1;
+      // line-comp-op: hue;
+    }
     line-join: round;
   }
   [stylegroup='noauto'] {
