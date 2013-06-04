@@ -20,9 +20,6 @@
         [craft!=null] {
             marker-file: url('icons/poi/craft-18.png');
         }
-        [shop!=null] {
-            marker-file: url('icons/poi/shop-18.png');
-        }
         [shop="beverages"],
         [shop="hairdresser"],
         [shop="photo"] {
@@ -30,6 +27,9 @@
         }
     }
     [zoom>=18] {
+        [shop!=null] {
+            marker-file: url('icons/poi/shop-18.png');
+        }
         [amenity='waste_basket'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }
