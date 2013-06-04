@@ -12,6 +12,7 @@
         [amenity='university'],
         [amenity='drinking_water'],
         [amenity='gambling'],
+        [amenity='grave_yard'],
         [amenity='place_of_worship'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }

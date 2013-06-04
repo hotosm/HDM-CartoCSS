@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.9999999"
-     inkscape:cx="19.038683"
-     inkscape:cy="-21.21755"
+     inkscape:zoom="16"
+     inkscape:cx="8.9041019"
+     inkscape:cy="210.28702"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -126,6 +126,10 @@
        orientation="0,1"
        position="6,-36"
        id="guide4681" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="5,222"
+       id="guide5173" />
   </sodipodi:namedview>
   <metadata
      id="metadata5374">
@@ -191,20 +195,6 @@
          id="rect6061"
          style="opacity:0.29999999999999999;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     </g>
-    <rect
-       style="fill:none;stroke:none"
-       id="rect9556"
-       width="16"
-       height="16"
-       x="0.96984899"
-       y="987.29187" />
-    <rect
-       style="fill:none;stroke:none"
-       id="rect9564"
-       width="16"
-       height="16"
-       x="0.96984899"
-       y="987.29187" />
     <g
        id="hospital-18"
        inkscape:label="hospital-18">
@@ -654,6 +644,23 @@
          height="12.000007"
          x="282"
          y="1074.3622" />
+    </g>
+    <g
+       id="grave_yard-18"
+       inkscape:label="grave_yard-18">
+      <path
+         sodipodi:nodetypes="accccccccaccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="rect5633-2"
+         d="m 8.96875,831.3622 c -1.9347185,0 -3.6794342,1.2873 -4.96875,3 l 0,10 -3,0 0,3 16,0 0,-3 -3,0 0,-10 c -1.3055,-1.7453 -3.078667,-3.0054 -5.03125,-3 z m -0.96875,2 2,0 0,2 2,0 0,2 -2,0 0,6 -2,0 0,-6 -2,0 0,-2 2,0 z"
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;opacity:0.29999999999999999;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round" />
+      <path
+         sodipodi:nodetypes="accccccccaccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="rect5633"
+         transform="translate(0,1028.3622)"
+         d="m 8.96875,-197 c -1.9347185,0.005 -3.6794342,1.28729 -4.96875,3 l 0,10 -3,0 0,3 16,0 0,-3 -3,0 0,-10 c -1.3055,-1.74534 -3.078667,-3.00538 -5.03125,-3 z M 8,-195 l 2,0 0,2 2,0 0,2 -2,0 0,6 -2,0 0,-6 -2,0 0,-2 2,0 z"
+         style="fill:#4d4d4d;fill-opacity:1;stroke:none" />
     </g>
   </g>
 </svg>
