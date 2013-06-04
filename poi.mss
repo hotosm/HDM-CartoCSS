@@ -29,6 +29,11 @@
             marker-file: url('icons/poi/[shop]-18.png');
         }
     }
+    [zoom>=18] {
+        [amenity='waste_basket'] {
+            marker-file: url('icons/poi/[amenity]-18.png');
+        }
+    }
 }
 #poi-point::label[zoom>=17] {
     text-name: "";
