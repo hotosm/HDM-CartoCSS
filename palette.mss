@@ -120,7 +120,7 @@ Map { font-directory: url(./fonts); }
 /* ROAD SURFACES
 /* ================================================================== */
 
-@unpaved: #ede7da;
+@unpaved: #d7c9ac;//#ede7da;
 @paved: #d2938e;
 
 @motorway_line:     @paved;
@@ -148,8 +148,8 @@ Map { font-directory: url(./fonts); }
 @urban_case:        @standard_fill * 0.9;
 
 @pedestrian_line:   @unpaved;
-@pedestrian_fill:   @unpaved;
-@pedestrian_case:   darken(@unpaved,5%);
+@pedestrian_fill:   @primary2;
+@pedestrian_case:   @unpaved;
 
 @cycle_line:        @standard_line;
 @cycle_fill:        #FAFAF5;
