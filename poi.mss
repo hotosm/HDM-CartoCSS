@@ -13,7 +13,6 @@
         [amenity='university'],
         [amenity='police'],
         [amenity='drinking_water'],
-        [amenity='gambling'],
         [amenity='grave_yard'],
         [amenity='cinema'],
         [amenity='cafe'],
@@ -34,6 +33,7 @@
         [shop!=null] {
             marker-file: url('icons/poi/shop-18.png');
         }
+        [amenity='gambling'],
         [amenity='waste_basket'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }
