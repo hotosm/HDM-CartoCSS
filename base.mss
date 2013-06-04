@@ -223,10 +223,17 @@ Map { background-color: @water; }
   line-dasharray:1,1;
 }
 
-.barriers[zoom>=17][barrier = 'hedge'] {
-  line-width:3;
-  line-color:darken(@park,5%);
-
+.barriers[zoom>=16][barrier='hedge'] {
+  ::alternate {
+    line-color: @park;
+  }
+  line-width:2;
+  line-color:darken(@park,15%);
+  line-dasharray:2,4;
+  line-cap: round;
+  [zoom=16] {
+    line-width: 1;
+  }
 }
 
 .barriers[zoom>=16][barrier = 'wall'] {
