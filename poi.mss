@@ -1,11 +1,15 @@
 .poi {
     [zoom>=15][zoom<=16] {
+        [amenity='school'],
+        [amenity='university'],
         [amenity='hospital'] {
             marker-file: url('icons/poi/[amenity]-12.png');
         }
     }
     [zoom>=17] {
         [amenity='hospital'],
+        [amenity='school'],
+        [amenity='university'],
         [amenity='drinking_water'],
         [amenity='gambling'],
         [amenity='place_of_worship'] {
@@ -24,7 +28,7 @@
         }
     }
 }
-.poi::label {
+#poi-point::label[zoom>=17] {
     text-name: "";
     text-face-name: @sans;
     text-size: 10;
@@ -37,10 +41,15 @@
     text-halo-radius: 2;
     text-label-position-tolerance: 18;
     text-placement-type: simple;
-    text-placements: "S,NE,W,NE,NW,SE,SW";
+    text-placements: "S,N,W,E,NE,NW,SE,SW";
     [zoom>=17] {
+        [amenity='school'],
+        [amenity='university'],
         [amenity='hospital'] {
             text-name: "[name]";
+            [zoom>=19] {
+                text-face-name: @sans_bold;
+            }
         }
     }
     [zoom>=18] {
@@ -51,6 +60,7 @@
     [zoom>=19] {
         [shop!=null] {
             text-name: "[name]";
+            text-fill: @poi_text2;
         }
     }
 }

@@ -189,6 +189,7 @@ Map { font-directory: url(./fonts); }
 @town_halo:         @place_halo;
 
 @poi_text:          @complementary3;
+@poi_text2:         @complementary1;
 @poi_halo:          @place_halo;
 
 @road_text:         #777;
