@@ -1,4 +1,10 @@
 .poi {
+    // Generic rules first
+    [zoom>=18] {
+        [shop!=null] {
+            marker-file: url('icons/poi/shop-18.png');
+        }
+    }
     [zoom>=15][zoom<=16] {
         [amenity='school'],
         [amenity='university'],
@@ -37,9 +43,6 @@
         }
     }
     [zoom>=18] {
-        [shop!=null] {
-            marker-file: url('icons/poi/shop-18.png');
-        }
         [amenity='gambling'],
         [amenity='waste_basket'] {
             marker-file: url('icons/poi/[amenity]-18.png');
