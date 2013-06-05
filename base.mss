@@ -148,12 +148,12 @@ Map { background-color: @water; }
   [type='canal'] {
     line-cap: round;
     line-join: round;
-    [zoom=15]{ line-width: 2; }
-    [zoom=16]{ line-width: 3; }
-    [zoom=17]{ line-width: 4; }
-    [zoom=18]{ line-width: 5; }
-    [zoom=19]{ line-width: 6; }
-    [zoom>19]{ line-width: 7; }
+    [zoom=15]{ line-width: 3; }
+    [zoom=16]{ line-width: 4; }
+    [zoom=17]{ line-width: 5; }
+    [zoom=18]{ line-width: 6; }
+    [zoom=19]{ line-width: 7; }
+    [zoom>19]{ line-width: 8; }
   }
   [type='stream'] {
     [zoom=15]{ line-width: 0.6; }
