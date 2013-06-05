@@ -24,6 +24,7 @@
         [amenity='grave_yard'],
         [amenity='cinema'],
         [amenity='cafe'],
+        [amenity='bar'],
         [amenity='restaurant'],
         [amenity='toilets'],
         [amenity='fuel'],
@@ -86,6 +87,7 @@
         [amenity='restaurant'],
         [amenity='kindergarten'],
         [amenity='cafe'],
+        [amenity='bar'],
         [amenity='bank'],
         [amenity='place_of_worship'] {
             text-name: "[name]";

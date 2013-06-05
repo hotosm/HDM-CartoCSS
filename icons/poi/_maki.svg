@@ -608,5 +608,35 @@
          id="rect22425"
          style="opacity:0.5;color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     </g>
+    <g
+       style="display:inline"
+       id="bar-18"
+       inkscape:label="bar-18"
+       transform="translate(-306,-154)"
+       inkscape:export-xdpi="89.996864"
+       inkscape:export-ydpi="89.996864">
+      <g
+         id="g21570">
+        <path
+           style="opacity:0.3;color:#000000;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           d="m 346,1149.3622 c -0.40625,0 -1,0.047 -1,0.25 0,0.2036 0.37228,0.5858 0.5,0.75 l 5.5,6 0,4 -2.8125,1.1875 c -0.40625,0.1354 -0.6875,0.3125 -0.6875,0.8125 l 8,0 c 0,-0.5 -0.40625,-0.6771 -0.8125,-0.8125 l -2.6875,-1.1875 0,-4 5.5,-6 c 0.12772,-0.1642 0.5,-0.5464 0.5,-0.75 0,-0.2026 -0.59375,-0.25 -1,-0.25 z"
+           id="path15230"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ssccccccccscccs" />
+        <path
+           sodipodi:nodetypes="ssccccccccscccs"
+           inkscape:connector-curvature="0"
+           id="path15601-4-0"
+           d="m 346,1149.3622 c -0.40625,0 -1,0.047 -1,0.25 0,0.2036 0.37228,0.5858 0.5,0.75 l 5.5,6 0,4 -2.8125,1.1875 c -0.40625,0.1354 -0.6875,0.3125 -0.6875,0.8125 l 8,0 c 0,-0.5 -0.40625,-0.6771 -0.8125,-0.8125 l -2.6875,-1.1875 0,-4 5.5,-6 c 0.12772,-0.1642 0.5,-0.5464 0.5,-0.75 0,-0.2026 -0.59375,-0.25 -1,-0.25 z"
+           style="color:#000000;fill:#444444;fill-opacity:1;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      </g>
+      <rect
+         style="opacity:0.5;color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect22417"
+         width="18.000017"
+         height="18.000031"
+         x="341.99997"
+         y="1146.3622" />
+    </g>
   </g>
 </svg>
