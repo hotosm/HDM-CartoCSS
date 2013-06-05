@@ -9,6 +9,7 @@
         [amenity='school'],
         [amenity='university'],
         [amenity='police'],
+        [amenity='bank'],
         [amenity='hospital'] {
             marker-file: url('icons/poi/[amenity]-12.png');
         }
@@ -26,6 +27,7 @@
         [amenity='restaurant'],
         [amenity='toilets'],
         [amenity='fuel'],
+        [amenity='bank'],
         [amenity='place_of_worship'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }
@@ -83,6 +85,7 @@
         [amenity='restaurant'],
         [amenity='kindergarten'],
         [amenity='cafe'],
+        [amenity='bank'],
         [amenity='place_of_worship'] {
             text-name: "[name]";
         }
