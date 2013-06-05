@@ -140,7 +140,7 @@ Map { font-directory: url(./fonts); }
 
 @tertiary_line:    @paved;
 @tertiary_fill:    #e9cbb0;
-@tertiary_case:    @land * 0.9;
+@tertiary_case:    @tertiary_fill * 0.9;
 
 @standard_line:     @paved;
 @standard_fill:     #e4e1d1;
