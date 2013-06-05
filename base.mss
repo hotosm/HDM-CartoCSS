@@ -63,7 +63,7 @@
   }
 
 /* ---- BUILDINGS ---- */
-#buildings[zoom>=12][zoom<=16] {
+#buildings[zoom>=12][zoom<19] {
   polygon-fill:@building;
   [zoom>=14] {
     line-color:darken(@building,5%);
@@ -77,13 +77,13 @@
 // At the highest zoom levels, render buildings in fancy pseudo-3D.
 // Ordering polygons by their Y-position is necessary for this effect
 // so we use a separate layer that does this for us.
-#buildings[zoom>=17][type != 'hedge'] {
+#buildings[zoom>=19][type != 'hedge'] {
   building-fill:@building;
   building-height:1.25;
 }
 
-#buildings[zoom>=17][type = 'hedge'] {
-  building-fill:@wooded;
+#buildings[zoom>=19][type = 'hedge'] {
+  building-fill:@building_hedge;
   building-height:1.25;
 }
 

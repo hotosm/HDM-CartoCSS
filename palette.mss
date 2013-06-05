@@ -93,7 +93,8 @@ Map { font-directory: url(./fonts); }
 @wooded:            #C3D9AD;
 @agriculture:       #95ae79;
 
-@building:          #d4cece;
+@building:          #dcd7d7;
+@building_hedge:    #dcd7d7;
 @hospital:          rgb(229,198,195);
 @school:            #a7c688;
 @sports:            #b9d0a3;

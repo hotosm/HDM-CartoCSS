@@ -225,10 +225,10 @@ as well. */
     line-cap: round;
     line-dasharray: 0.1,2;
   }
-  // [zoom>=16][bridge=0][condition='bad'] {
-  //   line-dasharray: 1,1;
-  //   // line-comp-op: hue;
-  // }
+  [condition='bad'] {
+    line-dasharray: 5,0.5;
+    // line-comp-op: hue;
+  }
   /* -- widths -- */
   [zoom=11] {
     [width='motorway'] { line-width: @r11_motorway; }
