@@ -25,8 +25,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.313708"
-     inkscape:cx="46.396158"
-     inkscape:cy="59.369467"
+     inkscape:cx="19.944864"
+     inkscape:cy="163.75098"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -254,44 +254,6 @@
          width="12"
          id="rect9633"
          style="opacity:0.3;fill:none;stroke:none" />
-    </g>
-    <g
-       id="bakery-18"
-       inkscape:label="bakery-18">
-      <g
-         id="g6477">
-        <g
-           id="g15032-6"
-           transform="translate(-34.96875,-227)"
-           style="opacity:0.3;fill:#ffffff;stroke:#ffffff;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none">
-          <path
-             style="fill:#ffffff;stroke:#ffffff;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-             d="m 44.96875,1116.3622 0,5 -1,0 -1,-5 c -0.834873,0.078 -2.330158,0.763 -3,1 l 1,4 -1,0 -2,-3 c -2,2 -2,3 -2,4 0,1.1435 0.735231,2 3,2 l 10,0 c 2.264769,0 3,-0.8702 3,-2 0,-1 2.5e-5,-2 -2,-4 l -1,3 -1,0 0,-4 c -0.632122,-0.1586 -2.195154,-0.9463 -3,-1 z"
-             id="path15002-3"
-             inkscape:connector-curvature="0"
-             sodipodi:nodetypes="ccccccccssssccccc" />
-        </g>
-        <g
-           id="g15032"
-           transform="translate(-34.96875,-227)">
-          <path
-             style="fill:#4d4d4d;stroke:none"
-             d="m 44.96875,1116.3622 0,5 -1,0 -1,-5 c -0.834873,0.078 -2.330158,0.763 -3,1 l 1,4 -1,0 -2,-3 c -2,2 -2,3 -2,4 0,1.1435 0.735231,2 3,2 l 10,0 c 2.264769,0 3,-0.8702 3,-2 0,-1 2.5e-5,-2 -2,-4 l -1,3 -1,0 0,-4 c -0.632122,-0.1586 -2.195154,-0.9463 -3,-1 z"
-             id="path15002"
-             inkscape:connector-curvature="0"
-             sodipodi:nodetypes="ccccccccssssccccc" />
-        </g>
-      </g>
-      <rect
-         ry="0.032999195"
-         rx="0.99450493"
-         transform="translate(0,1028.3622)"
-         y="-144"
-         x="0"
-         height="18"
-         width="18"
-         id="rect6549"
-         style="opacity:0.29999999999999999;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     </g>
     <g
        id="photo-18"
@@ -616,7 +578,9 @@
     </g>
     <g
        id="kindergarten-18"
-       inkscape:label="kindergarten-18">
+       inkscape:label="kindergarten-18"
+       inkscape:export-xdpi="89.996864"
+       inkscape:export-ydpi="89.996864">
       <path
          id="path6235"
          d="M 44.627348,977.6214"
@@ -641,6 +605,44 @@
          height="18"
          width="18"
          id="rect6308"
+         style="opacity:0.29999999999999999;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <g
+       id="bakery-18"
+       inkscape:label="bakery-18">
+      <g
+         id="g6477">
+        <g
+           id="g15032-6"
+           transform="translate(-34.96875,-227)"
+           style="opacity:0.3;fill:#ffffff;stroke:#ffffff;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none">
+          <path
+             style="fill:#ffffff;stroke:#ffffff;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+             d="m 44.96875,1116.3622 0,5 -1,0 -1,-5 c -0.834873,0.078 -2.330158,0.763 -3,1 l 1,4 -1,0 -2,-3 c -2,2 -2,3 -2,4 0,1.1435 0.735231,2 3,2 l 10,0 c 2.264769,0 3,-0.8702 3,-2 0,-1 2.5e-5,-2 -2,-4 l -1,3 -1,0 0,-4 c -0.632122,-0.1586 -2.195154,-0.9463 -3,-1 z"
+             id="path15002-3"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="ccccccccssssccccc" />
+        </g>
+        <g
+           id="g15032"
+           transform="translate(-34.96875,-227)">
+          <path
+             style="fill:#4d4d4d;stroke:none"
+             d="m 44.96875,1116.3622 0,4 -1,0 -1,-4 c -0.834873,0.078 -2.330158,0.763 -3,1 l 1,3 -1,0 -2,-2 c -2,2 -2,3 -2,4 0,1.1435 0.735231,2 3,2 l 10,0 c 2.264769,0 3,-0.8702 3,-2 0,-1 2.5e-5,-2 -2,-4 l -1,2 -1,0 0,-3 c -0.632122,-0.1586 -2.195154,-0.9463 -3,-1 z"
+             id="path15002"
+             inkscape:connector-curvature="0"
+             sodipodi:nodetypes="ccccccccssssccccc" />
+        </g>
+      </g>
+      <rect
+         ry="0.032999195"
+         rx="0.99450493"
+         transform="translate(0,1028.3622)"
+         y="-144"
+         x="0"
+         height="18"
+         width="18"
+         id="rect6549"
          style="opacity:0.29999999999999999;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     </g>
   </g>
