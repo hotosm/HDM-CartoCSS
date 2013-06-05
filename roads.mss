@@ -56,8 +56,8 @@ as well. */
 @r14_motorway: 5;  @r14_main: 4;  @r14_inter: 3;  @r14_minor: 2;   @r14_urban: 2;   @r14_narrow: 2;   @r14_noauto: 1;
 @r15_motorway: 6;  @r15_main: 4;  @r15_inter: 4;  @r15_minor: 2.1; @r15_urban: 2.1; @r15_narrow: 2.5; @r15_noauto: 2;
 @r16_motorway: 8;  @r16_main: 6;  @r16_inter: 5;  @r16_minor: 4;   @r16_urban: 4;   @r16_narrow: 3;   @r16_noauto: 2;
-@r17_motorway: 12; @r17_main: 10; @r17_inter: 6;  @r17_minor: 6;   @r17_urban: 6;   @r17_narrow: 4;   @r17_noauto: 4;
-@r18_motorway: 20; @r18_main: 16; @r18_inter: 10; @r18_minor: 10;  @r18_urban: 10;  @r18_narrow: 8;   @r18_noauto: 5;
+@r17_motorway: 12; @r17_main: 10; @r17_inter: 6;  @r17_minor: 6;   @r17_urban: 6;   @r17_narrow: 4;   @r17_noauto: 3;
+@r18_motorway: 20; @r18_main: 16; @r18_inter: 10; @r18_minor: 10;  @r18_urban: 10;  @r18_narrow: 8;   @r18_noauto: 3;
 
 /* ---- Casing ----------------------------------------------- */
 
@@ -168,7 +168,7 @@ as well. */
     [width='minor']{ line-width: @r17_minor + 2; }
     [width='urban']{ line-width: @r17_urban + 2; }
     [width='narrow']{ line-width: @r17_narrow + 1; }
-    [width='noauto']   { line-width: @r17_noauto + 4; }
+    [width='noauto']   { line-width: @r17_noauto + 3; }
   }
   [zoom>=18] {
     [width='motorway'] { line-width: @r18_motorway + 4; }
@@ -177,7 +177,7 @@ as well. */
     [width='minor']{ line-width: @r18_minor + 3.5; }
     [width='urban']{ line-width: @r18_urban + 3.5; }
     [width='narrow']{ line-width: @r18_narrow + 2; }
-    [width='noauto']   { line-width: @r18_noauto + 6; }
+    [width='noauto']   { line-width: @r18_noauto + 4; }
   }
 }
 
@@ -306,7 +306,7 @@ as well. */
     [width='minor']{ line-width: @r18_minor; }
     [width='urban']{ line-width: @r18_urban; }
     [width='narrow']{ line-width: @r18_narrow; }
-    [width='noauto']   { line-width: @r18_noauto; line-dasharray: 0.1,8; }
+    [width='noauto']   { line-width: @r18_noauto; line-dasharray: 0.1,6; }
   }
 }
 
