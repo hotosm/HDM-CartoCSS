@@ -52,12 +52,12 @@ as well. */
 /* Road width variables that are used in road & bridge styles */
 @r11_motorway: 2;  @r11_main: 2;  @r11_inter: 1;  @r11_minor: 0.5; @r11_urban: 0.5; @r11_narrow: 0;   @r11_noauto: 0;
 @r12_motorway: 3;  @r12_main: 2;  @r12_inter: 1;  @r12_minor: 0.8; @r12_urban: 0.8; @r12_narrow: 0;   @r12_noauto: 0;
-@r13_motorway: 4;  @r13_main: 3;  @r13_inter: 3;  @r13_minor: 2;   @r13_urban: 1.5; @r13_narrow: 1.5;   @r13_noauto: 2;
-@r14_motorway: 5;  @r14_main: 4;  @r14_inter: 3;  @r14_minor: 2;   @r14_urban: 2;   @r14_narrow: 2;   @r14_noauto: 2;
-@r15_motorway: 6;  @r15_main: 4;  @r15_inter: 4;  @r15_minor: 2.1; @r15_urban: 2.1; @r15_narrow: 2.5;   @r15_noauto: 2;
-@r16_motorway: 8;  @r16_main: 6;  @r16_inter: 5;  @r16_minor: 4;   @r16_urban: 4;   @r16_narrow: 3;   @r16_noauto: 4;
+@r13_motorway: 4;  @r13_main: 3;  @r13_inter: 3;  @r13_minor: 2;   @r13_urban: 1.5; @r13_narrow: 1.5; @r13_noauto: 1;
+@r14_motorway: 5;  @r14_main: 4;  @r14_inter: 3;  @r14_minor: 2;   @r14_urban: 2;   @r14_narrow: 2;   @r14_noauto: 1;
+@r15_motorway: 6;  @r15_main: 4;  @r15_inter: 4;  @r15_minor: 2.1; @r15_urban: 2.1; @r15_narrow: 2.5; @r15_noauto: 2;
+@r16_motorway: 8;  @r16_main: 6;  @r16_inter: 5;  @r16_minor: 4;   @r16_urban: 4;   @r16_narrow: 3;   @r16_noauto: 2;
 @r17_motorway: 12; @r17_main: 10; @r17_inter: 6;  @r17_minor: 6;   @r17_urban: 6;   @r17_narrow: 4;   @r17_noauto: 4;
-@r18_motorway: 20; @r18_main: 16; @r18_inter: 10; @r18_minor: 10;  @r18_urban: 10;  @r18_narrow: 8;  @r18_noauto: 5;
+@r18_motorway: 20; @r18_main: 16; @r18_inter: 10; @r18_minor: 10;  @r18_urban: 10;  @r18_narrow: 8;   @r18_noauto: 5;
 
 /* ---- Casing ----------------------------------------------- */
 
@@ -128,7 +128,7 @@ as well. */
     [width='inter'] { line-width: @r13_inter + 1; }
     [width='minor']{ line-width: @r13_minor + 1; }
     [width='urban']{ line-width: 0; }
-    [width='narrow']{ line-width: 0; }
+    [width='narrow']{ line-width: @r13_narrow + 0.2; }
     [width='noauto'] { line-width: 0; }
   }
   [zoom=14] {
@@ -140,8 +140,8 @@ as well. */
       line-width: @r14_urban + 1;
       [surface='unpaved']{ line-width: 0;}
     }
-    [width='narrow']{ line-width: 0; }
-    [width='noauto']   { line-width: 0; }
+    [width='narrow']{ line-width: @r14_narrow + 0.2; }
+    [width='noauto']   { line-width: @r14_noauto + 1; }
   }
   [zoom=15] {
     [width='motorway'] { line-width: @r15_motorway + 2.5; }
@@ -149,7 +149,7 @@ as well. */
     [width='inter'] { line-width: @r15_inter + 2; }
     [width='minor']{ line-width: @r15_minor + 2; }
     [width='urban']{ line-width: @r15_urban + 1; }
-    [width='narrow']{ line-width: 0; }
+    [width='narrow']{ line-width: @r15_narrow + 0.2; }
     [width='noauto']   { line-width: @r15_noauto + 2; }
   }
   [zoom=16] {
@@ -214,15 +214,15 @@ as well. */
   }
   [style="track"] {
     line-color: @track_fill;
-    [zoom=13] {line-color: darken(@track_fill,15%);}
-    [zoom=14] {line-color: darken(@track_fill,10%);}
-    [zoom=15] {line-color: darken(@track_fill,5%);}
+    line-dasharray: 4,2;
+    [zoom>=16] {line-dasharray: 8,2;}
   }
   [surface='unpaved'] {
     line-color: @unpaved;
   }
   [style='noauto'] {
     line-color: @pedestrian_fill;
+    line-cap: round;
   }
   // [zoom>=16][bridge=0][condition='bad'] {
   //   line-dasharray: 1,1;
@@ -257,7 +257,7 @@ as well. */
       [surface='unpaved'] {line-width: 0.5;}
     }
     [width='narrow']{line-width: @r13_narrow; }
-    [width='noauto']   { line-width: @r13_noauto; line-dasharray: 2,1; }
+    [width='noauto']   { line-width: @r13_noauto; line-dasharray: 1,2; }
   }
   [zoom=14] {
     [width='motorway'] { line-width: @r14_motorway; }
@@ -269,7 +269,7 @@ as well. */
       [surface='unpaved'] { line-width: 0.8; }
     }
     [width='narrow']{ line-width: @r14_narrow; }
-    [width='noauto']   { line-width: @r14_noauto; line-dasharray: 2,2; }
+    [width='noauto']   { line-width: @r14_noauto; line-dasharray: 1,4; }
   }
   [zoom=15] {
     [width='motorway'] { line-width: @r15_motorway; }
@@ -278,7 +278,7 @@ as well. */
     [width='minor']{ line-width: @r15_minor; }
     [width='urban']{ line-width: @r15_urban; }
     [width='narrow']{ line-width: @r15_narrow; }
-    [width='noauto']   { line-width: @r15_noauto; line-dasharray: 2,2; }
+    [width='noauto']   { line-width: @r15_noauto; line-dasharray: 2,4; }
   }
   [zoom=16] {
     [width='motorway'] { line-width: @r16_motorway; }
@@ -287,7 +287,7 @@ as well. */
     [width='minor']{ line-width: @r16_urban; }
     [width='urban']{ line-width: @r16_urban; }
     [width='narrow']{ line-width: @r16_narrow; }
-    [width='noauto']   { line-width: @r16_noauto; line-dasharray: 2,2; }
+    [width='noauto']   { line-width: @r16_noauto; line-dasharray: 1,4; }
   }
   [zoom=17] {
     [width='motorway'] { line-width: @r17_motorway; }
@@ -296,7 +296,7 @@ as well. */
     [width='minor']{ line-width: @r17_minor; }
     [width='urban']{ line-width: @r17_urban; }
     [width='narrow']{ line-width: @r17_narrow; }
-    [width='noauto']   { line-width: @r17_noauto; line-dasharray: 2,2; }
+    [width='noauto']   { line-width: @r17_noauto; line-dasharray: 2,4; }
   }
   [zoom>=18] {
     [width='motorway'] { line-width: @r18_motorway; }
@@ -305,7 +305,7 @@ as well. */
     [width='minor']{ line-width: @r18_minor; }
     [width='urban']{ line-width: @r18_urban; }
     [width='narrow']{ line-width: @r18_narrow; }
-    [width='noauto']   { line-width: @r18_noauto; line-dasharray: 3,3; }
+    [width='noauto']   { line-width: @r18_noauto; line-dasharray: 3,6; }
   }
 }
 

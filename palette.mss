@@ -151,7 +151,7 @@ Map { font-directory: url(./fonts); }
 
 @track_line:        @primary3;
 @track_fill:        @primary1;
-@track_case:        @track_fill * 0.9;
+@track_case:        darken(@track_fill,5%);
 
 @pedestrian_line:   @primary2;
 @pedestrian_fill:   @primary2;
