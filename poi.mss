@@ -28,6 +28,9 @@
         [shop="photo"] {
             marker-file: url('icons/poi/[shop]-18.png');
         }
+        [office='ngo'] {
+            marker-file: url('icons/poi/[office]-18.png');
+        }
     }
     [zoom>=18] {
         [shop!=null] {
@@ -64,6 +67,7 @@
         }
     }
     [zoom>=18] {
+        [office='ngo'],
         [amenity='place_of_worship'] {
             text-name: "[name]";
         }
