@@ -32,6 +32,9 @@
         [office='ngo'] {
             marker-file: url('icons/poi/[office]-18.png');
         }
+        [tourism='hotel'] {
+            marker-file: url('icons/poi/[tourism]-18.png');
+        }
     }
     [zoom>=18] {
         [shop!=null] {
@@ -69,6 +72,7 @@
     }
     [zoom>=18] {
         [office='ngo'],
+        [tourism='hotel'],
         [amenity='restaurant'],
         [amenity='cafe'],
         [amenity='place_of_worship'] {
