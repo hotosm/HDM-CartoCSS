@@ -40,6 +40,7 @@
         [shop="hairdresser"],
         [shop="supermarket"],
         [shop="bakery"],
+        [shop="mobile_phone"],
         [shop="photo"] {
             marker-file: url('icons/poi/[shop]-18.png');
         }
