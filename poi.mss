@@ -15,6 +15,7 @@
     }
     [zoom>=17] {
         [amenity='hospital'],
+        [amenity='kindergarten'],
         [amenity='school'],
         [amenity='university'],
         [amenity='police'],
@@ -79,6 +80,7 @@
         [office='ngo'],
         [tourism='hotel'],
         [amenity='restaurant'],
+        [amenity='kindergarten'],
         [amenity='cafe'],
         [amenity='place_of_worship'] {
             text-name: "[name]";
