@@ -25,8 +25,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.9999999"
-     inkscape:cx="25.616708"
-     inkscape:cy="105.55576"
+     inkscape:cx="30.616708"
+     inkscape:cy="130.55576"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -143,7 +143,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -418,6 +418,36 @@
          height="18.000013"
          width="18"
          id="rect7662"
+         style="opacity:0.5;color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
+    <g
+       style="display:inline"
+       id="restaurant-18"
+       inkscape:label="restaurant-18"
+       transform="translate(-342,-148)"
+       inkscape:export-xdpi="89.996864"
+       inkscape:export-ydpi="89.996864">
+      <g
+         id="g21606">
+        <path
+           sodipodi:nodetypes="cccsscsscccccccccccssscscsc"
+           style="opacity:0.3;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           d="m 348,1052.3622 -1,0 c 0,1.2963 0,3.2037 0,4.5 0,0.7777 1,0.7222 1,1.5 l 0,7 c 0,0.3889 0.5,1 1,1 0.5,0 1,-0.5 1,-1 l 0,-7 c 0,-0.7778 1,-0.7223 1,-1.5 0,-1.2963 0,-3.2037 0,-4.5 l -1,0 0,3 -0.5,0 0,-3 -1,0 0,3 -0.5,0 z m 8,0 c -0.77778,0 -2.00808,0.5162 -2.5,1.5 -0.38889,0.7777 -0.5,2.5 -0.5,3.5 l 0,3 c 0,0.5 0.61111,1 1,1 l 0,4 c 0,0.5 0.5,1 1,1 0.5,0 1,-0.5 1,-1 z"
+           id="path14875"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           id="rect6396-83"
+           d="m 348,1052.3622 -1,0 c 0,1.2963 0,3.2037 0,4.5 0,0.7777 1,0.7222 1,1.5 l 0,7 c 0,0.3889 0.5,1 1,1 0.5,0 1,-0.5 1,-1 l 0,-7 c 0,-0.7778 1,-0.7223 1,-1.5 0,-1.2963 0,-3.2037 0,-4.5 l -1,0 0,3 -0.5,0 0,-3 -1,0 0,3 -0.5,0 z m 8,0 c -0.77778,0 -2.00808,0.5162 -2.5,1.5 -0.38889,0.7777 -0.5,2.5 -0.5,3.5 l 0,3 c 0,0.5 0.61111,1 1,1 l 0,4 c 0,0.5 0.5,1 1,1 0.5,0 1,-0.5 1,-1 z"
+           style="color:#000000;fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           sodipodi:nodetypes="cccsscsscccccccccccssscscsc" />
+      </g>
+      <rect
+         y="1050.3622"
+         x="341.99997"
+         height="18.000031"
+         width="18.000017"
+         id="rect22284-4"
          style="opacity:0.5;color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     </g>
   </g>

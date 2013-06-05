@@ -16,6 +16,7 @@
         [amenity='grave_yard'],
         [amenity='cinema'],
         [amenity='cafe'],
+        [amenity='restaurant'],
         [amenity='toilets'],
         [amenity='place_of_worship'] {
             marker-file: url('icons/poi/[amenity]-18.png');
@@ -68,6 +69,8 @@
     }
     [zoom>=18] {
         [office='ngo'],
+        [amenity='restaurant'],
+        [amenity='cafe'],
         [amenity='place_of_worship'] {
             text-name: "[name]";
         }
