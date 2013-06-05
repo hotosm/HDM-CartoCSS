@@ -120,36 +120,42 @@ Map { font-directory: url(./fonts); }
 /* ROAD SURFACES
 /* ================================================================== */
 
-@unpaved: #d7c9ac;//#ede7da;
+@unpaved: @residential; //#e2d8c3; //#ede7da;
 @paved: #d2938e;
+
+@unpaved_case: darken(@unpaved,20%);
 
 @motorway_line:     @paved;
 @motorway_fill:     @paved;
 @motorway_case:     darken(@land, 50%);
 
-@trunk_line:        @paved;
-@trunk_fill:        @paved;
-@trunk_case:        darken(@land, 50%);
-
 @primary_line:      @paved;
 @primary_fill:      @paved;
 @primary_case:      @paved * 0.9;
 
-@secondary_line:    @paved;
-@secondary_fill:    #e6eaa1;
+@secondary_line:    #e6eaa1;
+@secondary_fill:    @secondary_line;
 @secondary_case:    @land * 0.9;
 
+@tertiary_line:    @paved;
+@tertiary_fill:    #e9cbb0;
+@tertiary_case:    @land * 0.9;
+
 @standard_line:     @paved;
-@standard_fill:     #f7f6f1;
+@standard_fill:     #e4e1d1;
 @standard_case:     @standard_fill * 0.9;
 
 @urban_line:        @paved;
 @urban_fill:        #f7f6f1;
-@urban_case:        @standard_fill * 0.9;
+@urban_case:        @urban_fill * 0.9;
 
-@pedestrian_line:   @unpaved;
+@track_line:        @primary3;
+@track_fill:        @primary1;
+@track_case:        @track_fill * 0.9;
+
+@pedestrian_line:   @primary2;
 @pedestrian_fill:   @primary2;
-@pedestrian_case:   @unpaved;
+@pedestrian_case:   @land * 0.9;
 
 @cycle_line:        @standard_line;
 @cycle_fill:        #FAFAF5;

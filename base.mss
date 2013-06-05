@@ -40,6 +40,7 @@
   [type='university']    { polygon-fill: @school; }
   [type='wood']          { polygon-fill: @wooded; }
   [type='farmland']      { polygon-fill: @agriculture; }
+  [type='allotments']      { polygon-fill: @agriculture; }
 }
 
 #landuse_overlays[type='nature_reserve'][zoom>6] {
