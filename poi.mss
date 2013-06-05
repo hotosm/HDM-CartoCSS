@@ -28,6 +28,7 @@
         [amenity='toilets'],
         [amenity='fuel'],
         [amenity='bank'],
+        [amenity='atm'],
         [amenity='place_of_worship'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }
