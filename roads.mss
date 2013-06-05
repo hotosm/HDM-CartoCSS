@@ -223,6 +223,7 @@ as well. */
   [style='noauto'] {
     line-color: @pedestrian_fill;
     line-cap: round;
+    line-dasharray: 0.1,2;
   }
   // [zoom>=16][bridge=0][condition='bad'] {
   //   line-dasharray: 1,1;
@@ -257,7 +258,7 @@ as well. */
       [surface='unpaved'] {line-width: 0.5;}
     }
     [width='narrow']{line-width: @r13_narrow; }
-    [width='noauto']   { line-width: @r13_noauto; line-dasharray: 1,2; }
+    [width='noauto']   { line-width: @r13_noauto; }
   }
   [zoom=14] {
     [width='motorway'] { line-width: @r14_motorway; }
@@ -269,7 +270,7 @@ as well. */
       [surface='unpaved'] { line-width: 0.8; }
     }
     [width='narrow']{ line-width: @r14_narrow; }
-    [width='noauto']   { line-width: @r14_noauto; line-dasharray: 1,4; }
+    [width='noauto']   { line-width: @r14_noauto; line-dasharray: 0.1,4; }
   }
   [zoom=15] {
     [width='motorway'] { line-width: @r15_motorway; }
@@ -278,7 +279,7 @@ as well. */
     [width='minor']{ line-width: @r15_minor; }
     [width='urban']{ line-width: @r15_urban; }
     [width='narrow']{ line-width: @r15_narrow; }
-    [width='noauto']   { line-width: @r15_noauto; line-dasharray: 2,4; }
+    [width='noauto']   { line-width: @r15_noauto; line-dasharray: 0.1,4; }
   }
   [zoom=16] {
     [width='motorway'] { line-width: @r16_motorway; }
@@ -287,7 +288,7 @@ as well. */
     [width='minor']{ line-width: @r16_urban; }
     [width='urban']{ line-width: @r16_urban; }
     [width='narrow']{ line-width: @r16_narrow; }
-    [width='noauto']   { line-width: @r16_noauto; line-dasharray: 1,4; }
+    [width='noauto']   { line-width: @r16_noauto; line-dasharray: 0.1,4; }
   }
   [zoom=17] {
     [width='motorway'] { line-width: @r17_motorway; }
@@ -296,7 +297,7 @@ as well. */
     [width='minor']{ line-width: @r17_minor; }
     [width='urban']{ line-width: @r17_urban; }
     [width='narrow']{ line-width: @r17_narrow; }
-    [width='noauto']   { line-width: @r17_noauto; line-dasharray: 2,4; }
+    [width='noauto']   { line-width: @r17_noauto; line-dasharray: 0.1,6; }
   }
   [zoom>=18] {
     [width='motorway'] { line-width: @r18_motorway; }
@@ -305,7 +306,7 @@ as well. */
     [width='minor']{ line-width: @r18_minor; }
     [width='urban']{ line-width: @r18_urban; }
     [width='narrow']{ line-width: @r18_narrow; }
-    [width='noauto']   { line-width: @r18_noauto; line-dasharray: 3,6; }
+    [width='noauto']   { line-width: @r18_noauto; line-dasharray: 0.1,8; }
   }
 }
 
