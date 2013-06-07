@@ -30,6 +30,7 @@
         [amenity='fuel'],
         [amenity='bank'],
         [amenity='atm'],
+        [amenity='pharmacy'],
         [amenity='place_of_worship'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }
@@ -75,6 +76,7 @@
     [zoom>=17] {
         [amenity='school'],
         [amenity='university'],
+        [amenity='pharmacy'],
         [amenity='hospital'] {
             text-name: "[name]";
             [zoom>=19] {
