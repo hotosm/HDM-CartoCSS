@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6568542"
-     inkscape:cx="51.902965"
-     inkscape:cy="58.943955"
+     inkscape:zoom="11.313708"
+     inkscape:cx="56.682746"
+     inkscape:cy="82.154252"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -151,7 +151,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -670,6 +670,68 @@
          width="18.000017"
          id="rect22284-6"
          style="opacity:0.5;color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
+    <g
+       style="display:inline"
+       id="townhall-18"
+       inkscape:label="townhall-18"
+       transform="translate(-384,-142)"
+       inkscape:export-xdpi="89.996864"
+       inkscape:export-ydpi="89.996864">
+      <g
+         transform="translate(0,-2)"
+         id="g21522">
+        <path
+           sodipodi:nodetypes="ccccccsscccc"
+           inkscape:connector-curvature="0"
+           id="path14474"
+           d="m 435,1105.3622 -5.5,-3 -5.5,3 0,1.9375 0,5.0625 -1,2.5 c 0,0.3611 0.23397,0.5 0.5,0.5 l 12,0 c 0.25638,0 0.5,-0.1389 0.5,-0.5 l -1,-2.5 0,-5.0625 z"
+           style="opacity:0.3;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+        <path
+           style="color:#000000;fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           d="m 429.5,1102.3622 -5.5,3 11,0 z m -4.5,4 c -0.5,0 -1,0.493 -1,0.9375 l 0,5.0625 -1,2.5 c 0,0.3611 0.23397,0.5 0.5,0.5 l 12,0 c 0.25638,0 0.5,-0.1389 0.5,-0.5 l -1,-2.5 0,-5.0625 c 0,-0.4445 -0.5,-0.9375 -1,-0.9375 z m 1.5,1 0.5,0.5 0,1.5 0,3 -1,0 0,-3 0,-1.5 z m 3,0 0.5,0.5 0,1.5 0,3 -1,0 0,-3 0,-1.5 z m 3,0 0.5,0.5 0,1.5 0,3 -1,0 0,-3 0,-1.5 z"
+           id="rect7645-6-5-0-1-2"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccc" />
+      </g>
+      <rect
+         y="1098.3622"
+         x="419.99997"
+         height="18.000031"
+         width="18.000017"
+         id="rect22296-2"
+         style="opacity:0.5;color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
+    <g
+       style="display:inline"
+       id="townhall-12"
+       inkscape:label="townhall-12"
+       transform="translate(-384,-136)"
+       inkscape:export-xdpi="89.996864"
+       inkscape:export-ydpi="89.996864">
+      <g
+         transform="translate(0,-1)"
+         id="g21518">
+        <path
+           sodipodi:nodetypes="cccccccccccccccccccccccccccc"
+           inkscape:connector-curvature="0"
+           id="path15745"
+           d="m 448,1102.3622 -3.5,-2 -3.5,2 0,5 0,1 -1,1 9,0 -1,-1 0,-1 z m -6,2.5 0.5,-0.5 0.5,0.5 0,2.5 -1,0 z m 2,0 0.5,-0.5 0.5,0.5 0,2.5 -1,0 z m 2,0 0.5,-0.5 0.5,0.5 0,2.5 -1,0 z"
+           style="opacity:0.3;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+        <path
+           style="color:#000000;fill:#444444;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           d="m 444.5,1100.3622 -3.5,2 7,0 z m -3,3 c -0.27701,0 -0.5,0.223 -0.5,0.5 l 0,3.5 0,1 -1,1 9,0 -1,-1 0,-1 0,-3.5 c 0,-0.277 -0.223,-0.5 -0.5,-0.5 z m 0.5,1.5 0.5,-0.5 0.5,0.5 0,2.5 -1,0 z m 2,0 0.5,-0.5 0.5,0.5 0,2.5 -1,0 z m 2,0 0.5,-0.5 0.5,0.5 0,2.5 -1,0 z"
+           id="rect7645-6-5-0-0-5"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccssccccccssscccccccccccccccccc" />
+      </g>
+      <rect
+         style="opacity:0.5;color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect22298-3"
+         width="11.999998"
+         height="12.000007"
+         x="438"
+         y="1098.3622" />
     </g>
   </g>
 </svg>

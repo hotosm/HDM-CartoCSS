@@ -10,6 +10,7 @@
         [amenity='university'],
         [amenity='police'],
         [amenity='bank'],
+        [amenity='townhall'],
         [amenity='hospital'] {
             marker-file: url('icons/poi/[amenity]-12.png');
         }
@@ -31,6 +32,7 @@
         [amenity='bank'],
         [amenity='atm'],
         [amenity='pharmacy'],
+        [amenity='townhall'],
         [amenity='place_of_worship'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }
@@ -80,6 +82,7 @@
         [amenity='school'],
         [amenity='university'],
         [amenity='pharmacy'],
+        [amenity='townhall'],
         [amenity='hospital'] {
             text-name: "[name]";
             [zoom>=19] {
