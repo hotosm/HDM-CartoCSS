@@ -92,6 +92,7 @@ Map { font-directory: url(./fonts); }
 @cemetery:          #D6DED2;
 @wooded:            #C3D9AD;
 @agriculture:       #95ae79;
+@military:          @primary3;
 
 @building:          #dcd7d7;
 @building_hedge:    #dcd7d7;
