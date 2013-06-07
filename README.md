@@ -18,7 +18,9 @@ Suggestion is to use [cartocc](https://github.com/yohanboniface/CartoCC) for man
 
 1. Rename `cartocc.json.sample` to `cartocc.json` and adapt it
 
-1. run `cartocc hdm`
+1. run `cartocc hdm`: this will create a `project.mml` file with correct local config in the project dir
+
+1. Run tilemill
 
 ### Importing data
 
