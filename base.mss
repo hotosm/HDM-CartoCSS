@@ -166,7 +166,8 @@ Map { background-color: @water; }
 /* ================================================================== */
 
 
-#admin {
+#admin-1-4,
+#admin-5-10[zoom>=13] {
   ::outline {
     line-color: lighten(@admin_2,25%);
     line-width: 2.5;

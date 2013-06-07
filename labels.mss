@@ -421,3 +421,21 @@
 
 
 /* ****************************************************************** */
+
+/* ================================================================== */
+/* ADMIN LABELS
+/* ================================================================== */
+
+#admin-label-1-4[zoom>=10],
+#admin-label-5-10[zoom>=13] {
+  text-name: "'      '+[name]+'      '";
+  text-fill: @admin_2_text;
+  text-size: 10;
+  text-placement: line;
+  text-face-name: @sans_lt_italic;
+  text-halo-radius: 2;
+  text-halo-fill: @place_halo;
+  text-min-padding: 50;
+  text-min-distance: 50;
+  text-max-char-angle-delta: 10;
+}

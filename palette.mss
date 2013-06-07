@@ -174,6 +174,8 @@ Map { font-directory: url(./fonts); }
 
 @admin_2:           @complementary3;
 @admin_3:           #AEA6A5;
+@admin_2_text:      @complementary3;
+@admin_3_text:      #AEA6A5;
 
 /* ================================================================== */
 /* LABEL COLORS
