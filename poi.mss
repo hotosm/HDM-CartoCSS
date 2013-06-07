@@ -44,6 +44,7 @@
         [shop="mobile_phone"],
         [shop="tailor"],
         [shop="car_parts"],
+        [shop="computer"],
         [shop="photo"] {
             marker-file: url('icons/poi/[shop]-18.png');
         }
