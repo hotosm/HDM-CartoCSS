@@ -43,6 +43,7 @@
         [shop="bakery"],
         [shop="mobile_phone"],
         [shop="tailor"],
+        [shop="car_parts"],
         [shop="photo"] {
             marker-file: url('icons/poi/[shop]-18.png');
         }
