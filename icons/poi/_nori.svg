@@ -25,8 +25,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="22.627417"
-     inkscape:cx="11.997292"
-     inkscape:cy="50.075281"
+     inkscape:cx="6.3404378"
+     inkscape:cy="179.69679"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -148,7 +148,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -395,16 +395,16 @@
          id="rect7026"
          style="opacity:0.3;fill:none;stroke:none" />
       <g
-         id="g7064">
+         id="g3894">
         <path
-           id="path6977-9"
-           d="m 1,875.3622 1,8 5,0 1,-8 z m 1,1 5,0 -0.3,2 -4.4,0 m 1.7,-4 0,-2 c 0,-1 1.0030379,-2.0779 2,-2 l 4,0 0,-2 -2,0 c -1,0 -1,-1 0,-1 l 5,0 c 1,0 1,1 0,1 l -2,0 0,2 6,0 0,2 c 0,0 -6.933324,0 -10,0 -0.518943,0 -0.939744,0.3005 -0.939744,0.8196 L 6,874.3622 z"
-           style="fill:#ffffff;fill-opacity:1;opacity:0.29999999999999999;stroke:#ffffff;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+           sodipodi:nodetypes="cccccccccccsccccccccccsccc"
            inkscape:connector-curvature="0"
-           sodipodi:nodetypes="cccccccccccsccccccccccsccc" />
+           style="fill:#ffffff;fill-opacity:1;opacity:0.29999999999999999;stroke:#ffffff;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+           d="m 3,875.3622 1,8 4,0 1,-8 z m 1,1 4,0 -0.3,2 -3.4,0 m 0.7,-4 0,-2 c 0,-1 0.9999999,-2 2,-2 l 3,0 0,-2 -2,0 c -1,0 -1,-1 0,-1 l 5,0 c 1,0 1,1 0,1 l -2,0 0,2 4,0 0,2 c 0,0 -3.933324,0 -7,0 -0.518943,0 -0.939744,0.3005 -0.939744,0.8196 L 7,874.3622 z"
+           id="path3124" />
         <path
            id="path6977"
-           d="m 1,875.3622 1,8 5,0 1,-8 z m 1,1 5,0 -0.3,2 -4.4,0 m 1.7,-4 0,-2 c 0,-1 1.0030379,-2.07789 2,-2 l 4,0 0,-2 -2,0 c -1,0 -1,-1 0,-1 l 5,0 c 1,0 1,1 0,1 l -2,0 0,2 6,0 0,2 c 0,0 -6.933324,0 -10,0 -0.518943,0 -0.939744,0.3005 -0.939744,0.8196 L 6,874.3622 z"
+           d="m 3,875.3622 1,8 4,0 1,-8 z m 1,1 4,0 -0.3,2 -3.4,0 m 0.7,-4 0,-2 c 0,-1 0.9999999,-2 2,-2 l 3,0 0,-2 -2,0 c -1,0 -1,-1 0,-1 l 5,0 c 1,0 1,1 0,1 l -2,0 0,2 4,0 0,2 c 0,0 -3.933324,0 -7,0 -0.518943,0 -0.939744,0.3005 -0.939744,0.8196 L 7,874.3622 z"
            style="fill:#4d4d4d;fill-opacity:1"
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="cccccccccccsccccccccccsccc" />
