@@ -336,7 +336,7 @@ as well. */
 /* AEROWAYS
 /* ================================================================== */
 
-#aeroway[zoom>9] {
+#aeroway[zoom>=10] {
   line-color:@aeroway;
   line-cap:butt;
   line-join:miter;
@@ -362,8 +362,7 @@ as well. */
     [zoom=17]{ line-width:4; }
     [zoom>17]{ line-width:5; }
   }
-  ::tunnel[zoom>=14][zoom<=20],
-  ::bridge[zoom>=14][zoom<=20]{
+  [tunnel='yes'][zoom>=14][zoom<=20] {
     line-color: @land;
     line-join: round;
     /* -- widths -- */
@@ -374,7 +373,9 @@ as well. */
     [zoom>=18] { line-width: 4 + 3; }
   }
 }
-
+#aeroway-poly[zoom>=10] {
+  polygon-fill: @aeroway;
+}
 /******************************************************************* */
 
 
