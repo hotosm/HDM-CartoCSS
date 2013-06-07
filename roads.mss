@@ -63,7 +63,7 @@ as well. */
 
 #roads_high::outline[zoom>=11][zoom<=20] {
   /* -- colors & styles -- */
-  line-cap: round;
+  line-cap: square;
   line-join: round;
   [bridge=1],
   [tunnel=1] {
@@ -184,7 +184,7 @@ as well. */
 
 #roads_high[zoom>=11][zoom<=20] {
   /* -- colors & styles -- */
-  line-cap: butt;
+  line-cap: square;
   line-join: round;
   [style='motorway'] {
     line-color: @motorway_fill;
@@ -227,6 +227,7 @@ as well. */
   }
   [condition='bad'] {
     line-dasharray: 5,0.5;
+    line-cap: butt;
     // line-comp-op: hue;
   }
   /* -- widths -- */
