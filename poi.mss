@@ -33,6 +33,7 @@
         [amenity='atm'],
         [amenity='pharmacy'],
         [amenity='townhall'],
+        [amenity='taxi'],
         [amenity='place_of_worship'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }
