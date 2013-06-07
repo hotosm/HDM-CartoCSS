@@ -1,0 +1,22 @@
+[
+    {
+        "if": {
+            "Datasource.type": "postgis"
+        },
+        "then": {
+            "Datasource.dbname": "hdm",
+            "Datasource.password": "",
+            "Datasource.user": "ybon",
+            "Datasource.host": ""
+        }
+    },
+    {
+        "if": {
+            "id": "slopeshade"
+        },
+        "then": {
+            "Datasource.file": "/home/ybon/SRTM/SRTM_W_250m-slopeshade-3785.tif"
+        }
+    }
+]
+
