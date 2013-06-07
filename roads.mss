@@ -64,7 +64,7 @@ as well. */
 #roads_high::outline[zoom>=11][zoom<=20] {
   /* -- colors & styles -- */
   line-cap: square;
-  line-join: round;
+  line-join: miter;
   [bridge=1],
   [tunnel=1] {
     line-cap: butt;
@@ -185,7 +185,7 @@ as well. */
 #roads_high[zoom>=11][zoom<=20] {
   /* -- colors & styles -- */
   line-cap: square;
-  line-join: round;
+  line-join: miter;
   [style='motorway'] {
     line-color: @motorway_fill;
     [tunnel=1] { line-color: lighten(@motorway_fill, 10%); }
