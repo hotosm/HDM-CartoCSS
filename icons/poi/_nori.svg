@@ -25,8 +25,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="22.627417"
-     inkscape:cx="46.4522"
-     inkscape:cy="176.66264"
+     inkscape:cx="45.935647"
+     inkscape:cy="195.38384"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -817,6 +817,28 @@
          height="18"
          width="18"
          id="rect7885"
+         style="opacity:0.29999999999999999;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <g
+       id="clothes-18"
+       inkscape:label="clothes-18">
+      <path
+         style="fill:#ffffff;stroke:#ffffff;opacity:0.29999999999999999;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+         d="M 41.0625 -177 L 37 -175 L 38 -171 L 41 -173 L 41 -165 L 49 -165 L 49 -173 L 52 -171 L 53 -175 L 49.0625 -177 L 47.9375 -177 C 47.921414 -175.30242 46.607126 -173.9375 45 -173.9375 C 43.392874 -173.9375 42.078586 -175.30242 42.0625 -177 L 41.0625 -177 z "
+         transform="translate(0,1028.3622)"
+         id="path8026" />
+      <path
+         id="rect7894-0"
+         transform="translate(0,1028.3622)"
+         d="M 41.0625 -177 L 37 -175 L 38 -171 L 41 -173 L 41 -165 L 49 -165 L 49 -173 L 52 -171 L 53 -175 L 49.0625 -177 L 47.9375 -177 C 47.921414 -175.30242 46.607126 -173.9375 45 -173.9375 C 43.392874 -173.9375 42.078586 -175.30242 42.0625 -177 L 41.0625 -177 z "
+         style="fill:#4d4d4d;stroke:none" />
+      <rect
+         transform="translate(0,1028.3622)"
+         y="-180"
+         x="36"
+         height="18"
+         width="18"
+         id="rect8028"
          style="opacity:0.29999999999999999;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     </g>
   </g>

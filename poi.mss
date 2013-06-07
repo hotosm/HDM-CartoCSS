@@ -48,6 +48,7 @@
         [shop="tailor"],
         [shop="car_parts"],
         [shop="computer"],
+        [shop="clothes"],
         [shop="photo"] {
             marker-file: url('icons/poi/[shop]-18.png');
         }
