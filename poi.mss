@@ -62,6 +62,9 @@
         [tourism='hotel'] {
             marker-file: url('icons/poi/[tourism]-18.png');
         }
+        [man_made="tower"]['tower:type'='communication'] {
+            marker-file: url('icons/poi/communication-tower-18.png');
+        }
     }
     [zoom>=18] {
         [amenity='gambling'],
