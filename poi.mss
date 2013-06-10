@@ -36,6 +36,7 @@
         [amenity='taxi'],
         [amenity='post_office'],
         [amenity='studio'],
+        [amenity='car_rental'],
         [amenity='place_of_worship'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }
@@ -105,6 +106,7 @@
         [amenity='bank'],
         [amenity='post_office'],
         [amenity='studio'],
+        [amenity='car_rental'],
         [amenity='place_of_worship'] {
             text-name: "[name]";
         }
