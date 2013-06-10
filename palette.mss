@@ -135,12 +135,12 @@ Map { font-directory: url(./fonts); }
 @primary_fill:      @paved;
 @primary_case:      @paved * 0.9;
 
-@secondary_line:    #e6eaa1;
+@secondary_line:    #e9cbb0;
 @secondary_fill:    @secondary_line;
-@secondary_case:    @land * 0.9;
+@secondary_case:    @secondary_fill * 0.9;
 
-@tertiary_line:    @paved;
-@tertiary_fill:    #e9cbb0;
+@tertiary_line:    #e6eaa1;
+@tertiary_fill:    @tertiary_line;
 @tertiary_case:    @tertiary_fill * 0.9;
 
 @standard_line:     @paved;
