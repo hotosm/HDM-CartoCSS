@@ -87,7 +87,7 @@ Map { font-directory: url(./fonts); }
 @land:              #F7F6F1;
 @water:             #90cccb; //#79c1c0
 @grass:             #a8c48d;
-@beach:             #FFEEC7;
+@beach:             #ece1a3;
 @park:              #DAF2C1;
 @cemetery:          #D6DED2;
 @wooded:            #C3D9AD;

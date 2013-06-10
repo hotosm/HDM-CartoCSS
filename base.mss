@@ -43,6 +43,7 @@
   [type='farmland']      { polygon-fill: @agriculture; }
   [type='allotments']    { polygon-fill: @agriculture; }
   [type='military']      { polygon-fill: @military; }
+  [type='beach']      { polygon-fill: @beach; }
 }
 
 #landuse_overlays[type='nature_reserve'][zoom>6] {
