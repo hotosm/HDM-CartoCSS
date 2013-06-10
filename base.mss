@@ -41,6 +41,7 @@
   [type='university']    { polygon-fill: @school; }
   [type='wood']          { polygon-fill: @wooded; }
   [type='farmland']      { polygon-fill: @agriculture; }
+  [type='farm']          { polygon-fill: @agriculture; }
   [type='allotments']    { polygon-fill: @agriculture; }
   [type='military']      { polygon-fill: @military; }
   [type='beach']      { polygon-fill: @beach; }
