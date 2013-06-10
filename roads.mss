@@ -298,7 +298,15 @@ as well. */
     [width='minor']{ line-width: @r17_minor; }
     [width='urban']{ line-width: @r17_urban; }
     [width='narrow']{ line-width: @r17_narrow; }
-    [width='noauto']   { line-width: @r17_noauto; line-dasharray: 0.1,6; }
+    [width='noauto']   {
+      line-width: @r17_noauto;
+      line-dasharray: 0.1,6;
+      [type='steps'] {
+        line-cap: butt;
+        line-width: @r17_noauto + 2;
+        line-dasharray: 2,2;
+      }
+    }
   }
   [zoom>=18] {
     [width='motorway'] { line-width: @r18_motorway; }
@@ -307,7 +315,15 @@ as well. */
     [width='minor']{ line-width: @r18_minor; }
     [width='urban']{ line-width: @r18_urban; }
     [width='narrow']{ line-width: @r18_narrow; }
-    [width='noauto']   { line-width: @r18_noauto; line-dasharray: 0.1,6; }
+    [width='noauto']   {
+      line-width: @r18_noauto;
+      line-dasharray: 0.1,6;
+      [type='steps'] {
+        line-cap: butt;
+        line-width: @r18_noauto + 2;
+        line-dasharray: 2,2;
+      }
+    }
   }
 }
 
