@@ -68,6 +68,7 @@
     }
     [zoom>=18] {
         [amenity='gambling'],
+        [amenity='bench'],
         [amenity='waste_basket'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }
