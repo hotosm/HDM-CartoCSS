@@ -17,6 +17,14 @@
         "then": {
             "Datasource.file": "/home/ybon/SRTM/SRTM_W_250m-slopeshade-3785.tif"
         }
+    },
+    {
+        "if": {
+            "id": "land-high"
+        },
+        "then": {
+            "Datasource.file": "/home/ybon/OSM/shp/land-polygons-split-3857/land_polygons.shp"
+        }
     }
 ]
 
