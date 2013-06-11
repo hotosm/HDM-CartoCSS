@@ -49,6 +49,7 @@
         [amenity='studio'],
         [amenity='car_rental'],
         [amenity='money_transfer'],
+        [amenity='courthouse'],
         [amenity='place_of_worship'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }
@@ -132,6 +133,7 @@
         [amenity='studio'],
         [amenity='car_rental'],
         [amenity='money_transfer'],
+        [amenity='courthouse'],
         [amenity='place_of_worship'] {
             text-name: "[name]";
         }
