@@ -93,7 +93,7 @@ Map { font-directory: url(./fonts); }
 @wooded:            #C3D9AD;
 @agriculture:       #95ae79;
 @military:          @primary3;
-@wetland:           #CFDCD3;
+@wetland:           #e3e9e2; //#CFDCD3;
 
 @building:          #dcd7d7;
 @building_hedge:    #dcd7d7;

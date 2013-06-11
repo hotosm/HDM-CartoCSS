@@ -45,7 +45,14 @@
   [type='allotments']    { polygon-fill: @agriculture; }
   [type='military']      { polygon-fill: @military; }
   [type='beach']         { polygon-fill: @beach; }
-  [type='wetland']       { polygon-fill: @wetland; }
+  [type='wetland']       {
+    [zoom<14] {
+      polygon-fill: @wetland;
+    } 
+    [zoom>=14] {
+      polygon-pattern-file:url('icons/pattern/marsh-36.png');
+    }
+  }
 }
 
 #landuse_overlays[type='nature_reserve'][zoom>6] {
@@ -61,11 +68,6 @@
   [zoom=11] { line-width: 1.5; }
   [zoom>=12] { line-width: 2.0; }
 }
- 
-#landuse_overlays[type='wetland'][zoom>11] {
-  [zoom>11][zoom<=14] { polygon-pattern-file:url('icons/marsh-16.png'); }
-  [zoom>14] { polygon-pattern-file:url('icons/marsh-32.png');}
-  }
 
 /* ---- BUILDINGS ---- */
 #buildings[zoom>=12] {
