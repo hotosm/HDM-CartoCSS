@@ -88,19 +88,19 @@ Map { font-directory: url(./fonts); }
 @water:             #90cccb; //#79c1c0
 @beach:             #ece1a3;
 @cemetery:          #D6DED2;
-@military:          @primary3;
+@military:          #D1BFAA;
 @wetland:           #e3e9e2; //#CFDCD3;
 /* Greens */
-@park:              #DAF2C1; //#86ac86
-@wooded:            #95ae79;
-@grass:             #a8c48d;
-@agriculture:       #c7c78d; //#C3D9AD;
-@sports:            #b9d0a3;
+@park:              #D0DCAE; //#86ac86
+@wooded:            #B2C29D; //#95ae79;
+@grass:             @park;
+@agriculture:       #DEDDBE; //#c7c78d; //#C3D9AD;
+@sports:            @park;
 
 @building:          #dcd7d7;
 @building_hedge:    #dcd7d7;
 @hospital:          rgb(229,198,195);
-@school:            #a7c688;
+@school:            #E2D6CD;
 
 @residential:       darken(@land,5%);
 @commercial:        @land * 0.97;
