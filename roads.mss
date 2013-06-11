@@ -214,8 +214,8 @@ as well. */
   }
   [style="track"] {
     line-color: @track_fill;
-    line-dasharray: 4,2;
-    [zoom>=16] {line-dasharray: 8,2;}
+    line-dasharray: 4,4;
+    [zoom>=16] {line-dasharray: 6,6;}
   }
   [surface='unpaved'] {
     line-color: @unpaved;
