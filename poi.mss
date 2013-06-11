@@ -75,6 +75,9 @@
         [tourism='hotel'] {
             marker-file: url('icons/poi/[tourism]-18.png');
         }
+        [man_made="water_tower"] {
+            marker-file: url('icons/poi/[man_made]-18.png');
+        }
         [man_made="tower"]['tower:type'='communication'] {
             marker-file: url('icons/poi/communication-tower-18.png');
         }

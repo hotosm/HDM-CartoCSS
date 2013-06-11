@@ -17,6 +17,53 @@
    sodipodi:docname="_nori.svg">
   <defs
      id="defs5371">
+    <inkscape:path-effect
+       effect="bend_path"
+       id="path-effect8658"
+       is_visible="true"
+       bendpath="m 76,-45 10,0"
+       prop_scale="1"
+       scale_y_rel="false"
+       vertical="false" />
+    <inkscape:path-effect
+       effect="ruler"
+       id="path-effect8656"
+       is_visible="true"
+       unit="px"
+       mark_distance="20"
+       mark_length="14"
+       minor_mark_length="7"
+       major_mark_steps="5"
+       shift="0"
+       offset="0"
+       mark_dir="left"
+       border_marks="both" />
+    <inkscape:path-effect
+       effect="ruler"
+       id="path-effect8654"
+       is_visible="true"
+       unit="px"
+       mark_distance="20"
+       mark_length="14"
+       minor_mark_length="7"
+       major_mark_steps="5"
+       shift="0"
+       offset="0"
+       mark_dir="left"
+       border_marks="both" />
+    <inkscape:path-effect
+       effect="ruler"
+       id="path-effect8652"
+       is_visible="true"
+       unit="px"
+       mark_distance="20"
+       mark_length="14"
+       minor_mark_length="7"
+       major_mark_steps="5"
+       shift="0"
+       offset="0"
+       mark_dir="left"
+       border_marks="both" />
     <marker
        inkscape:stockid="TriangleOutS"
        orient="auto"
@@ -103,9 +150,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.3788933"
-     inkscape:cx="65.469671"
-     inkscape:cy="39.145418"
+     inkscape:zoom="5.2176655"
+     inkscape:cx="78.938598"
+     inkscape:cy="54.693833"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -1163,6 +1210,28 @@
          width="18"
          id="rect8618"
          style="opacity:0.29999999999999999;fill:none;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <g
+       id="water_tower-18"
+       inkscape:label="water_tower-18">
+      <path
+         style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round;opacity:0.3"
+         d="M 81 -53 L 76.96875 -51 L 77 -46 L 76 -37 L 77 -37 L 77.125 -38 L 84.75 -38.96875 L 85 -37 L 86 -37 L 85 -46 L 84.96875 -51 L 81 -53 z M 78 -44.875 C 79.767164 -43.371867 82.233192 -43.375091 84 -44.875 L 84.25 -42.90625 L 77.65625 -42.09375 L 78 -44.875 z M 84.375 -41.90625 L 84.59375 -40.125 L 79.78125 -41.34375 L 84.375 -41.90625 z M 77.5 -40.90625 L 82.3125 -39.6875 L 77.25 -39.03125 L 77.5 -40.90625 z "
+         transform="translate(0,1028.3622)"
+         id="path8667" />
+      <path
+         id="rect8633"
+         transform="translate(0,1028.3622)"
+         d="M 81 -53 L 76.96875 -51 L 77 -46 L 76 -37 L 77 -37 L 77.125 -38 L 84.75 -38.96875 L 85 -37 L 86 -37 L 85 -46 L 84.96875 -51 L 81 -53 z M 78 -44.875 C 79.767164 -43.371867 82.233192 -43.375091 84 -44.875 L 84.25 -42.90625 L 77.65625 -42.09375 L 78 -44.875 z M 84.375 -41.90625 L 84.59375 -40.125 L 79.78125 -41.34375 L 84.375 -41.90625 z M 77.5 -40.90625 L 82.3125 -39.6875 L 77.25 -39.03125 L 77.5 -40.90625 z "
+         style="fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <rect
+         transform="translate(0,1028.3622)"
+         y="-54"
+         x="72"
+         height="18"
+         width="18"
+         id="rect8644"
+         style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none" />
     </g>
   </g>
 </svg>
