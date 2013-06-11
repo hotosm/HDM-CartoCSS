@@ -88,11 +88,12 @@ Map { font-directory: url(./fonts); }
 @water:             #90cccb; //#79c1c0
 @grass:             #a8c48d;
 @beach:             #ece1a3;
-@park:              #DAF2C1;
+@park:              #DAF2C1; //#86ac86
 @cemetery:          #D6DED2;
 @wooded:            #C3D9AD;
 @agriculture:       #95ae79;
 @military:          @primary3;
+@wetland:           #CFDCD3;
 
 @building:          #dcd7d7;
 @building_hedge:    #dcd7d7;
