@@ -103,9 +103,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.2176655"
-     inkscape:cx="58.287133"
-     inkscape:cy="35.235712"
+     inkscape:zoom="7.3788933"
+     inkscape:cx="65.469671"
+     inkscape:cy="39.145418"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -251,7 +251,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1141,6 +1141,28 @@
          width="18"
          id="rect7914"
          style="fill:none;stroke:none" />
+    </g>
+    <g
+       id="funeral_directors-18"
+       inkscape:label="funeral_directors-18">
+      <path
+         style="fill:#4d4d4d;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;opacity:0.29999999999999999;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+         d="M 79 -35 L 76 -31 L 79 -19 L 82 -19 L 85 -31 L 82 -35 L 79 -35 z M 80 -33 L 81 -33 L 81 -31 L 83 -31 L 83 -30 L 81 -30 L 81 -25 L 80 -25 L 80 -30 L 78 -30 L 78 -31 L 80 -31 L 80 -33 z "
+         transform="translate(0,1028.3622)"
+         id="path8626" />
+      <path
+         id="path3815"
+         transform="translate(0,1028.3622)"
+         d="M 79 -35 L 76 -31 L 79 -19 L 82 -19 L 85 -31 L 82 -35 L 79 -35 z M 80 -33 L 81 -33 L 81 -31 L 83 -31 L 83 -30 L 81 -30 L 81 -25 L 80 -25 L 80 -30 L 78 -30 L 78 -31 L 80 -31 L 80 -33 z "
+         style="fill:#4d4d4d;fill-opacity:1;stroke:none" />
+      <rect
+         transform="translate(0,1028.3622)"
+         y="-36"
+         x="72"
+         height="18"
+         width="18"
+         id="rect8618"
+         style="opacity:0.29999999999999999;fill:none;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     </g>
   </g>
 </svg>

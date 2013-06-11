@@ -65,6 +65,7 @@
         [shop="computer"],
         [shop="clothes"],
         [shop="car_repair"],
+        [shop="funeral_directors"],
         [shop="photo"] {
             marker-file: url('icons/poi/[shop]-18.png');
         }
