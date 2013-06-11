@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />  
+  <link rel="stylesheet" href="http://yohanboniface.github.io/Leaflet.EditInOSM/Leaflet.EditInOSM.css" />  
   <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
   <script src="http://mlevans.github.io/leaflet-hash/javascripts/leaflet-hash.js"></script>
+  <script src="http://yohanboniface.github.io/Leaflet.EditInOSM/Leaflet.EditInOSM.js"></script>
   <style type='text/css'>
       body { margin:0; padding:0; }
       #map-hdm { position:absolute; top:0; bottom:0; width:50%; }
@@ -28,7 +29,7 @@
 var startPoint = [19.6718, -72.1304];
 var mapHDM = L.map('map-hdm', {zoomControl:false}).setView(startPoint, 13);
 L.tileLayer('http://{s}.tiles.fluv.io/hdm/{z}/{x}/{y}.png', {maxZoom: 20}).addTo(mapHDM);
-var map2U = L.map('map-2u', {zoomControl: false}).setView(startPoint, 13);
+var map2U = L.map('map-2u', {zoomControl: false,editInOSMControl:true}).setView(startPoint, 13);
 L.tileLayer('http://{s}.layers.openstreetmap.fr/2u/{z}/{x}/{y}.png', {maxZoom: 20}).addTo(map2U);
 var hashHDM = new L.Hash(mapHDM);
 var hash2U = new L.Hash(map2U);
