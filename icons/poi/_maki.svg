@@ -24,9 +24,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="16"
-     inkscape:cx="52.123185"
-     inkscape:cy="34.082617"
+     inkscape:zoom="8"
+     inkscape:cx="67.803689"
+     inkscape:cy="118.06228"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -763,6 +763,71 @@
          height="18.000031"
          width="18.000017"
          id="rect22284-8"
+         style="opacity:0.5;color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
+    <g
+       transform="translate(-71.999977,-130.00001)"
+       style="display:inline"
+       id="airport-18"
+       inkscape:label="airport-18"
+       inkscape:export-xdpi="89.996864"
+       inkscape:export-ydpi="89.996864">
+      <g
+         id="g21737">
+        <path
+           sodipodi:nodetypes="cccccccccccccssscc"
+           id="path14268"
+           d="m 124.5,1060.3622 0,1 -5.5,-1 0,3 2,1.2222 0,0.7778 -6,0 0,-0.7778 2,-1.2222 0,-3 -5.5,1 0,-1 5.5,-3 c 0,0 0,-1.7036 0,-3 0,-0.7777 0.22222,-2 1,-2 0.77777,0 1,1.2223 1,2 0,1.2964 0,3 0,3 z"
+           style="opacity:0.3;color:#000000;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90"
+           inkscape:connector-curvature="0" />
+        <path
+           inkscape:connector-curvature="0"
+           inkscape:export-ydpi="90"
+           inkscape:export-xdpi="90"
+           style="fill:#444444;fill-opacity:1;stroke:none;display:inline"
+           d="m 124.5,1060.3622 0,1 -5.5,-1 0,3 2,1.2222 0,0.7778 -6,0 0,-0.7778 2,-1.2222 0,-3 -5.5,1 0,-1 5.5,-3 c 0,0 0,-1.7036 0,-3 0,-0.7777 0.22222,-2 1,-2 0.77777,0 1,1.2223 1,2 0,1.2964 0,3 0,3 z"
+           id="path7712-0"
+           sodipodi:nodetypes="cccccccccccccssscc" />
+      </g>
+      <rect
+         y="1050.3622"
+         x="107.99998"
+         height="18.000031"
+         width="18.000017"
+         id="rect22077-6"
+         style="opacity:0.5;color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
+    <g
+       transform="translate(-71.999997,-388)"
+       style="display:inline"
+       id="airfield-18"
+       inkscape:label="airfield-18"
+       inkscape:export-xdpi="89.996864"
+       inkscape:export-ydpi="89.996864">
+      <g
+         transform="translate(0,1)"
+         id="g12538">
+        <path
+           sodipodi:nodetypes="sssccccccccccccccccccssss"
+           inkscape:connector-curvature="0"
+           style="opacity:0.3;color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           d="m 113.32353,1292.3622 c -0.21182,0 -0.38235,0.1705 -0.38235,0.3824 0,0.2118 0.17053,0.3823 0.38235,0.3823 l 3.05882,0 -0.38235,2.2353 0,0.9411 -5,1.5294 0,1.5295 5,0 0,3.4118 -2,0.8235 0,0.7647 7,0 0,-0.7647 -2,-0.8235 0,-3.4118 5,0 0,-1.5295 -5,-1.5294 0,-0.9411 -0.38235,-2.2353 3.05882,0 c 0.21182,0 0.38235,-0.1705 0.38235,-0.3823 0,-0.2119 -0.17053,-0.3824 -0.38235,-0.3824 z"
+           id="path15781" />
+        <path
+           id="path6220"
+           d="m 113.32353,1292.3622 c -0.21182,0 -0.38235,0.1705 -0.38235,0.3824 0,0.2118 0.17053,0.3823 0.38235,0.3823 l 3.05882,0 -0.38235,2.2353 0,0.9411 -5,1.5294 0,1.5295 5,0 0,3.4118 -2,0.8235 0,0.7647 7,0 0,-0.7647 -2,-0.8235 0,-3.4118 5,0 0,-1.5295 -5,-1.5294 0,-0.9411 -0.38235,-2.2353 3.05882,0 c 0.21182,0 0.38235,-0.1705 0.38235,-0.3823 0,-0.2119 -0.17053,-0.3824 -0.38235,-0.3824 z"
+           style="fill:#444444;fill-opacity:1;stroke:none;display:inline"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="sssccccccccccccccccccssss" />
+      </g>
+      <rect
+         y="1290.3622"
+         x="107.99998"
+         height="18.000031"
+         width="18.000017"
+         id="rect22190-58-4"
          style="opacity:0.5;color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     </g>
   </g>

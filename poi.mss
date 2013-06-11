@@ -5,7 +5,15 @@
             marker-file: url('icons/poi/shop-18.png');
         }
     }
-    [zoom>=15][zoom<=16] {
+    [zoom>=10][zoom<15] {
+        [aeroway='airport'] {
+            marker-file: url('icons/poi/[aeroway]-18.png');
+        }
+    }
+    [zoom>=15][zoom<17] {
+        [aeroway='airfield'] {
+            marker-file: url('icons/poi/[aeroway]-18.png');
+        }
         [amenity='school'],
         [amenity='university'],
         [amenity='police'],
@@ -16,6 +24,9 @@
         }
     }
     [zoom>=17] {
+        [aeroway='airfield'] {
+            marker-file: url('icons/poi/[aeroway]-18.png');
+        }
         [amenity='hospital'],
         [amenity='kindergarten'],
         [amenity='school'],

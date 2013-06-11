@@ -62,9 +62,9 @@
      transform="translate(0,-1016.3622)">
     <g
        id="marsh-36"
+       inkscape:label="marsh-36"
        inkscape:export-xdpi="89.996864"
-       inkscape:export-ydpi="89.996864"
-       inkscape:label="marsh-36">
+       inkscape:export-ydpi="89.996864">
       <rect
          ry="0.06599839"
          rx="0.99450499"
@@ -78,34 +78,34 @@
          inkscape:connector-curvature="0"
          id="path10200"
          d="m 0.49993452,1021.4422 11.12405548,0"
-         style="fill:none;stroke:#cfdcd3;stroke-width:0.99999988px;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:none;stroke:#cfdcd3;stroke-width:0.5;stroke-linecap:square;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
       <path
          inkscape:connector-curvature="0"
          id="path10202"
          d="m 16.013529,1025.3576 8.956409,0"
-         style="fill:none;stroke:#cfdcd3;stroke-width:0.99999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:none;stroke:#cfdcd3;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
       <path
          inkscape:connector-curvature="0"
          id="path10204"
          d="m 9.6733209,1032.3588 19.1070071,0"
-         style="fill:none;stroke:#cfdcd3;stroke-width:0.99999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:none;stroke:#cfdcd3;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
       <path
          inkscape:connector-curvature="0"
          id="path10206"
          d="m 2.0813361,1037.3444 9.9515659,0"
-         style="fill:none;stroke:#cfdcd3;stroke-width:0.99999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:none;stroke:#cfdcd3;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
       <path
          inkscape:connector-curvature="0"
          id="path10210"
          d="m 4.0716494,1043.3606 17.9128186,0"
-         style="fill:none;stroke:#cfdcd3;stroke-width:0.99999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:none;stroke:#cfdcd3;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
       <path
          inkscape:connector-curvature="0"
          id="path10212"
          d="m 16.013529,1050.3618 18.907975,0"
-         style="fill:none;stroke:#cfdcd3;stroke-width:0.99999988px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:none;stroke:#cfdcd3;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none" />
       <path
-         style="fill:none;stroke:#cfdcd3;stroke-width:0.99999988;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:none;stroke:#cfdcd3;stroke-width:0.5;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 32.433613,1021.4422 3.066452,0"
          id="path10232"
          inkscape:connector-curvature="0" />
