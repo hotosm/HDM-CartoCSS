@@ -150,9 +150,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="14.757787"
-     inkscape:cx="86.111024"
-     inkscape:cy="84.15271"
+     inkscape:zoom="3.6894467"
+     inkscape:cx="54.585376"
+     inkscape:cy="66.663536"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -509,29 +509,6 @@
          height="18"
          width="18"
          id="rect6583"
-         style="opacity:0.3;fill:none;stroke:none" />
-    </g>
-    <g
-       id="place_of_worship-18"
-       inkscape:label="place_of_worship-18">
-      <path
-         style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;opacity:0.29999999999999999;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
-         d="m 8,993.3622 0,2 -2,0 0,2 2,0 0,3.0001 -4.999999,4 -1e-6,4.9999 12,0 10e-7,-4.9999 -5,-4 0,-3.0001 2,0 0,-2 -2,0 0,-2 z"
-         id="path10626"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="ccccccccccccccccc" />
-      <path
-         sodipodi:nodetypes="ccccccccccccccccc"
-         inkscape:connector-curvature="0"
-         id="rect2985"
-         d="m 8,993.3622 0,2 -2,0 0,2 2,0 0,3.0001 -4.999999,4 -1e-6,4.9999 12,0 10e-7,-4.9999 -5,-4 0,-3.0001 2,0 0,-2 -2,0 0,-2 z"
-         style="fill:#444444;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-      <rect
-         y="992.36218"
-         x="0"
-         height="18"
-         width="18"
-         id="rect6599"
          style="opacity:0.3;fill:none;stroke:none" />
     </g>
     <g

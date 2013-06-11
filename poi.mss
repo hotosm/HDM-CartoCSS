@@ -49,9 +49,16 @@
         [amenity='studio'],
         [amenity='car_rental'],
         [amenity='money_transfer'],
-        [amenity='courthouse'],
+        [amenity='courthouse'] {
+            marker-file: url('icons/poi/[amenity]-18.png');
+        }
         [amenity='place_of_worship'] {
             marker-file: url('icons/poi/[amenity]-18.png');
+            [religion='christian'],
+            [religion='jewish'],
+            [religion='muslim'] {
+                marker-file: url('icons/poi/[religion]-18.png');
+            }
         }
         [craft!=null] {
             marker-file: url('icons/poi/craft-18.png');
