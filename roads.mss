@@ -225,7 +225,7 @@ as well. */
     line-cap: round;
     line-dasharray: 0.1,2;
   }
-  [condition='bad'] {
+  [condition='bad'][style!='noauto'] {
     line-dasharray: 5,0.5;
     line-cap: butt;
     // line-comp-op: hue;
