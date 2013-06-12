@@ -28,6 +28,7 @@
   [type='golf_course']   { polygon-fill: @park; }
   [type='hospital']      { polygon-fill: @hospital; }
   [type='industrial']    { polygon-fill: @industrial; }
+  [type='landfill']      { polygon-fill: @industrial; }
   [type='quarry']        { polygon-fill: @industrial; }
   [type='parking']       { polygon-fill: @parking; }
   [type='pedestrian']    { polygon-fill: @pedestrian_case; }
