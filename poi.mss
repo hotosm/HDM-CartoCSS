@@ -24,6 +24,9 @@
         }
     }
     [zoom>=17] {
+        [highway='bus_stop'] {
+            marker-file: url('icons/poi/[highway]-18.png');
+        }
         [aeroway='airfield'] {
             marker-file: url('icons/poi/[aeroway]-18.png');
         }
@@ -130,6 +133,7 @@
         }
     }
     [zoom>=18] {
+        [highway='bus_stop'],
         [office='ngo'],
         [tourism='hotel'],
         [amenity='restaurant'],
