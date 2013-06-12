@@ -38,6 +38,7 @@
   [type='grass']         { polygon-fill: @grass; }
   [type='park']          { polygon-fill: @park; }
   [type='picnic_site']   { polygon-fill: @park; }
+  [type='camp_site']   { polygon-fill: @park; }
   [type='playground']    { polygon-fill: @park; }
   [type='scrub']         { polygon-fill: @wooded; }
   [type='forest']        { polygon-fill: @wooded; }
