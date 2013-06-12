@@ -120,6 +120,7 @@
     text-label-position-tolerance: 18;
     text-placement-type: simple;
     text-placements: "S,N,W,E,NE,NW,SE,SW";
+    text-avoid-edges: true;
     [zoom>=17] {
         [amenity='school'],
         [amenity='university'],
