@@ -116,6 +116,9 @@
         [amenity='bench'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }
+        [emergency="fire_hydrant"] {
+            marker-file: url('icons/poi/[emergency]-18.png');
+        }
     }
 }
 #poi-point::label[zoom>=17] {
