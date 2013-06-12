@@ -137,9 +137,7 @@
     text-placements: "S,N,W,E,NE,NW,SE,SW";
     text-avoid-edges: true;
     [zoom>=17] {
-        [amenity='school'],
-        [amenity='university'],
-        [amenity='pharmacy'],
+        /* Prio */
         [amenity='townhall'],
         [amenity='hospital'] {
             text-name: "[name]";
@@ -147,21 +145,33 @@
                 text-face-name: @sans_bold;
             }
         }
+        [amenity='school'],
+        [amenity='university'],
+        [amenity='pharmacy'] {
+            text-min-distance: 5;
+            text-name: "[name]";
+            [zoom>=19] {
+                text-face-name: @sans_bold;
+            }
+        }
     }
     [zoom>=18] {
-        [highway='bus_stop'],
+        /* Prio */
+        [amenity='courthouse'],
+        [amenity='bank'],
+        [highway='bus_stop'] {
+            text-name: "[name]";
+        }
         [office='ngo'],
         [tourism='hotel'],
         [amenity='restaurant'],
         [amenity='kindergarten'],
         [amenity='cafe'],
         [amenity='bar'],
-        [amenity='bank'],
         [amenity='post_office'],
         [amenity='studio'],
         [amenity='car_rental'],
         [amenity='money_transfer'],
-        [amenity='courthouse'],
         [amenity='fuel'],
         [amenity='place_of_worship'] {
             text-name: "[name]";
