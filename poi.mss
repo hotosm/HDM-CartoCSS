@@ -156,6 +156,7 @@
         [amenity='car_rental'],
         [amenity='money_transfer'],
         [amenity='courthouse'],
+        [amenity='fuel'],
         [amenity='place_of_worship'] {
             text-name: "[name]";
         }
