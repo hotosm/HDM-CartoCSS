@@ -40,9 +40,11 @@
   [type='picnic_site']   { polygon-fill: @park; }
   [type='camp_site']   { polygon-fill: @park; }
   [type='playground']    { polygon-fill: @park; }
-  [type='scrub']         { polygon-fill: @wooded; }
   [type='forest']        { polygon-fill: @wooded; }
   [type='wood']          { polygon-fill: @wooded; }
+  [type='heath']         { polygon-fill: @heath; }
+  [type='meadow']        { polygon-fill: @heath; }
+  [type='scrub']         { polygon-fill: @heath; }
   [type='farmland']      { polygon-fill: @agriculture; }
   [type='farm']          { polygon-fill: @agriculture; }
   [type='orchard']       { polygon-fill: @agriculture; }

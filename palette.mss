@@ -95,6 +95,7 @@ Map { font-directory: url(./fonts); }
 @wooded:            #B2C29D; //#95ae79;
 @grass:             @park;
 @agriculture:       #DEDDBE; //#c7c78d; //#C3D9AD;
+@heath:             #E1E9D6;
 @sports:            @park;
 
 @building:          #dcd7d7;
