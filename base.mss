@@ -21,6 +21,7 @@
 #landuse_gen1[zoom>9][zoom<=12],
 #landuse[zoom>12] {
   [type='cemetery']      { polygon-fill: @cemetery; }
+  [type='grave_yard']    { polygon-fill: @cemetery; }
   [type='college']       { polygon-fill: @school; }
   [type='commercial']    { polygon-fill: @industrial; }
   [type='common']        { polygon-fill: @park; }
