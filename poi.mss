@@ -87,6 +87,15 @@
         [tourism='hotel'] {
             marker-file: url('icons/poi/[tourism]-18.png');
         }
+        [man_made="water_well"] {
+            marker-file: url('icons/poi/bucket-18.png');
+            [drinking_water='yes'] {
+                marker-file: url('icons/poi/drinking_water-18.png');
+            }
+            [pump='manual'] {
+                marker-file: url('icons/poi/pump-18.png');
+            }
+        }
         [man_made="water_tower"] {
             marker-file: url('icons/poi/[man_made]-18.png');
         }
