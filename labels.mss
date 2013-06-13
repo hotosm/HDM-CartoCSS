@@ -465,7 +465,7 @@
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:line;
-  text-size:9;
+  text-size:10;
   text-fill:@road_text;
   text-halo-fill:@road_halo;
   text-halo-radius:1;

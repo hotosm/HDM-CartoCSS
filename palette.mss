@@ -205,7 +205,7 @@ Map { font-directory: url(./fonts); }
 @poi_text2:         @complementary1;
 @poi_halo:          @place_halo;
 
-@road_text:         #777;
+@road_text:         #525252;
 @road_halo:         #fff;
 
 @other_text:        #888;
