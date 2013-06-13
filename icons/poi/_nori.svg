@@ -150,9 +150,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313709"
-     inkscape:cx="19.351587"
-     inkscape:cy="141.71002"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="44.019409"
+     inkscape:cy="62.880939"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -484,34 +484,6 @@
          height="18"
          width="18"
          id="rect6575"
-         style="opacity:0.3;fill:none;stroke:none" />
-    </g>
-    <g
-       id="beverages-18"
-       inkscape:label="beverages-18">
-      <g
-         id="g7098">
-        <path
-           style="fill:#444444;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round;opacity:0.3"
-           d="m 6,957.3622 -2,2 10,0 -2,-2 z m -2,4 0,8 10,0 0,-8 z m 0,10 2,2 6,0 2,-2 z"
-           id="rect4953-7"
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="ccccccccccccccc" />
-        <path
-           style="fill:#444444;fill-opacity:1;stroke:none"
-           d="m 6,957.3622 -2,2 10,0 -2,-2 z m -2,4 0,8 10,0 0,-8 z m 0,10 2,2 6,0 2,-2 z"
-           id="rect4953"
-           inkscape:connector-curvature="0"
-           sodipodi:nodetypes="ccccccccccccccc" />
-      </g>
-      <rect
-         ry="0.032999195"
-         rx="0.99450493"
-         y="956.36218"
-         x="0"
-         height="18"
-         width="18"
-         id="rect6583"
          style="opacity:0.3;fill:none;stroke:none" />
     </g>
     <g
@@ -1430,6 +1402,31 @@
          height="18"
          width="18"
          id="rect15011"
+         style="opacity:0.3;fill:none;stroke:none" />
+    </g>
+    <g
+       id="beverages-18"
+       inkscape:label="beverages-18">
+      <path
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;opacity:0.29999999999999999;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+         d="m 7,959.3622 -2,1.5 8,0 -2,-1.5 z m -2,3 0,7 8,0 0,-7 z m 0,8.5 2,1.5 4,0 2,-1.5 z"
+         id="path15578"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccccccccc" />
+      <path
+         sodipodi:nodetypes="ccccccccccccccc"
+         inkscape:connector-curvature="0"
+         id="rect4953"
+         d="m 7,959.3622 -2,1.5 8,0 -2,-1.5 z m -2,3 0,7 8,0 0,-7 z m 0,8.5 2,1.5 4,0 2,-1.5 z"
+         style="fill:#444444;fill-opacity:1;stroke:none" />
+      <rect
+         ry="0.032999195"
+         rx="0.99450493"
+         y="956.36218"
+         x="0"
+         height="18"
+         width="18"
+         id="rect6583"
          style="opacity:0.3;fill:none;stroke:none" />
     </g>
   </g>
