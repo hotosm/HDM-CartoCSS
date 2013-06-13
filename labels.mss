@@ -267,12 +267,13 @@
     text-halo-radius: 2;
     text-label-position-tolerance: 18;
     text-placement-type: simple;
-    text-placements: "S,N,W,E,NE,NW,SE,SW";
+    text-placements: "S,N,W,E";
     text-avoid-edges: true;
     [zoom>=17] {
         /* Prio */
         [amenity='townhall'],
         [amenity='hospital'] {
+            text-min-distance: 30;
             text-name: "[name]";
             [zoom>=19] {
                 text-face-name: @sans_bold;
