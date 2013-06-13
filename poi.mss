@@ -122,6 +122,9 @@
         [amenity='bench'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }
+        [highway='street_lamp'] {
+            marker-file: url('icons/poi/[highway]-18.png');
+        }
         [emergency="fire_hydrant"] {
             marker-file: url('icons/poi/[emergency]-18.png');
         }
