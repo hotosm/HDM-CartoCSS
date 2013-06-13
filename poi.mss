@@ -19,6 +19,7 @@
         [amenity='police'],
         [amenity='bank'],
         [amenity='townhall'],
+        [amenity='taxi'],
         [amenity='hospital'] {
             marker-file: url('icons/poi/[amenity]-12.png');
         }
