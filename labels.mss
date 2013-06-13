@@ -373,6 +373,7 @@
   text-halo-radius:1;
   text-min-distance:60;
   text-size:10;
+  text-avoid-edges: true;
   [zoom=11] { text-min-distance:70; }
   [zoom=12] { text-min-distance:80; }
   [zoom=13] { text-min-distance:100; }
@@ -389,6 +390,7 @@
   text-halo-radius:1.3;
   text-min-distance:60;
   text-size:11;
+  text-avoid-edges: true;
 }
 
 #minorroad_label[zoom>14] {
@@ -401,6 +403,7 @@
   text-halo-radius:1;
   text-min-distance:60;
   text-size:11;
+  text-avoid-edges: true;
 }
 
 /* ================================================================== */
