@@ -14,13 +14,17 @@
         [aeroway='airfield'] {
             marker-file: url('icons/poi/[aeroway]-18.png');
         }
-        [amenity='school'],
         [amenity='university'],
         [amenity='police'],
         [amenity='bank'],
         [amenity='townhall'],
         [amenity='taxi'],
         [amenity='hospital'] {
+            marker-file: url('icons/poi/[amenity]-12.png');
+        }
+    }
+    [zoom>=16][zoom<17] {
+        [amenity='school'] {
             marker-file: url('icons/poi/[amenity]-12.png');
         }
     }
