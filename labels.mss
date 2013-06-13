@@ -251,6 +251,74 @@
 
 
 // =====================================================================
+// POI LABELS
+// =====================================================================
+
+#poi-point::label[zoom>=17] {
+    text-name: "";
+    text-face-name: @sans;
+    text-size: 10;
+    text-wrap-width: 30;
+    text-fill: @poi_text;
+    text-halo-fill: @poi_halo;
+    text-dy: 12;
+    text-dx: 12;
+    text-placement: point;
+    text-halo-radius: 2;
+    text-label-position-tolerance: 18;
+    text-placement-type: simple;
+    text-placements: "S,N,W,E,NE,NW,SE,SW";
+    text-avoid-edges: true;
+    [zoom>=17] {
+        /* Prio */
+        [amenity='townhall'],
+        [amenity='hospital'] {
+            text-name: "[name]";
+            [zoom>=19] {
+                text-face-name: @sans_bold;
+            }
+        }
+        [amenity='school'],
+        [amenity='university'],
+        [amenity='pharmacy'] {
+            text-min-distance: 100;
+            text-name: "[name]";
+            [zoom>=19] {
+                text-face-name: @sans_bold;
+            }
+        }
+    }
+    [zoom>=18] {
+        /* Prio */
+        [amenity='courthouse'],
+        [amenity='bank'],
+        [highway='bus_stop'] {
+            text-name: "[name]";
+        }
+        [office='ngo'],
+        [tourism='hotel'],
+        [amenity='restaurant'],
+        [amenity='kindergarten'],
+        [amenity='cafe'],
+        [amenity='bar'],
+        [amenity='post_office'],
+        [amenity='studio'],
+        [amenity='car_rental'],
+        [amenity='money_transfer'],
+        [amenity='fuel'],
+        [amenity='place_of_worship'] {
+            text-name: "[name]";
+        }
+    }
+    [zoom>=19] {
+        [amenity='cinema'],
+        [shop!=null] {
+            text-name: "[name]";
+            text-fill: @poi_text2;
+        }
+    }
+}
+// =====================================================================
 // AREA LABELS
 // =====================================================================
 
