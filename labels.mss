@@ -273,7 +273,6 @@
         /* Prio */
         [amenity='townhall'],
         [amenity='hospital'] {
-            text-min-distance: 30;
             text-name: "[name]";
             [zoom>=19] {
                 text-face-name: @sans_bold;
