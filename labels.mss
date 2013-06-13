@@ -306,6 +306,7 @@
         [amenity='car_rental'],
         [amenity='money_transfer'],
         [amenity='fuel'],
+        [amenity='social_facility'],
         [amenity='place_of_worship'] {
             text-name: "[name]";
         }
