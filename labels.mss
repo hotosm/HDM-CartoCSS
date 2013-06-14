@@ -280,6 +280,7 @@
     [zoom>=17] {
         /* Prio */
         [amenity='townhall'],
+        [amenity='fire_station'],
         [amenity='hospital'] {
             text-name: "[name]";
             [zoom>=19] {
@@ -300,6 +301,7 @@
         /* Prio */
         [amenity='courthouse'],
         [amenity='bank'],
+        [amenity='post_office'],
         [highway='bus_stop'] {
             text-name: "[name]";
         }
@@ -309,7 +311,6 @@
         [amenity='kindergarten'],
         [amenity='cafe'],
         [amenity='bar'],
-        [amenity='post_office'],
         [amenity='studio'],
         [amenity='car_rental'],
         [amenity='money_transfer'],

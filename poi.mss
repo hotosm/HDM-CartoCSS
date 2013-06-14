@@ -19,6 +19,7 @@
         [amenity='bank'],
         [amenity='townhall'],
         [amenity='taxi'],
+        [amenity='fire_station'],
         [amenity='hospital'] {
             marker-file: url('icons/poi/[amenity]-12.png');
         }
@@ -35,7 +36,12 @@
         [aeroway='airfield'] {
             marker-file: url('icons/poi/[aeroway]-18.png');
         }
-        [amenity='hospital'],
+        [amenity='atm'],
+        [amenity='fire_station'],
+        [amenity='post_office'],
+        [amenity='hospital'] { // amenity with priority
+            marker-file: url('icons/poi/[amenity]-18.png');
+        }
         [amenity='kindergarten'],
         [amenity='school'],
         [amenity='university'],
@@ -49,11 +55,9 @@
         [amenity='toilets'],
         [amenity='fuel'],
         [amenity='bank'],
-        [amenity='atm'],
         [amenity='pharmacy'],
         [amenity='townhall'],
         [amenity='taxi'],
-        [amenity='post_office'],
         [amenity='studio'],
         [amenity='car_rental'],
         [amenity='money_transfer'],

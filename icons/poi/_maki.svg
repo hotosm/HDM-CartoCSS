@@ -25,8 +25,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="4"
-     inkscape:cx="63.312598"
-     inkscape:cy="139.65869"
+     inkscape:cx="30.932222"
+     inkscape:cy="154.25047"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -1027,6 +1027,67 @@
          width="18"
          id="rect6685"
          style="opacity:0.3;color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
+    <g
+       style="display:inline"
+       id="fire_station-18"
+       inkscape:label="fire_station-18"
+       transform="translate(-384,-226)"
+       inkscape:export-xdpi="89.996864"
+       inkscape:export-ydpi="89.996864">
+      <g
+         id="g21510">
+        <path
+           sodipodi:nodetypes="cccsssccc"
+           inkscape:connector-curvature="0"
+           id="path14455"
+           d="m 429.5,1076.3622 -2.5,4 -1.5,-2 c -0.53852,0.9467 -2.5,3.0625 -2.5,5.5 0,3.5899 2.91015,6.5 6.5,6.5 3.58985,0 6.5,-2.9101 6.5,-6.5 0,-2.4375 -1.96148,-4.5533 -2.5,-5.5 l -1.5,2 z"
+           style="opacity:0.3;color:#000000;fill:#ffffff;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+        <path
+           style="color:#000000;fill:#747474;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           d="m 429.5,1076.3622 -2.5,4 -1.5,-2 c -0.53852,0.9467 -2.5,3.0625 -2.5,5.5 0,3.5899 2.91015,6.5 6.5,6.5 3.58985,0 6.5,-2.9101 6.5,-6.5 0,-2.4375 -1.96148,-4.5533 -2.5,-5.5 l -1.5,2 z m 0,6.5 c 0,0 2.5,2.3687 2.5,4.25 0,0.8125 -0.875,1.75 -2.5,1.75 -1.625,0 -2.5,-0.9375 -2.5,-1.75 0,-1.8168 2.5,-4.25 2.5,-4.25 z"
+           id="path10041-3-3"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccsssccccsssc" />
+      </g>
+      <rect
+         y="1074.3622"
+         x="419.99997"
+         height="18.000031"
+         width="18.000017"
+         id="rect22290-37"
+         style="opacity:0.5;color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
+    <g
+       style="display:inline"
+       id="fire_station-12"
+       inkscape:label="fire_station-12"
+       transform="translate(-384,-220)"
+       inkscape:export-xdpi="89.996864"
+       inkscape:export-ydpi="89.996864">
+      <g
+         transform="translate(-1,-1)"
+         id="g21514">
+        <path
+           sodipodi:nodetypes="cccsssccc"
+           inkscape:connector-curvature="0"
+           id="path5434"
+           d="m 445.5,1076.3622 -1.5,3 -1.5,-1.5 c -0.33139,0.5826 -1.5,2 -1.5,3.5 0,2.2092 2.29086,4 4.5,4 2.20914,0 4.5,-1.7908 4.5,-4 0,-1.5 -1.16861,-2.9174 -1.5,-3.5 l -1.5,1.5 z"
+           style="opacity:0.3;color:#000000;fill:#ffffff;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+        <path
+           style="color:#000000;fill:#525252;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           d="m 445.5,1076.3622 -1.5,3 -1.5,-1.5 c -0.33139,0.5826 -1.5,2 -1.5,3.5 0,2.2092 2.29086,4 4.5,4 2.20914,0 4.5,-1.7908 4.5,-4 0,-1.5 -1.16861,-2.9174 -1.5,-3.5 l -1.5,1.5 z m 0,4.5 c 0,0 1.5,1.3423 1.5,2.5 0,0.5 -0.5,1 -1.5,1 -1,0 -1.5,-0.5 -1.5,-1 0,-1.118 1.5,-2.5 1.5,-2.5 z"
+           id="path10041-3-2"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cccsssccccsssc" />
+      </g>
+      <rect
+         style="opacity:0.5;color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+         id="rect22292-6"
+         width="11.999998"
+         height="12.000007"
+         x="438"
+         y="1074.3622" />
     </g>
   </g>
 </svg>
