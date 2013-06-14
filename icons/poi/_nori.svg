@@ -150,9 +150,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="16"
-     inkscape:cx="88.485681"
-     inkscape:cy="193.24886"
+     inkscape:zoom="11.313709"
+     inkscape:cx="12.352233"
+     inkscape:cy="28.952662"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -307,53 +307,6 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,-1028.3622)">
-    <g
-       id="shop-18"
-       inkscape:label="shop-18">
-      <path
-         sodipodi:nodetypes="aaccccccaaaaccaa"
-         inkscape:connector-curvature="0"
-         id="rect10413-4-8"
-         d="m 9,1012.3622 c -1.6235435,0.01 -3.4097536,0.7069 -4.46875,1.9375 -1.1388144,1.3234 -1.276604,3.5082 -1.34375,5.0625 l -2.1875,0 3,7 10,0 3,-7 -2.09375,0 c -0.06334,-1.5543 -0.172639,-3.7435 -1.3125,-5.0625 -1.086627,-1.2574 -2.931896,-1.9458 -4.59375,-1.9375 z m 0,1.5 c 1.210869,-0.01 2.578792,0.4314 3.375,1.3437 0.938604,1.0755 0.96614,2.9084 1.03125,4.1563 l -8.71875,0 c 0.06499,-1.2482 0.097916,-3.0763 1.03125,-4.1563 0.7727908,-0.8943 2.0993574,-1.3379 3.28125,-1.3437 z"
-         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;opacity:0.29999999999999999;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round" />
-      <rect
-         y="1010.3406"
-         x="0.026296001"
-         height="16.160805"
-         width="16"
-         id="rect9517"
-         style="fill:none;stroke:none" />
-      <rect
-         y="1010.3407"
-         x="0.026296001"
-         height="16.160805"
-         width="16"
-         id="rect9473"
-         style="fill:none;stroke:none" />
-      <path
-         sodipodi:nodetypes="aaccccccaaaaccaa"
-         inkscape:connector-curvature="0"
-         id="rect10413-4"
-         d="m 9,1012.3622 c -1.6235435,0.01 -3.4097536,0.7069 -4.46875,1.9375 -1.1388144,1.3234 -1.276604,3.5082 -1.34375,5.0625 l -2.1875,0 3,7 10,0 3,-7 -2.09375,0 c -0.06334,-1.5543 -0.172639,-3.7435 -1.3125,-5.0625 -1.086627,-1.2574 -2.931896,-1.9458 -4.59375,-1.9375 z m 0,1.5 c 1.210869,-0.01 2.578792,0.4314 3.375,1.3437 0.938604,1.0755 0.96614,2.9084 1.03125,4.1563 l -8.71875,0 c 0.06499,-1.2482 0.097916,-3.0763 1.03125,-4.1563 0.7727908,-0.8943 2.0993574,-1.3379 3.28125,-1.3437 z"
-         style="fill:#747474;fill-opacity:1;stroke:none" />
-      <rect
-         y="1010.3406"
-         x="0.026296001"
-         height="16.160805"
-         width="16"
-         id="rect9519"
-         style="fill:none;stroke:none" />
-      <rect
-         ry="0.032999195"
-         rx="0.99450493"
-         transform="translate(0,1028.3622)"
-         y="-18"
-         x="0"
-         height="18"
-         width="18"
-         id="rect6061"
-         style="opacity:0.29999999999999999;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    </g>
     <g
        id="hospital-18"
        inkscape:label="hospital-18">
@@ -1526,6 +1479,30 @@
          width="18"
          id="rect16699"
          style="fill:none;stroke:none;stroke-width:0.20000000000000001;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <g
+       id="shop-18"
+       inkscape:label="shop-18">
+      <path
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;opacity:0.29999999999999999;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+         d="m 9,1013.3622 c -2.8674418,0 -4.8543401,3.2331 -5,7 l -2,0 3,6 8,0 3,-6 -2,0 c -0.01616,-3.6882 -2.132558,-7 -5,-7 z m 0,1.3125 c 2.259432,0 3.566238,2.7163 3.6875,5.6875 l -7.375,0 c 0.088871,-2.8665 1.4280676,-5.6875 3.6875,-5.6875 z"
+         id="path16763"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="accccccaacca" />
+      <path
+         sodipodi:nodetypes="accccccaacca"
+         inkscape:connector-curvature="0"
+         id="rect10413-4"
+         d="m 9,1013.3622 c -2.8674418,0 -4.8543401,3.2331 -5,7 l -2,0 3,6 8,0 3,-6 -2,0 c -0.01616,-3.6882 -2.132558,-7 -5,-7 z m 0,1.3125 c 2.259432,0 3.566238,2.7163 3.6875,5.6875 l -7.375,0 c 0.088871,-2.8665 1.4280676,-5.6875 3.6875,-5.6875 z"
+         style="fill:#747474;fill-opacity:1;stroke:none" />
+      <rect
+         transform="translate(0,1028.3622)"
+         y="-18"
+         x="0"
+         height="18"
+         width="18"
+         id="rect16765"
+         style="opacity:0.29999999999999999;fill:none;stroke:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     </g>
   </g>
 </svg>
