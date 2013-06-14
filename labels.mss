@@ -179,7 +179,7 @@
 
 /* ---- Other small places ------------------------------------------ */
 
-#place::small[type='village'][zoom>=13][zoom<=20],
+#place::small[type='village'][zoom>=11][zoom<=20],
 #place::small[type='suburb'][zoom>=13][zoom<=20],
 #place::small[type='hamlet'][zoom>=13][zoom<=20],
 #place::small[type='neighbourhood'][zoom>=13][zoom<=20] {
@@ -191,6 +191,12 @@
   text-halo-fill:@other_halo;
   text-halo-radius:1;
   text-wrap-width: 30;
+  text-min-distance: 100;
+  text-avoid-edges: true;
+  text-label-position-tolerance: 10;
+  [zoom>=13] {
+    text-min-distance: 50;
+  }
   [zoom>=14] {
     text-size:11;
     text-character-spacing: 1;
@@ -203,12 +209,14 @@
     text-character-spacing: 1;
     text-wrap-width: 60; 
     text-line-spacing: 1;
+    text-min-distance: 30;
   }
   [zoom>=16] {
     text-size:12;
     text-character-spacing: 2;
     text-wrap-width: 120;
     text-line-spacing: 2;
+    text-min-distance: 10;
   } 
   [zoom>=17] {
     text-size:13; 
