@@ -315,6 +315,7 @@
         [amenity='money_transfer'],
         [amenity='fuel'],
         [amenity='social_facility'],
+        [amenity='arts_centre'],
         [amenity='place_of_worship'] {
             text-name: "[name]";
         }

@@ -23,7 +23,7 @@
             marker-file: url('icons/poi/[amenity]-12.png');
         }
     }
-    [zoom>=16][zoom<17] {
+    [zoom=16] {
         [amenity='school'] {
             marker-file: url('icons/poi/[amenity]-12.png');
         }
@@ -58,6 +58,7 @@
         [amenity='car_rental'],
         [amenity='money_transfer'],
         [amenity='social_facility'],
+        [amenity='arts_centre'],
         [amenity='courthouse'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }
