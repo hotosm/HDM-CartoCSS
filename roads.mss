@@ -392,41 +392,30 @@ as well. */
 /* RAILWAY
 /* ================================================================== */
 
-
-#railway[zoom>=11][zoom<=20] {
-  ::outline {
-    line-cap: round;
-    line-join: round;
-    [bridge=1],
-    [tunnel=1] {
-      line-cap: butt;
-    }
-    line-color: fadeout(@land,50%);
-    [bridge=1] { line-color: @secondary_case * 0.8; }
-    [tunnel=1] { line-dasharray: 3,3; }
-
-    /* -- widths -- */
-    [zoom>=11][zoom<15] { line-width: 0; }
-    [zoom=15] { line-width: 1.5 + 2; }
-    [zoom=16] { line-width: 2 + 2; }
-    [zoom>=17] { line-width: 3 + 4; }
-    [zoom>=18] { line-width: 4 + 6; }
-  }
-
+#railway[type='other'][zoom>=12][zoom<=20] {
+  line-cap: butt;
   line-color: @rail_line;
-  line-dasharray: 1,1;
-  [railway='subway'] { line-opacity: 0.67; }
-  [zoom>15] { line-dasharray: 1,2; } 
-  [tunnel=1] {
-    line-cap: butt;
-  }
-  /* -- widths -- */
-  [zoom=11] { line-width: 0.2; }
-  [zoom=12] { line-width: 0.4; }
-  [zoom=13] {line-width: 0.8; }
-  [zoom=14] { line-width: 1; }
-  [zoom=15] { line-width: 1.5; }
-  [zoom=16] { line-width: 2; }
-  [zoom=17] {line-width: 3; }
+  [zoom>=12] { line-width: 1; }
+  [zoom>=14] { line-width: 2; }
+  [zoom>=16] { line-width: 3; }
   [zoom>=18] { line-width: 4; }
+}
+
+#railway[type='main'][zoom>=12][zoom<=20] {
+  ::outline {
+    line-cap: butt;
+    line-color: @rail_line;
+    [zoom>=12] { line-width: 2;}
+    [zoom>=14] { line-width: 3;}
+    [zoom>=16] { line-width: 4;}
+    [zoom>=18] { line-width: 6;}
+  }
+
+  line-cap: butt;
+  line-color: @land;
+  line-dasharray: 6,2;
+  [zoom>=12] { line-width: 1; }
+  [zoom>=14] { line-width: 2; }
+  [zoom>=16] { line-width: 3; }
+  [zoom>=18] { line-width: 4; line-dasharray: 8,4; }
 }
