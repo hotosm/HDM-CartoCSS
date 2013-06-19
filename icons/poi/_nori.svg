@@ -150,9 +150,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="78.527577"
-     inkscape:cy="171.71391"
+     inkscape:zoom="4"
+     inkscape:cx="104.68563"
+     inkscape:cy="29.548217"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -309,6 +309,14 @@
        orientation="0,1"
        position="95,270"
        id="guide4913" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="132,51"
+       id="guide6834" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="122,54"
+       id="guide6847" />
   </sodipodi:namedview>
   <metadata
      id="metadata5374">
@@ -1983,6 +1991,49 @@
          width="18"
          id="rect4981"
          style="opacity:0.3;fill:none;stroke:none" />
+    </g>
+    <g
+       id="government-18"
+       inkscape:label="government-18">
+      <path
+         id="path6827"
+         d="m 115,1001.3622 c 0,-2 -3.5,-2.5 -3.5,-2.5 l 0,-1.5 4.5,0 -1.5,-1.5 1.5,-1.5 -4.5,0 0,-1 -1,0 0,5.5 c 0,0 -3.5,0.5 -3.5,2.5 0,0 -1,0 -1,1 l 10,0 c 0,-1 -1,-1 -1,-1 z m -11,2 14,0 0,6 -5,0 0,-1 -4,0 0,1 -5,0 z"
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round;opacity:0.3" />
+      <path
+         style="fill:#747474;fill-opacity:1"
+         d="m 115,1001.3622 c 0,-2 -3.5,-2.5 -3.5,-2.5 l 0,-1.5 4.5,0 -1.5,-1.5 1.5,-1.5 -4.5,0 0,-1 -1,0 0,5.5 c 0,0 -3.5,0.5 -3.5,2.5 0,0 -1,0 -1,1 l 10,0 c 0,-1 -1,-1 -1,-1 z m -11,2 14,0 0,6 -5,0 0,-1 -4,0 0,1 -5,0 z"
+         id="path6788" />
+      <rect
+         transform="translate(0,1028.3622)"
+         y="-36"
+         x="102"
+         height="18"
+         width="18"
+         id="rect6817"
+         style="opacity:0.3;fill:none;stroke:none" />
+    </g>
+    <g
+       id="government-12"
+       inkscape:label="government-12">
+      <path
+         inkscape:connector-curvature="0"
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;opacity:0.29999999999999999;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+         d="m 126.5,1002.3622 0,-1 3.5,0 -2,-1 2,-1 -4.5,0 0,3 c 0,0 -2.5,0 -2.5,2 l 6,0 c 0,-2 -2.5,-2 -2.5,-2 z m -5.5,3 10,0 0,4 -3,0 0,-1 -4,0 0,1 -3,0 z"
+         id="path6849"
+         sodipodi:nodetypes="ccccccccccccccccccc" />
+      <path
+         sodipodi:nodetypes="ccccccccccccccccccc"
+         id="path6840"
+         d="m 126.5,1002.3622 0,-1 3.5,0 -2,-1 2,-1 -4.5,0 0,3 c 0,0 -2.5,0 -2.5,2 l 6,0 c 0,-2 -2.5,-2 -2.5,-2 z m -5.5,3 10,0 0,4 -3,0 0,-1 -4,0 0,1 -3,0 z"
+         style="fill:#525252;fill-opacity:1"
+         inkscape:connector-curvature="0" />
+      <rect
+         style="opacity:0.3;fill:none;stroke:none"
+         id="rect6842"
+         width="12"
+         height="12"
+         x="120"
+         y="998.36218" />
     </g>
   </g>
 </svg>

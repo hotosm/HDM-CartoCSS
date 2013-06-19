@@ -14,6 +14,9 @@
         [aeroway='airfield'] {
             marker-file: url('icons/poi/[aeroway]-18.png');
         }
+        [office='government'] {
+            marker-file: url('icons/poi/[office]-12.png');
+        }
         [amenity='university'],
         [amenity='police'],
         [amenity='bank'],
@@ -100,9 +103,12 @@
         [shop="photo"] {
             marker-file: url('icons/poi/[shop]-18.png');
         }
+        [office='government'],
         [office='ngo'] {
             marker-file: url('icons/poi/[office]-18.png');
-            [name='Oxfam'] { marker-file: url('icons/poi/oxfam-18.png'); }
+            [office='ngo'] {
+                [name='Oxfam'] { marker-file: url('icons/poi/oxfam-18.png'); }
+            }
         }
         [tourism='information'],
         [tourism='viewpoint'],
