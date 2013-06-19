@@ -53,6 +53,7 @@
         [amenity='bar'],
         [amenity='restaurant'],
         [amenity='toilets'],
+        [amenity='shower'],
         [amenity='fuel'],
         [amenity='bank'],
         [amenity='pharmacy'],
