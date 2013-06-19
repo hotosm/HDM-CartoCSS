@@ -318,6 +318,7 @@
         [amenity='social_facility'],
         [amenity='dentist'],
         [amenity='arts_centre'],
+        [amenity='fast_food'],
         [amenity='place_of_worship'] {
             text-name: "[name]";
         }
