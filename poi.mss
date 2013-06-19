@@ -98,6 +98,7 @@
         }
         [office='ngo'] {
             marker-file: url('icons/poi/[office]-18.png');
+            [name='Oxfam'] { marker-file: url('icons/poi/oxfam-18.png'); }
         }
         [tourism='information'],
         [tourism='viewpoint'],
