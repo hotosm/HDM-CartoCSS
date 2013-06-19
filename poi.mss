@@ -98,6 +98,7 @@
         [office='ngo'] {
             marker-file: url('icons/poi/[office]-18.png');
         }
+        [tourism='information'],
         [tourism='viewpoint'],
         [tourism='hotel'] {
             marker-file: url('icons/poi/[tourism]-18.png');
