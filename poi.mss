@@ -80,6 +80,7 @@
         }
         [craft!=null] {
             marker-file: url('icons/poi/craft-18.png');
+            [craft='shoemaker'],
             [craft='carpenter'] {
                 marker-file: url('icons/poi/[craft]-18.png');
             }
