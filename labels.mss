@@ -308,6 +308,7 @@
         [office='ngo'],
         [tourism='hotel'],
         [tourism='viewpoint'],
+        [tourism='camp_site'],
         [amenity='restaurant'],
         [amenity='kindergarten'],
         [amenity='cafe'],

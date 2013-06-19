@@ -150,9 +150,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4"
-     inkscape:cx="104.68563"
-     inkscape:cy="29.548217"
+     inkscape:zoom="11.313708"
+     inkscape:cx="110.1832"
+     inkscape:cy="61.148106"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -2034,6 +2034,34 @@
          height="12"
          x="120"
          y="998.36218" />
+    </g>
+    <g
+       transform="matrix(0.16,0,0,0.16,103,975.8422)"
+       id="Captions" />
+    <g
+       id="camp_site-18"
+       inkscape:label="camp_site-18">
+      <g
+         style="fill:none;stroke:#ffffff;stroke-opacity:1;opacity:0.29999999999999999;stroke-width:12.50000000000000000;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+         transform="matrix(0.16,0,0,0.16,103,975.8422)"
+         id="g7074">
+        <path
+           inkscape:connector-curvature="0"
+           d="M 100,97 56.25,15.75 62.5,-3 56.25,-3 50,9.5 43.75,-3 37.5,-3 43.75,15.75 0,97 z m -50,-43.75 18.75,37.5 -37.5,0 z"
+           id="path7076"
+           sodipodi:nodetypes="cccccccccccccc"
+           style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-width:12.50000000000000000;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round" />
+      </g>
+      <g
+         id="Your_Icon"
+         transform="matrix(0.16,0,0,0.16,103,975.8422)">
+        <path
+           style="fill:#747474;fill-opacity:1"
+           sodipodi:nodetypes="cccccccccccccc"
+           id="path7042"
+           d="M 100,97 56.25,15.75 62.5,-3 56.25,-3 50,9.5 43.75,-3 37.5,-3 43.75,15.75 0,97 z m -50,-43.75 18.75,37.5 -37.5,0 z"
+           inkscape:connector-curvature="0" />
+      </g>
     </g>
   </g>
 </svg>

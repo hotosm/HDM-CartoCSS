@@ -45,6 +45,13 @@
         [amenity='hospital'] { // amenity with priority
             marker-file: url('icons/poi/[amenity]-18.png');
         }
+        [office='government'],
+        [office='ngo'] {
+            marker-file: url('icons/poi/[office]-18.png');
+            [office='ngo'] {
+                [name='Oxfam'] { marker-file: url('icons/poi/oxfam-18.png'); }
+            }
+        }
         [amenity='kindergarten'],
         [amenity='school'],
         [amenity='university'],
@@ -103,14 +110,8 @@
         [shop="photo"] {
             marker-file: url('icons/poi/[shop]-18.png');
         }
-        [office='government'],
-        [office='ngo'] {
-            marker-file: url('icons/poi/[office]-18.png');
-            [office='ngo'] {
-                [name='Oxfam'] { marker-file: url('icons/poi/oxfam-18.png'); }
-            }
-        }
         [tourism='information'],
+        [tourism='camp_site'],
         [tourism='viewpoint'],
         [tourism='hotel'] {
             marker-file: url('icons/poi/[tourism]-18.png');
