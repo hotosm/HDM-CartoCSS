@@ -80,6 +80,9 @@
         }
         [craft!=null] {
             marker-file: url('icons/poi/craft-18.png');
+            [craft='carpenter'] {
+                marker-file: url('icons/poi/[craft]-18.png');
+            }
         }
         [shop="beverages"],
         [shop="hairdresser"],
