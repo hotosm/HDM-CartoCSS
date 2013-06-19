@@ -151,8 +151,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="11.313709"
-     inkscape:cx="90.771034"
-     inkscape:cy="253.39667"
+     inkscape:cx="89.290807"
+     inkscape:cy="241.91564"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -1546,6 +1546,48 @@
          style="fill:#747474;fill-opacity:1;fill-rule:nonzero;stroke:none"
          transform="translate(0,1028.3622)"
          id="path6675" />
+    </g>
+    <g
+       id="g5757"
+       transform="matrix(0.16,0,0,0.16,74.616352,795.34042)" />
+    <g
+       id="g5761"
+       transform="matrix(0.16,0,0,0.16,74.616352,795.34042)" />
+    <g
+       id="g5765"
+       transform="matrix(0.16,0,0,0.16,74.616352,795.34042)" />
+    <g
+       id="g5769"
+       transform="matrix(0.16,0,0,0.16,74.616352,795.34042)" />
+    <g
+       id="viewpoint-18"
+       inkscape:label="viewpoint-18">
+      <g
+         id="g6387"
+         transform="matrix(0.16,0,0,0.16,74.616352,795.34042)"
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;opacity:0.29999999999999999;stroke-width:12.50000000000000000;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round">
+        <path
+           id="path6389"
+           style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-width:12.50000000000000000;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+           d="M 59.16,86.315 23.844,61.35 26.987,55.883 66.232,74.068 z M 31.208,100 16.367,66.524 21.823,63.359 43.444,92.928 z M 59.16,13.679 23.844,38.646 26.987,44.118 66.232,25.932 z M 31.208,0 16.367,33.47 21.823,36.636 43.444,7.072 z m 49.494,42.928 -52.986,3.912 0,6.32 52.986,3.912 z M 20.891,50 c 0,5.759 -4.681,10.44 -10.451,10.44 C 4.681,60.44 0,55.759 0,50 0,44.23 4.681,39.555 10.44,39.555 c 5.77,0 10.451,4.675 10.451,10.445 z" />
+      </g>
+      <g
+         style="fill:#747474;fill-opacity:1"
+         transform="matrix(0.16,0,0,0.16,74.616352,795.34042)"
+         id="g5773">
+        <path
+           d="M 59.16,86.315 23.844,61.35 26.987,55.883 66.232,74.068 z M 31.208,100 16.367,66.524 21.823,63.359 43.444,92.928 z M 59.16,13.679 23.844,38.646 26.987,44.118 66.232,25.932 z M 31.208,0 16.367,33.47 21.823,36.636 43.444,7.072 z m 49.494,42.928 -52.986,3.912 0,6.32 52.986,3.912 z M 20.891,50 c 0,5.759 -4.681,10.44 -10.451,10.44 C 4.681,60.44 0,55.759 0,50 0,44.23 4.681,39.555 10.44,39.555 c 5.77,0 10.451,4.675 10.451,10.445 z"
+           style="fill:#747474;fill-opacity:1"
+           id="polygon5775" />
+      </g>
+      <rect
+         transform="translate(0,1028.3622)"
+         y="-234"
+         x="72"
+         height="18"
+         width="18"
+         id="rect5831"
+         style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     </g>
   </g>
 </svg>
