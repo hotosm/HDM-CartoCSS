@@ -150,9 +150,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="91.938708"
-     inkscape:cy="64.383689"
+     inkscape:zoom="16"
+     inkscape:cx="87.247165"
+     inkscape:cy="31.097291"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -317,6 +317,10 @@
        orientation="0,1"
        position="122,54"
        id="guide6847" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="150,134"
+       id="guide4472" />
   </sodipodi:namedview>
   <metadata
      id="metadata5374">
@@ -326,7 +330,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1071,23 +1075,6 @@
        transform="matrix(1.2125471,0,0,1.1028537,-38.099622,1031.0995)"
        style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Sans"
        id="text7907" />
-    <g
-       id="money_transfer-18"
-       inkscape:label="money_transfer-18">
-      <path
-         id="path16640"
-         d="m 82,1011.3619 0,3.5 -2,0 0,1.1875 c 0.5349,0.082 0.89227,0.2242 1.1875,0.4375 0.36759,0.263 0.5625,0.6277 0.5625,1.0938 0,0.065 -0.015,0.1797 -0.0312,0.3125 l -2.40625,0 0,-0.2813 c 0,-0.2786 -0.007,-0.4452 -0.0625,-0.5312 -0.0553,-0.086 -0.19318,-0.125 -0.375,-0.125 -0.14625,0 -0.2374,0.018 -0.3125,0.094 -0.0712,0.073 -0.125,0.1953 -0.125,0.3438 0,0.2473 0.0998,0.4322 0.25,0.5312 0.14624,0.099 0.56583,0.276 1.28125,0.5625 0.60869,0.2422 1.02866,0.4323 1.25,0.5625 0.22134,0.1276 0.4123,0.2943 0.5625,0.5313 0.15415,0.2342 0.21875,0.5546 0.21875,0.9062 0,0.5625 -0.21394,0.9922 -0.625,1.3125 -0.32905,0.2564 -0.78255,0.4317 -1.375,0.5313 -0.001,1.0325 0,1.5312 0,1.5312 l 2,0 0,3.5 1,0 6,-8 -6,-8 z m -9,3.5 0,4.5 0,4.5 5,0 c 0,0 0.034,-1.3758 0,-1.5312 -0.46369,-0.075 -0.88217,-0.2212 -1.25,-0.4375 -0.47826,-0.2839 -0.71875,-0.797 -0.71875,-1.5 l 0,-0.2813 2.40625,0 0,0.375 c 0,0.4245 0.0151,0.6772 0.0625,0.7813 0.0514,0.1015 0.18527,0.1562 0.375,0.1562 0.16206,0 0.2647,-0.023 0.34375,-0.094 0.0791,-0.073 0.12499,-0.2032 0.125,-0.3438 0,-0.3542 -0.0499,-0.599 -0.125,-0.75 -0.0751,-0.1536 -0.31126,-0.3203 -0.75,-0.5 -0.73123,-0.3021 -1.23518,-0.5155 -1.5,-0.6562 -0.26087,-0.1432 -0.49382,-0.336 -0.6875,-0.5938 C 76.09153,1018.2291 76,1017.9374 76,1017.6119 c 0,-0.4714 0.19059,-0.8568 0.59375,-1.125 0.33172,-0.2185 0.80686,-0.3555 1.40625,-0.4375 -0.001,-0.682 0,-1.1875 0,-1.1875 z"
-         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#747474;fill-opacity:1;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cccccccccsscccccccsccccccccccccccsccscsccccccscccc" />
-      <rect
-         y="1010.3622"
-         x="72"
-         height="18"
-         width="18"
-         id="rect7914"
-         style="fill:none;stroke:none" />
-    </g>
     <g
        id="funeral_directors-18"
        inkscape:label="funeral_directors-18">
@@ -2133,6 +2120,29 @@
          width="18"
          id="rect4424"
          style="opacity:0.29999999999999999;fill:none;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <g
+       id="money_transfer-18"
+       inkscape:label="money_transfer-18">
+      <path
+         id="path5903"
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round;opacity:0.3"
+         d="m 73,1014.3622 0,11 16,0 0,-11 -8,5 z m 2,4 2,0 0,1 1,1 -1,0 -1,-1 -1,1 2,1 1,1 -1,1 0,1 -2,0 0,-1 -1,-1 1,0 1,1 1,-1 -2,-1 -1,-1 1,-1 z m 10,0 2,0 0,1 1,1 -1,0 -1,-1 -1,1 2,1 1,1 -1,1 0,1 -2,0 0,-1 -1,-1 1,0 1,1 1,-1 -2,-1 -1,-1 0,0 1,-1 z m -12,-5 8,5 8,-5 z"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccc" />
+      <path
+         sodipodi:nodetypes="ccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+         inkscape:connector-curvature="0"
+         d="m 73,1014.3622 0,11 16,0 0,-11 -8,5 z m 2,4 2,0 0,1 1,1 -1,0 -1,-1 -1,1 2,1 1,1 -1,1 0,1 -2,0 0,-1 -1,-1 1,0 1,1 1,-1 -2,-1 -1,-1 1,-1 z m 10,0 2,0 0,1 1,1 -1,0 -1,-1 -1,1 2,1 1,1 -1,1 0,1 -2,0 0,-1 -1,-1 1,0 1,1 1,-1 -2,-1 -1,-1 0,0 1,-1 z m -12,-5 8,5 8,-5 z"
+         style="fill:#747474;fill-opacity:1;stroke:none"
+         id="path4505" />
+      <rect
+         y="1010.3622"
+         x="72"
+         height="18"
+         width="18"
+         id="rect4540"
+         style="opacity:0.3;fill:none;stroke:none" />
     </g>
   </g>
 </svg>
