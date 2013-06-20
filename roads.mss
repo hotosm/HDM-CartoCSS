@@ -216,6 +216,7 @@ as well. */
     line-color: @track_fill;
     line-dasharray: 4,4;
     [zoom>=16] {line-dasharray: 6,6;}
+    [zoom>=18] {line-dasharray: 10,10;}
   }
   [surface='unpaved'] {
     line-color: @unpaved;
