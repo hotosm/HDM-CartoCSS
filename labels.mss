@@ -419,8 +419,8 @@
 #waterway_label[type='stream'][zoom>=17] {
   text-name: '[name]';
   text-face-name: @sans_italic;
-  text-fill: darken(@water,25%);
-  text-halo-fill: fadeout(lighten(@water,5%),25%);
+  text-fill: darken(@water,30%);
+  text-halo-fill: lighten(@water,10%);
   text-halo-radius: 1;
   text-placement: line;
   text-min-distance: 400;
@@ -436,7 +436,7 @@
     text-name: "[name].replace('([\S\ ])','$1 ')";
   }
   [type='river'][zoom>=16],
-  [type='canal'][zoom=18] {
+  [type='canal'][zoom>=18] {
     text-size: 14;
     text-name: "[name].replace('([\S\ ])','$1 ')";
     text-spacing: 300;
