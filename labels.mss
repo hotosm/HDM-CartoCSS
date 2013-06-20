@@ -526,3 +526,23 @@
   text-min-distance: 50;
   text-max-char-angle-delta: 10;
 }
+
+
+/* ================================================================== */
+/* HOUSENUMBERS
+/* ================================================================== */
+
+
+#housenumber[zoom>=17]{
+  text-name: "[housenumber]";
+  text-placement: interior;
+  text-face-name: @sans;
+  text-fill: @road_text;
+  text-size: 7;
+  [zoom=17][mod5='no'] {
+    text-name: "";
+  }
+  [zoom >= 18] {
+    text-size: 9;
+  }
+}
