@@ -151,8 +151,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284271"
-     inkscape:cx="78.766829"
-     inkscape:cy="105.07464"
+     inkscape:cx="91.938708"
+     inkscape:cy="64.383689"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -326,7 +326,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2102,6 +2102,36 @@
          height="18"
          width="18"
          id="rect5099"
+         style="opacity:0.29999999999999999;fill:none;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <g
+       id="bureau_de_change-18"
+       inkscape:label="bureau_de_change-18">
+      <path
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;opacity:0.29999999999999999;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+         d="M 103 -104 L 103 -94 L 119 -94 L 119 -104 L 103 -104 z M 106 -103 L 107 -103 L 109 -103 L 109 -102 L 109 -101 L 108 -102 L 107 -102 L 106 -101 L 106 -100 L 109 -100 L 107 -98 L 106 -98 L 106 -97 L 107 -96 L 108 -96 L 109 -97 L 109 -96 L 109 -95 L 107 -95 L 106 -95 L 105 -96 L 105 -98 L 104 -98 L 104 -100 L 105 -100 L 105 -102 L 106 -103 z M 115 -103 L 117 -103 L 117 -102 L 118 -101 L 118 -100 L 117 -101 L 115 -101 L 115 -100 L 117 -99 L 118 -98 L 118 -97 L 117 -96 L 117 -95 L 115 -95 L 115 -96 L 114 -97 L 114 -98 L 115 -97 L 117 -97 L 117 -98 L 115 -99 L 114 -100 L 114 -101 L 115 -102 L 115 -103 z M 110 -100 L 112.96875 -100 L 112.96875 -99 L 110 -99 L 110 -100 z M 110 -98 L 113 -98 L 113 -97 L 110 -97 L 110 -98 z "
+         id="path4422"
+         transform="translate(0,1028.3622)" />
+      <path
+         transform="translate(0,1028.3622)"
+         id="rect3373"
+         d="M 103 -104 L 103 -94 L 119 -94 L 119 -104 L 103 -104 z M 106 -103 L 107 -103 L 109 -103 L 109 -102 L 109 -101 L 108 -102 L 107 -102 L 106 -101 L 106 -100 L 109 -100 L 107 -98 L 106 -98 L 106 -97 L 107 -96 L 108 -96 L 109 -97 L 109 -96 L 109 -95 L 107 -95 L 106 -95 L 105 -96 L 105 -98 L 104 -98 L 104 -100 L 105 -100 L 105 -102 L 106 -103 z M 115 -103 L 117 -103 L 117 -102 L 118 -101 L 118 -100 L 117 -101 L 115 -101 L 115 -100 L 117 -99 L 118 -98 L 118 -97 L 117 -96 L 117 -95 L 115 -95 L 115 -96 L 114 -97 L 114 -98 L 115 -97 L 117 -97 L 117 -98 L 115 -99 L 114 -100 L 114 -101 L 115 -102 L 115 -103 z M 110 -100 L 112.96875 -100 L 112.96875 -99 L 110 -99 L 110 -100 z M 110 -98 L 113 -98 L 113 -97 L 110 -97 L 110 -98 z "
+         style="fill:#747474;fill-opacity:1;stroke:none" />
+      <rect
+         transform="translate(0,1028.3622)"
+         y="-108"
+         x="102"
+         height="18"
+         width="18"
+         id="rect4190"
+         style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <rect
+         transform="translate(0,1028.3622)"
+         y="-108"
+         x="102"
+         height="18"
+         width="18"
+         id="rect4424"
          style="opacity:0.29999999999999999;fill:none;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     </g>
   </g>
