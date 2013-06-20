@@ -120,6 +120,7 @@
         [tourism='guest_house'],
         [tourism='hostel'],
         [tourism='hotel'],
+        [tourism='museum'],
         [tourism='motel'] { 
             marker-file: url('icons/poi/[tourism]-18.png');
         }

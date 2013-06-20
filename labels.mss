@@ -314,6 +314,7 @@
         [tourism='motel'], 
         [tourism='viewpoint'],
         [tourism='camp_site'],
+        [tourism='museum'],
         [leisure='beach_resort'],
         [amenity='library'],
         [amenity='theatre'],
