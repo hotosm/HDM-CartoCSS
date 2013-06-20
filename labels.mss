@@ -310,6 +310,7 @@
         [tourism='hotel'],
         [tourism='viewpoint'],
         [tourism='camp_site'],
+        [amenity='library'],
         [amenity='restaurant'],
         [amenity='kindergarten'],
         [amenity='cafe'],

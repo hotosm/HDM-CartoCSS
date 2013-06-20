@@ -25,7 +25,7 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="8"
-     inkscape:cx="74.724236"
+     inkscape:cx="52.724236"
      inkscape:cy="111.61459"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -159,7 +159,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1117,6 +1117,37 @@
          height="18.000031"
          x="341.99997"
          y="1122.3622" />
+    </g>
+    <g
+       style="display:inline"
+       id="library-18"
+       inkscape:label="library-18"
+       transform="translate(-198,-178)"
+       inkscape:export-xdpi="89.996864"
+       inkscape:export-ydpi="89.996864">
+      <g
+         transform="translate(1,-1)"
+         id="g21636">
+        <path
+           sodipodi:nodetypes="ccccsccscccc"
+           inkscape:connector-curvature="0"
+           style="opacity:0.3;color:#000000;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           d="m 266,1103.7151 0,7.6471 c 2,2.5 5,1.4706 5,3 l 1,0 0,-6.8824 c 0,-2.2941 -3,-1.6176 -6,-3.7647 z m 13,0 c -3,2.1471 -6,1.4706 -6,3.7647 l 0,6.8824 1,0 c 0,-1.5294 3,-0.5 5,-3 z"
+           id="path14152" />
+        <path
+           id="path7994-9-9-2-1"
+           d="m 266,1103.7151 0,7.6471 c 2,2.5 5,1.4706 5,3 l 1,0 0,-6.8824 c 0,-2.2941 -3,-1.6176 -6,-3.7647 z m 13,0 c -3,2.1471 -6,1.4706 -6,3.7647 l 0,6.8824 1,0 c 0,-1.5294 3,-0.5 5,-3 z"
+           style="color:#000000;fill:#747474;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccsccscccc" />
+      </g>
+      <rect
+         y="1098.3622"
+         x="263.99997"
+         height="18.000031"
+         width="18.000017"
+         id="rect22296"
+         style="opacity:0.5;color:#000000;fill:none;stroke:none;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
     </g>
   </g>
 </svg>
