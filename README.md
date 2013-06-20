@@ -4,6 +4,8 @@ The HDM rendering is a Carto project, focusing on the [Humanitarian Data Model](
 
 Preview: http://umap.fluv.io/en/map/hdm-first-draft_728
 
+Compare: http://compare.fluv.io/
+
 ## Deploying
 
 ### Local configuration
