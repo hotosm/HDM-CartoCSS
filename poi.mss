@@ -115,7 +115,11 @@
         [tourism='information'],
         [tourism='camp_site'],
         [tourism='viewpoint'],
-        [tourism='hotel'] {
+        [tourism='alpine_hut'],
+        [tourism='guest_house'],
+        [tourism='hostel'],
+        [tourism='hotel'],
+        [tourism='motel'] { 
             marker-file: url('icons/poi/[tourism]-18.png');
         }
         [man_made="water_well"] {

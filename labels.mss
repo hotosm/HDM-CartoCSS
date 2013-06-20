@@ -307,7 +307,11 @@
             text-name: "[name]";
         }
         [office='ngo'],
+        [tourism='alpine_hut'],
+        [tourism='guest_house'],
+        [tourism='hostel'],
         [tourism='hotel'],
+        [tourism='motel'], 
         [tourism='viewpoint'],
         [tourism='camp_site'],
         [amenity='library'],
