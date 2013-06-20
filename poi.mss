@@ -125,6 +125,7 @@
                 marker-file: url('icons/poi/pump-18.png');
             }
         }
+        [man_made="watermill"],
         [man_made="water_tower"] {
             marker-file: url('icons/poi/[man_made]-18.png');
         }

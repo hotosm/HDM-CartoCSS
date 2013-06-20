@@ -289,6 +289,7 @@
         }
         [amenity='school'],
         [amenity='university'],
+        [office='government'],
         [amenity='pharmacy'] {
             text-min-distance: 100;
             text-name: "[name]";
