@@ -150,9 +150,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="16"
-     inkscape:cx="87.247165"
-     inkscape:cy="31.097291"
+     inkscape:zoom="11.313709"
+     inkscape:cx="111.40399"
+     inkscape:cy="131.93385"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -2143,6 +2143,36 @@
          width="18"
          id="rect4540"
          style="opacity:0.3;fill:none;stroke:none" />
+    </g>
+    <g
+       id="beach_resort-18"
+       inkscape:label="beach_resort-18">
+      <rect
+         transform="translate(0,1028.3622)"
+         y="-126"
+         x="102"
+         height="18"
+         width="18"
+         id="rect5912"
+         style="opacity:0.29999999999999999;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <path
+         id="path5944"
+         transform="translate(0,1028.3622)"
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;opacity:0.29999999999999999;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+         d="m 117.75,-124.9375 -1.59375,1.59375 c 0,0 -0.28405,0.26983 -0.5625,0.6875 C 115.3153,-122.23858 115,-121.66667 115,-121 l 0,4 -3,0 2,8 3,0 2,-8 -3,0 0,-4 c 0,-0.33333 0.1847,-0.76142 0.40625,-1.09375 0.22155,-0.33233 0.4375,-0.5625 0.4375,-0.5625 l 1.59375,-1.59375 -0.6875,-0.6875 z M 113,-116 l 2,0 0,2 -1.5,0 -0.5,-2 z m 3,0 2,0 -0.40625,2 -1.59375,0 0,-2 z m -9.59375,-6.28125 L 106,-122 l -0.40625,0.28125 0.1875,0.25 L 103,-115 107.96875,-118.15625 110,-115.5 l 0,6.5 1,0 0,-7 -2.1875,-2.6875 L 114,-122 l -7.40625,0 z" />
+      <path
+         d="m 117.75,-124.9375 -1.59375,1.59375 c 0,0 -0.28405,0.26983 -0.5625,0.6875 C 115.3153,-122.23858 115,-121.66667 115,-121 l 0,4 -3,0 2,8 3,0 2,-8 -3,0 0,-4 c 0,-0.33333 0.1847,-0.76142 0.40625,-1.09375 0.22155,-0.33233 0.4375,-0.5625 0.4375,-0.5625 l 1.59375,-1.59375 -0.6875,-0.6875 z M 113,-116 l 2,0 0,2 -1.5,0 -0.5,-2 z m 3,0 2,0 -0.40625,2 -1.59375,0 0,-2 z m -9.59375,-6.28125 L 106,-122 l -0.40625,0.28125 0.1875,0.25 L 103,-115 107.96875,-118.15625 110,-115.5 l 0,6.5 1,0 0,-7 -2.1875,-2.6875 L 114,-122 l -7.40625,0 z"
+         style="fill:#747474;fill-opacity:1;stroke:none"
+         transform="translate(0,1028.3622)"
+         id="path5916" />
+      <rect
+         transform="translate(0,1028.3622)"
+         y="-126"
+         x="102"
+         height="18"
+         width="18"
+         id="rect5946"
+         style="opacity:0.29999999999999999;fill:none;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     </g>
   </g>
 </svg>
