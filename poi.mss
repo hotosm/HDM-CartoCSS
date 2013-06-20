@@ -78,6 +78,7 @@
         [amenity='fast_food'],
         [amenity='library'],
         [amenity='bureau_de_change'],
+        [amenity='theatre'],
         [amenity='courthouse'] {
             marker-file: url('icons/poi/[amenity]-18.png');
         }

@@ -316,6 +316,7 @@
         [tourism='camp_site'],
         [leisure='beach_resort'],
         [amenity='library'],
+        [amenity='theatre'],
         [amenity='restaurant'],
         [amenity='kindergarten'],
         [amenity='cafe'],
