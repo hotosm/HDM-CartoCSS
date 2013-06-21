@@ -108,6 +108,8 @@ Map { font-directory: url(./fonts); }
 @industrial:        @secondaryB1;
 @parking:           #EEE;
 
+@contour_line:      #d2ccb0;
+
 /* ================================================================== */
 /* ROAD COLORS
 /* ================================================================== */
@@ -217,8 +219,3 @@ Map { font-directory: url(./fonts); }
 /* Also used for other small places: hamlets, suburbs, localities */
 @village_text:      #888;
 @village_halo:      @place_halo;
-
-/* ****************************************************************** */
-
-
-

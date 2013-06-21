@@ -149,6 +149,24 @@
       "srs-name": "900913"
     },
     {
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427099,
+        179.99999692067183,
+        84.96651228427098
+      ],
+      "id": "contour_line",
+      "class": "",
+      "Datasource": {
+        "file": "/home/ybon/OSM/SRTM/haiti_contour_25m.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "contour_line"
+    },
+    {
       "Datasource": {
         "dbname": "hdm",
         "geometry_field": "way",

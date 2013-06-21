@@ -99,15 +99,18 @@
 /* RELIEF
 /* ================================================================== */
 
-#slopeshade,
-#hillshade {
+#slopeshade {
     raster-scaling: bilinear;
     raster-comp-op: multiply;
+    raster-opacity: 0.4;
 }
 
-#hillshade { raster-opacity: 0.6; }
+#contour_line[zoom>=13]{
+  line-width: 0.3;
+  line-color: @contour_line;
+  [zoom>=15] { line-width: 0.3;}
+}
 
-#slopeshade { raster-opacity: 0.4; }
 
 /* ================================================================== */
 /* WATER AREAS
