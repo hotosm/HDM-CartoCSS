@@ -34,4 +34,12 @@ osm2pgsql -G -U ybon -d hdm data/haiti-and-domrep-latest.osm.pbf --hstore --crea
 
 ### DEM
 
-TODO
+1. get the file from [CGIAR](http://srtm.csi.cgiar.org/)
+
+1. Reproject it: `gdalwarp -s_srs EPSG:4269 -t_srs EPSG:3785 -r bilinear srtm_22_09.tif haiti-3785.tif`
+
+1. Create slope file (transitional file): `gdaldem slope haiti-3785.tif haiti-slope-3785.tif`
+
+1. Create slopeshade (this one will be loaded by carto): `gdaldem color-relief -co compress=lzw haiti-slope-3785.tif slope-ramp.txt haiti-slopeshade-3785.tif`
+
+1. Create contour line: `gdal_contour -a height haiti-3785.tif haiti_contour_25m.shp -i 25.0`
