@@ -110,6 +110,7 @@
         [shop="car_repair"],
         [shop="funeral_directors"],
         [shop="dry_cleaning"],
+        [shop="butcher"],
         [shop="photo"] {
             marker-file: url('icons/poi/[shop]-18.png');
         }
