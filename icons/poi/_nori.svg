@@ -151,8 +151,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.377486"
-     inkscape:cx="115.37629"
-     inkscape:cy="150.48449"
+     inkscape:cx="108.17688"
+     inkscape:cy="161.23195"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -167,7 +167,7 @@
      inkscape:window-x="0"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
-     inkscape:snap-grids="true">
+     inkscape:snap-grids="false">
     <inkscape:grid
        type="xygrid"
        id="grid5377"
@@ -2195,6 +2195,28 @@
          width="18"
          id="rect4199-9"
          style="fill:none;stroke:none" />
+    </g>
+    <g
+       id="seafood-18"
+       inkscape:label="seafood-18">
+      <path
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;opacity:0.29999999999999999;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+         d="M 109 -159 L 110 -156 C 107 -155 106.58356 -154.79178 105 -154 L 103 -157 L 104 -153.5 L 103 -150 L 105 -153 C 106.39122 -152.30439 108.31421 -152.35902 110 -152 C 110.3319 -151.9293 109.69858 -149.9864 110 -150 C 110.36852 -150.0166 111.66512 -152 112 -152 C 114 -152 118.62724 -153 119 -154 C 118.44087 -155 114.43248 -156 112 -156 L 109 -159 z M 115.625 -155.21875 C 116.03921 -155.21875 116.375 -154.88296 116.375 -154.46875 C 116.375 -154.05454 116.03921 -153.71875 115.625 -153.71875 C 115.21079 -153.71875 114.875 -154.05454 114.875 -154.46875 C 114.875 -154.88296 115.21079 -155.21875 115.625 -155.21875 z "
+         transform="translate(0,1028.3622)"
+         id="path5796" />
+      <path
+         id="path4359"
+         transform="translate(0,1028.3622)"
+         d="M 109 -159 L 110 -156 C 107 -155 106.58356 -154.79178 105 -154 L 103 -157 L 104 -153.5 L 103 -150 L 105 -153 C 106.39122 -152.30439 108.31421 -152.35902 110 -152 C 110.3319 -151.9293 109.69858 -149.9864 110 -150 C 110.36852 -150.0166 111.66512 -152 112 -152 C 114 -152 118.62724 -153 119 -154 C 118.44087 -155 114.43248 -156 112 -156 L 109 -159 z M 115.625 -155.21875 C 116.03921 -155.21875 116.375 -154.88296 116.375 -154.46875 C 116.375 -154.05454 116.03921 -153.71875 115.625 -153.71875 C 115.21079 -153.71875 114.875 -154.05454 114.875 -154.46875 C 114.875 -154.88296 115.21079 -155.21875 115.625 -155.21875 z "
+         style="fill:#747474;fill-opacity:1;stroke:none" />
+      <rect
+         transform="translate(0,1028.3622)"
+         y="-162"
+         x="102"
+         height="18"
+         width="18"
+         id="rect5798"
+         style="opacity:0.29999999999999999;fill:none;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
     </g>
   </g>
 </svg>
