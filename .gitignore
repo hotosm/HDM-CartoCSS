@@ -2,3 +2,6 @@
 layers/*
 cartocc.json
 project.mml
+mapnik.xml
+cache/*
+node_modules/*
