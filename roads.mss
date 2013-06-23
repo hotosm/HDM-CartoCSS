@@ -69,37 +69,41 @@ as well. */
   [tunnel=1] {
     line-cap: butt;
   }
-  [bridge=1] { line-color: @standard_case * 0.8; }
   [style='motorway'] {
     line-color: @motorway_case;
-    [bridge=1] { line-color: @motorway_case * 0.8; }
+    [bridge=1] { line-color: darken(@motorway_case,20%); }
   }
   [style='primary'] {
     line-color: @primary_case;
-    [bridge=1] { line-color: @primary_case * 0.8; }
+    [bridge=1] { line-color: darken(@primary_case,20%); }
   }
   [style='secondary'] {
     line-color: @secondary_case;
-    [bridge=1] { line-color: @secondary_case * 0.8; }
+    [bridge=1] { line-color: darken(@secondary_case,20%); }
   }
   [style='tertiary'] {
     line-color: @tertiary_case;
-    [bridge=1] { line-color: @tertiary_case * 0.8; }
+    [bridge=1] { line-color: darken(@tertiary_case,20%); }
   }
   [style='standard'] {
     line-color: @standard_case;
+    [bridge=1] { line-color: darken(@standard_case,20%); }
   }
   [style="urban"] {
     line-color: @urban_case;
+    [bridge=1] { line-color: darken(@standard_case,20%); }
   }
   [surface='unpaved'] {
     line-color: @unpaved_case;
+    [bridge=1] { line-color: darken(@unpaved_case,20%); }
   }
   [style="track"] {
     line-color: @track_case;
+    [bridge=1] { line-color: darken(@track_case,20%); }
   }
   [style='noauto'] {
     line-color: @pedestrian_case;
+    [bridge=1] { line-color: darken(@pedestrian_case,10%); }
   }
   [tunnel=1] { line-dasharray: 3,3; }
 
