@@ -151,8 +151,8 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="7.377486"
-     inkscape:cx="108.17688"
-     inkscape:cy="161.23195"
+     inkscape:cx="94.371068"
+     inkscape:cy="179.47616"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -167,7 +167,7 @@
      inkscape:window-x="0"
      inkscape:window-y="24"
      inkscape:window-maximized="1"
-     inkscape:snap-grids="false">
+     inkscape:snap-grids="true">
     <inkscape:grid
        type="xygrid"
        id="grid5377"
@@ -2217,6 +2217,28 @@
          width="18"
          id="rect5798"
          style="opacity:0.29999999999999999;fill:none;stroke:none;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <g
+       id="pharmacy-18"
+       inkscape:label="pharmacy-18">
+      <path
+         id="path4207"
+         transform="translate(0,1028.3622)"
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;opacity:0.29999999999999999;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+         d="m 108,-174 -2,1.9375 0,8.0625 10,0 0,-8.25 -2,-1.75 -6,0 z m 2,2 2,0 0,2 2,0 0,2 -2,0 0,2 -2,0 0,-2 -2,0 0,-2 2,0 0,-2 z m -2,-6 0,3 6,0 0,-3 z" />
+      <path
+         d="m 108,-174 -2,1.9375 0,8.0625 10,0 0,-8.25 -2,-1.75 -6,0 z m 2,2 2,0 0,2 2,0 0,2 -2,0 0,2 -2,0 0,-2 -2,0 0,-2 2,0 0,-2 z m -2,-6 0,3 6,0 0,-3 z"
+         style="fill:#747474;fill-opacity:1;stroke:none"
+         transform="translate(0,1028.3622)"
+         id="path4199" />
+      <rect
+         transform="translate(0,1028.3622)"
+         y="-180"
+         x="102"
+         height="18"
+         width="18"
+         id="rect4201"
+         style="opacity:0.29999999999999999;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none" />
     </g>
   </g>
 </svg>
