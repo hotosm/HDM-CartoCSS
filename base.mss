@@ -209,7 +209,7 @@ Map { background-color: @water; }
   }
   line-color: @admin_2;
   line-width: 0.5;
-  line-dasharray:5,5;
+  line-dasharray: 20,10,5,10;
   line-opacity: 0.6;
   [admin_level!='2'] {
     line-color: @admin_3;
