@@ -156,13 +156,23 @@ Map { background-color: @water; }
   line-color: @water;
   [type='river'],
   [type='canal'] {
-    line-cap: round;
-    line-join: round;
-    [zoom=15]{ line-width: 6; }
-    [zoom=16]{ line-width: 7; }
-    [zoom=17]{ line-width: 8; }
-    [zoom=18]{ line-width: 9; }
-    [zoom>=19]{ line-width: 12; }
+    ::seasonal {
+      line-color: lighten(@water, 10%);
+      line-dasharray: 4,4;
+      line-cap: butt;
+    }
+    ::default {
+      line-color: @water;
+      line-cap: round;
+      line-join: round;
+    }
+    ::default, ::seasonal[seasonal='yes'] {
+      line-width: 6;
+      [zoom=16]{ line-width: 7; }
+      [zoom=17]{ line-width: 8; }
+      [zoom=18]{ line-width: 9; }
+      [zoom>=19]{ line-width: 12; }
+    }
   }
   [type='stream'] {
     [zoom=15]{ line-width: 0.6; }
