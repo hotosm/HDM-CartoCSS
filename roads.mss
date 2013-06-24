@@ -63,8 +63,8 @@ as well. */
 
 #roads_high::outline[zoom>=11][zoom<=20] {
   /* -- colors & styles -- */
-  line-cap: square;
-  line-join: miter;
+  line-cap: round;
+  line-join: round;
   [bridge=1],
   [tunnel=1] {
     line-cap: butt;
@@ -101,11 +101,13 @@ as well. */
     line-color: @track_case;
     [bridge=1] { line-color: darken(@track_case,20%); }
   }
+  [ford='yes'] {
+    line-color: @water;
+  }
   [style='noauto'] {
     line-color: @pedestrian_case;
     [bridge=1] { line-color: darken(@pedestrian_case,10%); }
   }
-  [tunnel=1] { line-dasharray: 3,3; }
 
   /* -- widths -- */
   [zoom=11] {
@@ -115,7 +117,7 @@ as well. */
     [width='minor']{ line-width: 0; }
     [width='urban']{ line-width: 0; }
     [width='narrow']{ line-width: 0; }
-    [width='noauto']   { line-width: 0; }
+    [width='noauto']   { line-width: 0;}
   }
   [zoom=12] {
     [width='motorway'] { line-width: @r12_motorway + 2; }
@@ -188,8 +190,8 @@ as well. */
 
 #roads_high[zoom>=11][zoom<=20] {
   /* -- colors & styles -- */
-  line-cap: square;
-  line-join: miter;
+  line-cap: round;
+  line-join: round;
   [style='motorway'] {
     line-color: @motorway_fill;
     [tunnel=1] { line-color: lighten(@motorway_fill, 10%); }
@@ -219,11 +221,16 @@ as well. */
   [style="track"] {
     line-color: @track_fill;
     line-dasharray: 4,4;
+    line-cap: square;
     [zoom>=16] {line-dasharray: 6,6;}
     [zoom>=18] {line-dasharray: 10,10;}
   }
   [surface='unpaved'] {
     line-color: @unpaved;
+  }
+  [ford='yes'] {
+    line-dasharray: 8,2;
+    line-cap: butt;
   }
   [style='noauto'] {
     line-color: @pedestrian_fill;
@@ -337,13 +344,13 @@ as well. */
   marker-fill:@standard_fill;
   marker-line-color:@standard_case;
   marker-line-width:2;
-  marker-allow-overlap:true;
+  marker-allow-overlap: true;
 }
 #turning_circle_fill[zoom>=14] {
-  marker-fill:@standard_fill;
-  marker-line-width:0;
-  marker-line-opacity:0;
-  marker-allow-overlap:true;
+  marker-fill: @standard_fill;
+  marker-line-width: 0;
+  marker-line-opacity: 0;
+  marker-allow-overlap: true;
 }
 #turning_circle_case,
 #turning_circle_fill {
