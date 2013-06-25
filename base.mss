@@ -102,7 +102,7 @@
 #slopeshade {
     raster-scaling: bilinear;
     raster-comp-op: multiply;
-    raster-opacity: 0.4;
+    raster-opacity: 0.5;
 }
 
 #contour_line[zoom>=13]{

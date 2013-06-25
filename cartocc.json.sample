@@ -12,10 +12,10 @@
     },
     {
         "if": {
-            "id": "slopeshade"
+            "id": "hillshade"
         },
         "then": {
-            "Datasource.file": "/home/ybon/SRTM/SRTM_W_250m-slopeshade-3785.tif"
+            "Datasource.file": "/home/ybon/SRTM/SRTM_W_250m-hillshade-3785.tif"
         }
     },
     {
