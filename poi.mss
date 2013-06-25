@@ -129,7 +129,10 @@
         [man_made="water_well"] {
             marker-file: url('icons/poi/bucket-18.png');
             [pump='manual'] {
-                marker-file: url('icons/poi/pump-18.png');
+                marker-file: url('icons/poi/pump-manual-18.png');
+            }
+            [pump='powered'] {
+                marker-file: url('icons/poi/pump-powered-18.png');
             }
             [drinking_water='yes'] {
                 marker-file: url('icons/poi/drinking_water_well-18.png');
