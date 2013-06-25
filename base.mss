@@ -99,7 +99,7 @@
 /* RELIEF
 /* ================================================================== */
 
-#slopeshade {
+#hillshade {
     raster-scaling: bilinear;
     raster-comp-op: multiply;
     raster-opacity: 0.5;
