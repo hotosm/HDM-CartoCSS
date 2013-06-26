@@ -43,3 +43,5 @@ osm2pgsql -G -U ybon -d hdm data/haiti-and-domrep-latest.osm.pbf --hstore --crea
 1. If you have more than one tiff for you covered area, merge them in a vrt file (remember to use absolute path): `gdalbuildvrt haiti-hillshade.vrt ~/OSM/SRTM/srtm_22_09-hillshade-80-3785.tif ~/OSM/SRTM/srtm_23_09-hillshade-80-3785.tif`
 
 1. Create contour line: `gdal_contour -a height haiti-3785.tif haiti_contour_25m.shp -i 25.0`
+
+1. Index shape file: `shapeindex haiti_contour_25m.shp`
