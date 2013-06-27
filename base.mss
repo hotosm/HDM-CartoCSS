@@ -102,7 +102,7 @@
 #hillshade {
     raster-scaling: bilinear;
     raster-comp-op: multiply;
-    raster-opacity: 0.5;
+    raster-opacity: 0.7;
 }
 
 #contour_line[zoom>=12]{
