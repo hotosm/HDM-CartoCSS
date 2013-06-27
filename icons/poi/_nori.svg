@@ -150,9 +150,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284271"
-     inkscape:cx="101.85888"
-     inkscape:cy="68.981905"
+     inkscape:zoom="16"
+     inkscape:cx="140.61325"
+     inkscape:cy="46.208779"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -338,7 +338,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2302,6 +2302,27 @@
          transform="translate(0,1028.3622)"
          d="M 137 -16 C 136 -16 135 -15 135 -14 L 135 -4 L 134 -2 L 145 -2 L 144 -4 L 147 -4 C 148 -4 148 -5 148 -5 L 148 -11 C 148 -12 147 -13 146 -13 L 144 -13 L 144 -14 C 144 -15 143 -16 142 -16 L 137 -16 z M 138 -15 L 141 -15 C 143 -15 143 -14 143 -14 C 140 -14 137.85459 -13.80227 138 -11 C 138 -9 136 -9 136 -11 L 136 -13 C 136 -14 137 -15 138 -15 z M 144 -12 L 145 -12 C 146 -12 147 -12 147 -10 L 147 -5 L 144 -5 L 144 -12 z M 136 -4 L 143 -4 L 143 -3 L 136 -3 L 136 -4 z "
          style="fill:#747474;fill-opacity:1;stroke:none" />
+    </g>
+    <g
+       id="hardware-18"
+       inkscape:label="hardware-18">
+      <path
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;opacity:0.29999999999999999;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+         d="M 135 -34 L 135 -31 L 137 -31 L 137 -30 L 140 -29 L 140 -31 L 142 -31 L 142 -34 L 135 -34 z M 145 -34 L 144 -32 L 144 -21 L 142 -19 L 148 -19 L 146 -21 L 146 -32 L 145 -34 z M 137 -29 L 137 -27 L 140 -26 L 140 -28 L 137 -29 z M 137 -26 L 137 -24 L 140 -23 L 140 -25 L 137 -26 z M 137 -23 L 137 -20 L 138 -19 L 139 -19 L 140 -20 L 140 -22 L 137 -23 z "
+         transform="translate(0,1028.3622)"
+         id="path4730" />
+      <path
+         id="path4488"
+         transform="translate(0,1028.3622)"
+         d="M 135 -34 L 135 -31 L 137 -31 L 137 -30 L 140 -29 L 140 -31 L 142 -31 L 142 -34 L 135 -34 z M 145 -34 L 144 -32 L 144 -21 L 142 -19 L 148 -19 L 146 -21 L 146 -32 L 145 -34 z M 137 -29 L 137 -27 L 140 -26 L 140 -28 L 137 -29 z M 137 -26 L 137 -24 L 140 -23 L 140 -25 L 137 -26 z M 137 -23 L 137 -20 L 138 -19 L 139 -19 L 140 -20 L 140 -22 L 137 -23 z "
+         style="fill:#747474;fill-opacity:1;stroke:none" />
+      <rect
+         y="992.36218"
+         x="132"
+         height="18"
+         width="18"
+         id="rect4500"
+         style="fill:none;stroke:none" />
     </g>
   </g>
 </svg>
