@@ -330,6 +330,7 @@
         [amenity='dentist'],
         [amenity='arts_centre'],
         [amenity='fast_food'],
+        [amenity='pub'],
         [amenity='place_of_worship'] {
             text-name: "[name]";
         }

@@ -150,9 +150,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.1295204"
-     inkscape:cx="16.291173"
-     inkscape:cy="176.59363"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="101.85888"
+     inkscape:cy="68.981905"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -338,7 +338,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2280,6 +2280,28 @@
          height="18"
          x="0"
          y="830.36218" />
+    </g>
+    <g
+       id="pub-18"
+       inkscape:label="pub-18">
+      <rect
+         transform="translate(0,1028.3622)"
+         y="-18"
+         x="132"
+         height="18"
+         width="18"
+         id="rect3664"
+         style="fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <path
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;opacity:0.29999999999999999;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+         d="M 137 -16 C 136 -16 135 -15 135 -14 L 135 -4 L 134 -2 L 145 -2 L 144 -4 L 147 -4 C 148 -4 148 -5 148 -5 L 148 -11 C 148 -12 147 -13 146 -13 L 144 -13 L 144 -14 C 144 -15 143 -16 142 -16 L 137 -16 z M 138 -15 L 141 -15 C 143 -15 143 -14 143 -14 C 140 -14 137.85459 -13.80227 138 -11 C 138 -9 136 -9 136 -11 L 136 -13 C 136 -14 137 -15 138 -15 z M 144 -12 L 145 -12 C 146 -12 147 -12 147 -10 L 147 -5 L 144 -5 L 144 -12 z M 136 -4 L 143 -4 L 143 -3 L 136 -3 L 136 -4 z "
+         transform="translate(0,1028.3622)"
+         id="path4481" />
+      <path
+         id="path4470"
+         transform="translate(0,1028.3622)"
+         d="M 137 -16 C 136 -16 135 -15 135 -14 L 135 -4 L 134 -2 L 145 -2 L 144 -4 L 147 -4 C 148 -4 148 -5 148 -5 L 148 -11 C 148 -12 147 -13 146 -13 L 144 -13 L 144 -14 C 144 -15 143 -16 142 -16 L 137 -16 z M 138 -15 L 141 -15 C 143 -15 143 -14 143 -14 C 140 -14 137.85459 -13.80227 138 -11 C 138 -9 136 -9 136 -11 L 136 -13 C 136 -14 137 -15 138 -15 z M 144 -12 L 145 -12 C 146 -12 147 -12 147 -10 L 147 -5 L 144 -5 L 144 -12 z M 136 -4 L 143 -4 L 143 -3 L 136 -3 L 136 -4 z "
+         style="fill:#747474;fill-opacity:1;stroke:none" />
     </g>
   </g>
 </svg>
