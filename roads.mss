@@ -108,6 +108,9 @@ as well. */
     line-color: @pedestrian_case;
     [bridge=1] { line-color: darken(@pedestrian_case,10%); }
   }
+  [condition='bad'][style!='noauto'] {
+    line-cap: butt;
+  }
 
   /* -- widths -- */
   [zoom=11] {
