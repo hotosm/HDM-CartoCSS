@@ -10,5 +10,13 @@
     marker-line-width: 2;
 }
 #power-point[type='tower'][zoom>=19] {
-    marker-file: url('icons/poi/power_tower-12.png')
+    marker-file: url('icons/poi/power_tower-12.png');
+}
+.power-poi[type='generator'][zoom>=18] {
+    marker-file: url('icons/poi/generator-18.png');
+    [source='nuclear'],
+    [source='wind'],
+    [source='solar'] {
+        marker-file: url('icons/poi/generator_[source]-18.png');    
+    }
 }
