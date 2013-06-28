@@ -150,9 +150,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="16"
-     inkscape:cx="140.61325"
-     inkscape:cy="46.208779"
+     inkscape:zoom="2.8284271"
+     inkscape:cx="61.468863"
+     inkscape:cy="76.947507"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -2323,6 +2323,28 @@
          width="18"
          id="rect4500"
          style="fill:none;stroke:none" />
+    </g>
+    <g
+       id="power_tower-12"
+       inkscape:label="power_tower-12">
+      <path
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;opacity:0.29999999999999999;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+         d="M 152 -47 L 152 -45 L 153 -45 L 153 -46 L 155 -46 L 155 -44 L 152 -44 L 152 -43 L 152 -42 L 153 -42 L 153 -43 L 155 -43 C 155 -43 153.64038 -39.021162 153 -37 L 154 -37 L 154.65625 -39 L 157.34375 -39 L 158 -37 L 159 -37 C 158.00916 -38.981683 157 -43 157 -43 L 159 -43 L 159 -42 L 160 -42 L 160 -44 L 157 -44 L 157 -46 L 159 -46 L 159 -45 L 160 -45 L 160 -47 L 157 -47 L 155 -47 L 152 -47 z M 156 -43 L 157 -40 L 155 -40 L 156 -43 z "
+         transform="translate(0,1028.3622)"
+         id="path4746" />
+      <path
+         id="path4737"
+         transform="translate(0,1028.3622)"
+         d="M 152 -47 L 152 -45 L 153 -45 L 153 -46 L 155 -46 L 155 -44 L 152 -44 L 152 -43 L 152 -42 L 153 -42 L 153 -43 L 155 -43 C 155 -43 153.64038 -39.021162 153 -37 L 154 -37 L 154.65625 -39 L 157.34375 -39 L 158 -37 L 159 -37 C 158.00916 -38.981683 157 -43 157 -43 L 159 -43 L 159 -42 L 160 -42 L 160 -44 L 157 -44 L 157 -46 L 159 -46 L 159 -45 L 160 -45 L 160 -47 L 157 -47 L 155 -47 L 152 -47 z M 156 -43 L 157 -40 L 155 -40 L 156 -43 z "
+         style="fill:#747474;fill-opacity:1;stroke:none" />
+      <rect
+         transform="translate(0,1028.3622)"
+         y="-48"
+         x="150"
+         height="12"
+         width="12"
+         id="rect4739"
+         style="opacity:0.29999999999999999;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:none" />
     </g>
   </g>
 </svg>
