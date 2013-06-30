@@ -101,7 +101,10 @@
       "id": "landuse_gen0",
       "name": "landuse_gen0",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -129,7 +132,10 @@
       "id": "landuse_gen1",
       "name": "landuse_gen1",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -157,7 +163,10 @@
       "id": "landuse",
       "name": "landuse",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "geometry": "raster",
@@ -221,7 +230,10 @@
       "id": "waterway_low",
       "name": "waterway_low",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -246,7 +258,10 @@
       "id": "waterway_med",
       "name": "waterway_med",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -271,7 +286,10 @@
       "id": "waterway_high",
       "name": "waterway_high",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -299,7 +317,10 @@
       "id": "water_gen0",
       "name": "water_gen0",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -327,7 +348,10 @@
       "id": "water_gen1",
       "name": "water_gen1",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -355,7 +379,10 @@
       "id": "water",
       "name": "water",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -383,7 +410,10 @@
       "id": "landuse_overlays",
       "name": "landuse_overlays",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -411,7 +441,10 @@
       "id": "admin-1-4",
       "name": "admin-1-4",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -439,7 +472,10 @@
       "id": "admin-5-10",
       "name": "admin-5-10",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -464,7 +500,10 @@
       "id": "buildings",
       "name": "buildings",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -492,7 +531,10 @@
       "id": "aeroway-poly",
       "name": "aeroway-poly",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -520,7 +562,10 @@
       "id": "aeroway",
       "name": "aeroway",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -548,7 +593,10 @@
       "id": "turning_circle_case",
       "name": "turning_circle_case",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -576,7 +624,10 @@
       "id": "roads_high",
       "name": "roads_high",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -604,7 +655,10 @@
       "id": "railway",
       "name": "railway",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -629,7 +683,10 @@
       "id": "roads_med",
       "name": "roads_med",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -654,7 +711,10 @@
       "id": "roads_low",
       "name": "roads_low",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -679,7 +739,10 @@
       "id": "turning_circle_fill",
       "name": "turning_circle_fill",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "geometry": "linestring",
@@ -700,8 +763,10 @@
       "class": "barriers",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "barrier_lines"
+      "name": "barrier_lines",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "extent": [
@@ -721,8 +786,10 @@
       "class": "barriers",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "barrier_areas"
+      "name": "barrier_areas",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "extent": [
@@ -742,8 +809,10 @@
       "class": "power-poi",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "power-poly"
+      "name": "power-poly",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "extent": [
@@ -763,8 +832,10 @@
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "power-line"
+      "name": "power-line",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "extent": [
@@ -784,8 +855,10 @@
       "class": "power-poi",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "power-point"
+      "name": "power-point",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "geometry": "point",
@@ -807,8 +880,10 @@
       "class": "poi",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "poi-point"
+      "name": "poi-point",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "extent": [
@@ -829,8 +904,10 @@
       "class": "poi",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "poi-poly"
+      "name": "poi-poly",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -858,7 +935,10 @@
       "id": "place",
       "name": "place",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -886,7 +966,10 @@
       "id": "area_label",
       "name": "area_label",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -914,7 +997,10 @@
       "id": "motorway_label",
       "name": "motorway_label",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -942,7 +1028,10 @@
       "id": "mainroad_label",
       "name": "mainroad_label",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -970,7 +1059,10 @@
       "id": "minorroad_label",
       "name": "minorroad_label",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -992,7 +1084,10 @@
         -85.051,
         179.9999999749438,
         83.74912119648586
-      ]
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -1014,7 +1109,10 @@
         -85.051,
         179.9999999749438,
         83.74912119648586
-      ]
+      ],
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -1042,7 +1140,10 @@
       "id": "waterway_label",
       "name": "waterway_label",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "geometry": "point",
@@ -1064,8 +1165,10 @@
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "housenumber"
+      "name": "housenumber",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     }
   ],
   "scale": 1,
