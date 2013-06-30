@@ -88,6 +88,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  WHERE way_area > 100000\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -119,6 +120,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon\n  WHERE way_area > 10000\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -150,6 +152,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type\n  FROM planet_osm_polygon ORDER BY way_area DESC) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -217,6 +220,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, waterway AS type\n  FROM planet_osm_line\n  WHERE waterway IN ('river', 'canal')\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -245,6 +249,7 @@
         "port": "5432",
         "table": "( SELECT way, waterway AS type\n  FROM planet_osm_line\n  WHERE waterway IN ('river', 'canal', 'stream')\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -273,6 +278,7 @@
         "port": "5432",
         "table": "( SELECT way, waterway AS type, CASE WHEN tags->'seasonal'='yes' OR tags->'intermittent'='yes' THEN 'yes' ELSE 'no' END AS seasonal FROM planet_osm_line WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -304,6 +310,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, \"natural\" AS type, way_area AS area\n  FROM planet_osm_polygon\n  WHERE (\"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream'))\n    AND way_area > 10000\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -335,6 +342,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, \"natural\" AS type, way_area AS area\n  FROM planet_osm_polygon\n  WHERE (\"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream'))\n    AND way_area > 1000\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -366,6 +374,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, way_area AS area\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream')\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -397,6 +406,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, way_area AS area, COALESCE(leisure) AS type\n  FROM planet_osm_polygon\n  WHERE leisure = 'nature_reserve'\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -427,6 +437,7 @@
         "project": "HDMCartoCSS",
         "table": "( SELECT way, admin_level\n  FROM planet_osm_roads\n  WHERE \"boundary\" = 'administrative'\n    AND admin_level IN ('0','1','2','3','4')\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
@@ -458,6 +469,7 @@
         "project": "HDMCartoCSS",
         "table": "( SELECT way, admin_level FROM planet_osm_roads WHERE \"boundary\" = 'administrative'  AND admin_level IN ('5', '6', '7', '8', '9', '10')) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
@@ -487,6 +499,7 @@
         "port": "5432",
         "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building NOT IN ('0','false', 'no')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -518,6 +531,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, aeroway AS type, tunnel FROM planet_osm_polygon WHERE aeroway IN ('apron', 'runway', 'taxiway')) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -549,6 +563,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, aeroway AS type, tunnel FROM planet_osm_line\n  WHERE aeroway IN ('apron', 'runway', 'taxiway')\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -580,6 +595,7 @@
         "srs": null,
         "table": "( SELECT way \n  FROM planet_osm_point \n  WHERE highway = 'turning_circle'\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -611,6 +627,7 @@
         "srs": null,
         "table": "( SELECT way, name, CASE WHEN tags->'smoothness' in ('bad', 'very_bad', 'horrible', 'very_horrible') THEN 'bad' ELSE 'good' END as condition, CASE WHEN surface IN ('paved', 'paving_stones', 'asphalt', 'concrete') THEN 'paved' WHEN (surface IS NULL AND highway IN ('trunk', 'trunk_link', 'motorway', 'motorway_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link')) THEN 'paved' ELSE 'unpaved' END as surface, highway AS type, tunnel, CASE WHEN bridge IS NOT NULL AND bridge!='no' THEN 1 ELSE 0 END as bridge, access, CASE WHEN highway IN ('service', 'track') or tags->'narrow'='yes' THEN 'narrow' WHEN highway IN ('motorway', 'trunk') THEN 'motorway' WHEN highway IN ('primary', 'secondary') THEN 'main' WHEN highway='tertiary' THEN 'inter' WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary_link', 'unclassified', 'road') THEN 'minor' WHEN highway IN ('residential', 'living_street') THEN 'urban' WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto' ELSE 'other' END AS width, CASE WHEN highway IN ('motorway', 'trunk') THEN 'motorway' WHEN highway IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary_link', 'unclassified', 'road', 'service') THEN 'standard' WHEN highway IN ('residential', 'living_street') THEN 'urban' WHEN highway IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto' ELSE highway END AS style, tags->'ford' as ford FROM planet_osm_line WHERE highway IS NOT NULL ORDER BY layer, z_order) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -642,6 +659,7 @@
         "srs": null,
         "table": "( SELECT way, tunnel, bridge, railway, CASE WHEN railway='rail' THEN 'main' ELSE 'other' END AS type FROM planet_osm_line WHERE railway IS NOT NULL ORDER BY z_order) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -670,6 +688,7 @@
         "port": "5432",
         "table": "( SELECT way, highway AS type\n  FROM planet_osm_roads\n  WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'motorway_link', 'trunk_link')\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -698,6 +717,7 @@
         "port": "5432",
         "table": "( SELECT way, highway AS type, bridge, tunnel\n    FROM planet_osm_roads\n    WHERE highway IN ('motorway', 'trunk')\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -726,6 +746,7 @@
         "port": "5432",
         "table": "( SELECT way \n  FROM planet_osm_point\n  WHERE highway = 'turning_circle'\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -754,6 +775,7 @@
       ],
       "Datasource": {
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "table": "(select way, barrier from planet_osm_line where barrier is not null) as data",
         "key_field": "",
         "geometry_field": "way",
@@ -777,6 +799,7 @@
       ],
       "Datasource": {
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "table": "(select way,barrier,\"natural\" from planet_osm_polygon where barrier is not null or \"natural\"='hedge') as barriers",
         "key_field": "",
         "geometry_field": "way",
@@ -800,6 +823,7 @@
       ],
       "Datasource": {
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "table": "(SELECT way, power AS type, tags->'generator:source' AS source, name FROM planet_osm_polygon WHERE power IS NOT NULL) as data",
         "key_field": "",
         "geometry_field": "way",
@@ -823,6 +847,7 @@
       ],
       "Datasource": {
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "table": "(SELECT way, power AS type, tags->'generator:source' AS source, name FROM planet_osm_line WHERE power IS NOT NULL) as data",
         "key_field": "",
         "geometry_field": "way",
@@ -846,6 +871,7 @@
       ],
       "Datasource": {
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "table": "(SELECT way, power AS type, tags->'generator:source' AS source, name FROM planet_osm_point WHERE power IS NOT NULL) as data",
         "key_field": "",
         "geometry_field": "way",
@@ -922,6 +948,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, CASE WHEN place='country' THEN 1 WHEN place='state' THEN 10 WHEN place='city' THEN 20 WHEN place='town' THEN 30 WHEN place='village' THEN 40 ELSE 100 END as prio, place AS type, name, z_order, CASE WHEN population ~ E'^\\\\d+$' THEN population::integer ELSE 0 END AS population FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality') ORDER BY prio, population DESC NULLS LAST) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -953,6 +980,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism) AS type, name, way_area AS area, ST_PointOnSurface(way) AS way FROM planet_osm_polygon WHERE name IS NOT NULL AND (landuse IS NOT NULL OR leisure IS NOT NULL OR \"natural\" IS NOT NULL OR building IS NOT NULL OR amenity IS NOT NULL OR tourism IS NOT NULL) AND way && !bbox! AND ST_IsValid(way) ORDER BY area DESC) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -984,6 +1012,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, highway AS type, name, ref, oneway, CHAR_LENGTH(ref) AS reflen\n    FROM planet_osm_line\n    WHERE highway IN ('motorway', 'trunk')\n      AND (name IS NOT NULL OR ref IS NOT NULL)\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -1015,6 +1044,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, highway AS type, name, oneway\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('primary', 'secondary', 'tertiary')\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -1046,6 +1076,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, highway AS type, name, oneway\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('residential', 'unclassified', 'road', 'living_street', 'unknown')\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
@@ -1067,6 +1098,7 @@
     {
       "Datasource": {
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "table": "( SELECT ST_Simplify(ST_buffer(p.way,-!pixel_width!*7),1) as way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_ContainsProperly(!bbox!, p.way) AND boundary='administrative' AND admin_level IN ('0', '2', '3', '4') order by admin_level) as data",
         "key_field": "",
         "geometry_field": "way",
@@ -1092,6 +1124,7 @@
     {
       "Datasource": {
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "table": "( SELECT ST_Simplify(ST_buffer(p.way,-!pixel_width!*7),1) as way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_ContainsProperly(!bbox!, p.way) AND boundary='administrative' AND admin_level IN ('5', '6', '7', '8', '9', '10') order by admin_level) as data",
         "key_field": "",
         "geometry_field": "way",
@@ -1127,6 +1160,7 @@
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT way, waterway AS type, name\n  FROM planet_osm_line\n  WHERE waterway IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data",
         "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
       },
       "class": "",
