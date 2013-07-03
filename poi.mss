@@ -114,6 +114,7 @@
         [shop="butcher"],
         [shop="seafood"],
         [shop="hardware"],
+        [shop="bicycle"],
         [shop="photo"] {
             marker-file: url('icons/poi/[shop]-18.png');
         }
