@@ -149,6 +149,9 @@
         [man_made="tower"]['tower:type'='communication'] {
             marker-file: url('icons/poi/communication-tower-18.png');
         }
+        [man_made="storage_tank"][content='water'] {
+            marker-file: url('icons/poi/storage_tank-18.png');
+        }
         [leisure="beach_resort"],
         [leisure="playground"] {
             marker-file: url('icons/poi/[leisure]-18.png');
