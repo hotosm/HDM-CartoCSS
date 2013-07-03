@@ -416,6 +416,16 @@ as well. */
   [zoom>=18] { line-width: 4; }
 }
 
+#railway[type='yard'][zoom>=12][zoom<=20] {
+  line-cap: butt;
+  line-color: @rail_line;
+  [zoom>=12] { line-width: 0.25; }
+  [zoom>=14] { line-width: 0.35; }
+  [zoom>=15] { line-width: 0.75; }
+  [zoom>=16] { line-width: 1.5; }
+  [zoom>=18] { line-width: 2.25; }
+}
+
 #railway[type='main'][zoom>=12][zoom<=20] {
   ::outline {
     line-cap: butt;
