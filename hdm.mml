@@ -657,7 +657,7 @@
         "port": "5432",
         "project": "hdm",
         "srs": null,
-        "table": "( SELECT way, tunnel, bridge, railway, CASE WHEN railway='rail' THEN 'main' ELSE 'other' END AS type FROM planet_osm_line WHERE railway IS NOT NULL ORDER BY z_order) AS data",
+        "table": "( SELECT way, tunnel, bridge, railway, service, CASE WHEN service='yard' THEN 'yard' WHEN railway='rail' THEN 'main' ELSE 'other' END AS type FROM planet_osm_line WHERE railway IS NOT NULL ORDER BY z_order) AS data",
         "type": "postgis",
         "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
