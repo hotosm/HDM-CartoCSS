@@ -467,7 +467,7 @@
         "password": "osm",
         "port": "5432",
         "project": "HDMCartoCSS",
-        "table": "( SELECT way, admin_level FROM planet_osm_roads WHERE \"boundary\" = 'administrative'  AND admin_level IN ('5', '6', '7', '8', '9', '10') AND \"boundary\" IS NOT NULL) AS data",
+        "table": "( SELECT way, admin_level FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('5', '6', '7', '8', '9', '10') AND \"boundary\" IS NOT NULL) AS data",
         "type": "postgis",
         "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm",
@@ -946,7 +946,7 @@
         "port": "5432",
         "project": "hdm",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, CASE WHEN place='country' THEN 1 WHEN place='state' THEN 10 WHEN place='city' THEN 20 WHEN place='town' THEN 30 WHEN place='village' THEN 40 ELSE 100 END as prio, place AS type, name, z_order, CASE WHEN population ~ E'^\\\\d+$' THEN population::integer ELSE 0 END AS population FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality') ORDER BY prio, population DESC NULLS LAST) AS data",
+        "table": "( SELECT way, CASE WHEN place='country' THEN 1 WHEN place='state' THEN 10 WHEN place='city' THEN 20 WHEN place='town' THEN 30 WHEN place='village' THEN 40 ELSE 100 END as prio, place AS type, name, z_order, CASE WHEN population ~ E'^\\\\d+$' THEN population::integer ELSE 0 END AS population FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality') AND place IS NOT NULL ORDER BY prio, population DESC NULLS LAST) AS data",
         "type": "postgis",
         "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
