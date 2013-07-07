@@ -116,6 +116,7 @@
         [shop="hardware"],
         [shop="bicycle"],
         [shop="motorcycle"],
+        [shop="tyres"],
         [shop="photo"] {
             marker-file: url('icons/poi/[shop]-18.png');
         }
