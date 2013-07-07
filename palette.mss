@@ -131,13 +131,13 @@ Map { font-directory: url(./fonts); }
 
 @unpaved_case: darken(@unpaved,20%);
 
-@motorway_line:     @paved;
-@motorway_fill:     @paved;
-@motorway_case:     darken(@land, 50%);
+@motorway_line:     #a098b0; //#44366e;
+@motorway_fill:     @motorway_line;
+@motorway_case:     darken(@motorway_fill, 10%);
 
-@primary_line:      @paved;
-@primary_fill:      @paved;
-@primary_case:      @paved * 0.9;
+@primary_line:      #d2938e;
+@primary_fill:      @primary_line;
+@primary_case:      @primary_fill * 0.9;
 
 @secondary_line:    #e9cbb0;
 @secondary_fill:    @secondary_line;
