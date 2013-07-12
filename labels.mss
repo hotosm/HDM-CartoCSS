@@ -555,3 +555,16 @@
     text-size: 9;
   }
 }
+
+/* ================================================================== */
+/* NATURAL
+/* ================================================================== */
+
+#natural_point_label[type='bay'][zoom>=10] {
+  text-name: '[name]';
+  text-face-name: @sans_italic;
+  text-fill: darken(@water,30%);
+  text-halo-fill: lighten(@water,10%);
+  text-halo-radius: 1;
+  text-size: 11;
+}
