@@ -568,3 +568,21 @@
   text-halo-radius: 1;
   text-size: 11;
 }
+
+#natural_point_label[type='peak'][zoom>=12] {
+  text-name: '"▲"';
+  text-face-name: @sans_lt_italic;
+  text-fill: @peak;
+  text-size: 10;
+  text-min-distance: 50;
+  ::name[name!=""][zoom>=13] {
+    text-name: '[name]';
+    text-face-name: @sans_lt_italic;
+    text-fill: @peak;
+    text-size: 10;
+    text-dy: -6;
+    [ele!=null] {
+      text-name: '[name] + " (" + [ele] + ")"';
+    }
+  }
+}
