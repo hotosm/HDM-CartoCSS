@@ -428,12 +428,13 @@
 #waterway_label[type='stream'][zoom>=17] {
   text-name: '[name]';
   text-face-name: @sans_italic;
-  text-fill: darken(@water,30%);
-  text-halo-fill: lighten(@water,10%);
+  text-fill: darken(@water,20%);
+  text-halo-fill: @other_halo;
   text-halo-radius: 1;
   text-placement: line;
   text-min-distance: 400;
   text-size: 10;
+  text-dy: 7;
   [type='river'][zoom=14],
   [type='canal'][zoom=16],
   [type='stream'][zoom=18] {
