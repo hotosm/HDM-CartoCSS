@@ -582,6 +582,7 @@
     text-fill: @peak;
     text-size: 10;
     text-dy: -6;
+    text-wrap-width: 30;
     [ele!=null] {
       text-name: '[name] + " (" + [ele] + ")"';
     }
