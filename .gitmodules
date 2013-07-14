@@ -1,0 +1,3 @@
+[submodule "Leaflet.TileLegend"]
+	path = Leaflet.TileLegend
+	url = https://github.com/yohanboniface/Leaflet.TileLegend.git
