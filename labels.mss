@@ -1,7 +1,12 @@
 /* LABELS.MSS CONTENTS:
- * - place names
- * - area labels
- * - waterway labels 
+ * - Place names
+ * - POI labels
+ * - Area labels
+ * - Waterway labels
+ * - Road labels
+ * - Oneway arrows
+ * - Admin labels
+ * - Housenumbers
  */
 
 /* Font sets are defined in palette.mss */

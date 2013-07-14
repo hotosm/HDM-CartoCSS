@@ -1,9 +1,11 @@
 /* BASE.MSS CONTENTS
  * - Landuse & landcover
+ * - Relief
  * - Water areas
  * - Water ways
- * - Administrative Boundaries
- *
+ * - Administrative boundaries
+ * - Barrier points
+ * - Barrier lines
  */
 
 /* ================================================================== */
