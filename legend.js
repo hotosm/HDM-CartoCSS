@@ -10,8 +10,8 @@ var LEGEND = {
                 text: "Paved primary road"
             },
             {
-                coordinates: [19.70824, -72.41555, 15],
-                text: "highway=secondary"
+                coordinates: [19.8090, -72.4498, 15],
+                text: "Paved secondary road"
             },
             {
                 coordinates: [19.72434, -72.16495, 15],
