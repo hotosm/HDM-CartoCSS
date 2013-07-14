@@ -13,21 +13,6 @@
   <style type='text/css'>
       body { margin:0; padding:0; }
       #map { position:absolute; top:0; bottom:0; right: 0; left: 0; width:100%; }
-      #leaflet-control-tilelegend-container {
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        overflow-y: auto;
-        height: 100%;
-        width: 300px;
-        background-color: #fff;
-        -moz-box-sizing:border-box;
-        -webkit-box-sizing:border-box;
-        box-sizing: border-box;
-        border-left: 1px solid #ddd;
-        font-family: sans-serif;
-      }
       .roads .tilelegend-map {
         width: 100%;
       }
@@ -50,11 +35,12 @@
 
 <script type="text/javascript">
 var startPoint = [19.6718, -72.1304];
-var map = L.map('map', {zoomControl:false}).setView(startPoint, 13),
-    tilelayer = L.tileLayer('http://{s}.layers.openstreetmap.fr/hot/{z}/{x}/{y}.png', {maxZoom: 20}).addTo(map),
-    hash = new L.Hash(map),
-    legend = new L.TileLegend(map, tilelayer, L.DomUtil.get('leaflet-control-tilelegend-container'), LEGEND);
-    legend.open();
+var map = L.map('map', {zoomControl:false, attributionControl: false}).setView(startPoint, 13),
+    tilelayer = L.tileLayer('http://{s}.layers.openstreetmap.fr/hot/{z}/{x}/{y}.png', {maxZoom: 20, legend: LEGEND, openLegendOnLoad: true, attribution: "HOT style"}).addTo(map),
+    hash = new L.Hash(map);
+    legend = (new L.Control.TileLegend()).addTo(map);
+    // legend = new L.TileLegend(map, tilelayer, L.DomUtil.get('leaflet-control-tilelegend-container'), LEGEND);
+    // legend.open();
 </script>
 </body>
 </html>
