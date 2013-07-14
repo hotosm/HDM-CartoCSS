@@ -41,15 +41,19 @@ var LEGEND = {
         keys: [
             {
                 coordinates: [19.7365, -72.1487, 16],
-                text: "wetland"
+                text: "Wetland"
             },
             {
                 coordinates: [19.71656, -72.12472, 17],
-                text: "farm land / agriculture"
+                text: "Farm land / agriculture"
             },
             {
                 coordinates: [19.66952, -72.00810, 17],
-                text: "industrial"
+                text: "Industrial"
+            },
+            {
+                coordinates: [19.5867, -72.2504, 17],
+                text: "Forest"
             }
         ]
     },
@@ -76,6 +80,40 @@ var LEGEND = {
             {
                 coordinates: [19.55134, -71.72704, 19],
                 text: "Kindergarden"
+            }
+        ]
+    },
+    {
+        title: 'Water',
+        className: 'poi',
+        keys: [
+            {
+                coordinates: [19.69696, -72.15852, 20],
+                text: "Drinking water"
+            },
+            {
+                coordinates: [19.63401, -72.14206, 20],
+                text: "Water well, drinking water"
+            },
+            {
+                coordinates: [19.695595, -72.155845, 20],
+                text: "Water well, manual pump, no drinking water"
+            },
+            {
+                coordinates: [19.69251, -72.15723, 20],
+                text: "Water well, powered pump, no drinking water"
+            },
+            {
+                coordinates: [19.67912, -72.126845, 20],
+                text: "Water well, no pump, no drinking water"
+            },
+            {
+                coordinates: [19.634165, -72.14189, 20],
+                text: "Water tower"
+            },
+            {
+                coordinates: [19.66293, -72.11811, 20],
+                text: "Water tank"
             }
         ]
     },
