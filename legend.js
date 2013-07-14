@@ -162,6 +162,38 @@ var LEGEND = {
             {
                 coordinates: [19.66933, -72.12373, 20],
                 text: "hairdresser"
+            },
+            {
+                coordinates: [19.76026, -72.20211, 20],
+                text: "Computers"
+            },
+            {
+                coordinates: [19.76128, -72.20152, 20],
+                text: "Phones"
+            },
+            {
+                coordinates: [19.75853, -72.20430, 20],
+                text: "Car parts"
+            },
+            {
+                coordinates: [19.75632, -72.20495, 20],
+                text: "Tailor"
+            },
+            {
+                coordinates: [19.74908, -72.20775, 20],
+                text: "Tyres"
+            },
+            {
+                coordinates: [19.74832, -72.20764, 20],
+                text: "Motorcycle"
+            },
+            {
+                coordinates: [19.74775, -72.20765, 20],
+                text: "Car repair"
+            },
+            {
+                coordinates: [19.74516, -72.21019, 20],
+                text: "Photo"
             }
         ]
     },
