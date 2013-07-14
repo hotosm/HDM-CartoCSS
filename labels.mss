@@ -433,12 +433,13 @@
 #waterway_label[type='stream'][zoom>=17] {
   text-name: '[name]';
   text-face-name: @sans_italic;
-  text-fill: darken(@water,30%);
-  text-halo-fill: lighten(@water,10%);
+  text-fill: darken(@water,20%);
+  text-halo-fill: @other_halo;
   text-halo-radius: 1;
   text-placement: line;
   text-min-distance: 400;
   text-size: 10;
+  text-dy: 7;
   [type='river'][zoom=14],
   [type='canal'][zoom=16],
   [type='stream'][zoom=18] {
@@ -558,5 +559,37 @@
   }
   [zoom >= 18] {
     text-size: 9;
+  }
+}
+
+/* ================================================================== */
+/* NATURAL
+/* ================================================================== */
+
+#natural_point_label[type='bay'][zoom>=10] {
+  text-name: '[name]';
+  text-face-name: @sans_italic;
+  text-fill: darken(@water,30%);
+  text-halo-fill: lighten(@water,10%);
+  text-halo-radius: 1;
+  text-size: 11;
+}
+
+#natural_point_label[type='peak'][zoom>=12] {
+  text-name: '"▲"';
+  text-face-name: @sans_lt_italic;
+  text-fill: @peak;
+  text-size: 10;
+  text-min-distance: 50;
+  ::name[name!=""][zoom>=13] {
+    text-name: '[name]';
+    text-face-name: @sans_lt_italic;
+    text-fill: @peak;
+    text-size: 10;
+    text-dy: -6;
+    text-wrap-width: 30;
+    [ele!=null] {
+      text-name: '[name] + " (" + [ele] + ")"';
+    }
   }
 }

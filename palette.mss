@@ -90,6 +90,7 @@ Map { font-directory: url(./fonts); }
 @cemetery:          #D6DED2;
 @military:          #D1BFAA;
 @wetland:           #e3e9e2; //#CFDCD3;
+@peak:              #69623c;
 /* Greens */
 @park:              #D0DCAE; //#86ac86
 @wooded:            #B2C29D; //#95ae79;
