@@ -101,10 +101,15 @@
 /* RELIEF
 /* ================================================================== */
 
-#hillshade {
+#hillshade[zoom>=4]{
     raster-scaling: bilinear;
     raster-comp-op: multiply;
-    raster-opacity: 0.5;
+    raster-opacity: 0.85;
+
+    [zoom>=5]  {raster-opacity: 0.75;}
+    [zoom>=7]  {raster-opacity: 0.65;}
+    [zoom>=9]  {raster-opacity: 0.55;}
+    [zoom>=10] {raster-opacity: 0.50;}
 }
 
 #contour_line[zoom>=12]{
