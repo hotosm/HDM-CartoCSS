@@ -1,7 +1,7 @@
 var LEGEND = {
     title: "HOT style",
     description: "Humanitarian focused OSM base layer.",
-    entries: [{
+    sections: [{
         title: 'Roads',
         className: 'roads',
         keys: [
