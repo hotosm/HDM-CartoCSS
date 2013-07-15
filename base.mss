@@ -1,5 +1,6 @@
 /* BASE.MSS CONTENTS
  * - Landuse & landcover
+ * - Buildings
  * - Relief
  * - Water areas
  * - Water ways
@@ -83,7 +84,10 @@
   [zoom>=12] { line-width: 2.0; }
 }
 
-/* ---- BUILDINGS ---- */
+/* ================================================================== */
+/* BUILDINGS
+/* ================================================================== */
+
 #buildings[zoom>=14] {
   polygon-fill:@building;
   line-color:darken(@building,5%);
@@ -92,6 +96,10 @@
   [zoom>=16] {
     line-color:darken(@building,10%);
     line-width:0.4;
+  }
+
+  [zoom>=18] {
+    line-color:darken(@building,20%);
   }
 }
 
