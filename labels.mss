@@ -62,6 +62,10 @@
   text-fill:@state_text;
   text-halo-fill: @state_halo;
   text-halo-radius: 1;
+  [zoom=5] {
+    text-size:9 + @text_adjust;
+    text-wrap-width: 35;
+  }
   [zoom=6] {
     text-size:10 + @text_adjust;
     text-wrap-width: 40;

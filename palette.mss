@@ -194,7 +194,7 @@ Map { font-directory: url(./fonts); }
 @country_text:      #435;
 @country_halo:      @place_halo;
 
-@state_text:        #546;
+@state_text:        #657;
 @state_halo:        @place_halo;
 
 @city_text:         #222;
