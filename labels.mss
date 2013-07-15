@@ -20,7 +20,7 @@
 /* PLACE NAMES
 /* ================================================================== */
 
-#place::country[type='country'][zoom>3][zoom<9] {
+#place::country[type='country'][zoom>=3][zoom<=7] {
   text-name:'[name]';
   text-face-name:@sans_bold;
   text-placement:point;
@@ -28,11 +28,11 @@
   text-halo-fill: @country_halo;
   text-halo-radius: 1;
   [zoom=3] {
-    text-size:10 + @text_adjust;
+    text-size:9 + @text_adjust;
     text-wrap-width: 40;
   }
   [zoom=4] {
-    text-size:11 + @text_adjust;
+    text-size:10 + @text_adjust;
     text-wrap-width: 50;
   }
   [zoom>4] {
@@ -62,6 +62,10 @@
   text-fill:@state_text;
   text-halo-fill: @state_halo;
   text-halo-radius: 1;
+  [zoom=5] {
+    text-size:9 + @text_adjust;
+    text-wrap-width: 35;
+  }
   [zoom=6] {
     text-size:10 + @text_adjust;
     text-wrap-width: 40;
