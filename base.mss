@@ -236,7 +236,8 @@ Map { background-color: @water; }
 /* ================================================================== */
 
 
-#admin-1-4,
+#admin-1-4[admin_level='2'][zoom>=2],
+#admin-1-4[admin_level='4'][zoom>=4],
 #admin-5-10[zoom>=13] {
   ::outline {
     line-color: lighten(@admin_2,25%);

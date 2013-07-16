@@ -97,7 +97,7 @@ as well. */
   }
   [style="urban"] {
     line-color: @urban_case;
-    [bridge=1] { line-color: darken(@standard_case,20%); }
+    [bridge=1] { line-color: darken(@urban_case,20%); }
   }
   [surface='unpaved'] {
     line-color: @unpaved_case;
