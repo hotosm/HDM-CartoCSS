@@ -20,6 +20,8 @@
 /* PLACE NAMES
 /* ================================================================== */
 
+/* ---- Countries --------------------------------------------------- */
+
 #place::country[type='country'][zoom>=3][zoom<=7] {
   text-name:'[name]';
   text-face-name:@sans_bold;
@@ -54,6 +56,8 @@
     text-character-spacing: 2;
   }
 }
+
+/* ---- States ------------------------------------------------------ */
 
 #place::state[type='state'][zoom>=5][zoom<=10] {
   text-name:'[name]';
@@ -93,6 +97,38 @@
     text-character-spacing: 2;
   }
 }
+
+/* ---- Capital cities ---------------------------------------------- */
+
+#country_capitals[zoom>=4][zoom<=15] {
+  ::capital_star[zoom>=4] {
+    text-face-name:@sans_bold;
+    text-placement:point;
+    text-fill:@country_text;
+    text-halo-fill: @country_halo;
+    text-halo-radius: 1;
+    point-ignore-placement: true;
+    text-name: '"★"';  // Note: this is not an asterisk it is a unicode 'star' ★.
+  }
+
+  ::capital_label[zoom>=6] {
+    text-face-name:@sans_bold;
+    text-placement:point;
+    text-fill:@country_text;
+    text-halo-fill: @country_halo;
+    text-halo-radius: 1;
+    point-ignore-placement: true;
+    text-name: '[name]';  // Note: this is not an asterisk it is a unicode 'star' ★.
+    text-dy: 7;
+    [zoom>=6][zoom<=7]    {text-size: 10;}
+    [zoom>=8][zoom<=9]    {text-size: 11;}
+    [zoom>=10][zoom<=11]  {text-size: 12;}
+    [zoom>=11][zoom<=12]  {text-size: 14;}
+    [zoom>=12][zoom<=15]  {text-size: 16;}
+  }
+}
+
+// Unicode 'empty star' ☆ would be a good one to use for state capitals when added.
 
 /* ---- Cities ------------------------------------------------------ */
 

@@ -937,7 +937,28 @@
     },
     {
       "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way, name\n\nFROM planet_osm_point\n\nWHERE name is not null and  ((tags->'is_capital') = 'country')\n\n) AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "-20037508,-19929239,20037508,19929239",
         "dbname": "hdm",
+        "user": "osm",
+        "id": "country_capitals",
+        "project": "hdm",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "country_capitals",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "country_capitals"
+    },
+    {
+      "Datasource": {
+        "dbname": "osm",
         "geometry_field": "way",
         "host": "localhost",
         "id": "place",
