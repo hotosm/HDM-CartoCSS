@@ -118,7 +118,7 @@
     text-halo-fill: @country_halo;
     text-halo-radius: 1;
     point-ignore-placement: true;
-    text-name: '[name]';  // Note: this is not an asterisk it is a unicode 'star' ★.
+    text-name: '[name]';
     text-dy: 7;
     [zoom>=6][zoom<=7]    {text-size: 10;}
     [zoom>=8][zoom<=9]    {text-size: 11;}
