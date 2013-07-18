@@ -40,7 +40,7 @@
 
 <script type="text/javascript">
 var startPoint = [19.6718, -72.1304];
-var map = L.map('map', {zoomControl:false, attributionControl: false}).setView(startPoint, 13),
+var map = L.map('map', {attributionControl: false}).setView(startPoint, 13),
     tilelayer = L.tileLayer('http://{s}.layers.openstreetmap.fr/hot/{z}/{x}/{y}.png', {maxZoom: 20, legend: LEGEND, openLegendOnLoad: true, attribution: "HOT style"}).addTo(map),
     hash = new L.Hash(map);
     legend = (new L.Control.TileLegend()).addTo(map);
