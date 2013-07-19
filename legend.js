@@ -79,7 +79,7 @@ var LEGEND = {
             },
             {
                 coordinates: [19.55134, -71.72704, 19],
-                text: "Kindergarden"
+                text: "Kindergarten"
             }
         ]
     },
@@ -165,7 +165,7 @@ var LEGEND = {
             },
             {
                 coordinates: [19.66933, -72.12373, 20],
-                text: "hairdresser"
+                text: "Hairdresser"
             },
             {
                 coordinates: [19.76026, -72.20211, 20],
@@ -229,11 +229,11 @@ var LEGEND = {
         ]
    },
    {
-        title: 'Government',
+        title: 'Social & Government',
         className: 'poi',
         keys: [
             {
-                coordinates: [19.67011, -72.12555, 18],
+                coordinates: [19.67011, -72.12636,20],
                 text: "Government Office"
             },
             {
@@ -241,16 +241,8 @@ var LEGEND = {
                 text: "Social Facility"
             },
             {
-                coordinates: [19.66910, -72.12724, 20],
-                text: "Community Centers"
-            },
-            {
-                coordinates: [19.69580, -72.15649, 20],
-                text: "Café"
-            },
-            {
-                coordinates: [19.75773, -70.51684, 20],
-                text: "Pub"
+                coordinates: [19.6625402, -71.8369115, 20],
+                text: "Community Center"
             }
         ]
     }
