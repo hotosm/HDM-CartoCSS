@@ -8,6 +8,13 @@ Compare: http://hotosm.github.io/HDM-CartoCSS/compare.html
 
 ## Deploying
 
+Be aware that you may run into unexpected errors if you have a different development environment than those that we've worked with: 
+- Ubuntu 12.04 or 13.04
+- Tilemill Master (required)
+- PostGIS 1.5 or 2.0.x 
+- Those on PostGIS 2.0.x and Ubuntu 12.04 can use the [install-tilemill-from-source.sh script](https://gist.github.com/skorasaurus/5911182) to set-up your environment.
+
+
 ### Local configuration
 
 Suggestion is to use [cartocc](https://github.com/yohanboniface/CartoCC) for managing the local config (like db credentials, path to shp...). Have a look at the `cartocc.json.sample` file to quick start
@@ -45,3 +52,12 @@ osm2pgsql -G -U ybon -d hdm data/haiti-and-domrep-latest.osm.pbf --hstore --crea
 1. Create contour line: `gdal_contour -a height haiti-3785.tif haiti_contour_25m.shp -i 25.0`
 
 1. Index shape file: `shapeindex haiti_contour_25m.shp`
+
+### gh-pages Branch
+
+To modify the gh-pages branch, you need to obtain the Leaflet.TileLegend repo through git's submodules. While in the HDM-CartoCSS Project directory and the gh-pages branch,  
+run: 
+```
+git submodule init
+git submodule update 
+```
