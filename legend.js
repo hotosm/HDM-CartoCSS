@@ -7,23 +7,23 @@ var LEGEND = {
         keys: [
             {
                 coordinates: [19.67236, -72.11825, 15],
-                text: "Paved primary road"
+                text: "Paved primary"
             },
             {
                 coordinates: [19.8090, -72.4498, 15],
-                text: "Paved secondary road"
+                text: "Paved secondary"
             },
             {
                 coordinates: [19.72434, -72.16495, 15],
-                text: "highway=tertiary"
+                text: "Tertiary"
             },
             {
                 coordinates: [19.66985, -72.12450, 19],
-                text: "residential (paved)"
+                text: "Paved Residential"
             },
             {
                 coordinates: [19.67993, -72.15773, 16],
-                text: "Unpaved road"
+                text: "Unpaved"
             },
             {
                 coordinates: [19.67921, -72.14910, 17],
@@ -89,23 +89,23 @@ var LEGEND = {
         keys: [
             {
                 coordinates: [19.69696, -72.15852, 20],
-                text: "Drinking water"
+                text: "potable water, unspecified source"
             },
             {
                 coordinates: [19.63401, -72.14206, 20],
-                text: "Water well, drinking water"
+                text: "Water well, potable water"
             },
             {
                 coordinates: [19.695595, -72.155845, 20],
-                text: "Water well, manual pump, no drinking water"
+                text: "Water well, manual pump, no potable water"
             },
             {
                 coordinates: [19.69251, -72.15723, 20],
-                text: "Water well, powered pump, no drinking water"
+                text: "Water well, powered pump, no potable water"
             },
             {
                 coordinates: [19.67912, -72.126845, 20],
-                text: "Water well, no pump, no drinking water"
+                text: "Water well, no pump, no potable water"
             },
             {
                 coordinates: [19.634165, -72.14189, 20],
@@ -127,11 +127,11 @@ var LEGEND = {
             },
             {
                 coordinates: [19.55020, -71.72397, 20],
-                text: "atm"
+                text: "ATM"
             },
             {
                 coordinates: [19.10882, -72.69989, 20],
-                text: "bureau de change"
+                text: "bureau de change/currency exchange"
             },
             {
                 coordinates: [19.55042, -71.72563, 20],
@@ -156,6 +156,10 @@ var LEGEND = {
                 text: "Clothes"
             },
             {
+                coordinates: [19.75632, -72.20495, 20],
+                text: "Tailor"
+            },
+            {
                 coordinates: [19.55010, -71.72416, 20],
                 text: "Dry cleaning"
             },
@@ -171,17 +175,21 @@ var LEGEND = {
                 coordinates: [19.76128, -72.20152, 20],
                 text: "Phones"
             },
+              {
+                coordinates: [19.74516, -72.21019, 20],
+                text: "Photo"
+            },
+            {
+                coordinates: [19.67214, -72.12361, 20],
+                text: "Beverages"
+            },
             {
                 coordinates: [19.75853, -72.20430, 20],
                 text: "Car parts"
             },
             {
-                coordinates: [19.75632, -72.20495, 20],
-                text: "Tailor"
-            },
-            {
                 coordinates: [19.74908, -72.20775, 20],
-                text: "Tyres"
+                text: "Tires"
             },
             {
                 coordinates: [19.74832, -72.20764, 20],
@@ -190,15 +198,12 @@ var LEGEND = {
             {
                 coordinates: [19.74775, -72.20765, 20],
                 text: "Car repair"
-            },
-            {
-                coordinates: [19.74516, -72.21019, 20],
-                text: "Photo"
             }
+          
         ]
     },
     {
-        title: 'Food & drinks',
+        title: 'Food & drink',
         className: 'poi',
         keys: [
             {
@@ -214,8 +219,30 @@ var LEGEND = {
                 text: "Bar"
             },
             {
-                coordinates: [19.67214, -72.12361, 20],
-                text: "Beverages"
+                coordinates: [19.69580, -72.15649, 20],
+                text: "Café"
+            },
+            {
+                coordinates: [19.75773, -70.51684, 20],
+                text: "Pub"
+            }
+        ]
+   },
+   {
+        title: 'Government',
+        className: 'poi',
+        keys: [
+            {
+                coordinates: [19.67011, -72.12555, 18],
+                text: "Government Office"
+            },
+            {
+                coordinates: [19.73670, -72.18351,20],
+                text: "Social Facility"
+            },
+            {
+                coordinates: [19.66910, -72.12724, 20],
+                text: "Community Centers"
             },
             {
                 coordinates: [19.69580, -72.15649, 20],
