@@ -70,6 +70,10 @@ var LEGEND = {
                 text: "Pharmacy"
             },
             {
+                coordinates: [19.737694, -72.183481, 18],
+                text: "Dentist"
+            },
+            {
                 coordinates: [19.65555, -72.07040, 17],
                 text: "University"
             },
@@ -84,7 +88,7 @@ var LEGEND = {
         ]
     },
     {
-        title: 'Water',
+        title: 'Water & Sanitation',
         className: 'poi',
         keys: [
             {
@@ -114,7 +118,16 @@ var LEGEND = {
             {
                 coordinates: [19.66293, -72.11811, 20],
                 text: "Water tank"
+            },
+            {
+                coordinates: [18.54379, -72.331565, 20],
+                text: "Toilets"
+            },
+            {
+                coordinates: [18.539408, -72.301255, 20],
+                text: "Showers"
             }
+            
         ]
     },
     {
@@ -232,15 +245,19 @@ var LEGEND = {
         className: 'poi',
         keys: [
             {
-                coordinates: [19.67011, -72.12636,20],
+                coordinates: [19.662519, -71.836931, 20],
                 text: "Government Office"
             },
             {
-                coordinates: [19.73670, -72.18351,20],
+                coordinates: [19.667918, -72.01959, 20],
+                text: "Police"
+            },
+            {
+                coordinates: [19.736724, -72.183599, 20],
                 text: "Social Facility"
             },
             {
-                coordinates: [19.6625402, -71.8369115, 20],
+                coordinates: [19.669621, -72.127119, 20],
                 text: "Community Center"
             }
         ]
