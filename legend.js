@@ -180,10 +180,6 @@ var LEGEND = {
                 text: "Photo"
             },
             {
-                coordinates: [19.67214, -72.12361, 20],
-                text: "Beverages"
-            },
-            {
                 coordinates: [19.75853, -72.20430, 20],
                 text: "Car parts"
             },
@@ -199,7 +195,6 @@ var LEGEND = {
                 coordinates: [19.74775, -72.20765, 20],
                 text: "Car repair"
             }
-          
         ]
     },
     {
@@ -217,6 +212,10 @@ var LEGEND = {
             {
                 coordinates: [19.66910, -72.12724, 20],
                 text: "Bar"
+            },
+              {
+                coordinates: [19.67214, -72.12361, 20],
+                text: "Beverages"
             },
             {
                 coordinates: [19.69580, -72.15649, 20],
