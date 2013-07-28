@@ -28,6 +28,9 @@
         [amenity='hospital'] {
             marker-file: url('icons/poi/[amenity]-12.png');
         }
+        [barrier='border_control'] {
+            marker-file: url('icons/poi/[barrier]-12.png');
+        }
     }
     [zoom=16] {
         [amenity='school'] {
@@ -53,6 +56,9 @@
             [office='ngo'] {
                 [name='Oxfam'] { marker-file: url('icons/poi/oxfam-18.png'); }
             }
+        }
+        [barrier='border_control'] {
+            marker-file: url('icons/poi/[barrier]-18.png');
         }
         [amenity='kindergarten'],
         [amenity='school'],
