@@ -937,24 +937,35 @@
     },
     {
       "Datasource": {
-        "type": "postgis",
-        "table": "( SELECT way, name\n\nFROM planet_osm_point\n\nWHERE name is not null and  ((tags->'is_capital') = 'country')\n\n) AS data",
+        "dbname": "osm",
+        "geometry_field": "way",
+        "host": "localhost",
+        "id": "low_place",
         "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "-20037508,-19929239,20037508,19929239",
-        "dbname": "hdm",
-        "user": "osm",
-        "id": "country_capitals",
+        "password": "osm",
+        "port": "5432",
         "project": "hdm",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, CASE WHEN place='country' THEN 1 WHEN place='state' THEN 10 WHEN tags->'is_capital'='country' THEN 20 WHEN place='city' THEN 21 WHEN place='town' THEN 30 ELSE 100 END as prio, place AS type, name, z_order, CASE WHEN population ~ E'^\\\\d+$' THEN population::integer ELSE 0 END AS population, tags->'is_capital' as is_capital FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town') AND place IS NOT NULL ORDER BY prio, population DESC NULLS LAST) AS data",
+        "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "user": "osm"
       },
-      "id": "country_capitals",
       "class": "",
-      "srs-name": "900913",
+      "geometry": "point",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427099,
+        179.99999692067183,
+        84.96651228427098
+      ],
+      "id": "low_place",
+      "name": "low_place",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "country_capitals"
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
     },
     {
       "Datasource": {
@@ -967,7 +978,7 @@
         "port": "5432",
         "project": "hdm",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, CASE WHEN place='country' THEN 1 WHEN place='state' THEN 10 WHEN place='city' THEN 20 WHEN place='town' THEN 30 WHEN place='village' THEN 40 ELSE 100 END as prio, place AS type, name, z_order, CASE WHEN population ~ E'^\\\\d+$' THEN population::integer ELSE 0 END AS population FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality') AND place IS NOT NULL ORDER BY prio, population DESC NULLS LAST) AS data",
+        "table": "( SELECT way, CASE WHEN place='country' THEN 1 WHEN place='state' THEN 10 WHEN place='city' THEN 20 WHEN place='town' THEN 30 WHEN place='village' THEN 40 ELSE 100 END as prio, place AS type, name, z_order, CASE WHEN population ~ E'^\\\\d+$' THEN population::integer ELSE 0 END AS population, tags->'is_capital' as is_capital FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality') AND place IS NOT NULL ORDER BY prio, population DESC NULLS LAST) AS data",
         "type": "postgis",
         "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"

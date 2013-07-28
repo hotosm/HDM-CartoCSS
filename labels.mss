@@ -22,7 +22,7 @@
 
 /* ---- Countries --------------------------------------------------- */
 
-#place::country[type='country'][zoom>=3][zoom<=7] {
+#low_place[type='country'][zoom>=3][zoom<=7] {
   text-name:'[name]';
   text-face-name:@sans_bold;
   text-placement:point;
@@ -59,7 +59,7 @@
 
 /* ---- States ------------------------------------------------------ */
 
-#place::state[type='state'][zoom>=5][zoom<=10] {
+#low_place[type='state'][zoom>=5][zoom<=10] {
   text-name:'[name]';
   text-face-name:@sans_bold_italic;
   text-placement:point;
@@ -98,121 +98,68 @@
   }
 }
 
-/* ---- Capital cities ---------------------------------------------- */
+/* ---- Cities and Towns ----------------------------------------------- */
 
-#country_capitals[zoom>=4][zoom<=15] {
-  ::capital_star[zoom>=4] {
-    text-face-name:@sans_bold;
-    text-placement:point;
-    text-fill:@country_text;
-    text-halo-fill: @country_halo;
-    text-halo-radius: 1;
-    point-ignore-placement: true;
-    text-name: '"★"';  // Note: this is not an asterisk it is a unicode 'star' ★.
-  }
-
-  ::capital_label[zoom>=6] {
-    text-face-name:@sans_bold;
-    text-placement:point;
-    text-fill:@country_text;
-    text-halo-fill: @country_halo;
-    text-halo-radius: 1;
-    point-ignore-placement: true;
-    text-name: '[name]';
-    text-dy: 7;
-    [zoom>=6][zoom<=7]    {text-size: 10;}
-    [zoom>=8][zoom<=9]    {text-size: 11;}
-    [zoom>=10][zoom<=11]  {text-size: 12;}
-    [zoom>=11][zoom<=12]  {text-size: 14;}
-    [zoom>=12][zoom<=15]  {text-size: 16;}
-  }
-}
-
-// Unicode 'empty star' ☆ would be a good one to use for state capitals when added.
-
-/* ---- Cities ------------------------------------------------------ */
-
-#place::city[type='city'][zoom>=8][zoom<=15] {
+#low_place[is_capital='country'][zoom>=4][zoom<=10],
+#low_place[type='city'][zoom>=8][zoom<=10],
+#place[type='city'][zoom>=11][zoom<=15],
+#low_place[type='town'][zoom>=9][zoom<=10],
+#place[type='town'][zoom>=11][zoom<=17] {
   text-name:'[name]';
-  text-face-name:@sans;
-  text-placement:point;
-  text-fill:@city_text;
-  text-halo-fill:@city_halo;
-  text-halo-radius:2;
-  [zoom<=8] {
-    text-size: 10;
-    text-halo-radius:1;
-  }
-  [zoom=9] {
-    text-size:10;
-    text-wrap-width: 60;
-  }
-  [zoom=10] {
-    text-size:11;
-    text-wrap-width: 70;
-  }
-  [zoom=11] {
-    text-size:12;
-    text-character-spacing: 1;
-    text-wrap-width: 80;
-  }
-  [zoom=12] {
-    text-size:13;
-    text-character-spacing: 1;
-    text-wrap-width: 100;
-  }
-  [zoom=13] {
-    text-size:14;
-    text-character-spacing: 2;
-    text-wrap-width: 200;
-    text-transform: uppercase;
-  }
-  [zoom=14] {
-    text-size:15;
-    text-character-spacing: 4;
-    text-wrap-width: 300;
-    text-transform: uppercase;
-  }
-  [zoom=15] {
-    text-size:16;
-    text-character-spacing: 6;
-    text-wrap-width: 400;
-    text-transform: uppercase;
-  }
-}
-
-/* ---- Towns ------------------------------------------------------- */
-
-#place::town[type='town'][zoom>=9][zoom<=17] {
-  text-name:'[name]';
-  text-face-name:@sans;
-  text-placement:point;
-  text-fill:@town_text;
   text-size:9;
-  text-halo-fill:@town_halo;
-  text-halo-radius:1;
+  text-face-name: @sans;
+  text-halo-radius: 1;
   text-wrap-width: 50;
+  text-fill: @town_text;
+  text-halo-fill: @town_halo;
+  [type='city'] {
+    text-fill: @city_text;
+    text-halo-fill: @city_halo;
+    text-size: 10;
+  }
+  [is_capital='country'] {
+    text-name: '"★\n" + [name]';  // Note: this is not an asterisk it is a unicode 'star' ★.
+    text-face-name: @sans_bold;
+    text-fill: @capital_text;
+    text-halo-fill: @capital_halo;
+    text-size: 10;
+    text-line-spacing: -2;
+  }
   [zoom>=10] {
     text-halo-radius:2;
     text-size: 10;
+    [type='city'],
+    [is_capital='country'] { text-size: 11;}
   }
-  [zoom>=11]{ text-size:11; }
+  [zoom>=11]{
+    text-size:11;
+    [type='city'],
+    [is_capital='country'] { text-size: 12;}
+  }
   [zoom>=12]{
     text-size:12;
+    [type='city'],
+    [is_capital='country'] { text-size: 13;}
   }
   [zoom>=13]{
     text-transform: uppercase;
     text-character-spacing: 1;
+    [type='city'],
+    [is_capital='country'] { text-size: 14;}
   }
   [zoom>=14]{
     text-size:13;
     text-character-spacing: 2;
+    [type='city'],
+    [is_capital='country'] { text-size: 15;}
   }
   [zoom>=15]{
     text-size:14;
     text-character-spacing: 3;
+    [type='city'],
+    [is_capital='country'] { text-size: 16;}
   }
-  [zoom>=15]{
+  [zoom>=16]{
     text-size:15;
     text-line-spacing: 5;
   }

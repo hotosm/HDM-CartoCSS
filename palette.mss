@@ -148,6 +148,9 @@ Map { font-directory: url(./fonts); }
 @country_text:      #435;
 @country_halo:      @place_halo;
 
+@capital_text:      @country_text;
+@capital_halo:      @country_halo;
+
 @state_text:        #657;
 @state_halo:        @place_halo;
 
