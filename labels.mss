@@ -98,40 +98,69 @@
 /* ---- Cities and Towns ----------------------------------------------- */
 
 #low_place[is_capital='country'][zoom>=4][zoom<=10],
-#low_place[type='city'][zoom>=8][zoom<=10],
+#low_place[type='city'][zoom>=7][zoom<=10],
+#low_place[type='town'][zoom>=9][zoom<=10] {
+  shield-file: url('icons/place/town.png');
+  [type='city'] {
+    shield-file: url('icons/place/city.png');
+  }
+  [is_capital='country'] {
+    shield-file: url('icons/place/country_capital.png');
+  }
+  shield-name:'[name]';
+  shield-size: 9;
+  shield-face-name: @sans;
+  shield-halo-radius: 1;
+  shield-wrap-width: 50;
+  shield-fill: @town_text;
+  shield-halo-fill: @town_halo;
+  shield-placement-type: simple;
+  shield-placements: 'NE,SW,NW,SE,E,W';
+  shield-text-dy: 3;
+  shield-text-dx: 3;
+  shield-unlock-image: true;
+  shield-min-distance: 10;
+  [type='city'] {
+    shield-fill: @city_text;
+    shield-halo-fill: @city_halo;
+    shield-size: 10;
+  }
+  [is_capital='country'] {
+    shield-face-name: @sans_bold;
+    shield-fill: @capital_text;
+    shield-halo-fill: @capital_halo;
+    shield-size: 11;
+    shield-line-spacing: -2;
+    shield-text-dx: 4;
+  }
+  [zoom>=10] {
+    shield-halo-radius: 2;
+    shield-size: 10;
+    [type='city'] { shield-size: 11;}
+    [is_capital='country'] { shield-size: 11;}
+  }
+}
+
 #place[type='city'][zoom>=11][zoom<=15],
-#low_place[type='town'][zoom>=9][zoom<=10],
 #place[type='town'][zoom>=11][zoom<=17] {
   text-name:'[name]';
-  text-size:9;
+  text-size: 11;
   text-face-name: @sans;
-  text-halo-radius: 1;
+  text-halo-radius: 2;
   text-wrap-width: 50;
   text-fill: @town_text;
   text-halo-fill: @town_halo;
   [type='city'] {
     text-fill: @city_text;
     text-halo-fill: @city_halo;
-    text-size: 10;
+    text-size: 12;
   }
   [is_capital='country'] {
-    text-name: '"★\n" + [name]';  // Note: this is not an asterisk it is a unicode 'star' ★.
     text-face-name: @sans_bold;
     text-fill: @capital_text;
     text-halo-fill: @capital_halo;
-    text-size: 10;
     text-line-spacing: -2;
-  }
-  [zoom>=10] {
-    text-halo-radius:2;
-    text-size: 10;
-    [type='city'],
-    [is_capital='country'] { text-size: 11;}
-  }
-  [zoom>=11]{
-    text-size:11;
-    [type='city'],
-    [is_capital='country'] { text-size: 12;}
+    text-transform: uppercase;
   }
   [zoom>=12]{
     text-size:12;
@@ -165,6 +194,8 @@
     text-line-spacing: 6;
   }
 }
+
+
 
 /* ---- Other small places ------------------------------------------ */
 
