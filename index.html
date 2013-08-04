@@ -41,7 +41,7 @@
 <script type="text/javascript">
 var startPoint = [19.6718, -72.1304];
 var map = L.map('map', {attributionControl: false}).setView(startPoint, 13),
-    tilelayer = L.tileLayer('http://{s}.tiles.fluv.io/hdm/{z}/{x}/{y}.png', {maxZoom: 20, legend: LEGEND, openLegendOnLoad: true, attribution: 'Data \u00a9 <a href="http://www.openstreetmap.org/copyright"> OpenStreetMap Contributors </a> Tiles \u00a9 HOT'}).addTo(map),
+    tilelayer = L.tileLayer('http://{s}.layers.openstreetmap.fr/hot/{z}/{x}/{y}.png', {maxZoom: 20, legend: LEGEND, openLegendOnLoad: true, attribution: 'Data \u00a9 <a href="http://www.openstreetmap.org/copyright"> OpenStreetMap Contributors </a> Tiles \u00a9 HOT'}).addTo(map),
     hash = new L.Hash(map);
     legend = (new L.Control.TileLegend()).addTo(map);
     // legend = new L.TileLegend(map, tilelayer, L.DomUtil.get('leaflet-control-tilelegend-container'), LEGEND);
