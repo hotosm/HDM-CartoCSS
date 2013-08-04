@@ -590,21 +590,21 @@
   text-size: 11;
 }
 
-#natural_point_label[type='peak'][zoom>=12] {
-  text-name: '"▲"';
-  text-face-name: @sans_lt_italic;
-  text-fill: @peak;
-  text-size: 10;
-  text-min-distance: 50;
-  ::name[name!=""][zoom>=13] {
-    text-name: '[name]';
-    text-face-name: @sans_lt_italic;
-    text-fill: @peak;
-    text-size: 10;
-    text-dy: -6;
-    text-wrap-width: 30;
-    [ele!=null] {
-      text-name: '[name] + " (" + [ele] + ")"';
-    }
+#natural_point_label[type='peak'][zoom>=13] {
+  shield-file: url('icons/natural/peak-6.png');
+  shield-name: '[name]';
+  shield-face-name: @sans_lt_italic;
+  shield-fill: @peak;
+  shield-size: 10;
+  shield-min-distance: 50;
+  shield-text-dy: 6;
+  shield-text-dx: 6;
+  shield-halo-fill: @other_halo;
+  shield-halo-radius: 1;
+  shield-placement-type: simple;
+  shield-placements: 'S,N,E,W';
+  shield-unlock-image: true;
+  [ele!=null] {
+    shield-name: '[name] + " (" + [ele] + ")"';
   }
 }
