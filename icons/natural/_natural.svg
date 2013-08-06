@@ -14,7 +14,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="_natural.svg">
+   sodipodi:docname="_natural.svg"
+   inkscape:export-filename="/home/ybon/Code/maps/hdm/icons/natural/_natural.png"
+   inkscape:export-xdpi="89.996864"
+   inkscape:export-ydpi="89.996864">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -68,7 +71,9 @@
      transform="translate(-3,-1045.3622)">
     <g
        id="peak-6"
-       inkscape:label="peak-6">
+       inkscape:label="peak-6"
+       inkscape:export-xdpi="89.996864"
+       inkscape:export-ydpi="89.996864">
       <path
          style="opacity:0.3;fill:none;stroke:#ffffff;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 6,1046.3622 -2,4 4,0 z"
