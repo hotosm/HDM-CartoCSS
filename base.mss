@@ -155,7 +155,10 @@
 /* WATER AREAS
 /* ================================================================== */
 
-Map { background-color: @water; }
+Map {
+  background-color: @water;
+  buffer-size: 256;
+}
 
 #water_gen0[zoom>3][zoom<=9],
 #water_gen1[zoom>9][zoom<=12],
