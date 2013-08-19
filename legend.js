@@ -135,7 +135,7 @@ var LEGEND = {
         className: 'poi',
         keys: [
             {
-                coordinates: [19.75792, -72.20032, 20],
+                coordinates: [19.757764, -72.200638, 20],
                 text: "bank"
             },
             {
