@@ -111,8 +111,8 @@ Map { font-directory: url(./fonts); }
 @urban_case:        @urban_fill * 0.9;
 
 @track_line:        #BFA286;
-@track_fill:        #E8E0D8;
-@track_case:        darken(@track_fill,5%);
+@track_fill:        @unpaved; //#E4DAD0;
+@track_case:        @unpaved_case;
 
 @pedestrian_line:   #CBC5BF;
 @pedestrian_fill:   #BFA286;
