@@ -347,6 +347,7 @@
         [amenity='money_transfer'],
         [amenity='fuel'],
         [amenity='social_facility'],
+        [amenity='community_centre'],
         [amenity='dentist'],
         [amenity='arts_centre'],
         [amenity='fast_food'],

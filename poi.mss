@@ -81,6 +81,7 @@
         [amenity='car_rental'],
         [amenity='money_transfer'],
         [amenity='social_facility'],
+        [amenity='community_centre'],
         [amenity='arts_centre'],
         [amenity='dentist'],
         [amenity='fast_food'],

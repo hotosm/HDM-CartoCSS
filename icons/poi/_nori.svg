@@ -150,9 +150,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="6.208351"
-     inkscape:cx="146.39845"
-     inkscape:cy="208.64574"
+     inkscape:zoom="24.833404"
+     inkscape:cx="78.479845"
+     inkscape:cy="267.39161"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -338,7 +338,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2548,6 +2548,27 @@
          width="12"
          id="rect4284"
          style="opacity:0.3;fill:none;stroke:none" />
+    </g>
+    <g
+       id="community_centre-18"
+       inkscape:label="community_centre-18">
+      <rect
+         y="776.36218"
+         x="72"
+         height="18"
+         width="18"
+         id="rect16571-3"
+         style="fill:none;stroke:none" />
+      <path
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:2;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans;stroke-opacity:1;opacity:0.29999999999999999;stroke-miterlimit:4;stroke-dasharray:none"
+         d="M 81 -251 L 73 -248 L 73 -247 L 81 -249.875 L 89 -247 L 89 -248 L 81 -251 z M 77 -246.5 C 76.171573 -246.5 75.5 -245.82843 75.5 -245 C 75.5 -244.2752 76.003975 -243.67115 76.6875 -243.53125 L 76.65625 -243.3125 L 74 -240 L 75 -240 L 76.3125 -241.5625 L 75 -235 L 76 -235 L 77 -238 L 78 -235 L 79 -235 L 77.6875 -241.625 L 79 -240 L 80 -240 L 77.34375 -243.375 L 77.3125 -243.53125 C 77.996025 -243.67115 78.5 -244.2752 78.5 -245 C 78.5 -245.82843 77.828427 -246.5 77 -246.5 z M 85 -246.5 C 84.171573 -246.5 83.5 -245.82843 83.5 -245 C 83.5 -244.2751 84.003975 -243.67115 84.6875 -243.53125 L 84.65625 -243.3125 L 82 -240 L 83 -240 L 84.3125 -241.5625 L 83 -235 L 84 -235 L 85 -238 L 86 -235 L 87 -235 L 85.6875 -241.625 L 87 -240 L 88 -240 L 85.34375 -243.375 L 85.3125 -243.53125 C 85.996025 -243.67115 86.5 -244.2751 86.5 -245 C 86.5 -245.82843 85.828427 -246.5 85 -246.5 z "
+         transform="translate(0,1028.3622)"
+         id="path4010" />
+      <path
+         id="path3998"
+         transform="translate(0,1028.3622)"
+         d="M 81 -251 L 73 -248 L 73 -247 L 81 -249.875 L 89 -247 L 89 -248 L 81 -251 z M 77 -246.5 C 76.171573 -246.5 75.5 -245.82843 75.5 -245 C 75.5 -244.2752 76.003975 -243.67115 76.6875 -243.53125 L 76.65625 -243.3125 L 74 -240 L 75 -240 L 76.3125 -241.5625 L 75 -235 L 76 -235 L 77 -238 L 78 -235 L 79 -235 L 77.6875 -241.625 L 79 -240 L 80 -240 L 77.34375 -243.375 L 77.3125 -243.53125 C 77.996025 -243.67115 78.5 -244.2752 78.5 -245 C 78.5 -245.82843 77.828427 -246.5 77 -246.5 z M 85 -246.5 C 84.171573 -246.5 83.5 -245.82843 83.5 -245 C 83.5 -244.2751 84.003975 -243.67115 84.6875 -243.53125 L 84.65625 -243.3125 L 82 -240 L 83 -240 L 84.3125 -241.5625 L 83 -235 L 84 -235 L 85 -238 L 86 -235 L 87 -235 L 85.6875 -241.625 L 87 -240 L 88 -240 L 85.34375 -243.375 L 85.3125 -243.53125 C 85.996025 -243.67115 86.5 -244.2751 86.5 -245 C 86.5 -245.82843 85.828427 -246.5 85 -246.5 z "
+         style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#747474;fill-opacity:1;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
     </g>
   </g>
 </svg>
