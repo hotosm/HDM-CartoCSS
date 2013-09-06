@@ -31,7 +31,10 @@
   [type='golf_course']   { polygon-fill: @park; }
   [type='hospital']      { polygon-fill: @hospital; }
   [type='industrial']    { polygon-fill: @industrial; }
-  [type='landfill']      { polygon-fill: darken(@industrial,10%); }
+  [type='landfill']      {
+    polygon-fill: darken(@industrial,10%);
+    [landfill_type="underwater"] { polygon-fill: @water;}
+  }
   [type='quarry']        { polygon-fill: @industrial; }
   [type='parking']       { polygon-fill: @parking; }
   [type='pedestrian']    { polygon-fill: @pedestrian_case; }
