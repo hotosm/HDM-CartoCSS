@@ -33,7 +33,7 @@
   [type='industrial']    { polygon-fill: @industrial; }
   [type='landfill']      {
     polygon-fill: darken(@industrial,10%);
-    [landfill_type="underwater"] { polygon-fill: @water;}
+    [landfill_type="underwater"] { polygon-fill: darken(@water,1%);}
   }
   [type='quarry']        { polygon-fill: @industrial; }
   [type='parking']       { polygon-fill: @parking; }
