@@ -432,21 +432,30 @@ as well. */
   [zoom>=18] { line-width: 2.25; }
 }
 
-#railway[type='main'][zoom>=12][zoom<=20] {
-  ::outline {
-    line-cap: butt;
-    line-color: @rail_line;
-    [zoom>=12] { line-width: 2;}
-    [zoom>=14] { line-width: 3;}
-    [zoom>=16] { line-width: 4;}
-    [zoom>=18] { line-width: 6;}
-  }
-
-  line-cap: butt;
-  line-color: @land;
-  line-dasharray: 6,2;
-  [zoom>=12] { line-width: 1; }
-  [zoom>=14] { line-width: 2; }
-  [zoom>=16] { line-width: 3; }
-  [zoom>=18] { line-width: 4; line-dasharray: 8,4; }
+#railway[type='main'][zoom>=12][zoom<=21] {
+::perpendicular-dashes {
+line-cap: butt;
+line-color: @rail_line;
+[zoom>=12] { line-width: 5.25;
+    line-dasharray: 0.45,10; }
+[zoom>=14] { line-width: 5.75; 
+    line-dasharray: 0.75,15;}
+[zoom>=16] { line-width: 6.75; 
+    line-dasharray: 1.25,20; }
+[zoom>=18] { line-width: 7;
+     line-dasharray: 1.5,25; }
+[zoom>=20] { line-width: 7;
+     line-dasharray: 1.75,35; }
 }
+#railway[type='main'] [zoom>=12][zoom<=21] {
+::base-line {
+line-cap: butt;
+line-color: @rail_line;
+[zoom>=12] { line-width: 1; }
+[zoom>=14] { line-width: 1.25; }
+[zoom>=16] { line-width: 1.75; }
+[zoom>=18] { line-width: 2; }
+[zoom>=20] { line-width: 2.25; }
+}
+}
+}  
