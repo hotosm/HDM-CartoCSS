@@ -413,7 +413,7 @@ as well. */
 /* RAILWAY
 /* ================================================================== */
 
-#railway[type='disused'][zoom>=14][zoom<=21] {
+#railway[type='disused'][zoom>=14][zoom<=20] {
   line-cap: butt;
   line-color: darken(@rail_line,20%);
   [zoom>=14] { line-width: 0.35; line-dasharray: 4,2;}
@@ -422,7 +422,7 @@ as well. */
   [zoom>=18] { line-width: 1.75; line-dasharray: 10,6;}
 }
 
-#railway[type='yard'][zoom>=15][zoom<=21] {
+#railway[type='yard'][zoom>=15][zoom<=20] {
   line-cap: butt;
   line-color: @rail_line;
   [zoom>=15] { line-width: 0.35; }
@@ -430,7 +430,7 @@ as well. */
   [zoom>=18] { line-width: 2.25; }
 }
 
-#railway[type='main'][zoom>=11][zoom<=21] {
+#railway[type='main'][zoom>=11][zoom<=20] {
   line-cap: butt;
   line-color: @rail_line;
   [zoom>=11] { line-width: 1; }
@@ -440,7 +440,7 @@ as well. */
   [zoom>=20] { line-width: 2.25; }
 }  
 
-#railway[type='other'][zoom>=14][zoom<=21] {
+#railway[type='other'][zoom>=14][zoom<=20] {
   line-cap: butt;
   line-color: @rail_line;
   [zoom>=14] { line-width: 1; }
