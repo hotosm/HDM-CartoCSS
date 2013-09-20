@@ -430,7 +430,7 @@ as well. */
   [zoom>=18] { line-width: 2.25; }
 }
 
-#railway[type='main'][zoom>=11][zoom<=20] {
+#railway[type='main'][zoom>=12][zoom<=20] {
   line-cap: butt;
   line-color: @rail_line;
   [zoom>=11] { line-width: 1; }
