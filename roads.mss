@@ -413,75 +413,34 @@ as well. */
 /* RAILWAY
 /* ================================================================== */
 
+#railway[type='disused'][zoom>=14][zoom<=21] {
+  line-cap: butt;
+  line-color: darken(@rail_line,20%);
+  [zoom>=14] { line-width: 0.35; line-dasharray: 4,2;}
+  [zoom>=15] { line-width: 0.55; line-dasharray: 4,2;}
+  [zoom>=16] { line-width: 1; line-dasharray: 7,4; }
+  [zoom>=18] { line-width: 1.75; line-dasharray: 10,6;}
+}
 
-
-#railway[type='yard'][zoom>=12][zoom<=20] {
+#railway[type='yard'][zoom>=15][zoom<=21] {
   line-cap: butt;
   line-color: @rail_line;
-  [zoom>=12] { line-width: 0.25; }
-  [zoom>=14] { line-width: 0.35; }
-  [zoom>=15] { line-width: 0.75; }
+  [zoom>=15] { line-width: 0.35; }
   [zoom>=16] { line-width: 1.5; }
   [zoom>=18] { line-width: 2.25; }
 }
 
-#railway[type='main'][zoom>=12][zoom<=21]::perpendicular-dashes {
+#railway[type='main'][zoom>=11][zoom<=21] {
   line-cap: butt;
   line-color: @rail_line;
-  [zoom>=12] { 
-    line-width: 5.25;
-    line-dasharray: 0.45,10; 
-  }
-  [zoom>=14] { 
-    line-width: 5.75; 
-    line-dasharray: 0.75,15;
-  }
-  [zoom>=16] { 
-    line-width: 6.75; 
-    line-dasharray: 1.25,20; 
-  }
-  [zoom>=18] { 
-    line-width: 7;
-    line-dasharray: 1.5,25; 
-  }
-  [zoom>=20] { 
-    line-width: 7;
-    line-dasharray: 1.75,35; 
-  }
-}
-
-#railway[type='main'][zoom>=12][zoom<=21]::base-line {
-  line-cap: butt;
-  line-color: @rail_line;
-  [zoom>=12] { line-width: 1; }
+  [zoom>=11] { line-width: 1; }
   [zoom>=14] { line-width: 1.25; }
   [zoom>=16] { line-width: 1.75; }
   [zoom>=18] { line-width: 2; }
   [zoom>=20] { line-width: 2.25; }
 }  
 
-#railway[type='other'][zoom>=14][zoom<=21]::perpendicular-dashes {
-  line-cap: butt;
-  line-color: @rail_line;
-  [zoom>=14] { 
-    line-width: 5.25; 
-    line-dasharray: 0.75,15;
-    }
-  [zoom>=16] { 
-    line-width: 6.25; 
-    line-dasharray: 1.25,20; 
-    }
-  [zoom>=18] { 
-    line-width: 6.5;
-    line-dasharray: 1.5,25; 
-    }
-  [zoom>=20] { 
-    line-width: 6.5;
-    line-dasharray: 1.75,35; 
-    }
-}
-
-#railway[type='other'][zoom>=14][zoom<=21]::base-line {
+#railway[type='other'][zoom>=14][zoom<=21] {
   line-cap: butt;
   line-color: @rail_line;
   [zoom>=14] { line-width: 1; }
