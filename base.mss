@@ -243,6 +243,7 @@ Map {
 
 
 #admin-1-4[admin_level='2'][zoom>=2],
+#admin-1-4[admin_level='3'][zoom>=4],
 #admin-1-4[admin_level='4'][zoom>=4],
 #admin-5-10[zoom>=13] {
   ::outline {
