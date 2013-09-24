@@ -1,3 +1,23 @@
+.airport {
+    [zoom>=10][zoom<15] {
+        [aeroway='airport'] {
+            marker-file: url('icons/poi/[aeroway]-18.png');
+            marker-clip:false;
+            marker-ignore-placement: true;
+         }
+    }
+    [zoom>=15][zoom<17] {
+        [aeroway='airfield'] {
+            marker-file: url('icons/poi/[aeroway]-18.png');
+        }
+    }
+    [zoom>17] {
+        [aeroway='airfield'] {
+            marker-file: url('icons/poi/[aeroway]-18.png');
+        }
+    }
+}
+
 .poi {
     // Generic rules first
     [zoom>=18] {
@@ -5,17 +25,7 @@
             marker-file: url('icons/poi/shop-18.png');
         }
     }
-    // [zoom>=10][zoom<15] {
-    //     [aeroway='airport'] {
-    //         marker-file: url('icons/poi/[aeroway]-18.png');
-    //         marker-clip:false;
-    //         marker-ignore-placement: true;
-    //      }
-    // }
     [zoom>=15][zoom<17] {
-        [aeroway='airfield'] {
-            marker-file: url('icons/poi/[aeroway]-18.png');
-        }
         [office='government'] {
             marker-file: url('icons/poi/[office]-12.png');
         }
@@ -40,9 +50,6 @@
     [zoom>=17] {
         [highway='bus_stop'] {
             marker-file: url('icons/poi/[highway]-18.png');
-        }
-        [aeroway='airfield'] {
-            marker-file: url('icons/poi/[aeroway]-18.png');
         }
         [amenity='atm'],
         [amenity='fire_station'],
