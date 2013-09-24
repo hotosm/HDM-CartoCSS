@@ -5,13 +5,13 @@
             marker-file: url('icons/poi/shop-18.png');
         }
     }
-    [zoom>=10][zoom<15] {
-        [aeroway='airport'] {
-            marker-file: url('icons/poi/[aeroway]-18.png');
-            marker-clip:false;
-            marker-ignore-placement: true;
-         }
-    }
+    // [zoom>=10][zoom<15] {
+    //     [aeroway='airport'] {
+    //         marker-file: url('icons/poi/[aeroway]-18.png');
+    //         marker-clip:false;
+    //         marker-ignore-placement: true;
+    //      }
+    // }
     [zoom>=15][zoom<17] {
         [aeroway='airfield'] {
             marker-file: url('icons/poi/[aeroway]-18.png');
