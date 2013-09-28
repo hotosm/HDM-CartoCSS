@@ -106,6 +106,20 @@
   }
 }
 
+#abandoned[zoom>=18] {
+  [building!=null] {
+    polygon-fill:@building;
+    line-color:darken(@building,5%);
+    line-width:0.2;
+  }
+  
+  text-name:'"X"';
+  text-face-name:@sans_bold;
+  text-placement:point;
+  text-fill:@other_text;
+  text-halo-fill: @other_halo;
+  text-halo-radius: 1;
+}
 
 /* ================================================================== */
 /* RELIEF
