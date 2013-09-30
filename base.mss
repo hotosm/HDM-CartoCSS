@@ -109,11 +109,11 @@
 #abandoned[zoom>=18] {
   [building!=null] {
     polygon-fill:@building;
-    line-color:darken(@building,5%);
-    line-width:0.2;
+    line-color:darken(@building,20%);
+    line-width:0.4;
   }
   
-  text-name:'"X"';
+  text-name:'"x"';
   text-face-name:@sans_bold;
   text-placement:point;
   text-fill:@other_text;
