@@ -116,7 +116,7 @@ Map { font-directory: url(./fonts); }
 
 @pedestrian_line:   #CBC5BF;
 @pedestrian_fill:   #BFA286;
-@pedestrian_case:   @land * 0.9;
+@pedestrian_case:   @land;
 
 @cycle_line:        @standard_line;
 @cycle_fill:        #FAFAF5;
