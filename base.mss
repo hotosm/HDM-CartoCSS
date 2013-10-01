@@ -318,6 +318,19 @@ Map {
   }
 }
 
+.barriers[zoom>=16][barrier='dry_bush'] {
+  ::alternate {
+    line-color: #B0B5A0;
+  }
+  line-width:2;
+  line-color:darken(#B0B5A0,15%);
+  line-dasharray:2,4;
+  line-cap: round;
+  [zoom=16] {
+    line-width: 1;
+  }
+}
+
 .barriers[zoom>=16][barrier = 'wall'] {
   line-width:1;
   line-color: darken(@land,25%);
