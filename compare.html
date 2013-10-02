@@ -29,7 +29,7 @@
 <script>
 var startPoint = [19.6718, -72.1304];
 var mapHDM = L.map('map-hdm', {zoomControl:false}).setView(startPoint, 13);
-L.tileLayer('http://a.layers.openstreetmap.fr/hot/{zoom}/{x}/{y}.png', {maxZoom: 20}).addTo(mapHDM);
+L.tileLayer('http://a.layers.openstreetmap.fr/hot/{z}/{x}/{y}.png', {maxZoom: 20}).addTo(mapHDM);
 var map2U = L.map('map-2u', {zoomControl: false,editInOSMControl:true}).setView(startPoint, 13);
 L.tileLayer('http://{s}.layers.openstreetmap.fr/2u/{z}/{x}/{y}.png', {maxZoom: 20}).addTo(map2U);
 var hashHDM = new L.Hash(mapHDM);
