@@ -61,8 +61,16 @@
   [type='farm']          { polygon-fill: @agriculture; }
   [type='orchard']       { polygon-fill: @agriculture; }
   [type='allotments']    { polygon-fill: @agriculture; }
-  [type='military']      { polygon-fill: @military; }
   [type='beach']         { polygon-fill: @beach; }
+  [type='military']      {
+    [zoom<=9] {
+      polygon-fill: @military;
+      polygon-opacity: 0.4;
+    }
+    [zoom>=10] {
+      polygon-pattern-file:url('icons/pattern/military-36.png');
+    }
+  }
   [type='wetland']       {
     [zoom<14] {
       polygon-fill: @wetland;
