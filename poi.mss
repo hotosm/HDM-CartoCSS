@@ -103,7 +103,7 @@
             marker-file: url('icons/poi/[amenity]-18.png');
             [religion='christian'],
             [religion='jewish'],
-            [religion='buddhist'],
+            [religion='hindu'],
             [religion='muslim'] {
                 marker-file: url('icons/poi/[religion]-18.png');
             }
