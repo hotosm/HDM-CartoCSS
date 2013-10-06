@@ -10,17 +10,17 @@
   <style type='text/css'>
       body { margin:0; padding:0; }
       #map-hdm { position:absolute; top:0; bottom:0; width:50%; }
-      #map-2u { position:absolute; top:0; bottom:0; right: 0; width:50%; }
+      #map-osm { position:absolute; top:0; bottom:0; right: 0; width:50%; }
   </style>
 </head>
 <body>
 <div id="content">
 
 <div class='wrapper'>
-    <div class='layer' id='map-2u'></div>
+    <div class='layer' id='map-osm'></div>
     <div class='layer' id='map-hdm'></div>
     <div class="separator">
-        <div class="before">2U</div>
+        <div class="before">OSM 'Standard'</div>
         <div class="after">HDM</div>
     </div>
 </div>
@@ -30,10 +30,10 @@
 var startPoint = [19.6718, -72.1304];
 var mapHDM = L.map('map-hdm', {zoomControl:false}).setView(startPoint, 13);
 L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {attribution: 'Data \u00a9 <a href="http://www.openstreetmap.org/copyright"> OpenStreetMap Contributors </a> Tiles \u00a9 HOT', maxZoom: 20}).addTo(mapHDM);
-var map2U = L.map('map-2u', {zoomControl: false,editInOSMControl:true}).setView(startPoint, 13);
-L.tileLayer('http://{s}.layers.openstreetmap.fr/2u/{z}/{x}/{y}.png', {attribution: 'Data \u00a9 <a href="http://www.openstreetmap.org/copyright"> OpenStreetMap Contributors </a>', maxZoom: 20}).addTo(map2U);
+var mapOSM = L.map('map-osm', {zoomControl: false,editInOSMControl:true}).setView(startPoint, 13);
+L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Data \u00a9 <a href="http://www.openstreetmap.org/copyright"> OpenStreetMap Contributors </a>', maxZoom: 20}).addTo(mapOSM);
 var hashHDM = new L.Hash(mapHDM);
-var hash2U = new L.Hash(map2U);
+var hash2U = new L.Hash(mapOSM);
 </script>
 </body>
 </html>
