@@ -259,6 +259,10 @@ var LEGEND = {
             {
                 coordinates: [19.669621, -72.127119, 20],
                 text: "Community Center"
+            },
+            {
+                coordinates: [19.104301, -72.695057, 20],
+                text: "NGO (Non-Governmental Office)"
             }
         ]
     }
