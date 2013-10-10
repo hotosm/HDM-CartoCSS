@@ -262,7 +262,7 @@ var LEGEND = {
             },
             {
                 coordinates: [19.104301, -72.695057, 20],
-                text: "NGO (Non-Governmental Office)"
+                text: "NGO (Non-Governmental Organization) Office"
             }
         ]
     }
