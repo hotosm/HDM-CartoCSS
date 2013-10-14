@@ -326,6 +326,7 @@
         [highway='bus_stop'] {
             text-name: "[name]";
         }
+        [craft!=null],
         [office='ngo'],
         [tourism='alpine_hut'],
         [tourism='guest_house'],
