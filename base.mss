@@ -39,6 +39,7 @@
   [type='parking']       { polygon-fill: @parking; }
   [type='pedestrian']    { polygon-fill: @pedestrian_case; }
   [type='residential']   { polygon-fill: @residential; }
+  [type='retail']        { polygon-fill: @residential; }
   [type='school']        { polygon-fill: @school; }
   [type='sports_centre'] { polygon-fill: @sports; }
   [type='stadium']       { polygon-fill: @sports; }
