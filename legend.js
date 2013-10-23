@@ -1,6 +1,7 @@
 var LEGEND = {
     title: "HOT style",
     description: "Humanitarian focused OSM base layer.",
+    displayPopup: true,
     sections: [{
         title: 'Roads',
         className: 'roads',
