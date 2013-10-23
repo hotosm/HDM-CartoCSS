@@ -43,6 +43,7 @@
         }
     }
     [zoom=16] {
+        [amenity='embassy'],
         [amenity='school'] {
             marker-file: url('icons/poi/[amenity]-12.png');
         }
@@ -54,6 +55,7 @@
         [amenity='atm'],
         [amenity='fire_station'],
         [amenity='post_office'],
+        [amenity='embassy'],
         [amenity='hospital'] { // amenity with priority
             marker-file: url('icons/poi/[amenity]-18.png');
         }

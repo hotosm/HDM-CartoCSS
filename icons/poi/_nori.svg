@@ -150,9 +150,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="6.208351"
-     inkscape:cx="127.14446"
-     inkscape:cy="134.60316"
+     inkscape:zoom="24.833404"
+     inkscape:cx="114.46707"
+     inkscape:cy="64.397971"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -1998,9 +1998,10 @@
        id="Captions" />
     <g
        id="camp_site-18"
-       inkscape:label="camp_site-18">
+       inkscape:label="camp_site-18"
+       transform="translate(30,-162)">
       <g
-         style="fill:none;stroke:#ffffff;stroke-opacity:1;opacity:0.29999999999999999;stroke-width:12.50000000000000000;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round"
+         style="opacity:0.3;fill:none;stroke:#ffffff;stroke-width:12.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          transform="matrix(0.16,0,0,0.16,103,975.8422)"
          id="g7074">
         <path
@@ -2008,7 +2009,7 @@
            d="M 100,97 56.25,15.75 62.5,-3 56.25,-3 50,9.5 43.75,-3 37.5,-3 43.75,15.75 0,97 z m -50,-43.75 18.75,37.5 -37.5,0 z"
            id="path7076"
            sodipodi:nodetypes="cccccccccccccc"
-           style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-width:12.50000000000000000;stroke-miterlimit:4;stroke-dasharray:none;stroke-linejoin:round" />
+           style="fill:none;stroke:#ffffff;stroke-width:12.5;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
       </g>
       <g
          id="Your_Icon"
@@ -2570,5 +2571,24 @@
          d="M 81 -251 L 73 -248 L 73 -247 L 81 -249.875 L 89 -247 L 89 -248 L 81 -251 z M 77 -246.5 C 76.171573 -246.5 75.5 -245.82843 75.5 -245 C 75.5 -244.2752 76.003975 -243.67115 76.6875 -243.53125 L 76.65625 -243.3125 L 74 -240 L 75 -240 L 76.3125 -241.5625 L 75 -235 L 76 -235 L 77 -238 L 78 -235 L 79 -235 L 77.6875 -241.625 L 79 -240 L 80 -240 L 77.34375 -243.375 L 77.3125 -243.53125 C 77.996025 -243.67115 78.5 -244.2752 78.5 -245 C 78.5 -245.82843 77.828427 -246.5 77 -246.5 z M 85 -246.5 C 84.171573 -246.5 83.5 -245.82843 83.5 -245 C 83.5 -244.2751 84.003975 -243.67115 84.6875 -243.53125 L 84.65625 -243.3125 L 82 -240 L 83 -240 L 84.3125 -241.5625 L 83 -235 L 84 -235 L 85 -238 L 86 -235 L 87 -235 L 85.6875 -241.625 L 87 -240 L 88 -240 L 85.34375 -243.375 L 85.3125 -243.53125 C 85.996025 -243.67115 86.5 -244.2751 86.5 -245 C 86.5 -245.82843 85.828427 -246.5 85 -246.5 z "
          style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;baseline-shift:baseline;color:#000000;fill:#747474;fill-opacity:1;stroke:none;stroke-width:1px;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Sans;-inkscape-font-specification:Sans" />
     </g>
+    <path
+       inkscape:connector-curvature="0"
+       id="path4440"
+       d="m 115,983.3622 c 0,-2 -3.5,-2.5 -3.5,-2.5 l 0,-1.5 4.5,0 -1.5,-1.5 1.5,-1.5 -4.5,0 0,-1 -1,0 0,5.5 c 0,0 -3.5,0.5 -3.5,2.5 0,0 -1,0 -1,1 l 10,0 c 0,-1 -1,-1 -1,-1 z m -11,2 14,0 0,6 -5,0 0,-1 -4,0 0,1 -5,0 z"
+       style="opacity:0.3;fill:none;stroke:#ffffff;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       style="fill:#747474;fill-opacity:1"
+       d="m 110.5,-53 0,5.5 c 0,0 -3.5,0.5 -3.5,2.5 0,0 -1,0 -1,1 l 10,0 c 0,-1 -1,-1 -1,-1 0,-2 -3.5,-2.5 -3.5,-2.5 l 0,-1.5 4.5,0 -1.5,-1.5 1.5,-1.5 -4.5,0 0,-1 z m -6.5,10 0,1.03125 1,0 0,3.96875 -1,0 0,1 5,0 0,-1 4,0 0,1 5,0 0,-1 -1,0 0,-4 1,0 0,-1 z m 3,1 1,0 0,4 -1,0 z m 3,0 2,0 0,3 -2,0 z m 4,0 1,0 0,4 -1,0 z"
+       transform="translate(0,1028.3622)"
+       id="path4442"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccccccccccc" />
+    <rect
+       y="974.36218"
+       x="102"
+       height="18"
+       width="18"
+       id="rect4444"
+       style="opacity:0.3;fill:none;stroke:none" />
   </g>
 </svg>

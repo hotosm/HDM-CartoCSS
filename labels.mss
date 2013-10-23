@@ -337,6 +337,7 @@
         [tourism='camp_site'],
         [tourism='museum'],
         [leisure='beach_resort'],
+        [amenity='embassy'],
         [amenity='library'],
         [amenity='theatre'],
         [amenity='restaurant'],
