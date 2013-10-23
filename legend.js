@@ -250,6 +250,10 @@ var LEGEND = {
                 text: "Government Office"
             },
             {
+                coordinates: [19.55091, -71.72714, 20],
+                text: "Embassy"
+            },
+            {
                 coordinates: [19.667918, -72.01959, 20],
                 text: "Police"
             },
@@ -260,10 +264,6 @@ var LEGEND = {
             {
                 coordinates: [19.669621, -72.127119, 20],
                 text: "Community Center"
-            },
-            {
-                coordinates: [19.104301, -72.695057, 20],
-                text: "NGO (Non-Governmental Organization) Office"
             }
         ]
     }
