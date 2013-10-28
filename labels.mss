@@ -339,6 +339,7 @@
         [tourism='museum'],
         [leisure='beach_resort'],
         [amenity='embassy'],
+        [amenity='doctors'],
         [amenity='library'],
         [amenity='theatre'],
         [amenity='restaurant'],

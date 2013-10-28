@@ -69,6 +69,7 @@
         [amenity='fire_station'],
         [amenity='post_office'],
         [amenity='embassy'],
+        [amenity='doctors'],
         [amenity='hospital'] { // amenity with priority
             marker-file: url('icons/poi/[amenity]-18.png');
             marker-clip:false;
