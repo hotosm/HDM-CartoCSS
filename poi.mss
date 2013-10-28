@@ -18,15 +18,15 @@
     }
 }
 
-.poi {
-    // Generic rules first
-    [zoom>=18] {
-        [shop!=null] {
-            marker-file: url('icons/poi/shop-18.png');
+.poi::med[zoom<17] {
+    [zoom>=14] {
+        [amenity='townhall'],
+        [amenity='fire_station'] {
+            marker-file: url('icons/poi/[amenity]-12.png');
             marker-clip:false;
         }
     }
-    [zoom>=15][zoom<17] {
+    [zoom>=15] {
         [office='government'] {
             marker-file: url('icons/poi/[office]-12.png');
             marker-clip:false;
@@ -34,9 +34,7 @@
         [amenity='university'],
         [amenity='police'],
         [amenity='bank'],
-        [amenity='townhall'],
         [amenity='taxi'],
-        [amenity='fire_station'],
         [amenity='hospital'] {
             marker-file: url('icons/poi/[amenity]-12.png');
             marker-clip:false;
@@ -51,6 +49,15 @@
         [amenity='school'] {
             marker-clip:false;
             marker-file: url('icons/poi/[amenity]-12.png');
+        }
+    }
+}
+.poi::high {
+    // Generic rules first
+    [zoom>=18] {
+        [shop!=null] {
+            marker-file: url('icons/poi/shop-18.png');
+            marker-clip:false;
         }
     }
     [zoom>=17] {
