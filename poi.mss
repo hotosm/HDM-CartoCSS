@@ -23,11 +23,13 @@
     [zoom>=18] {
         [shop!=null] {
             marker-file: url('icons/poi/shop-18.png');
+            marker-clip:false;
         }
     }
     [zoom>=15][zoom<17] {
         [office='government'] {
             marker-file: url('icons/poi/[office]-12.png');
+            marker-clip:false;
         }
         [amenity='university'],
         [amenity='police'],
@@ -37,20 +39,24 @@
         [amenity='fire_station'],
         [amenity='hospital'] {
             marker-file: url('icons/poi/[amenity]-12.png');
+            marker-clip:false;
         }
         [barrier='border_control'] {
             marker-file: url('icons/poi/[barrier]-12.png');
+            marker-clip:false;
         }
     }
     [zoom=16] {
         [amenity='embassy'],
         [amenity='school'] {
+            marker-clip:false;
             marker-file: url('icons/poi/[amenity]-12.png');
         }
     }
     [zoom>=17] {
         [highway='bus_stop'] {
             marker-file: url('icons/poi/[highway]-18.png');
+            marker-clip:false;
         }
         [amenity='atm'],
         [amenity='fire_station'],
@@ -58,16 +64,19 @@
         [amenity='embassy'],
         [amenity='hospital'] { // amenity with priority
             marker-file: url('icons/poi/[amenity]-18.png');
+            marker-clip:false;
         }
         [office='government'],
         [office='ngo'] {
             marker-file: url('icons/poi/[office]-18.png');
+            marker-clip:false;
             [office='ngo'] {
                 [name='Oxfam'] { marker-file: url('icons/poi/oxfam-18.png'); }
             }
         }
         [barrier='border_control'] {
             marker-file: url('icons/poi/[barrier]-18.png');
+            marker-clip:false;
         }
         [amenity='kindergarten'],
         [amenity='school'],
@@ -100,9 +109,11 @@
         [amenity='pub'],
         [amenity='courthouse'] {
             marker-file: url('icons/poi/[amenity]-18.png');
+            marker-clip:false;
         }
         [amenity='place_of_worship'] {
             marker-file: url('icons/poi/[amenity]-18.png');
+            marker-clip:false;
             [religion='christian'],
             [religion='jewish'],
             [religion='hindu'],
@@ -112,6 +123,7 @@
         }
         [craft!=null] {
             marker-file: url('icons/poi/craft-18.png');
+            marker-clip:false;
             [craft='shoemaker'],
             [craft='carpenter'] {
                 marker-file: url('icons/poi/[craft]-18.png');
@@ -137,6 +149,7 @@
         [shop="tyres"],
         [shop="photo"] {
             marker-file: url('icons/poi/[shop]-18.png');
+            marker-clip:false;
         }
         [tourism='information'],
         [tourism='camp_site'],
@@ -148,6 +161,7 @@
         [tourism='museum'],
         [tourism='motel'] { 
             marker-file: url('icons/poi/[tourism]-18.png');
+            marker-clip:false;
         }
         [man_made="water_well"] {
             marker-file: url('icons/poi/bucket-18.png');
@@ -174,6 +188,7 @@
         [leisure="beach_resort"],
         [leisure="playground"] {
             marker-file: url('icons/poi/[leisure]-18.png');
+            marker-clip:false;
         }
     }
     [zoom>=18] {

@@ -282,7 +282,7 @@
 // POI LABELS
 // =====================================================================
 
-#poi-point::label[zoom>=17] {
+.poi::label[zoom>=16] {
     text-name: "";
     text-face-name: @sans;
     text-size: 10;
@@ -297,7 +297,8 @@
     text-placement-type: simple;
     text-placements: "S,N,W,E";
     text-avoid-edges: true;
-    [zoom>=17] {
+    text-clip: false;
+    [zoom>=16] {
         /* Prio */
         [amenity='townhall'],
         [amenity='fire_station'],
@@ -311,7 +312,7 @@
         [amenity='university'],
         [office='government'],
         [amenity='pharmacy'] {
-            text-min-distance: 100;
+            text-min-distance: 2;
             text-name: "[name]";
             [zoom>=19] {
                 text-face-name: @sans_bold;
