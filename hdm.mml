@@ -276,7 +276,7 @@
         "key_field": "",
         "password": "osm",
         "port": "5432",
-        "table": "( SELECT way, waterway AS type, CASE WHEN tags->'seasonal'='yes' OR tags->'intermittent'='yes' THEN 'yes' ELSE 'no' END AS seasonal FROM planet_osm_line WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')) AS data",
+        "table": "( SELECT way, waterway AS type,\nCASE WHEN intermittent IN ('yes') OR tags@> hstore('seasonal','yes') THEN 'yes'\nELSE 'no' END AS seasonal\nFROM planet_osm_line\nWHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')) as h2o",
         "type": "postgis",
         "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
