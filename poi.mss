@@ -52,15 +52,7 @@
         }
     }
 }
-.poi::high {
-    // Generic rules first
-    [zoom>=18] {
-        [shop!=null] {
-            marker-file: url('icons/poi/shop-18.png');
-            marker-clip:false;
-        }
-    }
-    [zoom>=17] {
+.poi::high-prio[zoom>=17] {
         [highway='bus_stop'] {
             marker-file: url('icons/poi/[highway]-18.png');
             marker-clip:false;
@@ -70,7 +62,7 @@
         [amenity='post_office'],
         [amenity='embassy'],
         [amenity='doctors'],
-        [amenity='hospital'] { // amenity with priority
+        [amenity='hospital'] {
             marker-file: url('icons/poi/[amenity]-18.png');
             marker-clip:false;
         }
@@ -86,6 +78,16 @@
             marker-file: url('icons/poi/[barrier]-18.png');
             marker-clip:false;
         }
+}
+.poi::high {
+    // Generic rules first
+    [zoom>=18] {
+        [shop!=null] {
+            marker-file: url('icons/poi/shop-18.png');
+            marker-clip:false;
+        }
+    }
+    [zoom>=17] {
         [amenity='kindergarten'],
         [amenity='school'],
         [amenity='university'],
