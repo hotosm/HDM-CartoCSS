@@ -111,7 +111,7 @@
   polygon-fill:@building;
   line-color:darken(@building,5%);
   line-width:0.2;
-  
+
   [zoom>=16] {
     line-color:darken(@building,10%);
     line-width:0.4;
@@ -120,6 +120,26 @@
   [zoom>=18] {
     line-color:darken(@building,20%);
   }
+
+  [type="collapsed"],
+  [type="damaged"] {
+    [zoom>=19] {
+      polygon-fill: lighten(@building, 3%);
+    }
+    line-width: 0.5;
+    line-color: @damaged;
+    [zoom=18] {
+      line-width: 0.6;
+    }
+    [zoom>=19] {
+      line-dasharray: 6,3;
+      line-width: 0.7;
+    }
+    [type="collapsed"] {
+      line-color: @collapsed;
+    }
+  }
+
 }
 
 

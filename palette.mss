@@ -53,15 +53,17 @@ Map { font-directory: url(./fonts); }
 @heath:             #E1E9D6;
 @sports:            @park;
 
-@building:          #dcd7d7;
-@building_hedge:    #dcd7d7;
-@hospital:          rgb(229,198,195);
-@school:            #E2D6CD;
-
 @residential:       darken(@land,5%);
 @commercial:        @land * 0.97;
 @industrial:        #D7C8CB;
 @parking:           #EEE;
+
+@building:          #dcd7d7;
+@building_hedge:    #dcd7d7;
+@collapsed:         #b25047;
+@damaged:           #c87c38;
+@hospital:          rgb(229,198,195);
+@school:            #E2D6CD;
 
 
 /* ================================================================== */

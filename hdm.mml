@@ -1,13 +1,13 @@
 {
   "bounds": [
-    -72.2653,
-    19.5326,
-    -71.7586,
-    19.8133
+        -179.99999692067183,
+        -84.96651228427099,
+        179.99999692067183,
+        84.96651228427098
   ],
   "center": [
-    -72.1198,
-    19.6698,
+    124.99934,
+    11.24634,
     16
   ],
   "format": "png",
@@ -497,7 +497,7 @@
         "key_field": "",
         "password": "osm",
         "port": "5432",
-        "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building NOT IN ('0','false', 'no')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
+        "table": "( SELECT way, building AS type FROM planet_osm_polygon WHERE building NOT IN ('0','false', 'no')) AS data",
         "type": "postgis",
         "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
