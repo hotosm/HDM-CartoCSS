@@ -324,15 +324,15 @@ Map {
           }
           [zoom=17] {
             line-width: 1;
-            line-dasharray: 16,7;
+            line-dasharray: 32,10;
           }
           [zoom=18] {
             line-width: 1.5;
-            line-dasharray: 20,10;
+            line-dasharray: 56,15;
           }
           [zoom>=19] {
             line-width: 2;
-            line-dasharray: 28,14;
+            line-dasharray: 66,20;
           }
 
         } 
