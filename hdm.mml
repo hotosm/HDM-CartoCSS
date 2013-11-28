@@ -218,7 +218,7 @@
         "port": "5432",
         "project": "hdm",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, waterway AS type\n  FROM planet_osm_line\n  WHERE waterway IN ('river', 'canal')\n) AS data",
+        "table": "( SELECT way, waterway AS type,\nCASE WHEN intermittent IN ('yes') OR tags@> hstore('seasonal','yes') THEN 'yes'\nELSE 'no' END AS seasonal\nFROM planet_osm_line\nWHERE waterway IN ('river', 'canal')) as h2olow",
         "type": "postgis",
         "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
@@ -247,7 +247,7 @@
         "key_field": "",
         "password": "osm",
         "port": "5432",
-        "table": "( SELECT way, waterway AS type\n  FROM planet_osm_line\n  WHERE waterway IN ('river', 'canal', 'stream')\n) AS data",
+        "table": "( SELECT way, waterway AS type,\nCASE WHEN intermittent IN ('yes') OR tags@> hstore('seasonal','yes') THEN 'yes'\nELSE 'no' END AS seasonal\nFROM planet_osm_line\nWHERE waterway IN ('river', 'canal', 'stream')) as h2o",
         "type": "postgis",
         "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"
