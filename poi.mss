@@ -71,7 +71,8 @@
             marker-file: url('icons/poi/[office]-18.png');
             marker-clip:false;
             [office='ngo'] {
-                [name='Oxfam'] { marker-file: url('icons/poi/oxfam-18.png'); }
+                [name='Oxfam'],[operator='oxfam'] { marker-file: url('icons/poi/oxfam-18.png'); }
+                [name='ACRA'],[operator='acra'] { marker-file: url('icons/poi/acra-18.png'); }
             }
         }
         [barrier='border_control'] {

@@ -6,8 +6,8 @@
         84.96651228427098
   ],
   "center": [
-    124.99934,
-    11.24634,
+    15.0674,
+    12.1177,
     16
   ],
   "format": "png",
@@ -945,7 +945,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select way,name,amenity,shop,tourism,highway,man_made,access,religion,waterway,lock,historic,leisure,tags->'office' as office, tags->'craft' as craft, tags->'pump' as pump,tags->'drinking_water' as drinking_water, \"tower:type\", tags->'emergency' as emergency, power, tags->'content' AS content, barrier FROM planet_osm_point WHERE amenity is not null or shop is not null or tags ? 'craft' or tourism in ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','motel','museum','viewpoint','bed_and_breakfast','information','chalet') or highway in ('bus_stop','traffic_signals','ford', 'street_lamp') or man_made in ('mast','water_tower', 'tower', 'water_well', 'watermill', 'storage_tank') or historic in ('memorial','archaeological_site') or leisure in ('playground','slipway', 'beach_resort') or tags @> hstore('office', 'ngo') OR tags @> hstore('office', 'government') OR tags @> hstore ('emergency', 'fire_hydrant') OR power IN ('generator', 'sub_station', 'tower', 'pole') OR barrier IN ('border_control')) as data",
+        "table": "(select way,name,amenity,shop,tourism,highway,man_made,access,religion,waterway,lock,historic,leisure,tags->'office' as office, tags->'craft' as craft, tags->'pump' as pump,tags->'drinking_water' as drinking_water, \"tower:type\", tags->'emergency' as emergency, power, tags->'content' AS content, barrier, lower(operator) AS operator FROM planet_osm_point WHERE amenity is not null or shop is not null or tags ? 'craft' or tourism in ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','motel','museum','viewpoint','bed_and_breakfast','information','chalet') or highway in ('bus_stop','traffic_signals','ford', 'street_lamp') or man_made in ('mast','water_tower', 'tower', 'water_well', 'watermill', 'storage_tank') or historic in ('memorial','archaeological_site') or leisure in ('playground','slipway', 'beach_resort') or tags @> hstore('office', 'ngo') OR tags @> hstore('office', 'government') OR tags @> hstore ('emergency', 'fire_hydrant') OR power IN ('generator', 'sub_station', 'tower', 'pole') OR barrier IN ('border_control')) as data",
         "extent": "-20037508,-19929239,20037508,19929239",
         "key_field": "",
         "geometry_field": "way",
@@ -969,7 +969,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "(select way,name,amenity,shop,tourism,highway,man_made,access,religion,waterway,lock,historic,leisure,tags->'office' as office, tags->'craft' as craft, tags->'pump' as pump,tags->'drinking_water' as drinking_water, \"tower:type\", tags->'emergency' as emergency, power, tags->'content' AS content, barrier FROM planet_osm_polygon WHERE amenity is not null or shop is not null or tourism in ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','motel','museum','viewpoint','bed_and_breakfast','information','chalet')\n         or highway in ('bus_stop','traffic_signals') or historic in ('memorial','archaeological_site') OR leisure='playground' OR power IN ('plant', 'sub_station')) as data",
+        "table": "(select way,name,amenity,shop,tourism,highway,man_made,access,religion,waterway,lock,historic,leisure,tags->'office' as office, tags->'craft' as craft, tags->'pump' as pump,tags->'drinking_water' as drinking_water, \"tower:type\", tags->'emergency' as emergency, power, tags->'content' AS content, barrier, lower(operator) AS operator FROM planet_osm_polygon WHERE amenity is not null or shop is not null or tourism in ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','motel','museum','viewpoint','bed_and_breakfast','information','chalet')\n         or highway in ('bus_stop','traffic_signals') or historic in ('memorial','archaeological_site') OR leisure='playground' OR power IN ('plant', 'sub_station')) as data",
         "extent": "-20037508,-19929239,20037508,19929239",
         "key_field": "",
         "geometry_field": "way",
