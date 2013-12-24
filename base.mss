@@ -210,11 +210,33 @@ Map {
 
 #waterway_low[zoom>=8][zoom<=12] {
   line-color: @water;
+  line-cap: round;
+  line-join: round;
+  [type='river'],
+  [type='canal'] {
+    [seasonal='yes']{
+      line-cap: butt;
+      line-color: @water;
+      [zoom=10] {
+        line-width: 0.4;
+        line-dasharray: 6,3;
+      }
+      [zoom=11] {
+        line-width: 0.6;
+        line-dasharray: 8,4;
+      }
+      [zoom=12] {
+        line-width: 0.8;
+        line-dasharray: 12,6;
+      }
+    }    
+   
   [zoom=8] { line-width: 0.1; }
   [zoom=9] { line-width: 0.2; }
   [zoom=10]{ line-width: 0.4; }
   [zoom=11]{ line-width: 0.6; }
   [zoom=12]{ line-width: 0.8; }
+  }
 }
 
 #waterway_med[zoom>=13][zoom<=14] {
@@ -223,10 +245,30 @@ Map {
   [type='canal'] {
     line-cap: round;
     line-join: round;
+    [seasonal='yes']{
+      line-cap: butt;
+      line-color: @water;
+      [zoom=13] {
+        line-width: 1;
+        line-dasharray: 8,4;
+      }
+      [zoom=14] {
+        line-width: 1.5;
+        line-dasharray: 16,6;
+      }
+    }    
     [zoom=13]{ line-width: 1; }
     [zoom=14]{ line-width: 1.5; }
   }
   [type='stream'] {
+    [seasonal='yes'] {
+      line-cap: butt;
+      line-color: @water;
+      [zoom=14] {
+        line-width: 0.4;
+        line-dasharray: 8,4;
+      }
+    }    
     [zoom=13]{ line-width: 0.2; }
     [zoom=14]{ line-width: 0.4; }
   }
@@ -234,32 +276,69 @@ Map {
   
 #waterway_high[zoom>=15] {
   line-color: @water;
-  [type='river'],
-  [type='canal'] {
-    ::seasonal {
-      line-color: lighten(@water, 10%);
-      line-dasharray: 4,4;
-      line-cap: butt;
-    }
-    ::default {
+  line-cap: round;
+  line-join: round;
+  [type='river'] {
+    [seasonal='yes']{
+    line-cap: butt;
       line-color: @water;
-      line-cap: round;
-      line-join: round;
-    }
-    ::default, ::seasonal[seasonal='yes'] {
-      line-width: 6;
-      [zoom=16]{ line-width: 7; }
-      [zoom=17]{ line-width: 8; }
-      [zoom=18]{ line-width: 9; }
-      [zoom>=19]{ line-width: 12; }
-    }
+      [zoom=15] {
+        line-width: 6;
+        line-dasharray: 24,7;
+        }
+      [zoom=16] {
+        line-width: 7;
+        line-dasharray: 28,8;
+        }
+      [zoom=17] {
+        line-width: 8;
+        line-dasharray: 32,10;
+        }
+      [zoom>=18] {
+        line-width: 9;
+        line-dasharray: 56,15;
+        }
+      [zoom>=19] {
+        line-width: 12;
+        line-dasharray: 66,20;
+        }
+     }   
+    [zoom=15]{ line-width: 6; }
+    [zoom=16]{ line-width: 7; }
+    [zoom=17]{ line-width: 8; }
+    [zoom=18]{ line-width: 9; }
+    [zoom>=19]{ line-width: 12; }
   }
-  [type='stream'] {
-    [zoom=15]{ line-width: 0.6; }
-    [zoom=16]{ line-width: 0.8; }
-    [zoom=17]{ line-width: 1; }
-    [zoom=18]{ line-width: 1.5; }
-    [zoom>18]{ line-width: 2; }
+    [type='stream'] {
+      [seasonal='yes']{
+        line-color: @water;
+        line-cap: butt;
+        [zoom=15] {
+          line-width: 0.6;
+          line-dasharray: 24,7;
+        }
+        [zoom=16] {
+          line-width: 0.8;     
+          line-dasharray: 28,8;
+        }
+        [zoom=17] {
+          line-width: 1;
+          line-dasharray: 32,10;
+        }
+        [zoom=18] {
+          line-width: 1.5;
+          line-dasharray: 56,15;
+        }
+        [zoom>=19] {
+          line-width: 2;
+          line-dasharray: 66,20;
+        }
+      } 
+      [zoom=15]{ line-width: 0.6; }
+      [zoom=16]{ line-width: 0.8; }
+      [zoom=17]{ line-width: 1; }
+      [zoom=18]{ line-width: 1.5; }
+      [zoom>=19]{ line-width: 2; }
   }
   [type='ditch'],
   [type='drain'] {
