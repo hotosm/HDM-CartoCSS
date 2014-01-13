@@ -7,7 +7,7 @@ mkdir -p tmp
 cd tmp
 if test -z "$1"
 then
-    echo "Use ./script/fetch.sh W,S,E,N; ex.: 58,13,59,12"
+    echo "Use ./script/fetch.sh W,N,E,S; ex.: 58,12,59,13"
     exit 0
 fi
 A=$1
@@ -18,9 +18,9 @@ then
     exit 1
 fi
 W=${BBOX[0]}
-S=${BBOX[1]}
+N=${BBOX[1]}
 E=${BBOX[2]}
-N=${BBOX[3]}
+S=${BBOX[3]}
 if [[ $W > $E ]]
 then
     echo "West coordinate must be lower or equal to East one, got $W and $E"
