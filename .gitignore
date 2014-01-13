@@ -5,3 +5,4 @@ project.mml
 mapnik.xml
 cache/*
 node_modules/*
+DEM/data/*
