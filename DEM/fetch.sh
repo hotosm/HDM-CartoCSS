@@ -30,15 +30,19 @@ for (( x=$W; x<=$E; x++ ))
 do
     for (( y=$N; y<=$S; y++ ))
     do
-        URL=http://srtm.csi.cgiar.org/SRT-ZIP/SRTM_V41/SRTM_Data_GeoTiff/srtm_$(printf "%02d" $x)_$(printf "%02d" $y).zip
-        echo "Downloading $URL"
-        wget $URL
+        FILENAME=srtm_$(printf "%02d" $x)_$(printf "%02d" $y).zip
+        URL=http://srtm.csi.cgiar.org/SRT-ZIP/SRTM_V41/SRTM_Data_GeoTiff/$FILENAME
+        if [ ! -f "$FILENAME" ]
+        then
+            echo "Downloading $URL"
+            wget $URL $FILENAME
+        fi
     done
 done
 echo "Done with downloads. Now unzipping"
 for file in *.zip
 do
-    unzip $file
+    unzip -o $file
     rm readme.txt
     rm *.hdr
     rm *.tfw
