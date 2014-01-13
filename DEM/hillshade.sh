@@ -21,7 +21,7 @@ do
         # gdaldem color-relief -co compress=lzw $hillshade_path ../slope.ramp $hillshade_path
         # gdaldem hillshade -co compress=lzw -compute_edges $proj_path $hillshade_path -alt 80
         # gdal_calc.py -A $hillshade_path --outfile=$hillshade_path --calc="A*(A>5)" --NoDataValue=0
-        gdaldem hillshade -co compress=lzw -compute_edges $proj_path $hillshade_path -alt 80
+        gdaldem hillshade -co compress=lzw -compute_edges $proj_path $hillshade_path
         gdaldem color-relief $hillshade_path -alpha $ROOT/shade.ramp $hillshade_path
     fi
     if [ ! -f "$contour_path" ] 
