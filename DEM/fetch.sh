@@ -35,7 +35,7 @@ do
         if [ ! -f "$FILENAME" ]
         then
             echo "Downloading $URL"
-            wget $URL $FILENAME
+            wget $URL -O $FILENAME
         fi
     done
 done
