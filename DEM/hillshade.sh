@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 DIR=${1:-'data'}
+ROOT=$PWD
 cd $DIR
 echo "Working directory set to ${PWD}"
 mkdir -p hillshade
@@ -21,7 +22,7 @@ do
         # gdaldem hillshade -co compress=lzw -compute_edges $proj_path $hillshade_path -alt 80
         # gdal_calc.py -A $hillshade_path --outfile=$hillshade_path --calc="A*(A>5)" --NoDataValue=0
         gdaldem hillshade -co compress=lzw -compute_edges $proj_path $hillshade_path -alt 80
-        gdaldem color-relief $hillshade_path -alpha ../../shade.ramp $hillshade_path
+        gdaldem color-relief $hillshade_path -alpha $ROOT/shade.ramp $hillshade_path
     fi
     if [ ! -f "$contour_path" ] 
     then
