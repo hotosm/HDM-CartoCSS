@@ -480,7 +480,7 @@
         "key_field": "",
         "password": "osm",
         "port": "5432",
-        "table": "( SELECT way, building AS type FROM planet_osm_polygon WHERE building NOT IN ('0','false', 'no')) AS data",
+        "table": "( SELECT way, CASE WHEN amenity IS NOT NULL or shop IS NOT NULL THEN 'yes' ELSE 'no' END AS poi, building AS type FROM planet_osm_polygon WHERE building NOT IN ('0','false', 'no')) AS data",
         "type": "postgis",
         "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"

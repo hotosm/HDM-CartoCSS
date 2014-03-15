@@ -107,13 +107,20 @@
 /* ================================================================== */
 
 #buildings[zoom>=14] {
-  polygon-fill:@building;
-  line-color:darken(@building,5%);
-  line-width:0.2;
+  polygon-fill: @building;
+  line-color: darken(@building, 5%);
+  line-width: 0.2;
+  [poi='yes'] {
+    polygon-fill: darken(@building, 5%);
+    line-color: darken(@building, 10%);
+  }
 
   [zoom>=16] {
     line-color:darken(@building,10%);
-    line-width:0.4;
+    line-width: 0.4;
+    [poi='yes'] {
+      line-color: darken(@building, 15%);
+    }
   }
 
   [zoom>=18] {
