@@ -118,6 +118,7 @@
         [amenity='bureau_de_change'],
         [amenity='theatre'],
         [amenity='pub'],
+        [amenity='telephone'],
         [amenity='courthouse'] {
             marker-file: url('icons/poi/[amenity]-18.png');
             marker-clip:false;
