@@ -56,7 +56,6 @@ Map { font-directory: url(./fonts); }
 @residential:       darken(@land,5%);
 @commercial:        @land * 0.97;
 @industrial:        #D7C8CB;
-@parking:           #EEE;
 
 @building:          #dcd7d7;
 @building_hedge:    #dcd7d7;

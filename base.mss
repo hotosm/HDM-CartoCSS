@@ -35,7 +35,6 @@
     [landfill_type="underwater"] { polygon-fill: darken(@water,1%);}
   }
   [type='quarry']        { polygon-fill: @industrial; }
-  [type='parking']       { polygon-fill: @parking; }
   [type='pedestrian']    { polygon-fill: @pedestrian_case; }
   [type='residential']   { polygon-fill: @residential; }
   [type='retail']        { polygon-fill: @residential; }
