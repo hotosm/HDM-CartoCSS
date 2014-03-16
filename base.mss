@@ -371,7 +371,7 @@ Map {
 #admin-1-4[admin_level='3'][zoom>=5],
 #admin-1-4[admin_level='4'][zoom>=5],
 #admin-5-10[zoom>=13] {
-  ::outline {
+  [zoom>=5]::outline {
     line-color: lighten(@admin_2,25%);
     line-width: 2.5;
     line-opacity: 0.3;    
