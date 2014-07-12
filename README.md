@@ -45,3 +45,10 @@ osm2pgsql -G -U ybon -d hdm data/haiti-and-domrep-latest.osm.pbf --hstore --crea
 1. Create contour line: `gdal_contour -a height haiti-3785.tif haiti_contour_25m.shp -i 25.0`
 
 1. Index shape file: `shapeindex haiti_contour_25m.shp`
+
+
+## Licence
+
+- stylesheet is licenced under CCO
+- Nori icons are licenced under CCO
+- Maki icons are © [MapBox](https://www.mapbox.com/maki/)
