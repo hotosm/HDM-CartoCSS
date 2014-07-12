@@ -1,5 +1,5 @@
 An OpenStreetMap rendering dedicated to the humanitarian and
-developpement data model.
+development data model.
 
 Created by Yohan Boniface <ybon@openstreetmap.fr> and contributors
 for the Humanitarian OpenStreetMap Team (<http://hotosm.org>).
