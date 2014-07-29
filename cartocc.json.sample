@@ -20,7 +20,7 @@
     },
     {
         "if": {
-            "id": "land-high"
+            "id": "contour_line"
         },
         "then": {
             "Datasource.file": "/home/ybon/OSM/shp/land-polygons-split-3857/land_polygons.shp"
