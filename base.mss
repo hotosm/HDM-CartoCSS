@@ -44,6 +44,7 @@
   [type='university']    { polygon-fill: @school; }
   [type='pitch']         { polygon-fill: @sports; polygon-opacity: 0.8; }
   [type='grass']         { polygon-fill: @grass; }
+  [type='grassland']     { polygon-fill: @grass; }
   [type='park']          { polygon-fill: @park; }
   [type='garden']        { polygon-fill: @park; }
   [type='village_green'] { polygon-fill: @park; }
