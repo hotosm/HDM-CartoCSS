@@ -26,7 +26,8 @@
   "Layer": [
     {
       "Datasource": {
-        "file": "http://data.openstreetmapdata.com/simplified-land-polygons-complete-3857.zip"
+        "file": "http://data.openstreetmapdata.com/simplified-land-polygons-complete-3857.zip",
+        "type": "shape"
       },
       "class": "shp",
       "geometry": "polygon",
@@ -43,7 +44,8 @@
     },
     {
       "Datasource": {
-        "file": "http://data.openstreetmapdata.com/land-polygons-split-3857.zip"
+        "file": "http://data.openstreetmapdata.com/land-polygons-split-3857.zip",
+        "type": "shape"
       },
       "class": "shp",
       "geometry": "polygon",
@@ -165,7 +167,8 @@
       "id": "hillshade",
       "class": "",
       "Datasource": {
-        "file": "/home/ybon/Code/maps/relief/SRTM_W_250m-hillshade-3785.tif"
+        "file": "/home/ybon/Code/maps/relief/SRTM_W_250m-hillshade-3785.tif",
+        "type": "gdal"
       },
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
@@ -183,10 +186,11 @@
       "id": "contour_line",
       "class": "",
       "Datasource": {
-        "file": "/home/ybon/OSM/SRTM/haiti_contour_25m.shp"
+        "file": "/home/ybon/OSM/SRTM/haiti_contour_25m.shp",
+        "type": "shape"
       },
       "srs-name": "autodetect",
-      "srs": "",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "contour_line"
     },
