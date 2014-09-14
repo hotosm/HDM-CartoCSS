@@ -40,7 +40,7 @@ osm2pgsql -G -U ybon -d hdm data/haiti-and-domrep-latest.osm.pbf --hstore --crea
 1. run the `fetch.sh` script with West,North,East,South tiles coordinates as
    parameter, for example for Burundi it comes:
 
-       ./fetch.sh 42,12,43,13
+   ```./fetch.sh 42,12,43,13```
 
 1. Then run the `hillshade.sh` script to create the hillshade
 
