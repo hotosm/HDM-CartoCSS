@@ -4,7 +4,7 @@
             "Datasource.type": "postgis"
         },
         "then": {
-            "Datasource.dbname": "hdm",
+            "Datasource.dbname": "burundi",
             "Datasource.password": "",
             "Datasource.user": "ybon",
             "Datasource.host": ""
@@ -15,7 +15,15 @@
             "id": "hillshade"
         },
         "then": {
-            "Datasource.file": "/home/ybon/SRTM/SRTM_W_250m-hillshade-3785.tif"
+            "Datasource.file": "/path/to/hillshade.vrt"
+        }
+    },
+    {
+        "if": {
+            "id": "contour_line"
+        },
+        "then": {
+            "Datasource.file": "/path/to/contour-25m.shp"
         }
     },
     {
@@ -23,7 +31,15 @@
             "id": "land-high"
         },
         "then": {
-            "Datasource.file": "/home/ybon/OSM/shp/land-polygons-split-3857/land_polygons.shp"
+            "Datasource.file": "/path/to/land-polygons-split-3857/land_polygons.shp"
+        }
+    },
+    {
+        "if": {
+            "id": "land-low"
+        },
+        "then": {
+            "Datasource.file": "/path/to/simplified-land-polygons-complete-3857/simplified_land_polygons.shp"
         }
     }
 ]

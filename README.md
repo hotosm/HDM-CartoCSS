@@ -34,17 +34,25 @@ osm2pgsql -G -U ybon -d hdm data/haiti-and-domrep-latest.osm.pbf --hstore --crea
 
 ### DEM
 
-1. get the file from [CGIAR](http://srtm.csi.cgiar.org/)
+1. get the needed tiles from [CGIAR](http://srtm.csi.cgiar.org/SELECTION/inputCoord.asp);
+   for example for Burundi we need 42/12, 42/13, 43/12 and 43/13
 
-1. Reproject it: `gdalwarp -s_srs EPSG:4269 -t_srs EPSG:3785 -r bilinear srtm_22_09.tif haiti-3785.tif`
+1. run the `fetch.sh` script with West,North,East,South tiles coordinates as
+   parameter, for example for Burundi it comes:
 
-1. Create hillshade: `gdaldem hillshade -co compress=lzw haiti-3785.tif haiti-hillshade-80-3785.tif -alt 80`
+       ./fetch.sh 42,12,43,13
 
-1. If you have more than one tiff for you covered area, merge them in a vrt file (remember to use absolute path): `gdalbuildvrt haiti-hillshade.vrt ~/OSM/SRTM/srtm_22_09-hillshade-80-3785.tif ~/OSM/SRTM/srtm_23_09-hillshade-80-3785.tif`
+1. Then run the `hillshade.sh` script to create the hillshade
 
-1. Create contour line: `gdal_contour -a height haiti-3785.tif haiti_contour_25m.shp -i 25.0`
+1. Then `./hillshade_to_vrt.sh` to index the hillshade in a `.vrt` file in the
+   `data` directory. You need to reference this file as source for the layer
+   `hillshade` in your `cartocc.json` file.
 
-1. Index shape file: `shapeindex haiti_contour_25m.shp`
+1. Generate contour lines with `merge_contour.sh`. This will generate a
+   `contour-25m.shp` file in the `data` dir. Use this file for the layer
+   `contour_line`.
+
+You're done! Remember to adapt the `cartocc.json` file, and run `cartocc`.
 
 
 ## Licence
