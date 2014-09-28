@@ -85,7 +85,7 @@ Map { font-directory: url(./fonts); }
 @unpaved: @residential; //#e2d8c3; //#ede7da;
 @paved: #d2938e;
 
-@unpaved_case: darken(@unpaved,20%);
+@unpaved_case: darken(@unpaved, 20%);
 
 @motorway_line:     #a098b0; //#44366e;
 @motorway_fill:     @motorway_line;
@@ -126,6 +126,9 @@ Map { font-directory: url(./fonts); }
 @rail_line:         #999;
 @rail_fill:         #fff;
 @rail_case:         @land;
+
+@construction_case: darken(@land, 1%);
+@construction_fill: darken(@unpaved, 1%);
 
 @aeroway:           #ddd;
 
