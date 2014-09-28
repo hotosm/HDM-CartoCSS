@@ -127,9 +127,6 @@ Map { font-directory: url(./fonts); }
 @rail_fill:         #fff;
 @rail_case:         @land;
 
-@construction_case: darken(@land, 1%);
-@construction_fill: darken(@unpaved, 1%);
-
 @aeroway:           #ddd;
 
 /* ================================================================== */

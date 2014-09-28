@@ -118,8 +118,8 @@ as well. */
   [condition='bad'][style!='noauto'] {
     line-cap: butt;
   }
-  [style='construction'] {
-    line-color: @construction_case;
+  [construction!=null] {
+    line-color: transparent;
   }
 
   /* -- widths -- */
@@ -131,7 +131,7 @@ as well. */
     [width='urban']{ line-width: 0; }
     [width='narrow']{ line-width: 0; }
     [width='noauto']   { line-width: 0;}
-    [style='construction'] { line-width: 0; }
+    [construction!=null] { line-width: 0; }
   }
   [zoom=12] {
     [width='motorway'] { line-width: @r12_motorway + 2; }
@@ -141,7 +141,7 @@ as well. */
     [width='urban']{ line-width: 0; }
     [width='narrow']{ line-width: 0; }
     [width='noauto']   { line-width: 0; }
-    [style='construction'] { line-width: 0; }
+    [construction!=null] { line-width: 0; }
   }
   [zoom=13] {
     [width='motorway'] { line-width: @r13_motorway + 2; }
@@ -151,7 +151,7 @@ as well. */
     [width='urban']{ line-width: 0; }
     [width='narrow']{ line-width: @r13_narrow + 0.2; }
     [width='noauto'] { line-width: 0; }
-    [style='construction'] { line-width: 0; }
+    [construction!=null] { line-width: 0; }
   }
   [zoom=14] {
     [width='motorway'] { line-width: @r14_motorway + 2; }
@@ -164,7 +164,7 @@ as well. */
     }
     [width='narrow']{ line-width: @r14_narrow + 0.2; }
     [width='noauto']   { line-width: @r14_noauto + 1; }
-    [style='construction'] { line-width: 0; }
+    [construction!=null] { line-width: 0; }
   }
   [zoom=15] {
     [width='motorway'] { line-width: @r15_motorway + 2.5; }
@@ -260,10 +260,9 @@ as well. */
     line-cap: butt;
     // line-comp-op: hue;
   }
-  [style='construction'] {
-    line-dasharray: 10,5;
+  [construction!=null] {
+    line-dasharray: 10,10;
     line-cap: butt;
-    line-color: @construction_fill;
     line-width: 0;
   }
   /* -- widths -- */
@@ -275,7 +274,7 @@ as well. */
     [width='urban']{ line-width: @r11_urban; }
     [width='narrow']{ line-width: @r11_narrow; }
     [width='noauto']   { line-width: 0; }
-    [style='construction'] { line-width: 0; }
+    [construction!=null] { line-width: 0; }
   }
   [zoom=12] {
     line-width: @r12_minor;
@@ -285,7 +284,7 @@ as well. */
     [width='urban']{ line-width: @r12_urban; }
     [width='narrow']{ line-width: @r12_narrow; }
     [width='noauto']   { line-width: @r12_noauto; }
-    [style='construction'] { line-width: 0; }
+    [construction!=null] { line-width: 0; }
   }
   [zoom=13] {
     line-width: @r13_minor;
@@ -298,7 +297,7 @@ as well. */
     }
     [width='narrow']{line-width: @r13_narrow; }
     [width='noauto']   { line-width: @r13_noauto; }
-    [style='construction'] { line-width: 0; }
+    [construction!=null] { line-width: 0; }
   }
   [zoom=14] {
     line-width: @r14_minor;
@@ -311,7 +310,7 @@ as well. */
     }
     [width='narrow']{ line-width: @r14_narrow; }
     [width='noauto']   { line-width: @r14_noauto; line-dasharray: 0.1,4; }
-    [style='construction'] { line-width: 0; }
+    [construction!=null] { line-width: 0; }
   }
   [zoom=15] {
     line-width: @r15_minor;
@@ -321,6 +320,7 @@ as well. */
     [width='urban']{ line-width: @r15_urban; }
     [width='narrow']{ line-width: @r15_narrow; }
     [width='noauto']   { line-width: @r15_noauto; line-dasharray: 0.1,4; }
+    [construction!=null] { line-dasharray: 10,10; }
   }
   [zoom=16] {
     line-width: @r16_minor;
@@ -330,6 +330,7 @@ as well. */
     [width='urban']{ line-width: @r16_urban; }
     [width='narrow']{ line-width: @r16_narrow; }
     [width='noauto']   { line-width: @r16_noauto; line-dasharray: 0.1,4; }
+    [construction!=null] { line-dasharray: 10,10; }
   }
   [zoom=17] {
     line-width: @r17_minor;
@@ -347,7 +348,7 @@ as well. */
         line-dasharray: 2,2;
       }
     }
-    [style='construction'] { line-dasharray: 15,10; }
+    [construction!=null] { line-dasharray: 15,10; }
   }
   [zoom>=18] {
     line-width: @r18_minor;
@@ -365,7 +366,7 @@ as well. */
         line-dasharray: 2,2;
       }
     }
-    [style='construction'] { line-dasharray: 15,15; }
+    [construction!=null] { line-dasharray: 15,15; }
   }
 }
 
