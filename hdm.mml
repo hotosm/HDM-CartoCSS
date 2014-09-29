@@ -1258,7 +1258,7 @@
         "port": "5432",
         "project": "hdm",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, \"natural\" AS type, name, CASE WHEN ele ~ E'^\\\\d+$' THEN ele::integer ELSE null END as ele FROM planet_osm_point WHERE \"natural\" IS NOT NULL AND \"natural\" IN ('peak', 'bay') ORDER BY ele DESC NULLS LAST) AS data",
+        "table": "( SELECT way, \"natural\" AS type, name, CASE WHEN ele ~ E'^\\\\d+$' THEN ele::integer ELSE null END as ele FROM planet_osm_point WHERE \"natural\" IS NOT NULL AND \"natural\" IN ('peak', 'bay', 'volcano') ORDER BY ele DESC NULLS LAST) AS data",
         "type": "postgis",
         "extent": "-20037508,-19929239,20037508,19929239",
         "user": "osm"

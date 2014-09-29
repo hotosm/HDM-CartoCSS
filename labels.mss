@@ -595,6 +595,7 @@
   text-size: 11;
 }
 
+#natural_point_label[type='volcano'][zoom>=13],
 #natural_point_label[type='peak'][zoom>=13] {
   shield-file: url('icons/natural/peak-6.png');
   shield-name: '[name]';
