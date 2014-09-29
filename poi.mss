@@ -191,7 +191,8 @@
         [man_made="water_tower"] {
             marker-file: url('icons/poi/[man_made]-18.png');
         }
-        [man_made="tower"]['tower:type'='communication'] {
+        [man_made="tower"]['tower:type'='communication'],
+        [man_made='mast'] {
             marker-file: url('icons/poi/communication-tower-18.png');
         }
         [man_made="storage_tank"][content='water'] {

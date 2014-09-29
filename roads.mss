@@ -63,7 +63,7 @@ as well. */
 @r15_motorway: 6;  @r15_main: 4;  @r15_inter: 4;  @r15_minor: 2.1; @r15_urban: 2.1; @r15_narrow: 2.5; @r15_noauto: 1.5;
 @r16_motorway: 8;  @r16_main: 6;  @r16_inter: 5;  @r16_minor: 4;   @r16_urban: 3;   @r16_narrow: 3;   @r16_noauto: 1.7;
 @r17_motorway: 12; @r17_main: 10; @r17_inter: 6;  @r17_minor: 6;   @r17_urban: 5;   @r17_narrow: 4;   @r17_noauto: 2;
-@r18_motorway: 20; @r18_main: 16; @r18_inter: 10; @r18_minor: 10;  @r18_urban: 8;  @r18_narrow: 8;   @r18_noauto: 3;
+@r18_motorway: 20; @r18_main: 16; @r18_inter: 10; @r18_minor: 10;  @r18_urban: 8;   @r18_narrow: 8;   @r18_noauto: 3;
 
 /* ---- Casing ----------------------------------------------- */
 
