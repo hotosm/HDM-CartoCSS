@@ -63,7 +63,22 @@
   [type='orchard']       { polygon-fill: @agriculture; }
   [type='allotments']    { polygon-fill: @agriculture; }
   [type='beach']         { polygon-fill: @beach; }
-  [type='desert']        { polygon-fill: @beach; polygon-opacity: 0.6;}
+  [type='desert']        {
+    polygon-fill: @beach;
+    polygon-opacity: 0.3;
+    [zoom>=9] {
+      polygon-opacity: 0.5;
+    }
+    [zoom>=11] {
+      polygon-opacity: 0.5;
+    }
+    [zoom>=14] {
+      polygon-opacity: 0.7;
+    }
+    [zoom>=16] {
+      polygon-opacity: 0.8;
+    }
+  }
   [type='military']      {
     [zoom<=9] {
       polygon-fill: @military;
