@@ -63,6 +63,10 @@
   [type='orchard']       { polygon-fill: @agriculture; }
   [type='allotments']    { polygon-fill: @agriculture; }
   [type='beach']         { polygon-fill: @beach; }
+  [type='salt_pond']     {
+    polygon-fill: @salt;
+    [zoom>=16] { polygon-pattern-file: url('icons/pattern/salt-36.png'); }
+  }
   [type='desert']        {
     polygon-fill: @beach;
     polygon-opacity: 0.3;
