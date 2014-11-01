@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 DIR=${1:-'data'}
 ROOT=$PWD
+mkdir -p $DIR
 cd $DIR
 echo "Working directory set to ${PWD}"
 mkdir -p hillshade
