@@ -386,27 +386,31 @@ Map {
 /* ================================================================== */
 
 
-#admin-1-4[maritime='no'][admin_level='2'][zoom>=2][zoom<5],
-#admin-1-4[maritime='no'][admin_level='3'][zoom>=4][zoom<5],
-#admin-1-4[maritime='no'][admin_level='4'][zoom>=4][zoom<5],
-#admin-1-4[admin_level='2'][zoom>=5],
-#admin-1-4[admin_level='3'][zoom>=5],
-#admin-1-4[admin_level='4'][zoom>=5],
-#admin-5-10[zoom>=13] {
-  [zoom>=4]::outline {
-    line-color: lighten(@admin_2,25%);
-    line-width: 2.5;
-    line-opacity: 0.3;    
-    [admin_level!='2'] {
-      line-color: lighten(@admin_3,25%);
+#admin-low[maritime='no'][admin_level=2][zoom>=2][zoom<5],
+#admin-low[maritime='no'][admin_level=3][zoom>=4][zoom<5],
+#admin-low[maritime='no'][admin_level=4][zoom>=4][zoom<5],
+#admin-low[zoom>=5][zoom<11],
+#admin-med[zoom>=11][zoom<13],
+#admin-high[zoom>=13] {
+  [admin_level=2] {
+    outline/line-color: lighten(@admin_2, 25%);
+    outline/line-width: 2;
+    [zoom>=8] {
+      outline/line-width: 3;
     }
   }
+  eraser/line-color: white;
+  eraser/line-width: 1;
+  eraser/comp-op: darken;
   line-color: @admin_2;
-  line-width: 0.5;
-  line-dasharray: 20,10,5,10;
-  line-opacity: 0.6;
-  [admin_level!='2'] {
+  line-width: 1;
+  [admin_level>2] {
+    line-dasharray: 10,5;
     line-color: @admin_3;
+    [admin_level>=6] {
+      line-dasharray: 5,5;
+      line-width: 0.8;
+    }
   }
 }
 

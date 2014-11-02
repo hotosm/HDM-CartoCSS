@@ -135,7 +135,7 @@ Map { font-directory: url(./fonts); }
 /* ================================================================== */
 
 @admin_2:           #537076;
-@admin_3:           #AEA6A5;
+@admin_3:           #a59c9b;
 @admin_2_text:      @admin_2;
 @admin_3_text:      @admin_3;
 
