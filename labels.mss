@@ -11,7 +11,7 @@
 
 /* Font sets are defined in palette.mss */
 
-/* Mapnik does not yet support character-spacing adjustments for 
+/* Mapnik does not yet support character-spacing adjustments for
    labels placed along a line. We can fake this using the replace()
    function in the text-name parameter by replacing each character
    with itself followed by one or more spaces. */
@@ -227,7 +227,7 @@
     text-halo-radius: 2;
     text-transform: uppercase;
     text-character-spacing: 1;
-    text-wrap-width: 60; 
+    text-wrap-width: 60;
     text-line-spacing: 1;
     text-min-distance: 30;
   }
@@ -237,9 +237,9 @@
     text-wrap-width: 120;
     text-line-spacing: 2;
     text-min-distance: 10;
-  } 
+  }
   [zoom>=17] {
-    text-size:13; 
+    text-size:13;
     text-character-spacing: 3;
     text-wrap-width: 160;
     text-line-spacing: 4;
@@ -333,7 +333,7 @@
         [tourism='guest_house'],
         [tourism='hostel'],
         [tourism='hotel'],
-        [tourism='motel'], 
+        [tourism='motel'],
         [tourism='viewpoint'],
         [tourism='camp_site'],
         [tourism='museum'],

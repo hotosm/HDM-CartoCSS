@@ -460,7 +460,7 @@ as well. */
   [zoom>=16] { line-width: 1.75; }
   [zoom>=18] { line-width: 2; }
   [zoom>=20] { line-width: 2.25; }
-}  
+}
 
 #railway[type='other'][zoom>=14][zoom<=20] {
   line-cap: butt;
@@ -469,4 +469,4 @@ as well. */
   [zoom>=16] { line-width: 1.5; }
   [zoom>=18] { line-width: 1.75; }
   [zoom>=20] { line-width: 2; }
-}  
+}
