@@ -2,9 +2,9 @@
 
 The HDM rendering is a Carto project, focusing on the [Humanitarian Data Model](http://wiki.openstreetmap.org/wiki/Humanitarian_OSM_Tags).
 
-Preview: http://hotosm.github.io/HDM-CartoCSS/
+Preview: http://map.hotosm.org
 
-Compare: http://hotosm.github.io/HDM-CartoCSS/compare.html
+Compare: http://map.hotosm.org/compare.html
 
 ## Deploying
 
