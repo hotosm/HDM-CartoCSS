@@ -560,6 +560,7 @@
   text-halo-fill: @place_halo;
   text-min-padding: 50;
   text-min-distance: 50;
+  text-spacing: 300;
   text-max-char-angle-delta: 10;
 }
 
