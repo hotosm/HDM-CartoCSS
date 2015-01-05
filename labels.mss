@@ -554,6 +554,7 @@
   text-fill: @admin_2_text;
   text-size: 10;
   text-placement: line;
+  text-dy: -7;
   text-face-name: @sans_lt_italic;
   text-halo-radius: 2;
   text-halo-fill: @place_halo;
