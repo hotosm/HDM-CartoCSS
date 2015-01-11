@@ -399,12 +399,13 @@ as well. */
 
 #ferry {
   [route='ferry'] {
-    line-color: #55d;
     [zoom>=9] {
+      line-color: #55d;
       line-width: 0.4;
       line-dasharray: 4, 4;
     }
     [zoom>=13] {
+      line-color: #55d;
       line-width: 0.8;
       line-dasharray: 6, 6;
     }
