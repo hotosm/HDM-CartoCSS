@@ -668,6 +668,38 @@
         "dbname": "hdm",
         "geometry_field": "way",
         "host": "localhost",
+        "id": "ferry",
+        "key_field": "",
+        "password": "osm",
+        "port": "5432",
+        "project": "hdm",
+        "srs": null,
+        "table": "( SELECT way, route, name, z_order FROM planet_osm_line WHERE route IS NOT NULL AND route='ferry' ORDER BY z_order) as ferry",
+        "type": "postgis",
+        "extent": "-20037508,-19929239,20037508,19929239",
+        "user": "osm"
+      },
+      "class": "",
+      "geometry": "linestring",
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427099,
+        179.99999692067183,
+        84.96651228427098
+      ],
+      "id": "ferry",
+      "name": "ferry",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "advanced": {
+        "extent_from_subquery": "true"
+      }
+    },
+    {
+      "Datasource": {
+        "dbname": "hdm",
+        "geometry_field": "way",
+        "host": "localhost",
         "id": "railway",
         "key_field": "",
         "password": "osm",

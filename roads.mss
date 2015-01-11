@@ -1,5 +1,6 @@
 /* ROADS.MSS CONTENTS
  * - Road & rail lines
+ * - Ferries
  * - Aeroways
  * - Railway
  */
@@ -390,6 +391,24 @@ as well. */
   [zoom=16] { marker-width: @r16_minor * 1.1; }
   [zoom=17] { marker-width: @r17_minor * 1.1; }
   [zoom>=18] { marker-width: @r18_minor * 1.1; }
+}
+
+/* ================================================================== */
+/* FERRIES
+/* ================================================================== */
+
+#ferry {
+  [route='ferry'] {
+    line-color: #55d;
+    [zoom>=9] {
+      line-width: 0.4;
+      line-dasharray: 4, 4;
+    }
+    [zoom>=13] {
+      line-width: 0.8;
+      line-dasharray: 6, 6;
+    }
+  }
 }
 
 /* ================================================================== */
