@@ -397,19 +397,14 @@ as well. */
 /* FERRIES
 /* ================================================================== */
 
-#ferry {
-  [route='ferry'] {
-    [zoom>=9] {
-      line-color: #55d;
-      line-width: 0.4;
-      line-dasharray: 4, 4;
-    }
-    [zoom>=13] {
-      line-color: #55d;
-      line-width: 0.8;
-      line-dasharray: 6, 6;
-    }
-  }
+#ferry[zoom>=9] {
+  line-color: @ferry;
+  line-width: 0.4;
+  line-dasharray: 4, 4;
+}
+#ferry[zoom>=13] {
+  line-width: 0.8;
+  line-dasharray: 6, 6;
 }
 
 /* ================================================================== */
