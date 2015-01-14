@@ -130,7 +130,7 @@ Map { font-directory: url(./fonts); }
 
 @aeroway:           #ddd;
 
-@ferry:             #55d;
+@ferry:             #42908f;
 
 /* ================================================================== */
 /* BOUNDARY COLORS

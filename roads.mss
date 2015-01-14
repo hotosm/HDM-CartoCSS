@@ -399,12 +399,12 @@ as well. */
 
 #ferry[zoom>=9] {
   line-color: @ferry;
-  line-width: 0.4;
+  line-width: 0.5;
   line-dasharray: 4, 4;
-}
-#ferry[zoom>=13] {
-  line-width: 0.8;
-  line-dasharray: 6, 6;
+  [zoom>=13] {
+    line-width: 0.8;
+    line-dasharray: 6, 6;
+  }
 }
 
 /* ================================================================== */
