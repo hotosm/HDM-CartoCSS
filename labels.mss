@@ -536,7 +536,7 @@
   marker-max-error: 0.5;
   marker-spacing: 200;
   marker-file: url('icons/oneway.svg');
-  [oneway=-1] { marker-file: url('icons/oneway-reverse.svg'); }
+  [oneway='-1'] { marker-file: url('icons/oneway-reverse.svg'); }
   [zoom=16] { marker-transform: "scale(0.5)"; }
   [zoom=17] { marker-transform: "scale(0.75)"; }
 }
