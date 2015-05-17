@@ -77,7 +77,7 @@
         "user": "osm"
       },
       "class": "",
-      "geometry": "multipolygon",
+      "geometry": "polygon",
       "extent": [
         -179.99999692067183,
         -84.96651228427099,
@@ -109,7 +109,7 @@
         "user": "osm"
       },
       "class": "",
-      "geometry": "multipolygon",
+      "geometry": "polygon",
       "extent": [
         -179.99999692067183,
         -84.96651228427099,
