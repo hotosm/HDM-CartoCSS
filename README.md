@@ -14,6 +14,6 @@ See the [wiki](https://github.com/hotosm/HDM-CartoCSS/wiki) for instructions.
 
 ## Licence
 
-- stylesheet is licenced under CCO
-- Nori icons are licenced under CCO
-- Maki icons are © [MapBox](https://www.mapbox.com/maki/)
+- stylesheet is licenced under CC0
+- Nori icons are licenced under CC0
+- [Maki icons](https://www.mapbox.com/maki/) by Mapbox are licened under CC0
