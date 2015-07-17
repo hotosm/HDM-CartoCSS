@@ -536,6 +536,35 @@
       }
     },
     {
+      "extent": [
+        -179.99999692067183,
+        -84.96651228427099,
+        179.99999692067183,
+        84.96651228427098
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way, (tags->'abandoned:building') AS building\n  FROM planet_osm_polygon\n  WHERE  tags ? 'abandoned:building'\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "3227542.51,-671237.42,3266191.94,-643301.64",
+        "dbname": "osm",
+        "user": "buck",
+        "id": "abandoned",
+        "project": "hdm",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "port": "5432"
+      },
+      "id": "abandoned",
+      "class": "",
+      "geometry": "polygon",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "abandoned"
+    },
+    {
       "Datasource": {
         "dbname": "hdm",
         "geometry_field": "way",

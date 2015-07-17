@@ -170,6 +170,20 @@
 
 }
 
+#abandoned[zoom>=18] {
+  [building!=null] {
+    polygon-fill:@building;
+    line-color:darken(@building,20%);
+    line-width:0.4;
+  }
+  
+  text-name:'"x"';
+  text-face-name:@sans_bold;
+  text-placement:point;
+  text-fill:@other_text;
+  text-halo-fill: @other_halo;
+  text-halo-radius: 1;
+}
 
 /* ================================================================== */
 /* RELIEF
@@ -449,6 +463,19 @@ Map {
   }
   line-width:2;
   line-color:darken(@park,15%);
+  line-dasharray:2,4;
+  line-cap: round;
+  [zoom=16] {
+    line-width: 1;
+  }
+}
+
+.barriers[zoom>=16][barrier='dry_bush'] {
+  ::alternate {
+    line-color: #B0B5A0;
+  }
+  line-width:2;
+  line-color:darken(#B0B5A0,15%);
   line-dasharray:2,4;
   line-cap: round;
   [zoom=16] {
