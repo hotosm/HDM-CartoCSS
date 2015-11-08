@@ -300,18 +300,18 @@
     text-clip: false;
     [zoom>=16] {
         /* Prio */
-        [amenity='townhall'],
-        [amenity='fire_station'],
-        [amenity='hospital'] {
+        [main='townhall'],
+        [main='fire_station'],
+        [main='hospital'] {
             text-name: "[name]";
             [zoom>=19] {
                 text-face-name: @sans_bold;
             }
         }
-        [amenity='school'],
-        [amenity='university'],
-        [office='government'],
-        [amenity='pharmacy'] {
+        [main='school'],
+        [main='university'],
+        [main='government'],
+        [main='pharmacy'] {
             text-min-distance: 2;
             text-name: "[name]";
             [zoom>=19] {
@@ -321,52 +321,69 @@
     }
     [zoom>=18] {
         /* Prio */
-        [amenity='courthouse'],
-        [amenity='bank'],
-        [amenity='post_office'],
-        [highway='bus_stop'] {
-            text-name: "[name]";
-        }
-        [craft!=null],
-        [office='ngo'],
-        [tourism='alpine_hut'],
-        [tourism='guest_house'],
-        [tourism='hostel'],
-        [tourism='hotel'],
-        [tourism='motel'],
-        [tourism='viewpoint'],
-        [tourism='camp_site'],
-        [tourism='museum'],
-        [leisure='beach_resort'],
-        [amenity='embassy'],
-        [amenity='doctors'],
-        [amenity='library'],
-        [amenity='theatre'],
-        [amenity='restaurant'],
-        [amenity='kindergarten'],
-        [amenity='cafe'],
-        [amenity='bar'],
-        [amenity='studio'],
-        [amenity='car_rental'],
-        [amenity='money_transfer'],
-        [amenity='fuel'],
-        [amenity='social_facility'],
-        [amenity='community_centre'],
-        [amenity='dentist'],
-        [amenity='arts_centre'],
-        [amenity='fast_food'],
-        [amenity='pub'],
-        [amenity='place_of_worship'] {
+        [main='courthouse'],
+        [main='bank'],
+        [main='post_office'],
+        [main='bus_stop'],
+        [main='ngo'],
+        [main='alpine_hut'],
+        [main='guest_house'],
+        [main='hostel'],
+        [main='hotel'],
+        [main='motel'],
+        [main='viewpoint'],
+        [main='camp_site'],
+        [main='museum'],
+        [main='beach_resort'],
+        [main='embassy'],
+        [main='doctors'],
+        [main='library'],
+        [main='theatre'],
+        [main='restaurant'],
+        [main='kindergarten'],
+        [main='cafe'],
+        [main='bar'],
+        [main='studio'],
+        [main='car_rental'],
+        [main='money_transfer'],
+        [main='fuel'],
+        [main='social_facility'],
+        [main='community_centre'],
+        [main='dentist'],
+        [main='arts_centre'],
+        [main='fast_food'],
+        [main='pub'],
+        [main='place_of_worship'] {
             text-name: "[name]";
         }
     }
     [zoom>=19] {
-        [amenity='cinema'],
-        [shop!=null] {
+        [main='cinema'] {
             text-name: "[name]";
             text-fill: @poi_text2;
         }
     }
+}
+.poi::catchall {
+  [zoom>=18][craft!=null],
+  [zoom>=19][shop!=null] {
+    text-name: "";
+    text-face-name: @sans;
+    text-size: 10;
+    text-wrap-width: 30;
+    text-fill: @poi_text2;
+    text-halo-fill: @poi_halo;
+    text-dy: 12;
+    text-dx: 12;
+    text-placement: point;
+    text-halo-radius: 2;
+    text-label-position-tolerance: 18;
+    text-placement-type: simple;
+    text-placements: "S,N,W,E";
+    text-avoid-edges: true;
+    text-clip: false;
+    text-name: "[name]";
+  }
 }
 // =====================================================================
 // AREA LABELS
