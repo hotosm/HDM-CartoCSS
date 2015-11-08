@@ -281,7 +281,6 @@
 // =====================================================================
 // POI LABELS
 // =====================================================================
-
 .poi::label[zoom>=16] {
     text-name: "";
     text-face-name: @sans;
@@ -364,27 +363,25 @@
         }
     }
 }
-.poi::catchall {
-  [zoom>=18][craft!=null],
-  [zoom>=19][shop!=null] {
-    text-name: "";
-    text-face-name: @sans;
-    text-size: 10;
-    text-wrap-width: 30;
-    text-fill: @poi_text2;
-    text-halo-fill: @poi_halo;
-    text-dy: 12;
-    text-dx: 12;
-    text-placement: point;
-    text-halo-radius: 2;
-    text-label-position-tolerance: 18;
-    text-placement-type: simple;
-    text-placements: "S,N,W,E";
-    text-avoid-edges: true;
-    text-clip: false;
-    text-name: "[name]";
-  }
+.poi::craft[zoom>=18][craft!=null],
+.poi::shop[zoom>=19][shop!=null] {
+  text-face-name: @sans;
+  text-size: 10;
+  text-wrap-width: 30;
+  text-fill: @poi_text2;
+  text-halo-fill: @poi_halo;
+  text-dy: 12;
+  text-dx: 12;
+  text-placement: point;
+  text-halo-radius: 2;
+  text-label-position-tolerance: 18;
+  text-placement-type: simple;
+  text-placements: "S,N,W,E";
+  text-avoid-edges: true;
+  text-clip: false;
+  text-name: "[name]";
 }
+
 // =====================================================================
 // AREA LABELS
 // =====================================================================

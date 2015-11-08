@@ -69,13 +69,6 @@
         }
 }
 .poi::high {
-    // Generic rules first
-    ::catchallshop[zoom>=18] {
-        [shop!=null] {
-            marker-file: url('icons/poi/shop-18.png');
-            marker-clip:false;
-        }
-    }
     [zoom>=17] {
         [main='kindergarten'],
         [main='school'],
@@ -183,6 +176,12 @@
             [man_made="storage_tank"][content='water'] {
                 marker-file: url('icons/poi/storage_tank-18.png');
             }
+        }
+    }
+    ::catchallshop[zoom>=18] {
+        [shop!=null] {
+            marker-file: url('icons/poi/shop-18.png');
+            marker-clip:false;
         }
     }
     [zoom>=18] {
