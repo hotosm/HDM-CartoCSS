@@ -44,13 +44,13 @@
   }
   [zoom=6] {
     text-size: 13;
-    text-character-spacing: 1;
+    text-character-spacing: 0;
     text-wrap-width: 80;
     text-line-spacing: 2;
   }
   [zoom=7] {
     text-size: 14;
-    text-character-spacing: 2;
+    text-character-spacing: 1;
   }
 }
 
@@ -150,6 +150,7 @@
   text-wrap-width: 50;
   text-fill: @town_text;
   text-halo-fill: @town_halo;
+  text-character-spacing: -1;
   [type='city'] {
     text-fill: @city_text;
     text-halo-fill: @city_halo;
@@ -162,26 +163,26 @@
     text-line-spacing: -2;
     text-transform: uppercase;
   }
-  [zoom>=12]{
-    text-size:12;
+  [zoom>=12] {
+    text-size: 12;
     [type='city'],
     [is_capital='country'] { text-size: 13;}
   }
-  [zoom>=13]{
+  [zoom>=13] {
     text-transform: uppercase;
-    text-character-spacing: 1;
+    text-character-spacing: 0;
     [type='city'],
     [is_capital='country'] { text-size: 14;}
   }
   [zoom>=14]{
     text-size:13;
-    text-character-spacing: 2;
+    text-character-spacing: 1;
     [type='city'],
     [is_capital='country'] { text-size: 15;}
   }
   [zoom>=15]{
     text-size:14;
-    text-character-spacing: 3;
+    text-character-spacing: 2;
     [type='city'],
     [is_capital='country'] { text-size: 16;}
   }
@@ -219,34 +220,34 @@
   }
   [zoom>=14] {
     text-size:11;
-    text-character-spacing: 1;
+    text-character-spacing: 0;
     text-wrap-width: 40;
     text-line-spacing: 1;
   }
   [zoom>=15] {
     text-halo-radius: 2;
     text-transform: uppercase;
-    text-character-spacing: 1;
+    text-character-spacing: 0;
     text-wrap-width: 60;
     text-line-spacing: 1;
     text-min-distance: 30;
   }
   [zoom>=16] {
     text-size:12;
-    text-character-spacing: 2;
+    text-character-spacing: 1;
     text-wrap-width: 120;
     text-line-spacing: 2;
     text-min-distance: 10;
   }
   [zoom>=17] {
     text-size:13;
-    text-character-spacing: 3;
+    text-character-spacing: 2;
     text-wrap-width: 160;
     text-line-spacing: 4;
   }
   [zoom>=18] {
     text-size:14;
-    text-character-spacing: 4;
+    text-character-spacing: 3;
     text-line-spacing: 6;
   }
 }
@@ -272,7 +273,7 @@
   }
   [zoom>=18] {
     text-size:12;
-    text-character-spacing: 1;
+    text-character-spacing: 0;
     text-line-spacing: 4;
   }
 }
@@ -291,12 +292,13 @@
     text-dy: 12;
     text-dx: 12;
     text-placement: point;
-    text-halo-radius: 2;
+    text-halo-radius: 1;
     text-label-position-tolerance: 18;
     text-placement-type: simple;
     text-placements: "S,N,W,E";
     text-avoid-edges: true;
     text-clip: false;
+    text-character-spacing: -1;
     [zoom>=16] {
         /* Prio */
         [main='townhall'],
@@ -439,20 +441,20 @@
     text-name: "[name]";
     text-size: 13;
     text-wrap-width: 60;
-    text-character-spacing: 1;
+    text-character-spacing: 0;
     text-halo-radius: 2;
   }
   [zoom=16][area>1600000],
   [zoom=17][area>80000],
   [zoom=18][area>20000] {
     text-size: 15;
-    text-character-spacing: 2;
+    text-character-spacing: 1;
     text-wrap-width: 120;
   }
   [zoom>=17][area>1600000],
   [zoom>=18][area>80000] {
     text-size: 20;
-    text-character-spacing: 3;
+    text-character-spacing: 2;
     text-wrap-width: 180;
   }
 }
@@ -503,10 +505,11 @@
   text-placement:line;
   text-fill:@road_text;
   text-halo-fill:@road_halo;
-  text-halo-radius:1;
-  text-min-distance:60;
+  text-halo-radius: 1;
+  text-min-distance: 60;
   text-size:10;
   text-avoid-edges: true;
+  text-character-spacing: -1;
   [zoom=11] { text-min-distance:70; }
   [zoom=12] { text-min-distance:80; }
   [zoom=13] { text-min-distance:100; }
@@ -520,10 +523,11 @@
   text-placement:line;
   text-fill:@road_text;
   text-halo-fill:@road_halo;
-  text-halo-radius:1.3;
+  text-halo-radius:1;
   text-min-distance:60;
   text-size:11;
   text-avoid-edges: true;
+  text-character-spacing: -1;
 }
 
 #minorroad_label[zoom>14] {
@@ -537,6 +541,7 @@
   text-min-distance:60;
   text-size:11;
   text-avoid-edges: true;
+  text-character-spacing: -1;
 }
 
 /* ================================================================== */

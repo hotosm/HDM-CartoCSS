@@ -614,7 +614,7 @@ Layer:
       srs: null
       table: |-
         ( SELECT
-            way, name, type, tunnel, access, ford, construction,
+            way, name, access, construction, stratum,
             CASE
               WHEN smoothness IN ('bad', 'very_bad', 'horrible', 'very_horrible') THEN 'bad'
               ELSE 'good'
@@ -625,9 +625,11 @@ Layer:
               ELSE 'unpaved'
             END AS surface,
             CASE
-              WHEN bridge IS NOT NULL AND bridge!='no' THEN 1
-              ELSE 0
-            END AS bridge,
+              WHEN tunnel IS NOT NULL AND tunnel!='no' THEN 'tunnel'
+              WHEN bridge IS NOT NULL AND bridge!='no' THEN 'bridge'
+              WHEN ford IS NOT NULL AND ford!='no' THEN 'ford'
+              ELSE NULL
+            END AS structure,
             CASE
               WHEN type IN ('service', 'track') OR narrow='yes' THEN 'narrow'
               WHEN type IN ('motorway', 'trunk') THEN 'motorway'
@@ -645,25 +647,31 @@ Layer:
               WHEN type IN ('residential', 'living_street') THEN 'urban'
               WHEN type IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
               ELSE type
-            END AS style,
-            CASE
-              WHEN layer ~ E'^-?\\d{1,4}$' THEN layer::integer
-              ELSE 0
-            END AS layer
+            END AS style
           FROM
             ( SELECT
                 way, name, bridge, access, surface, tunnel, tags->'smoothness' AS smoothness, tags->'ford' AS ford, layer, tags->'narrow' AS narrow, construction,
                 CASE
+                  WHEN layer ~ E'^-?\\d{1,4}$' THEN layer::integer
+                  ELSE 0
+                END AS stratum,
+                CASE
                   WHEN highway='construction' AND construction IS NOT NULL THEN construction
                   ELSE highway
-                END AS type
+                END AS type,
+                CASE
+                  WHEN highway IN ('trunk', 'motorway') THEN 1
+                  WHEN highway IN ('primary', 'secondary', 'tertiary') THEN 10
+                  WHEN highway IN ('tertiary') THEN 100
+                  ELSE 1000
+                END AS prio
               FROM
                 planet_osm_line
               WHERE
                 highway IS NOT NULL
                 AND way && !bbox!
               ORDER BY
-                layer, z_order
+                stratum, prio DESC, z_order
             ) as a
           WHERE
             a.type!='construction' and (a.construction!='yes' OR a.construction IS NULL)
