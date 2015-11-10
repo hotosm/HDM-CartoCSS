@@ -376,11 +376,12 @@ Layer:
     srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
+  - id: landuse_overlays
+    name: landuse_overlays
+    Datasource:
       dbname: hdm
       geometry_field: way
       host: ''
-      id: landuse_overlays
       key_field: ''
       password: ''
       port: 5432
@@ -402,8 +403,6 @@ Layer:
       - -84.96651228427099
       - 179.99999692067183
       - 84.96651228427098
-    id: landuse_overlays
-    name: landuse_overlays
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
     srs-name: 900913
     advanced:
@@ -630,16 +629,6 @@ Layer:
               WHEN ford IS NOT NULL AND ford!='no' THEN 'ford'
               ELSE NULL
             END AS structure,
-            CASE
-              WHEN type IN ('service', 'track') OR narrow='yes' THEN 'narrow'
-              WHEN type IN ('motorway', 'trunk') THEN 'motorway'
-              WHEN type IN ('primary', 'secondary') THEN 'main'
-              WHEN type='tertiary' THEN 'inter'
-              WHEN type IN ('motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary_link', 'unclassified', 'road') THEN 'minor'
-              WHEN type IN ('residential', 'living_street') THEN 'urban'
-              WHEN type IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
-              ELSE 'other'
-            END AS width,
             CASE
               WHEN type IN ('motorway', 'trunk', 'trunk_link') THEN 'motorway'
               WHEN type ~ E'\\w+_link$' THEN regexp_replace(type, '_link', '')
