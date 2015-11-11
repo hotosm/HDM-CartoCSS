@@ -85,7 +85,7 @@ Map { font-directory: url(./fonts); }
 
 // @unpaved: darken(@residential, 15%); //#e2d8c3; //#ede7da;
 @unpaved: @residential; //#e2d8c3; //#ede7da;
-@paved: #d2938e;
+@paved: #aea1a0;
 
 @unpaved_case: darken(@unpaved, 15%);
 
@@ -105,11 +105,10 @@ Map { font-directory: url(./fonts); }
 @tertiary_fill:    @tertiary_line;
 @tertiary_case:    @tertiary_fill * 0.9;
 
-@standard_line:     @paved;
+@standard_line:     #d2938e;
 @standard_fill:     #e4e1d1;
 @standard_case:     @standard_fill * 0.9;
 
-@urban_line:        @paved;
 @urban_fill:        #f7f6f1;
 @urban_case:        @urban_fill * 0.9;
 

@@ -172,6 +172,7 @@ as well. */
   [zoom>=11] {
     line-cap: round;
     line-join: round;
+    line-color: @paved;  // Default.
   }
   [style='motorway'] {
     [zoom>=15][structure='bridge'] { bridge/line-color: darken(@motorway_case, 10%); }
