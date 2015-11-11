@@ -578,11 +578,9 @@ Layer:
       dbname: hdm
       geometry_field: way
       host: ''
-      id: turning_circle_case
       key_field: ''
       password: ''
       port: 5432
-      project: osm-bright-master
       srs: null
       table: "( SELECT way \n  FROM planet_osm_point \n  WHERE highway = 'turning_circle'\n) AS data"
       type: postgis
@@ -613,7 +611,7 @@ Layer:
       srs: null
       table: |-
         ( SELECT
-            way, name, access, construction, stratum,
+            way, name, access, construction, stratum, type,
             CASE
               WHEN smoothness IN ('bad', 'very_bad', 'horrible', 'very_horrible') THEN 'bad'
               ELSE 'good'

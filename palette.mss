@@ -54,7 +54,7 @@ Map { font-directory: url(./fonts); }
 @heath:             #E1E9D6;
 @sports:            @park;
 
-@residential:       darken(@land,4%);
+@residential:       darken(@land, 4%);
 @commercial:        @land * 0.97;
 @industrial:        #D7C8CB;
 
@@ -87,7 +87,7 @@ Map { font-directory: url(./fonts); }
 @unpaved: @residential; //#e2d8c3; //#ede7da;
 @paved: #d2938e;
 
-@unpaved_case: darken(@unpaved, 20%);
+@unpaved_case: darken(@unpaved, 15%);
 
 @motorway_line:     #a098b0; //#44366e;
 @motorway_fill:     @motorway_line;
@@ -114,8 +114,8 @@ Map { font-directory: url(./fonts); }
 @urban_case:        @urban_fill * 0.9;
 
 @track_line:        #BFA286;
-@track_fill:        @unpaved; //#E4DAD0;
-@track_case:        @unpaved_case;
+@track_fill:        @unpaved;
+@track_case:        darken(@unpaved, 20%);
 
 @pedestrian_line:   #CBC5BF;
 @pedestrian_fill:   #BFA286;
