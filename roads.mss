@@ -61,7 +61,7 @@ as well. */
 @r12_motorway: 4;   @r12_main: 3.5; @r12_inter: 2;    @r12_minor: 0;   @r12_narrow: 0;   @r12_noauto: 0;
 @r13_motorway: 5;   @r13_main: 4.5; @r13_inter: 3.5;  @r13_minor: 2.5; @r13_narrow: 1.5; @r13_noauto: 0;
 @r14_motorway: 5;   @r14_main: 4.5; @r14_inter: 3.5;  @r14_minor: 2;   @r14_narrow: 2;   @r14_noauto: 1.2;
-@r15_motorway: 6;   @r15_main: 5;   @r15_inter: 4;    @r15_minor: 3; @r15_narrow: 2.5; @r15_noauto: 1.5;
+@r15_motorway: 6;   @r15_main: 5;   @r15_inter: 4;    @r15_minor: 3;   @r15_narrow: 2.5; @r15_noauto: 1.5;
 @r16_motorway: 8;   @r16_main: 8;   @r16_inter: 6;    @r16_minor: 5;   @r16_narrow: 4;   @r16_noauto: 1.7;
 @r17_motorway: 10;  @r17_main: 10;  @r17_inter: 8;    @r17_minor: 6;   @r17_narrow: 5;   @r17_noauto: 2;
 @r18_motorway: 16;  @r18_main: 14;  @r18_inter: 12;   @r18_minor: 8;   @r18_narrow: 8;   @r18_noauto: 3;

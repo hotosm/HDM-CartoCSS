@@ -119,7 +119,6 @@ Layer:
       dbname: hdm
       geometry_field: way
       host: ''
-      id: landuse
       key_field: ''
       password: ''
       port: 5432

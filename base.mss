@@ -104,7 +104,7 @@
 }
 
 #landuse_overlays[type='nature_reserve'][zoom>6] {
-  line-color: @wooded;
+  line-color: darken(@wooded, 5%);
   line-opacity:  0.8;
   polygon-fill: @wooded;
   polygon-opacity: 0.4;
