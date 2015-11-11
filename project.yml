@@ -357,7 +357,7 @@ Layer:
         ( SELECT way, way_area AS area
           FROM planet_osm_polygon
           WHERE "natural" IN ('water', 'pond')
-            OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank')
+            OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'dock')
         ) AS data
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
