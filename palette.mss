@@ -169,7 +169,7 @@ Map { font-directory: url(./fonts); }
 @poi_halo:          @place_halo;
 
 @road_text:         #525252;
-@road_halo:         #fff;
+@road_halo:         rgba(255,255,255,0.8);
 
 @other_text:        #888;
 @other_halo:        @place_halo;

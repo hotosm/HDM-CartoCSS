@@ -501,10 +501,10 @@
 #motorway_label[type='motorway'][zoom>9],
 #motorway_label[type='trunk'][zoom>9] {
   text-name:"[name]";
-  text-face-name:@sans_bold;
-  text-placement:line;
+  text-face-name: @sans_bold;
+  text-placement: line;
   text-fill:@road_text;
-  text-halo-fill:@road_halo;
+  text-halo-fill: @road_halo;
   text-halo-radius: 1;
   text-min-distance: 60;
   text-size:10;
@@ -519,11 +519,11 @@
 #mainroad_label[type='secondary'][zoom>13],
 #mainroad_label[type='tertiary'][zoom>13] {
   text-name:'[name]';
-  text-face-name:@sans;
-  text-placement:line;
-  text-fill:@road_text;
-  text-halo-fill:@road_halo;
-  text-halo-radius:1;
+  text-face-name: @sans;
+  text-placement: line;
+  text-fill: @road_text;
+  text-halo-fill: @road_halo;
+  text-halo-radius: 1;
   text-min-distance:60;
   text-size:11;
   text-avoid-edges: true;
