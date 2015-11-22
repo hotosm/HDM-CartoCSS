@@ -189,4 +189,4 @@ Map { font-directory: url(./fonts); }
 /* ================================================================== */
 
 @contour_line:      #d2ccb0;
-@power_line:        #7a5960;
+@power_line:        #9a747c;
