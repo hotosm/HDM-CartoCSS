@@ -171,6 +171,8 @@ Map { font-directory: url(./fonts); }
 @road_text:         #525252;
 @road_halo:         rgba(255,255,255,0.8);
 
+@housenumber_text:  #797979;
+
 @other_text:        #888;
 @other_halo:        @place_halo;
 

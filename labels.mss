@@ -593,7 +593,9 @@
   text-name: "[housenumber]";
   text-placement: interior;
   text-face-name: @sans;
-  text-fill: @road_text;
+  text-fill: @housenumber_text;
+  text-halo-fill: @road_halo;
+  text-halo-radius: 1;
   text-size: 7;
   [zoom=17][mod5='no'] {
     text-name: "";
