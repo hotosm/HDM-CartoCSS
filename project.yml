@@ -485,7 +485,10 @@ Layer:
     srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
+  - id: buildings
+    name: buildings
+    class: ''
+    Datasource:
       dbname: hdm
       geometry_field: way
       host: ''
@@ -503,15 +506,12 @@ Layer:
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
       user: osm
-    class: ''
     geometry: polygon
     extent:
       - -179.99999692067183
       - -84.96651228427099
       - 179.99999692067183
       - 84.96651228427098
-    id: buildings
-    name: buildings
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
     srs-name: 900913
     advanced:
@@ -992,8 +992,9 @@ Layer:
       type: postgis
       table: |-
         ( SELECT
-            way, name, COALESCE(amenity, leisure, shop, tourism, tags->'office', highway, tags->'emergency', barrier) AS main, man_made, religion, shop, tags->'craft' as craft, tags->'pump' as pump,
-            tags->'drinking_water' as drinking_water, "tower:type", power, tags->'content' AS content, lower(operator) AS operator
+            way, name, COALESCE(amenity, leisure, shop, tourism, tags->'office', highway, tags->'emergency', barrier) AS main, man_made, religion,
+            CASE WHEN shop IS NOT NULL AND shop!='no' THEN shop ELSE NULL END AS shop,
+            tags->'craft' as craft, tags->'pump' as pump, tags->'drinking_water' as drinking_water, "tower:type", power, tags->'content' AS content, lower(operator) AS operator
           FROM
             planet_osm_point
           WHERE
@@ -1029,7 +1030,8 @@ Layer:
       type: postgis
       table: |-
         ( SELECT
-            way, name, COALESCE(amenity, leisure, shop, tourism, tags->'office', highway, tags->'emergency', barrier) AS main, man_made, religion, shop,
+            way, name, COALESCE(amenity, leisure, shop, tourism, tags->'office', highway, tags->'emergency', barrier) AS main, man_made, religion,
+            CASE WHEN shop IS NOT NULL AND shop!='no' THEN shop ELSE NULL END AS shop,
             tags->'craft' as craft, tags->'pump' as pump, tags->'drinking_water' as drinking_water, "tower:type",
             power, tags->'content' AS content, lower(operator) AS operator
           FROM
@@ -1051,29 +1053,24 @@ Layer:
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
+  - id: low_place
+    name: low_place
+    class: ''
+    Datasource:
       dbname: hdm
       geometry_field: way
-      host: ''
-      id: low_place
       key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
       srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
       table: "( SELECT way, CASE WHEN place='country' THEN 1 WHEN capital='yes' AND admin_level='2' THEN 10 WHEN place='state' THEN 20 WHEN place='city' THEN 21 WHEN place='town' THEN 30 ELSE 100 END as prio, place AS type, name, z_order, CASE WHEN population ~ E'^\\d{1,9}$' THEN population::integer ELSE NULL END AS population, CASE WHEN capital='yes' AND admin_level='2' THEN 'country' ELSE NULL END AS is_capital FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town') AND place IS NOT NULL ORDER BY prio, population DESC NULLS LAST) AS data"
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
       user: osm
-    class: ''
     geometry: point
     extent:
       - -179.99999692067183
       - -84.96651228427099
       - 179.99999692067183
       - 84.96651228427098
-    id: low_place
-    name: low_place
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
     srs-name: 900913
     advanced:
