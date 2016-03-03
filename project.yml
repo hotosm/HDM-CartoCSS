@@ -636,7 +636,7 @@ Layer:
             END AS style
           FROM
             ( SELECT
-                way, name, bridge, access, surface, tunnel, tags->'smoothness' AS smoothness, tags->'ford' AS ford, layer, tags->'narrow' AS narrow, construction,
+                way, {name}, bridge, access, surface, tunnel, tags->'smoothness' AS smoothness, tags->'ford' AS ford, layer, tags->'narrow' AS narrow, construction,
                 CASE
                   WHEN layer ~ E'^-?\\d{1,4}$' THEN layer::integer
                   ELSE 0
@@ -688,7 +688,7 @@ Layer:
       port: 5432
       project: hdm
       srs: null
-      table: "( SELECT way, route, name, z_order FROM planet_osm_line WHERE route IS NOT NULL AND route='ferry' ORDER BY z_order) as ferry"
+      table: "( SELECT way, route, {name}, z_order FROM planet_osm_line WHERE route IS NOT NULL AND route='ferry' ORDER BY z_order) as ferry"
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
       user: osm
@@ -992,7 +992,7 @@ Layer:
       type: postgis
       table: |-
         ( SELECT
-            way, name, COALESCE(amenity, leisure, shop, tourism, tags->'office', highway, tags->'emergency', barrier) AS main, man_made, religion,
+            way, {name}, COALESCE(amenity, leisure, shop, tourism, tags->'office', highway, tags->'emergency', barrier) AS main, man_made, religion,
             CASE WHEN shop IS NOT NULL AND shop!='no' THEN shop ELSE NULL END AS shop,
             tags->'craft' as craft, tags->'pump' as pump, tags->'drinking_water' as drinking_water, "tower:type", power, tags->'content' AS content, lower(operator) AS operator
           FROM
@@ -1030,7 +1030,7 @@ Layer:
       type: postgis
       table: |-
         ( SELECT
-            way, name, COALESCE(amenity, leisure, shop, tourism, tags->'office', highway, tags->'emergency', barrier) AS main, man_made, religion,
+            way, {name}, COALESCE(amenity, leisure, shop, tourism, tags->'office', highway, tags->'emergency', barrier) AS main, man_made, religion,
             CASE WHEN shop IS NOT NULL AND shop!='no' THEN shop ELSE NULL END AS shop,
             tags->'craft' as craft, tags->'pump' as pump, tags->'drinking_water' as drinking_water, "tower:type",
             power, tags->'content' AS content, lower(operator) AS operator
@@ -1061,7 +1061,7 @@ Layer:
       geometry_field: way
       key_field: ''
       srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-      table: "( SELECT way, CASE WHEN place='country' THEN 1 WHEN capital='yes' AND admin_level='2' THEN 10 WHEN place='state' THEN 20 WHEN place='city' THEN 21 WHEN place='town' THEN 30 ELSE 100 END as prio, place AS type, name, z_order, CASE WHEN population ~ E'^\\d{1,9}$' THEN population::integer ELSE NULL END AS population, CASE WHEN capital='yes' AND admin_level='2' THEN 'country' ELSE NULL END AS is_capital FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town') AND place IS NOT NULL ORDER BY prio, population DESC NULLS LAST) AS data"
+      table: "( SELECT way, CASE WHEN place='country' THEN 1 WHEN capital='yes' AND admin_level='2' THEN 10 WHEN place='state' THEN 20 WHEN place='city' THEN 21 WHEN place='town' THEN 30 ELSE 100 END as prio, place AS type, {name}, z_order, CASE WHEN population ~ E'^\\d{1,9}$' THEN population::integer ELSE NULL END AS population, CASE WHEN capital='yes' AND admin_level='2' THEN 'country' ELSE NULL END AS is_capital FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town') AND place IS NOT NULL ORDER BY prio, population DESC NULLS LAST) AS data"
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
       user: osm
@@ -1085,7 +1085,7 @@ Layer:
       port: 5432
       project: hdm
       srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-      table: "( SELECT way, CASE WHEN place='country' THEN 1 WHEN capital='yes' AND admin_level='2' THEN 10 WHEN place='state' THEN 20 WHEN place='town' THEN 30 WHEN place='village' THEN 40 ELSE 100 END as prio, place AS type, name, z_order, CASE WHEN population ~ E'^\\d{1,9}$' THEN population::integer ELSE NULL END AS population, CASE WHEN capital='yes' AND admin_level='2' THEN 'country' ELSE NULL END AS is_capital FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality') AND place IS NOT NULL ORDER BY prio, population DESC NULLS LAST) AS data"
+      table: "( SELECT way, CASE WHEN place='country' THEN 1 WHEN capital='yes' AND admin_level='2' THEN 10 WHEN place='state' THEN 20 WHEN place='town' THEN 30 WHEN place='village' THEN 40 ELSE 100 END as prio, place AS type, {name}, z_order, CASE WHEN population ~ E'^\\d{1,9}$' THEN population::integer ELSE NULL END AS population, CASE WHEN capital='yes' AND admin_level='2' THEN 'country' ELSE NULL END AS is_capital FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality') AND place IS NOT NULL ORDER BY prio, population DESC NULLS LAST) AS data"
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
       user: osm
@@ -1112,7 +1112,16 @@ Layer:
       port: 5432
       project: hdm
       srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-      table: '( SELECT COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type, name, way_area AS area, ST_PointOnSurface(way) AS way FROM planet_osm_polygon WHERE name IS NOT NULL AND (landuse IS NOT NULL OR leisure IS NOT NULL OR "natural" IS NOT NULL) AND way && !bbox! AND ST_IsValid(way) ORDER BY area DESC) AS data'
+      table: |-
+        ( SELECT
+            COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type, {name}, way_area AS area, ST_PointOnSurface(way) AS way
+          FROM
+            planet_osm_polygon
+          WHERE
+            name IS NOT NULL AND (landuse IS NOT NULL OR leisure IS NOT NULL OR "natural" IS NOT NULL) AND way && !bbox! AND ST_IsValid(way)
+          ORDER BY
+            area DESC
+        ) AS data
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
       user: osm
@@ -1139,7 +1148,7 @@ Layer:
       port: 5432
       project: hdm
       srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-      table: "( SELECT way, highway AS type, name, ref, CASE WHEN oneway IN ('yes', '-1') THEN oneway ELSE 'no' END AS oneway, CHAR_LENGTH(ref) AS reflen FROM planet_osm_line WHERE highway IN ('motorway', 'trunk') AND (name IS NOT NULL OR ref IS NOT NULL)) AS data"
+      table: "( SELECT way, highway AS type, {name}, ref, CASE WHEN oneway IN ('yes', '-1') THEN oneway ELSE 'no' END AS oneway, CHAR_LENGTH(ref) AS reflen FROM planet_osm_line WHERE highway IN ('motorway', 'trunk') AND (name IS NOT NULL OR ref IS NOT NULL)) AS data"
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
       user: osm
@@ -1166,7 +1175,7 @@ Layer:
       port: 5432
       project: hdm
       srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-      table: "( SELECT way, highway AS type, name, CASE WHEN oneway IN ('yes', '-1') THEN oneway ELSE 'no' END AS oneway FROM planet_osm_line WHERE (name IS NOT NULL OR oneway IN ('yes', '-1')) AND highway IN ('primary', 'secondary', 'tertiary')) AS data"
+      table: "( SELECT way, highway AS type, {name}, CASE WHEN oneway IN ('yes', '-1') THEN oneway ELSE 'no' END AS oneway FROM planet_osm_line WHERE (name IS NOT NULL OR oneway IN ('yes', '-1')) AND highway IN ('primary', 'secondary', 'tertiary')) AS data"
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
       user: osm
@@ -1183,18 +1192,14 @@ Layer:
     srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
+  - id: minorroad_label
+    name: minorroad_label
+    Datasource:
       dbname: hdm
       geometry_field: way
-      host: ''
-      id: minorroad_label
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
       srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
       table: >-
-        ( SELECT way, highway AS type, name, CASE WHEN oneway IN ('yes', '-1')
+        ( SELECT way, highway AS type, {name}, CASE WHEN oneway IN ('yes', '-1')
         THEN oneway ELSE 'no' END AS oneway FROM planet_osm_line WHERE (name IS
         NOT NULL OR oneway IN ('yes', '-1')) AND highway IN ('residential',
         'unclassified', 'road', 'living_street', 'unknown')
@@ -1202,7 +1207,6 @@ Layer:
         ) AS data
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
     class: ''
     geometry: linestring
     extent:
@@ -1210,8 +1214,6 @@ Layer:
       - -84.96651228427099
       - 179.99999692067183
       - 84.96651228427098
-    id: minorroad_label
-    name: minorroad_label
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
     srs-name: 900913
     advanced:
@@ -1219,7 +1221,7 @@ Layer:
   - Datasource:
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
-      table: "( SELECT p.way as way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_ContainsProperly(!bbox!, p.way) AND boundary='administrative' AND admin_level IN ('5', '6', '7', '8', '9', '10') order by admin_level) as data"
+      table: "( SELECT p.way as way, {name}, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_ContainsProperly(!bbox!, p.way) AND boundary='administrative' AND admin_level IN ('5', '6', '7', '8', '9', '10') order by admin_level) as data"
       key_field: ''
       geometry_field: way
       extent_cache: auto
@@ -1242,7 +1244,7 @@ Layer:
   - Datasource:
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
-      table: "( SELECT p.way as way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_ContainsProperly(!bbox!, p.way) AND boundary='administrative' AND admin_level IN ('0', '2', '3', '4') order by admin_level) as data"
+      table: "( SELECT p.way as way, {name}, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_ContainsProperly(!bbox!, p.way) AND boundary='administrative' AND admin_level IN ('0', '2', '3', '4') order by admin_level) as data"
       key_field: ''
       geometry_field: way
       extent_cache: auto
@@ -1272,7 +1274,7 @@ Layer:
       port: 5432
       project: hdm
       srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-      table: "( SELECT way, waterway AS type, name\n  FROM planet_osm_line\n  WHERE waterway IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data"
+      table: "( SELECT way, waterway AS type, {name} FROM planet_osm_line WHERE waterway IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data"
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
       user: osm
@@ -1301,7 +1303,7 @@ Layer:
       srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
       table: |-
         ( SELECT
-          way, "natural" AS type, name,
+          way, "natural" AS type, {name},
           CASE WHEN ele ~ E'^\\d{1,5}$' THEN ele::integer ELSE null END as ele
         FROM
           planet_osm_point
