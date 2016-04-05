@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 DIR=${2:-'data'}
+mkdir -p $DIR
 cd $DIR
 echo "Working directory set to ${PWD}"
 mkdir -p tmp
