@@ -14,8 +14,8 @@ First of all: thanks for contributing!
 * commits must be atomic: just one consistent change per commit
 * when possible, refer to an issue on the commit message, for example adding
   `(cf #xx)` at the end of the commit message
-* never commit environnement related changes (like layer file path or database
-  connection settings in the .mml)
+* never commit environment related changes (like layer file path or database
+  connection settings in the .yml)
 
 ## Submitting a pull request
 
