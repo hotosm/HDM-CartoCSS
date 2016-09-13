@@ -1219,7 +1219,7 @@ Layer:
   - Datasource:
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
-      table: "( SELECT p.way as way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_ContainsProperly(!bbox!, p.way) AND boundary='administrative' AND admin_level IN ('5', '6', '7', '8', '9', '10') order by admin_level) as data"
+      table: "( SELECT p.way as way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_Covers(p.way, !bbox!) AND boundary='administrative' AND admin_level IN ('5', '6', '7', '8', '9', '10') order by admin_level) as data"
       key_field: ''
       geometry_field: way
       extent_cache: auto
@@ -1242,7 +1242,7 @@ Layer:
   - Datasource:
       type: postgis
       extent: '-20037508,-19929239,20037508,19929239'
-      table: "( SELECT p.way as way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_ContainsProperly(!bbox!, p.way) AND boundary='administrative' AND admin_level IN ('0', '2', '3', '4') order by admin_level) as data"
+      table: "( SELECT p.way as way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_Covers(p.way, !bbox!) AND boundary='administrative' AND admin_level IN ('0', '2', '3', '4') order by admin_level) as data"
       key_field: ''
       geometry_field: way
       extent_cache: auto
