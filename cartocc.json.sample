@@ -28,7 +28,7 @@
     },
     {
         "if": {
-            "id": "land-high"
+            "id": "contour_line"
         },
         "then": {
             "Datasource.file": "/path/to/land-polygons-split-3857/land_polygons.shp"
