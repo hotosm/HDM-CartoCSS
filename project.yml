@@ -1,17 +1,45 @@
-bounds:
-  - 28.9874267578125
-  - -4.4833328616955255
-  - 30.871582031249996
-  - -2.284550660236957
+bounds: &world
+  - -180
+  - -85
+  - 180
+  - 85
+
+_parts:
+  # let's factorize default values used by layers
+  extents: &extents
+    extent: *world
+    srs-name: "3857"
+    srs: "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+    class: ''
+    status: 'on'
+
+  extents84: &extents84
+    extent: *world
+    srs-name: "WGS84"
+    srs: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+
+  osm2pgsql: &osm2pgsql
+    type: "postgis"
+    dbname: "osm"
+    key_field: ""
+    geometry_field: "way"
+    extent: "-20037508,-20037508,20037508,20037508"
+    host: localhost
+    user: hot
+    password: m4d31nfr4nc3
+    asynchronous_request: 'true'
+    max_async_connection: '4'
+
 center:
   - 29.9377
   - -3.4216
-  - 9
+  - 15
 format: png
 interactivity: false
 minzoom: 0
 maxzoom: 20
 srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
 Stylesheet:
   - "palette.mss"
   - "base.mss"
@@ -19,45 +47,31 @@ Stylesheet:
   - "poi.mss"
   - "power.mss"
   - "labels.mss"
+
 Layer:
   - Datasource:
       file: http://data.openstreetmapdata.com/simplified-land-polygons-complete-3857.zip
       type: shape
     class: shp
     geometry: polygon
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
+    <<: *extents
     id: land-low
     name: land-low
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
-  - Datasource:
+
+  - id: land-high
+    name: land-high
+    Datasource:
       file: http://data.openstreetmapdata.com/land-polygons-split-3857.zip
       type: shape
     class: shp
     geometry: polygon
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: land-high
-    name: land-high
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: landuse_gen0
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+    <<: *extents
+
+  - id: landuse_gen0
+    name: landuse_gen0
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
       table: |-
         ( SELECT
             way, way_area AS area, COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type, tags->'landfill:type' as landfill_type
@@ -66,32 +80,14 @@ Layer:
           WHERE
             way_area > 100000 ORDER BY way_area DESC
         ) AS data
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: multipolygon
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: landuse_gen0
-    name: landuse_gen0
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: landuse_gen1
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
+  - id: landuse_gen1
+    name: landuse_gen1
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
       table: >-
         ( SELECT way, way_area AS area, COALESCE(landuse, leisure, "natural",
         highway, amenity, tourism) AS type, tags->'landfill:type' as
@@ -99,89 +95,54 @@ Layer:
         way_area DESC
 
         ) AS data
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: multipolygon
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: landuse_gen1
-    name: landuse_gen1
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
+  - name: landuse
+    id: landuse
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
       table: |-
         ( SELECT way, way_area AS area, COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type, tags->'landfill:type' as landfill_type FROM planet_osm_polygon ORDER BY way_area DESC) AS data
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: polygon
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: landuse
-    name: landuse
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
+
   - geometry: raster
+    status: 'off'
     extent:
-      - -179.99988650551296
-      - -60.01077716383244
-      - 179.999898712822
-      - 60.01041647383395
+      - -179.99999
+      - -85
+      - 179.99999
+      - 85
     id: hillshade
-    class: ''
     Datasource:
       file: /home/ybon/Code/maps/hdm/DEM/data/hillshade.vrt
       type: gdal
     srs-name: 900913
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    advanced: {}
     name: hillshade
+
   - geometry: linestring
+    status: 'off'
     extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
+      - -179.99999
+      - -85
+      - 179.99999
+      - 85
     id: contour_line
-    class: ''
     Datasource:
       file: /home/ybon/Code/maps/hdm/DEM/data/contour-25m.shp
       type: shape
     srs-name: autodetect
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    advanced: {}
     name: contour_line
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: waterway
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
+  - name: waterway_low
+    id: waterway_low
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
       table: >-
         ( SELECT way, waterway AS type,
 
@@ -193,29 +154,13 @@ Layer:
         FROM planet_osm_line
 
         WHERE waterway IN ('river', 'canal')) as h2olow
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: waterway_low
-    name: waterway_low
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      key_field: ''
-      password: ''
-      port: 5432
+
+  - name: waterway_med
+    id: waterway_med
+    Datasource:
+      <<: *osm2pgsql
       table: >-
         ( SELECT way, waterway AS type,
 
@@ -227,29 +172,12 @@ Layer:
         FROM planet_osm_line
 
         WHERE waterway IN ('river', 'canal', 'stream')) as h2o
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: waterway_med
-    name: waterway_med
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
-    advanced:
-      extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      key_field: ''
-      password: ''
-      port: 5432
+
+  - id: waterway_high
+    name: waterway_high
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
       table: >-
         ( SELECT way, waterway AS type,
 
@@ -261,32 +189,14 @@ Layer:
         FROM planet_osm_line
 
         WHERE waterway IN ('river', 'canal', 'stream', 'ditch', 'drain')) as h2o
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: waterway_high
-    name: waterway_high
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: water_gen0
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
+  - id: water_gen0
+    name: water_gen0
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
       table: >-
         ( SELECT way, "natural" AS type, way_area AS area
           FROM planet_osm_polygon
@@ -294,32 +204,14 @@ Layer:
             OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank'))
             AND way_area > 10000
         ) AS data
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: polygon
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: water_gen0
-    name: water_gen0
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: water_gen1
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
+  - id: water_gen1
+    name: water_gen1
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
       table: >-
         ( SELECT way, "natural" AS type, way_area AS area
           FROM planet_osm_polygon
@@ -327,174 +219,69 @@ Layer:
             OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank'))
             AND way_area > 1000
         ) AS data
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: polygon
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: water_gen1
-    name: water_gen1
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: water
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
+  - id: water
+    name: water
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
       table: >-
         ( SELECT way, way_area AS area
           FROM planet_osm_polygon
           WHERE "natural" IN ('water', 'pond')
             OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'dock')
         ) AS data
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: polygon
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: water
-    name: water
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
+
   - id: landuse_overlays
     name: landuse_overlays
+    <<: *extents
     Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+      <<: *osm2pgsql
       table: |-
         ( SELECT way, way_area AS area, COALESCE(leisure) AS type
           FROM planet_osm_polygon
           WHERE leisure = 'nature_reserve'
           ORDER BY way_area DESC
         ) AS data
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: polygon
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: admin-5-10
-      key_field: ''
-      password: ''
-      port: 5432
-      project: HDMCartoCSS
-      table: "( SELECT way, admin_level::integer, CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('1','2','3','4', '5', '6', '7', '8', '9', '10') AND \"boundary\" IS NOT NULL ORDER BY admin_level DESC) AS data"
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: admin-high
+
+  - id: admin-high
     name: admin-high
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "( SELECT way, admin_level::integer, CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('1','2','3','4', '5', '6', '7', '8', '9', '10') AND \"boundary\" IS NOT NULL ORDER BY admin_level DESC) AS data"
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      key_field: ''
-      password: ''
-      port: 5432
-      project: HDMCartoCSS
-      table: "( SELECT way, admin_level::integer, CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('1','2','3','4', '5', '6', '7', '8') AND \"boundary\" IS NOT NULL ORDER by admin_level DESC) AS data"
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: admin-med
+
+  - id: admin-med
     name: admin-med
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "( SELECT way, admin_level::integer, CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('1','2','3','4', '5', '6', '7', '8') AND \"boundary\" IS NOT NULL ORDER by admin_level DESC) AS data"
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      key_field: ''
-      password: ''
-      port: 5432
-      project: HDMCartoCSS
-      table: "( SELECT way, admin_level::integer, CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('1','2','3','4') AND \"boundary\" IS NOT NULL ORDER by admin_level DESC) AS data"
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: admin-low
+
+  - id: admin-low
     name: admin-low
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "( SELECT way, admin_level::integer, CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('1','2','3','4') AND \"boundary\" IS NOT NULL ORDER by admin_level DESC) AS data"
     advanced:
       extent_from_subquery: 'true'
+
   - id: buildings
     name: buildings
-    class: ''
+    <<: *extents
     Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      key_field: ''
-      password: ''
-      port: 5432
+      <<: *osm2pgsql
       table: |-
         ( SELECT
             way, CASE WHEN amenity IS NOT NULL or shop IS NOT NULL THEN 'yes' ELSE 'no' END AS poi, building AS type
@@ -503,111 +290,44 @@ Layer:
           WHERE
             building NOT IN ('0','false', 'no')
         ) AS data
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    geometry: polygon
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: aeroway
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-      table: "( SELECT way, aeroway AS type, tunnel FROM planet_osm_polygon WHERE aeroway IN ('apron', 'runway', 'taxiway')) AS data"
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: polygon
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: aeroway-poly
+
+  - id: aeroway-poly
     name: aeroway-poly
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "( SELECT way, aeroway AS type, tunnel FROM planet_osm_polygon WHERE aeroway IN ('apron', 'runway', 'taxiway')) AS data"
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: aeroway
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
+  - id: aeroway
+    name: aeroway
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
       table: |-
         ( SELECT way, aeroway AS type, tunnel FROM planet_osm_line
           WHERE aeroway IN ('apron', 'runway', 'taxiway')
         ) AS data
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: aeroway
-    name: aeroway
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      key_field: ''
-      password: ''
-      port: 5432
-      srs: null
-      table: "( SELECT way \n  FROM planet_osm_point \n  WHERE highway = 'turning_circle'\n) AS data"
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: point
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: turning_circle_case
+
+  - id: turning_circle_case
     name: turning_circle_case
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "( SELECT way \n  FROM planet_osm_point \n  WHERE highway = 'turning_circle'\n) AS data"
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: roads_high
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: null
+
+  - id: roads_high
+    name: roads_high
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
       table: |-
         ( SELECT
             way, name, access, construction, stratum, type,
@@ -662,83 +382,32 @@ Layer:
           WHERE
             a.type!='construction' and (a.construction!='yes' OR a.construction IS NULL)
           ) AS data
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: roads_high
-    name: roads_high
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: ferry
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: null
-      table: "( SELECT way, route, name, z_order FROM planet_osm_line WHERE route IS NOT NULL AND route='ferry' ORDER BY z_order) as ferry"
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: ferry
+
+  - id: ferry
     name: ferry
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "( SELECT way, route, name, z_order FROM planet_osm_line WHERE route IS NOT NULL AND route='ferry' ORDER BY z_order) as ferry"
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: railway
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: null
-      table: "( SELECT way, tunnel, bridge, railway, service, CASE WHEN railway in ('spur','siding') or (railway='rail' and service in ('spur','siding','yard')) THEN 'yard' WHEN railway='disused' THEN 'disused' WHEN railway='rail' THEN 'main' ELSE 'other' END AS type FROM planet_osm_line WHERE railway IS NOT NULL AND railway!='abandoned' ORDER BY z_order) as rail"
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: railway
+
+  - id: railway
     name: railway
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "( SELECT way, tunnel, bridge, railway, service, CASE WHEN railway in ('spur','siding') or (railway='rail' and service in ('spur','siding','yard')) THEN 'yard' WHEN railway='disused' THEN 'disused' WHEN railway='rail' THEN 'main' ELSE 'other' END AS type FROM planet_osm_line WHERE railway IS NOT NULL AND railway!='abandoned' ORDER BY z_order) as rail"
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      key_field: ''
-      password: ''
-      port: 5432
+
+  - id: roads_med
+    name: roads_med
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
       table: >-
         ( SELECT way, highway AS type
 
@@ -748,105 +417,47 @@ Layer:
         'motorway_link', 'trunk_link')
 
         ) AS data
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: roads_med
-    name: roads_med
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      key_field: ''
-      password: ''
-      port: 5432
+
+  - id: roads_low
+    name: roads_low
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
       table: |-
         ( SELECT way, highway AS type, bridge, tunnel
             FROM planet_osm_roads
             WHERE highway IN ('motorway', 'trunk')
         ) AS data
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: roads_low
-    name: roads_low
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      key_field: ''
-      password: ''
-      port: 5432
-      table: "( SELECT way \n  FROM planet_osm_point\n  WHERE highway = 'turning_circle'\n) AS data"
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: point
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: turning_circle_fill
+
+  - id: turning_circle_fill
     name: turning_circle_fill
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "( SELECT way \n  FROM planet_osm_point\n  WHERE highway = 'turning_circle'\n) AS data"
     advanced:
       extent_from_subquery: 'true'
-  - geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    Datasource:
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      table: '(select way, barrier from planet_osm_line where barrier is not null) as data'
-      key_field: ''
-      geometry_field: way
-      dbname: hdm
-      password: ''
-      user: osm
-      host: ''
-    id: barrier_lines
-    class: barriers
-    srs-name: 900913
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
+  - id: barrier_lines
     name: barrier_lines
+    <<: *extents
+    class: barriers
+    Datasource:
+      <<: *osm2pgsql
+      table: '(select way, barrier from planet_osm_line where barrier is not null) as data'
     advanced:
       extent_from_subquery: 'true'
-  - extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
+
+  - id: barrier_areas
+    name: barrier_areas
+    <<: *extents
+    class: barriers
     Datasource:
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
+      <<: *osm2pgsql
       table: |-
         ( SELECT
             way,barrier,"natural"
@@ -855,141 +466,64 @@ Layer:
           WHERE
             barrier IS NOT NULL OR "natural"='hedge'
         ) AS barriers
-      key_field: ''
-      geometry_field: way
-      dbname: hdm
-      password: ''
-      user: osm
-      host: ''
-    id: barrier_areas
-    class: barriers
-    srs-name: 900913
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    name: barrier_areas
     advanced:
       extent_from_subquery: 'true'
-  - extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    Datasource:
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      table: "(SELECT way, power AS type, tags->'generator:source' AS source, name FROM planet_osm_polygon WHERE power IS NOT NULL) as data"
-      key_field: ''
-      geometry_field: way
-      dbname: hdm
-      password: ''
-      user: osm
-      host: ''
-    id: power-poly
-    class: power-poi
-    srs-name: 900913
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
+  - id: power-poly
     name: power-poly
-    advanced:
-      extent_from_subquery: 'true'
-  - extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    Datasource:
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      table: "(SELECT way, power AS type, tags->'generator:source' AS source, name FROM planet_osm_line WHERE power IS NOT NULL) as data"
-      key_field: ''
-      geometry_field: way
-      dbname: hdm
-      password: ''
-      user: osm
-      host: ''
-    id: power-line
-    class: ''
-    srs-name: 900913
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    name: power-line
-    advanced:
-      extent_from_subquery: 'true'
-  - extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    Datasource:
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      table: "(SELECT way, power AS type, tags->'generator:source' AS source, name FROM planet_osm_point WHERE power IS NOT NULL) as data"
-      key_field: ''
-      geometry_field: way
-      dbname: hdm
-      password: ''
-      user: osm
-      host: ''
-    id: power-point
+    <<: *extents
     class: power-poi
-    srs-name: 900913
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+    Datasource:
+      <<: *osm2pgsql
+      table: "(SELECT way, power AS type, tags->'generator:source' AS source, name FROM planet_osm_polygon WHERE power IS NOT NULL) as data"
+    advanced:
+      extent_from_subquery: 'true'
+
+  - id: power-line
+    name: power-line
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "(SELECT way, power AS type, tags->'generator:source' AS source, name FROM planet_osm_line WHERE power IS NOT NULL) as data"
+    advanced:
+      extent_from_subquery: 'true'
+
+  - id: power-point
     name: power-point
+    <<: *extents
+    class: power-poi
+    Datasource:
+      <<: *osm2pgsql
+      table: "(SELECT way, power AS type, tags->'generator:source' AS source, name FROM planet_osm_point WHERE power IS NOT NULL) as data"
     advanced:
       extent_from_subquery: 'true'
-  - geometry: point
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    Datasource:
-      type: postgis
-      table: "(select way,name,CASE WHEN tags ? 'iata' THEN 'airport' WHEN aeroway='aerodrome' THEN 'airfield' ELSE null END AS aeroway FROM planet_osm_point WHERE aeroway='aerodrome') as data"
-      extent: '-20037508,-19929239,20037508,19929239'
-      key_field: ''
-      geometry_field: way
-      dbname: hdm
-      password: ''
-      user: osm
-      host: ''
-    id: airport-point
-    class: airport
-    srs-name: 900913
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
+  - id: airport-point
     name: airport-point
-    advanced:
-      extent_from_subquery: 'true'
-  - extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    Datasource:
-      type: postgis
-      table: "(select way,name,CASE WHEN tags ? 'iata' THEN 'airport' WHEN aeroway='aerodrome' THEN 'airfield' ELSE null END AS aeroway FROM planet_osm_polygon WHERE aeroway='aerodrome') as data"
-      extent: '-20037508,-19929239,20037508,19929239'
-      key_field: ''
-      geometry_field: way
-      dbname: hdm
-      password: ''
-      user: osm
-      host: ''
-    id: airport-poly
+    <<: *extents
     class: airport
-    srs-name: 900913
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    name: airport-poly
+    Datasource:
+      <<: *osm2pgsql
+      table: "(select way,name,CASE WHEN tags ? 'iata' THEN 'airport' WHEN aeroway='aerodrome' THEN 'airfield' ELSE null END AS aeroway FROM planet_osm_point WHERE aeroway='aerodrome') as data"
     advanced:
       extent_from_subquery: 'true'
+
+  - id: airport-poly
+    name: airport-poly
+    <<: *extents
+    class: airport
+    Datasource:
+      <<: *osm2pgsql
+      table: "(select way,name,CASE WHEN tags ? 'iata' THEN 'airport' WHEN aeroway='aerodrome' THEN 'airfield' ELSE null END AS aeroway FROM planet_osm_polygon WHERE aeroway='aerodrome') as data"
+    advanced:
+      extent_from_subquery: 'true'
+
   - name: poi-point
     id: poi-point
+    <<: *extents
     class: poi
-    geometry: point
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
     Datasource:
-      type: postgis
+      <<: *osm2pgsql
       table: |-
         ( SELECT
             way, name, COALESCE(amenity, leisure, shop, tourism, tags->'office', highway, tags->'emergency', barrier) AS main, man_made, religion,
@@ -1007,27 +541,15 @@ Layer:
             OR tags @> hstore('office', 'ngo') OR tags @> hstore('office', 'government') OR tags @> hstore ('emergency', 'fire_hydrant')
             OR power IN ('generator', 'sub_station', 'tower', 'pole') OR barrier IN ('border_control')
         ) AS data
-      extent: '-20037508,-19929239,20037508,19929239'
-      key_field: ''
-      geometry_field: way
-      dbname: hdm
-      password: ''
-      user: osm
-      host: ''
-    srs-name: 900913
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
     advanced:
       extent_from_subquery: 'true'
+
   - name: poi-poly
     id: poi-poly
+    <<: *extents
     class: poi
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
     Datasource:
-      type: postgis
+      <<: *osm2pgsql
       table: |-
         ( SELECT
             way, name, COALESCE(amenity, leisure, shop, tourism, tags->'office', highway, tags->'emergency', barrier) AS main, man_made, religion,
@@ -1042,157 +564,59 @@ Layer:
             OR highway IN ('bus_stop','traffic_signals') OR historic in ('memorial','archaeological_site') OR leisure='playground'
             OR power IN ('plant', 'sub_station')
         ) AS data
-      extent: '-20037508,-19929239,20037508,19929239'
-      key_field: ''
-      geometry_field: way
-      dbname: hdm
-      password: ''
-      user: osm
-      host: ''
-    srs-name: 900913
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
     advanced:
       extent_from_subquery: 'true'
+
   - id: low_place
     name: low_place
-    class: ''
+    <<: *extents
     Datasource:
-      dbname: hdm
-      geometry_field: way
-      key_field: ''
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+      <<: *osm2pgsql
       table: "( SELECT way, CASE WHEN place='country' THEN 1 WHEN capital='yes' AND admin_level='2' THEN 10 WHEN place='state' THEN 20 WHEN place='city' THEN 21 WHEN place='town' THEN 30 ELSE 100 END as prio, place AS type, name, z_order, CASE WHEN population ~ E'^\\d{1,9}$' THEN population::integer ELSE NULL END AS population, CASE WHEN capital='yes' AND admin_level='2' THEN 'country' ELSE NULL END AS is_capital FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town') AND place IS NOT NULL ORDER BY prio, population DESC NULLS LAST) AS data"
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    geometry: point
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: place
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-      table: "( SELECT way, CASE WHEN place='country' THEN 1 WHEN capital='yes' AND admin_level='2' THEN 10 WHEN place='state' THEN 20 WHEN place='town' THEN 30 WHEN place='village' THEN 40 ELSE 100 END as prio, place AS type, name, z_order, CASE WHEN population ~ E'^\\d{1,9}$' THEN population::integer ELSE NULL END AS population, CASE WHEN capital='yes' AND admin_level='2' THEN 'country' ELSE NULL END AS is_capital FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality') AND place IS NOT NULL ORDER BY prio, population DESC NULLS LAST) AS data"
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: point
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: place
+
+  - id: place
     name: place
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "( SELECT way, CASE WHEN place='country' THEN 1 WHEN capital='yes' AND admin_level='2' THEN 10 WHEN place='state' THEN 20 WHEN place='town' THEN 30 WHEN place='village' THEN 40 ELSE 100 END as prio, place AS type, name, z_order, CASE WHEN population ~ E'^\\d{1,9}$' THEN population::integer ELSE NULL END AS population, CASE WHEN capital='yes' AND admin_level='2' THEN 'country' ELSE NULL END AS is_capital FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality') AND place IS NOT NULL ORDER BY prio, population DESC NULLS LAST) AS data"
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: landuse_label
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-      table: '( SELECT COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type, name, way_area AS area, ST_PointOnSurface(way) AS way FROM planet_osm_polygon WHERE name IS NOT NULL AND (landuse IS NOT NULL OR leisure IS NOT NULL OR "natural" IS NOT NULL) AND way && !bbox! AND ST_IsValid(way) ORDER BY area DESC) AS data'
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: point
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: area_label
+
+  - id: area_label
     name: area_label
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: '( SELECT COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type, name, way_area AS area, ST_PointOnSurface(way) AS way FROM planet_osm_polygon WHERE name IS NOT NULL AND (landuse IS NOT NULL OR leisure IS NOT NULL OR "natural" IS NOT NULL) AND way && !bbox! AND ST_IsValid(way) ORDER BY area DESC) AS data'
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: motorway_label
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-      table: "( SELECT way, highway AS type, name, ref, CASE WHEN oneway IN ('yes', '-1') THEN oneway ELSE 'no' END AS oneway, CHAR_LENGTH(ref) AS reflen FROM planet_osm_line WHERE highway IN ('motorway', 'trunk') AND (name IS NOT NULL OR ref IS NOT NULL)) AS data"
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: motorway_label
+
+  - id: motorway_label
     name: motorway_label
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "( SELECT way, highway AS type, name, ref, CASE WHEN oneway IN ('yes', '-1') THEN oneway ELSE 'no' END AS oneway, CHAR_LENGTH(ref) AS reflen FROM planet_osm_line WHERE highway IN ('motorway', 'trunk') AND (name IS NOT NULL OR ref IS NOT NULL)) AS data"
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: mainroad_label
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-      table: "( SELECT way, highway AS type, name, CASE WHEN oneway IN ('yes', '-1') THEN oneway ELSE 'no' END AS oneway FROM planet_osm_line WHERE (name IS NOT NULL OR oneway IN ('yes', '-1')) AND highway IN ('primary', 'secondary', 'tertiary')) AS data"
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: mainroad_label
+
+  - id: mainroad_label
     name: mainroad_label
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "( SELECT way, highway AS type, name, CASE WHEN oneway IN ('yes', '-1') THEN oneway ELSE 'no' END AS oneway FROM planet_osm_line WHERE (name IS NOT NULL OR oneway IN ('yes', '-1')) AND highway IN ('primary', 'secondary', 'tertiary')) AS data"
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: minorroad_label
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
+  - id: minorroad_label
+    name: minorroad_label
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
       table: >-
         ( SELECT way, highway AS type, name, CASE WHEN oneway IN ('yes', '-1')
         THEN oneway ELSE 'no' END AS oneway FROM planet_osm_line WHERE (name IS
@@ -1200,105 +624,41 @@ Layer:
         'unclassified', 'road', 'living_street', 'unknown')
 
         ) AS data
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: minorroad_label
-    name: minorroad_label
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      table: "( SELECT p.way as way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_Covers(p.way, !bbox!) AND boundary='administrative' AND admin_level IN ('5', '6', '7', '8', '9', '10') order by admin_level) as data"
-      key_field: ''
-      geometry_field: way
-      extent_cache: auto
-      dbname: hdm
-      user: osm
-      password: ''
-      host: ''
-    id: admin-label-5-10
-    class: ''
-    srs-name: 900913
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
+  - id: admin-label-5-10
     name: admin-label-5-10
-    extent:
-      - -179.9999999749438
-      - -85.051
-      - 179.9999999749438
-      - 83.74912119648586
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "( SELECT p.way as way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_Covers(p.way, !bbox!) AND boundary='administrative' AND admin_level IN ('5', '6', '7', '8', '9', '10') order by admin_level) as data"
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      table: "( SELECT p.way as way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_Covers(p.way, !bbox!) AND boundary='administrative' AND admin_level IN ('0', '2', '3', '4') order by admin_level) as data"
-      key_field: ''
-      geometry_field: way
-      extent_cache: auto
-      dbname: hdm
-      user: osm
-      password: ''
-      host: ''
-    id: admin-label-1-4
-    class: ''
-    srs-name: 900913
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
+  - id: admin-label-1-4
     name: admin-label-1-4
-    extent:
-      - -179.9999999749438
-      - -85.051
-      - 179.9999999749438
-      - 83.74912119648586
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "( SELECT p.way as way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_Covers(p.way, !bbox!) AND boundary='administrative' AND admin_level IN ('0', '2', '3', '4') order by admin_level) as data"
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: waterway_label
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-      table: "( SELECT way, waterway AS type, name\n  FROM planet_osm_line\n  WHERE waterway IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data"
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: linestring
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: waterway_label
+
+  - id: waterway_label
     name: waterway_label
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "( SELECT way, waterway AS type, name\n  FROM planet_osm_line\n  WHERE waterway IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data"
     advanced:
       extent_from_subquery: 'true'
-  - Datasource:
-      dbname: hdm
-      geometry_field: way
-      host: ''
-      id: natural_point_label
-      key_field: ''
-      password: ''
-      port: 5432
-      project: hdm
-      srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
+  - id: natural_point_label
+    name: natural_point_label
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
       table: |-
         ( SELECT
           way, "natural" AS type, name,
@@ -1309,48 +669,21 @@ Layer:
           "natural" IS NOT NULL AND "natural" IN ('peak', 'bay', 'volcano')
         ORDER BY ele DESC NULLS LAST
         ) AS data
-      type: postgis
-      extent: '-20037508,-19929239,20037508,19929239'
-      user: osm
-    class: ''
-    geometry: point
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    id: natural_point_label
-    name: natural_point_label
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    srs-name: 900913
     advanced:
       extent_from_subquery: 'true'
-  - geometry: point
-    extent:
-      - -179.99999692067183
-      - -84.96651228427099
-      - 179.99999692067183
-      - 84.96651228427098
-    Datasource:
-      type: postgis
-      table: "      (select way,\"addr:housenumber\" AS housenumber, CASE WHEN \"addr:housenumber\" ~ E'^\\d+$' AND mod(\"addr:housenumber\"::bigint, 5) IN (0, 1) THEN 'yes' ELSE 'no' END AS mod5 FROM planet_osm_polygon WHERE \"addr:housenumber\" IS NOT NULL AND building IS NOT NULL UNION SELECT way,\"addr:housenumber\" AS housenumber, CASE WHEN \"addr:housenumber\" ~ E'^\\d+$' AND mod(\"addr:housenumber\"::bigint, 5) IN (0, 1) THEN 'yes' ELSE 'no' END AS mod5 FROM planet_osm_point WHERE \"addr:housenumber\" IS NOT NULL) as data"
-      extent: '-20037508,-19929239,20037508,19929239'
-      key_field: ''
-      geometry_field: way
-      dbname: hdm
-      password: ''
-      user: osm
-      host: ''
-    id: housenumber
-    class: ''
-    srs-name: 900913
-    srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
+
+  - id: housenumber
     name: housenumber
+    <<: *extents
+    Datasource:
+      <<: *osm2pgsql
+      table: "      (select way,\"addr:housenumber\" AS housenumber, CASE WHEN \"addr:housenumber\" ~ E'^\\d+$' AND mod(\"addr:housenumber\"::bigint, 5) IN (0, 1) THEN 'yes' ELSE 'no' END AS mod5 FROM planet_osm_polygon WHERE \"addr:housenumber\" IS NOT NULL AND building IS NOT NULL UNION SELECT way,\"addr:housenumber\" AS housenumber, CASE WHEN \"addr:housenumber\" ~ E'^\\d+$' AND mod(\"addr:housenumber\"::bigint, 5) IN (0, 1) THEN 'yes' ELSE 'no' END AS mod5 FROM planet_osm_point WHERE \"addr:housenumber\" IS NOT NULL) as data"
     advanced:
       extent_from_subquery: 'true'
+
 scale: 1
-metatile: 2
-attribution: 'Data © OpenStreetMap (and) contributors, CC-BY-SA'
+metatile: 8
+attribution: 'Data © OpenStreetMap (and) contributors under ODbL 1.0'
 description: ''
 name: hdm
 compareUrl: 'http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'
