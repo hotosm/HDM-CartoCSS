@@ -109,7 +109,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - geometry: raster
-    status: 'off'
     extent:
       - -179.99999
       - -85
@@ -124,7 +123,6 @@ Layer:
     name: hillshade
 
   - geometry: linestring
-    status: 'off'
     extent:
       - -179.99999
       - -85
