@@ -109,32 +109,26 @@ Layer:
       extent_from_subquery: 'true'
 
   - geometry: raster
-    extent:
-      - -179.99999
-      - -85
-      - 179.99999
-      - 85
+    extent: *world
     id: hillshade
     Datasource:
-      file: /home/ybon/Code/maps/hdm/DEM/data/hillshade.vrt
+      file: DEM/data/hillshade.vrt
       type: gdal
     srs-name: 900913
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
     name: hillshade
+    status: 'off'
 
   - geometry: linestring
-    extent:
-      - -179.99999
-      - -85
-      - 179.99999
-      - 85
+    extent: *world
     id: contour_line
     Datasource:
-      file: /home/ybon/Code/maps/hdm/DEM/data/contour-25m.shp
+      file: DEM/data/contour-25m.shp
       type: shape
     srs-name: autodetect
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
     name: contour_line
+    status: 'off'
 
   - name: waterway_low
     id: waterway_low
