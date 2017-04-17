@@ -2,7 +2,7 @@
 
 First of all: thanks for contributing!
 
-## Code conventions
+## Code conventions
 
 * Always specify zoom levels as either >= or < . Don't use = or =< or >
 * Open curly braces on the same line, and close on an empty line.
