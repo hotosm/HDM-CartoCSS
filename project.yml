@@ -56,10 +56,8 @@ Layer:
     geometry: polygon
     <<: *extents
     id: land-low
-    name: land-low
 
   - id: land-high
-    name: land-high
     Datasource:
       file: http://data.openstreetmapdata.com/land-polygons-split-3857.zip
       type: shape
@@ -68,7 +66,6 @@ Layer:
     <<: *extents
 
   - id: landuse_gen0
-    name: landuse_gen0
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -84,7 +81,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: landuse_gen1
-    name: landuse_gen1
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -98,8 +94,7 @@ Layer:
     advanced:
       extent_from_subquery: 'true'
 
-  - name: landuse
-    id: landuse
+  - id: landuse
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -116,7 +111,6 @@ Layer:
       type: gdal
     srs-name: 900913
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    name: hillshade
     status: 'off'
 
   - geometry: linestring
@@ -127,11 +121,9 @@ Layer:
       type: shape
     srs-name: autodetect
     srs: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over
-    name: contour_line
     status: 'off'
 
-  - name: waterway_low
-    id: waterway_low
+  - id: waterway_low
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -149,8 +141,7 @@ Layer:
     advanced:
       extent_from_subquery: 'true'
 
-  - name: waterway_med
-    id: waterway_med
+  - id: waterway_med
     Datasource:
       <<: *osm2pgsql
       table: >-
@@ -166,7 +157,6 @@ Layer:
         WHERE waterway IN ('river', 'canal', 'stream')) as h2o
 
   - id: waterway_high
-    name: waterway_high
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -185,7 +175,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: water_gen0
-    name: water_gen0
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -200,7 +189,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: water_gen1
-    name: water_gen1
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -215,7 +203,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: water
-    name: water
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -229,7 +216,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: landuse_overlays
-    name: landuse_overlays
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -243,7 +229,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: admin-high
-    name: admin-high
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -252,7 +237,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: admin-med
-    name: admin-med
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -261,7 +245,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: admin-low
-    name: admin-low
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -270,7 +253,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: buildings
-    name: buildings
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -286,7 +268,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: aeroway-poly
-    name: aeroway-poly
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -295,7 +276,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: aeroway
-    name: aeroway
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -307,7 +287,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: turning_circle_case
-    name: turning_circle_case
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -316,7 +295,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: roads_high
-    name: roads_high
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -378,7 +356,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: ferry
-    name: ferry
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -387,7 +364,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: railway
-    name: railway
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -396,7 +372,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: roads_med
-    name: roads_med
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -413,7 +388,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: roads_low
-    name: roads_low
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -426,7 +400,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: turning_circle_fill
-    name: turning_circle_fill
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -435,7 +408,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: barrier_lines
-    name: barrier_lines
     <<: *extents
     class: barriers
     Datasource:
@@ -445,7 +417,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: barrier_areas
-    name: barrier_areas
     <<: *extents
     class: barriers
     Datasource:
@@ -462,7 +433,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: power-poly
-    name: power-poly
     <<: *extents
     class: power-poi
     Datasource:
@@ -472,7 +442,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: power-line
-    name: power-line
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -481,7 +450,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: power-point
-    name: power-point
     <<: *extents
     class: power-poi
     Datasource:
@@ -491,7 +459,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: airport-point
-    name: airport-point
     <<: *extents
     class: airport
     Datasource:
@@ -501,7 +468,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: airport-poly
-    name: airport-poly
     <<: *extents
     class: airport
     Datasource:
@@ -510,8 +476,7 @@ Layer:
     advanced:
       extent_from_subquery: 'true'
 
-  - name: poi-point
-    id: poi-point
+  - id: poi-point
     <<: *extents
     class: poi
     Datasource:
@@ -536,8 +501,7 @@ Layer:
     advanced:
       extent_from_subquery: 'true'
 
-  - name: poi-poly
-    id: poi-poly
+  - id: poi-poly
     <<: *extents
     class: poi
     Datasource:
@@ -560,7 +524,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: low_place
-    name: low_place
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -569,7 +532,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: place
-    name: place
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -578,7 +540,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: area_label
-    name: area_label
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -587,7 +548,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: motorway_label
-    name: motorway_label
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -596,7 +556,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: mainroad_label
-    name: mainroad_label
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -605,7 +564,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: minorroad_label
-    name: minorroad_label
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -620,7 +578,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: admin-label-5-10
-    name: admin-label-5-10
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -629,7 +586,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: admin-label-1-4
-    name: admin-label-1-4
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -638,7 +594,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: waterway_label
-    name: waterway_label
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -647,7 +602,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: natural_point_label
-    name: natural_point_label
     <<: *extents
     Datasource:
       <<: *osm2pgsql
@@ -665,7 +619,6 @@ Layer:
       extent_from_subquery: 'true'
 
   - id: housenumber
-    name: housenumber
     <<: *extents
     Datasource:
       <<: *osm2pgsql
