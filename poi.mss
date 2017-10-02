@@ -100,25 +100,25 @@
         [main='theatre'],
         [main='pub'],
         [main='telephone'],
-        [main="beverages"],
-        [main="hairdresser"],
-        [main="supermarket"],
-        [main="bakery"],
-        [main="mobile_phone"],
-        [main="tailor"],
-        [main="car_parts"],
-        [main="computer"],
-        [main="clothes"],
-        [main="car_repair"],
-        [main="funeral_directors"],
-        [main="dry_cleaning"],
-        [main="butcher"],
-        [main="seafood"],
-        [main="hardware"],
-        [main="bicycle"],
-        [main="motorcycle"],
-        [main="tyres"],
-        [main="photo"],
+        [main='beverages'],
+        [main='hairdresser'],
+        [main='supermarket'],
+        [main='bakery'],
+        [main='mobile_phone'],
+        [main='tailor'],
+        [main='car_parts'],
+        [main='computer'],
+        [main='clothes'],
+        [main='car_repair'],
+        [main='funeral_directors'],
+        [main='dry_cleaning'],
+        [main='butcher'],
+        [main='seafood'],
+        [main='hardware'],
+        [main='bicycle'],
+        [main='motorcycle'],
+        [main='tyres'],
+        [main='photo'],
         [main='courthouse'],
         [main='information'],
         [main='camp_site'],
@@ -128,9 +128,9 @@
         [main='hostel'],
         [main='hotel'],
         [main='museum'],
-        [main="beach_resort"],
-        [main="playground"],
-        [main='motel'] { 
+        [main='beach_resort'],
+        [main='playground'],
+        [main='motel'] {
             marker-file: url('icons/poi/[main]-18.png');
             marker-clip:false;
         }
@@ -153,7 +153,7 @@
             }
         }
         ::manmade {
-            [man_made="water_well"] {
+            [man_made='water_well'] {
                 marker-file: url('icons/poi/bucket-18.png');
                 [pump='manual'] {
                     marker-file: url('icons/poi/pump-manual-18.png');
@@ -165,15 +165,15 @@
                     marker-file: url('icons/poi/drinking_water_well-18.png');
                 }
             }
-            [man_made="watermill"],
-            [man_made="water_tower"] {
+            [man_made='watermill'],
+            [man_made='water_tower'] {
                 marker-file: url('icons/poi/[man_made]-18.png');
             }
-            [man_made="tower"]['tower:type'='communication'],
+            [man_made='tower']['tower:type'='communication'],
             [man_made='mast'] {
                 marker-file: url('icons/poi/communication-tower-18.png');
             }
-            [man_made="storage_tank"][content='water'] {
+            [man_made='storage_tank'][content='water'] {
                 marker-file: url('icons/poi/storage_tank-18.png');
             }
         }
@@ -186,15 +186,15 @@
     }
     [zoom>=18] {
         [main='gambling'],
-        [main='recycling'],
-        [main='waste_basket'] {
+        [main='recycling'] {
             marker-file: url('icons/poi/[main]-18.png');
         }
     }
     [zoom>=19] {
         [main='bench'],
         [main='street_lamp'],
-        [main="fire_hydrant"] {
+        [main='waste_basket'],
+        [main='fire_hydrant'] {
             marker-file: url('icons/poi/[main]-18.png');
         }
     }
