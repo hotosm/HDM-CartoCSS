@@ -87,9 +87,9 @@ Layer:
       table: >-
         ( SELECT way, way_area AS area, COALESCE(landuse, leisure, "natural",
         highway, amenity, tourism) AS type, tags->'landfill:type' as
-        landfill_type FROM planet_osm_polygon WHERE way_area > 10000 ORDER BY
-        way_area DESC
-
+        landfill_type FROM planet_osm_polygon WHERE way_area > 10000 AND
+        COALESCE(landuse, leisure, "natural", highway, amenity, tourism) IS NOT NULL
+        ORDER BY way_area DESC
         ) AS data
     advanced:
       extent_from_subquery: 'true'
@@ -99,7 +99,10 @@ Layer:
     Datasource:
       <<: *osm2pgsql
       table: |-
-        ( SELECT way, way_area AS area, COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type, tags->'landfill:type' as landfill_type FROM planet_osm_polygon ORDER BY way_area DESC) AS data
+        ( SELECT way, way_area AS area, COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type, tags->'landfill:type' as landfill_type
+        FROM planet_osm_polygon
+        WHERE COALESCE(landuse, leisure, "natural", highway, amenity, tourism) IS NOT NULL
+        ORDER BY way_area DESC) AS data
     advanced:
       extent_from_subquery: 'true'
 
