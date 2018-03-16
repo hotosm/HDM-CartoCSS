@@ -18,12 +18,12 @@ _parts:
     srs-name: "WGS84"
     srs: "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
 
-  osm2pgsql: &osm2pgsql
-    type: "postgis"
-    dbname: "osm"
+  postgis: &postgis
+    type: postgis
+    dbname: osm
     key_field: ""
-    geometry_field: "way"
-    extent: "-20037508,-20037508,20037508,20037508"
+    geometry_field: way
+    extent: -20037508,-20037508,20037508,20037508
     host: localhost
     user: hot
     password: m4d31nfr4nc3
@@ -66,7 +66,7 @@ Layer:
   - id: landuse_gen0
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT
             way, way_area AS area, COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type, tags->'landfill:type' as landfill_type
@@ -81,7 +81,7 @@ Layer:
   - id: landuse_gen1
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: >-
         ( SELECT way, way_area AS area, COALESCE(landuse, leisure, "natural",
         highway, amenity, tourism) AS type, tags->'landfill:type' as
@@ -95,7 +95,7 @@ Layer:
   - id: landuse
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT way, way_area AS area, COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type, tags->'landfill:type' as landfill_type
         FROM planet_osm_polygon
@@ -127,7 +127,7 @@ Layer:
   - id: waterway_low
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: >-
         ( SELECT way, waterway AS type,
 
@@ -144,7 +144,7 @@ Layer:
 
   - id: waterway_med
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: >-
         ( SELECT way, waterway AS type,
 
@@ -160,7 +160,7 @@ Layer:
   - id: waterway_high
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: >-
         ( SELECT way, waterway AS type,
 
@@ -178,7 +178,7 @@ Layer:
   - id: water_gen0
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: >-
         ( SELECT way, "natural" AS type, way_area AS area
           FROM planet_osm_polygon
@@ -192,7 +192,7 @@ Layer:
   - id: water_gen1
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: >-
         ( SELECT way, "natural" AS type, way_area AS area
           FROM planet_osm_polygon
@@ -206,7 +206,7 @@ Layer:
   - id: water
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: >-
         ( SELECT way, way_area AS area
           FROM planet_osm_polygon
@@ -219,7 +219,7 @@ Layer:
   - id: landuse_overlays
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT way, way_area AS area, COALESCE(leisure) AS type
           FROM planet_osm_polygon
@@ -232,7 +232,7 @@ Layer:
   - id: admin-high
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT
             ST_Intersection(way, !bbox!) AS way, admin_level::integer,
@@ -253,7 +253,7 @@ Layer:
   - id: admin-med
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT
             ST_Intersection(way, !bbox!) AS way, admin_level::integer,
@@ -274,7 +274,7 @@ Layer:
   - id: admin-low
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT
             way, admin_level::integer,
@@ -294,7 +294,7 @@ Layer:
   - id: buildings
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT
             way, CASE WHEN amenity IS NOT NULL or shop IS NOT NULL THEN 'yes' ELSE 'no' END AS poi, building AS type
@@ -309,7 +309,7 @@ Layer:
   - id: aeroway-poly
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "( SELECT way, aeroway AS type, tunnel FROM planet_osm_polygon WHERE aeroway IN ('apron', 'runway', 'taxiway')) AS data"
     advanced:
       extent_from_subquery: 'true'
@@ -317,7 +317,7 @@ Layer:
   - id: aeroway
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT way, aeroway AS type, tunnel FROM planet_osm_line
           WHERE aeroway IN ('apron', 'runway', 'taxiway')
@@ -328,7 +328,7 @@ Layer:
   - id: turning_circle_case
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "( SELECT way \n  FROM planet_osm_point \n  WHERE highway = 'turning_circle'\n) AS data"
     advanced:
       extent_from_subquery: 'true'
@@ -336,7 +336,7 @@ Layer:
   - id: roads_high
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT
             way, name, access, construction, stratum, type,
@@ -397,7 +397,7 @@ Layer:
   - id: ferry
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "( SELECT way, route, name, z_order FROM planet_osm_line WHERE route IS NOT NULL AND route='ferry' ORDER BY z_order) as ferry"
     advanced:
       extent_from_subquery: 'true'
@@ -405,7 +405,7 @@ Layer:
   - id: railway
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "( SELECT way, tunnel, bridge, railway, service, CASE WHEN railway in ('spur','siding') or (railway='rail' and service in ('spur','siding','yard')) THEN 'yard' WHEN railway='disused' THEN 'disused' WHEN railway='rail' THEN 'main' ELSE 'other' END AS type FROM planet_osm_line WHERE railway IS NOT NULL AND railway!='abandoned' ORDER BY z_order) as rail"
     advanced:
       extent_from_subquery: 'true'
@@ -413,7 +413,7 @@ Layer:
   - id: roads_med
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: >-
         ( SELECT way, highway AS type
 
@@ -429,7 +429,7 @@ Layer:
   - id: roads_low
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT way, highway AS type, bridge, tunnel
             FROM planet_osm_roads
@@ -441,7 +441,7 @@ Layer:
   - id: turning_circle_fill
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "( SELECT way \n  FROM planet_osm_point\n  WHERE highway = 'turning_circle'\n) AS data"
     advanced:
       extent_from_subquery: 'true'
@@ -450,7 +450,7 @@ Layer:
     <<: *extents
     class: barriers
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: '(select way, barrier from planet_osm_line where barrier is not null) as data'
     advanced:
       extent_from_subquery: 'true'
@@ -459,7 +459,7 @@ Layer:
     <<: *extents
     class: barriers
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT
             way,barrier,"natural"
@@ -475,7 +475,7 @@ Layer:
     <<: *extents
     class: power-poi
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "(SELECT way, power AS type, tags->'generator:source' AS source, name FROM planet_osm_polygon WHERE power IS NOT NULL) as data"
     advanced:
       extent_from_subquery: 'true'
@@ -483,7 +483,7 @@ Layer:
   - id: power-line
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "(SELECT way, power AS type, tags->'generator:source' AS source, name FROM planet_osm_line WHERE power IS NOT NULL) as data"
     advanced:
       extent_from_subquery: 'true'
@@ -492,7 +492,7 @@ Layer:
     <<: *extents
     class: power-poi
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "(SELECT way, power AS type, tags->'generator:source' AS source, name FROM planet_osm_point WHERE power IS NOT NULL) as data"
     advanced:
       extent_from_subquery: 'true'
@@ -501,7 +501,7 @@ Layer:
     <<: *extents
     class: airport
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "(select way,name,CASE WHEN tags ? 'iata' THEN 'airport' WHEN aeroway='aerodrome' THEN 'airfield' ELSE null END AS aeroway FROM planet_osm_point WHERE aeroway='aerodrome') as data"
     advanced:
       extent_from_subquery: 'true'
@@ -510,7 +510,7 @@ Layer:
     <<: *extents
     class: airport
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "(select way,name,CASE WHEN tags ? 'iata' THEN 'airport' WHEN aeroway='aerodrome' THEN 'airfield' ELSE null END AS aeroway FROM planet_osm_polygon WHERE aeroway='aerodrome') as data"
     advanced:
       extent_from_subquery: 'true'
@@ -519,7 +519,7 @@ Layer:
     <<: *extents
     class: poi
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT
             way, name, COALESCE(amenity, leisure, shop, tourism, tags->'office', highway, tags->'emergency', barrier) AS main, man_made, religion,
@@ -544,7 +544,7 @@ Layer:
     <<: *extents
     class: poi
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT
             way, name, COALESCE(amenity, leisure, shop, tourism, tags->'office', highway, tags->'emergency', barrier) AS main, man_made, religion,
@@ -565,7 +565,7 @@ Layer:
   - id: low_place
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "( SELECT way, CASE WHEN place='country' THEN 1 WHEN capital='yes' AND admin_level='2' THEN 10 WHEN place='state' THEN 20 WHEN place='city' THEN 21 WHEN place='town' THEN 30 ELSE 100 END as prio, place AS type, name, z_order, CASE WHEN population ~ E'^\\d{1,9}$' THEN population::integer ELSE NULL END AS population, CASE WHEN capital='yes' AND admin_level='2' THEN 'country' ELSE NULL END AS is_capital FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town') AND place IS NOT NULL ORDER BY prio, population DESC NULLS LAST) AS data"
     advanced:
       extent_from_subquery: 'true'
@@ -573,7 +573,7 @@ Layer:
   - id: place
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "( SELECT way, CASE WHEN place='country' THEN 1 WHEN capital='yes' AND admin_level='2' THEN 10 WHEN place='state' THEN 20 WHEN place='town' THEN 30 WHEN place='village' THEN 40 ELSE 100 END as prio, place AS type, name, z_order, CASE WHEN population ~ E'^\\d{1,9}$' THEN population::integer ELSE NULL END AS population, CASE WHEN capital='yes' AND admin_level='2' THEN 'country' ELSE NULL END AS is_capital FROM planet_osm_point WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality') AND place IS NOT NULL ORDER BY prio, population DESC NULLS LAST) AS data"
     advanced:
       extent_from_subquery: 'true'
@@ -581,7 +581,7 @@ Layer:
   - id: area_label
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: '( SELECT COALESCE(landuse, leisure, "natural", highway, amenity, tourism) AS type, name, way_area AS area, ST_PointOnSurface(way) AS way FROM planet_osm_polygon WHERE name IS NOT NULL AND (landuse IS NOT NULL OR leisure IS NOT NULL OR "natural" IS NOT NULL) AND way && !bbox! AND ST_IsValid(way) ORDER BY area DESC) AS data'
     advanced:
       extent_from_subquery: 'true'
@@ -589,7 +589,7 @@ Layer:
   - id: motorway_label
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "( SELECT way, highway AS type, name, ref, CASE WHEN oneway IN ('yes', '-1') THEN oneway ELSE 'no' END AS oneway, CHAR_LENGTH(ref) AS reflen FROM planet_osm_line WHERE highway IN ('motorway', 'trunk') AND (name IS NOT NULL OR ref IS NOT NULL)) AS data"
     advanced:
       extent_from_subquery: 'true'
@@ -597,7 +597,7 @@ Layer:
   - id: mainroad_label
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "( SELECT way, highway AS type, name, CASE WHEN oneway IN ('yes', '-1') THEN oneway ELSE 'no' END AS oneway FROM planet_osm_line WHERE (name IS NOT NULL OR oneway IN ('yes', '-1')) AND highway IN ('primary', 'secondary', 'tertiary')) AS data"
     advanced:
       extent_from_subquery: 'true'
@@ -605,7 +605,7 @@ Layer:
   - id: minorroad_label
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: >-
         ( SELECT way, highway AS type, name, CASE WHEN oneway IN ('yes', '-1')
         THEN oneway ELSE 'no' END AS oneway FROM planet_osm_line WHERE (name IS
@@ -619,7 +619,7 @@ Layer:
   - id: admin-label-5-10
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT
             ST_Intersection(p.way, !bbox!) AS way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') AS integer) AS admin_level
@@ -637,7 +637,7 @@ Layer:
   - id: admin-label-1-4
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT
             ST_Intersection(p.way, !bbox!) AS way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') AS integer) AS admin_level
@@ -655,7 +655,7 @@ Layer:
   - id: waterway_label
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "( SELECT way, waterway AS type, name\n  FROM planet_osm_line\n  WHERE waterway IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data"
     advanced:
       extent_from_subquery: 'true'
@@ -663,7 +663,7 @@ Layer:
   - id: natural_point_label
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: |-
         ( SELECT
           way, "natural" AS type, name,
@@ -680,7 +680,7 @@ Layer:
   - id: housenumber
     <<: *extents
     Datasource:
-      <<: *osm2pgsql
+      <<: *postgis
       table: "      (select way,\"addr:housenumber\" AS housenumber, CASE WHEN \"addr:housenumber\" ~ E'^\\d+$' AND mod(\"addr:housenumber\"::bigint, 5) IN (0, 1) THEN 'yes' ELSE 'no' END AS mod5 FROM planet_osm_polygon WHERE \"addr:housenumber\" IS NOT NULL AND building IS NOT NULL UNION SELECT way,\"addr:housenumber\" AS housenumber, CASE WHEN \"addr:housenumber\" ~ E'^\\d+$' AND mod(\"addr:housenumber\"::bigint, 5) IN (0, 1) THEN 'yes' ELSE 'no' END AS mod5 FROM planet_osm_point WHERE \"addr:housenumber\" IS NOT NULL) as data"
     advanced:
       extent_from_subquery: 'true'
