@@ -233,7 +233,20 @@ Layer:
     <<: *extents
     Datasource:
       <<: *osm2pgsql
-      table: "( SELECT way, admin_level::integer, CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('1','2','3','4', '5', '6', '7', '8', '9', '10') AND \"boundary\" IS NOT NULL ORDER BY admin_level DESC) AS data"
+      table: |-
+        ( SELECT
+            ST_Intersection(way, !bbox!) AS way, admin_level::integer,
+            CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime
+          FROM
+            planet_osm_roads
+          WHERE
+            "boundary" = 'administrative'
+            AND admin_level IN ('1','2','3','4', '5', '6', '7', '8', '9', '10')
+            AND "boundary" IS NOT NULL
+            AND way && !bbox!
+          ORDER BY
+            admin_level DESC
+        ) AS data
     advanced:
       extent_from_subquery: 'true'
 
@@ -241,7 +254,20 @@ Layer:
     <<: *extents
     Datasource:
       <<: *osm2pgsql
-      table: "( SELECT way, admin_level::integer, CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('1','2','3','4', '5', '6', '7', '8') AND \"boundary\" IS NOT NULL ORDER by admin_level DESC) AS data"
+      table: |-
+        ( SELECT
+            ST_Intersection(way, !bbox!) AS way, admin_level::integer,
+            CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime
+          FROM
+            planet_osm_roads
+          WHERE
+            "boundary" = 'administrative'
+            AND admin_level IN ('1','2','3','4', '5', '6', '7', '8')
+            AND "boundary" IS NOT NULL
+            AND way && !bbox!
+          ORDER BY
+            admin_level DESC
+        ) AS data
     advanced:
       extent_from_subquery: 'true'
 
@@ -249,7 +275,19 @@ Layer:
     <<: *extents
     Datasource:
       <<: *osm2pgsql
-      table: "( SELECT way, admin_level::integer, CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime FROM planet_osm_roads WHERE \"boundary\" = 'administrative' AND admin_level IN ('1','2','3','4') AND \"boundary\" IS NOT NULL ORDER by admin_level DESC) AS data"
+      table: |-
+        ( SELECT
+            way, admin_level::integer,
+            CASE WHEN tags->'maritime'='yes' THEN 'yes' ELSE 'no' END AS maritime
+          FROM
+            planet_osm_roads
+          WHERE
+            "boundary" = 'administrative'
+            AND admin_level IN ('1','2','3','4')
+            AND "boundary" IS NOT NULL
+          ORDER BY
+            admin_level DESC
+        ) AS data
     advanced:
       extent_from_subquery: 'true'
 
@@ -582,7 +620,17 @@ Layer:
     <<: *extents
     Datasource:
       <<: *osm2pgsql
-      table: "( SELECT p.way as way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_Covers(p.way, !bbox!) AND boundary='administrative' AND admin_level IN ('5', '6', '7', '8', '9', '10') order by admin_level) as data"
+      table: |-
+        ( SELECT
+            ST_Intersection(p.way, !bbox!) AS way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') AS integer) AS admin_level
+          FROM
+            planet_osm_polygon p
+          WHERE
+            ST_Intersects(p.way,!bbox!) AND not ST_Covers(p.way, !bbox!)
+            AND boundary='administrative' AND admin_level IN ('5', '6', '7', '8', '9', '10')
+          ORDER BY
+            admin_level
+        ) AS data
     advanced:
       extent_from_subquery: 'true'
 
@@ -590,7 +638,17 @@ Layer:
     <<: *extents
     Datasource:
       <<: *osm2pgsql
-      table: "( SELECT p.way as way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') as integer) as admin_level FROM planet_osm_polygon p where ST_Intersects(p.way,!bbox!) AND not ST_Covers(p.way, !bbox!) AND boundary='administrative' AND admin_level IN ('0', '2', '3', '4') order by admin_level) as data"
+      table: |-
+        ( SELECT
+            ST_Intersection(p.way, !bbox!) AS way, name, cast(regexp_replace(admin_level,'[^0-9]','','g') AS integer) AS admin_level
+          FROM
+            planet_osm_polygon p
+          WHERE
+            ST_Intersects(p.way, !bbox!) AND not ST_Covers(p.way, !bbox!)
+            AND boundary='administrative' AND admin_level IN ('0', '2', '3', '4')
+          ORDER BY
+            admin_level
+        ) AS data
     advanced:
       extent_from_subquery: 'true'
 
