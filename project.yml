@@ -27,8 +27,6 @@ _parts:
     host: localhost
     user: hot
     password: m4d31nfr4nc3
-    asynchronous_request: 'true'
-    max_async_connection: '4'
 
 center:
   - 29.9377
