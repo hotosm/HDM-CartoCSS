@@ -10,3 +10,4 @@ DEM/tmp/*
 localconfig.js
 localconfig.json
 Leaflet.TileLegend/
+tmp/
