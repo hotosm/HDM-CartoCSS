@@ -1,0 +1,15 @@
+<svg id="svg2" width="18" height="18" version="1.1" xmlns="http://www.w3.org/2000/svg">
+ <g id="courthouse-18" transform="translate(-72 -956.36)">
+  <g id="g9103" fill="none" opacity=".3" stroke="#fff" stroke-linejoin="round">
+   <path id="path9105" transform="matrix(.16 0 0 .16 73.055 957.36)" d="m80.905 18.775h-25v68.75h25v6.25h-62.5v-6.25h25v-68.75h-25v-6.25h25v-12.5h12.5v12.5h25z" stroke-width="12.5"/>
+   <path id="path9107" d="m76 960.36-3 6c0 0.8022 1.6166 2 3 2 1.3843 0 3-1.1978 3-2zm-2.5843 6 2.5843-5.0291 2.5843 5.0291z" stroke-width="2"/>
+   <path id="path9109" d="m86 960.36-3 6c0 0.8022 1.6157 2 3 2 1.3834 0 3-1.1978 3-2zm-2.5845 6 2.5843-5.0291 2.5845 5.0291z" stroke-width="2"/>
+  </g>
+  <g id="g9098" fill="#747474">
+   <path id="polygon9055" transform="matrix(.16 0 0 .16 73.055 957.36)" d="m80.905 18.775h-25v68.75h25v6.25h-62.5v-6.25h25v-68.75h-25v-6.25h25v-12.5h12.5v12.5h25z"/>
+   <path id="path9057" d="m76 960.36-3 6c0 0.8022 1.6166 2 3 2 1.3843 0 3-1.1978 3-2zm-2.5843 6 2.5843-5.0291 2.5843 5.0291z"/>
+   <path id="path9059" d="m86 960.36-3 6c0 0.8022 1.6157 2 3 2 1.3834 0 3-1.1978 3-2zm-2.5845 6 2.5843-5.0291 2.5845 5.0291z"/>
+  </g>
+  <rect id="rect9096" transform="translate(0 1028.4)" x="72" y="-72" width="18" height="18" fill="none" opacity=".3"/>
+ </g>
+</svg>
