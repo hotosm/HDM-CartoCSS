@@ -1,5 +1,5 @@
 .airport {
-    [aeroway='airfield'][zoom>=15],
+    [aeroway='airfield'][zoom>=12],
     [aeroway='airport'][zoom>=10][zoom<15] {
         marker-file: url('icons/poi/[aeroway].svg');
         marker-clip:false;
