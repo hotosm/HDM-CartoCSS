@@ -338,6 +338,7 @@
         [main='beach_resort'],
         [main='embassy'],
         [main='doctors'],
+        [main='clinic'],
         [main='library'],
         [main='theatre'],
         [main='restaurant'],

@@ -43,6 +43,7 @@
         [main='post_office'],
         [main='embassy'],
         [main='doctors'],
+        [main='clinic'],
         [main='hospital'],
         [main='border_control'] {
             marker-file: url('icons/poi/[main].svg');
