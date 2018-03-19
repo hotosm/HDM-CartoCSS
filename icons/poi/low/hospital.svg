@@ -1,10 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
-<svg id="svg5369" width="12" height="12" version="1.1" xmlns="http://www.w3.org/2000/svg">
- <g id="layer1" transform="translate(-18 -980.36)">
-  <g id="hospital-12">
-   <path id="path10603" d="m21.014 990.36v-8h1.9857v3h2v-3h2.043v8h-2.043v-3h-2v3z" fill="#fff" opacity=".3" stroke="#fff" stroke-linejoin="round" stroke-width="2"/>
-   <path id="path4497-7" d="m21.014 990.36v-8h1.9857v3h2v-3h2.043v8h-2.043v-3h-2v3z" fill="#525252"/>
-   <rect id="rect9633" x="18" y="980.36" width="12" height="12" fill="none" opacity=".3"/>
-  </g>
- </g>
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg5369"
+   width="12"
+   height="12"
+   version="1.1"
+   sodipodi:docname="hospital.svg"
+   inkscape:version="0.92.2 2405546, 2018-03-11">
+  <metadata
+     id="metadata958">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs956" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="3840"
+     inkscape:window-height="2031"
+     id="namedview954"
+     showgrid="false"
+     inkscape:zoom="19.666667"
+     inkscape:cx="-10.29661"
+     inkscape:cy="6"
+     inkscape:window-x="0"
+     inkscape:window-y="55"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg5369" />
+  <path
+     style="opacity:0.3;fill:#747474;fill-opacity:1;stroke:#ffffff;stroke-width:1.49152541;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     id="path846"
+     d="M 6,0.77966102 C 3.149331,0.77966102 0.77966102,3.0832393 0.77966102,6 0.77966102,8.9167615 3.149331,11.220339 6,11.220339 8.8506698,11.220339 11.220339,8.9167607 11.220339,6 11.220339,3.0832393 8.8506698,0.77966102 6,0.77966102 Z M 6,1.5685124 C 8.5276948,1.5685124 10.518051,3.586204 10.518051,6 10.518051,8.4137967 8.5276948,10.431488 6,10.431488 3.4723052,10.431488 1.4819487,8.4137967 1.4819487,6 1.4819487,3.586204 3.4723052,1.5685124 6,1.5685124 Z M 4.5017858,2.2877588 V 4.5151037 H 2.2544657 V 7.4848963 H 4.5017858 V 9.7122412 H 7.4982142 V 7.4848963 H 9.7455351 V 4.5151037 H 7.4982142 V 2.2877588 Z"
+     inkscape:connector-curvature="0" />
+  <rect
+     width="10.440678"
+     height="10.440678"
+     x="0.779661"
+     y="0.779661"
+     id="canvas"
+     style="visibility:hidden;fill:none;stroke:none;stroke-width:0.74576271" />
+  <path
+     inkscape:connector-curvature="0"
+     d="M 6,0.77966102 C 3.149331,0.77966102 0.77966102,3.0832393 0.77966102,6 0.77966102,8.9167615 3.149331,11.220339 6,11.220339 8.8506698,11.220339 11.220339,8.9167607 11.220339,6 11.220339,3.0832393 8.8506698,0.77966102 6,0.77966102 Z M 6,1.5685124 C 8.5276948,1.5685124 10.518051,3.586204 10.518051,6 10.518051,8.4137967 8.5276948,10.431488 6,10.431488 3.4723052,10.431488 1.4819487,8.4137967 1.4819487,6 1.4819487,3.586204 3.4723052,1.5685124 6,1.5685124 Z M 4.5017858,2.2877588 V 4.5151037 H 2.2544657 V 7.4848963 H 4.5017858 V 9.7122412 H 7.4982142 V 7.4848963 H 9.7455351 V 4.5151037 H 7.4982142 V 2.2877588 Z"
+     id="hospital"
+     style="fill:#525252;fill-opacity:1;stroke-width:0.74576271" />
 </svg>

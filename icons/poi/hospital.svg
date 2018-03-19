@@ -1,4 +1,66 @@
-<svg id="svg6" width="18" height="18" version="1.1" xmlns="http://www.w3.org/2000/svg">
- <path id="path2" d="m4 15.5v-13h2.9828l0.04022 5h3.977l-0.04022-5h3.0402v13h-3.0402l0.04022-5h-3.977l-0.04022 5z" fill="#fff" opacity=".3" stroke="#fff" stroke-linejoin="round" stroke-width="2"/>
- <path id="path4" d="m4 15.5v-13h2.9828l0.04022 5h3.977l-0.04022-5h3.0402v13h-3.0402l0.04022-5h-3.977l-0.04022 5z" fill="#747474"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg6"
+   width="18"
+   height="18"
+   version="1.1"
+   sodipodi:docname="hospital.svg"
+   inkscape:version="0.92.2 2405546, 2018-03-11">
+  <metadata
+     id="metadata9">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs7" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="3840"
+     inkscape:window-height="2031"
+     id="namedview5"
+     showgrid="false"
+     inkscape:zoom="26.222222"
+     inkscape:cx="7.352391"
+     inkscape:cy="11.594695"
+     inkscape:window-x="0"
+     inkscape:window-y="55"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg6" />
+  <path
+     style="fill:#747474;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;stroke-width:2;stroke-miterlimit:4;stroke-dasharray:none;opacity:0.3"
+     id="path846"
+     d="m 8.9999998,2.0000001 c -3.822488,0 -7,3.0888888 -7,7 0,3.9111119 3.177512,6.9999999 7,6.9999999 C 12.822489,16 16,12.911111 16,9.0000001 c 0,-3.9111112 -3.177511,-7 -7.0000002,-7 z m 0,1.0577778 c 3.3894092,0 6.0582962,2.7055413 6.0582962,5.9422222 0,3.2366819 -2.668887,5.9422219 -6.0582962,5.9422219 -3.389409,0 -6.058296,-2.70554 -6.058296,-5.9422219 0,-3.2366809 2.668887,-5.9422222 6.058296,-5.9422222 z M 6.9910308,4.0222223 V 7.008889 h -3.013452 v 3.982222 h 3.013452 v 2.986667 h 4.0179382 v -2.986667 h 3.013453 V 7.008889 H 11.008969 V 4.0222223 Z"
+     inkscape:connector-curvature="0" />
+  <rect
+     width="14"
+     height="14"
+     x="2"
+     y="2"
+     id="canvas"
+     style="visibility:hidden;fill:none;stroke:none" />
+  <path
+     inkscape:connector-curvature="0"
+     d="m 8.9999998,2.0000001 c -3.822488,0 -7,3.0888888 -7,7 0,3.9111119 3.177512,6.9999999 7,6.9999999 C 12.822489,16 16,12.911111 16,9.0000001 c 0,-3.9111112 -3.177511,-7 -7.0000002,-7 z m 0,1.0577778 c 3.3894092,0 6.0582962,2.7055413 6.0582962,5.9422222 0,3.2366819 -2.668887,5.9422219 -6.0582962,5.9422219 -3.389409,0 -6.058296,-2.70554 -6.058296,-5.9422219 0,-3.2366809 2.668887,-5.9422222 6.058296,-5.9422222 z M 6.9910308,4.0222223 V 7.008889 h -3.013452 v 3.982222 h 3.013452 v 2.986667 h 4.0179382 v -2.986667 h 3.013453 V 7.008889 H 11.008969 V 4.0222223 Z"
+     id="hospital"
+     style="fill:#747474;fill-opacity:1" />
 </svg>
