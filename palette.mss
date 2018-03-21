@@ -21,12 +21,45 @@
 Map { font-directory: url(./fonts); }
 
 /* set up font sets for various weights and styles */
-@sans_lt:           "Open Sans Regular", "DejaVu Sans Book", "Unifont Medium", "unifont Medium";
-@sans_lt_italic:    "Open Sans Italic", "DejaVu Sans Italic", "Open Sans Regular", "DejaVu Sans Book", "Unifont Medium", "unifont Medium";
-@sans:              "Open Sans Semibold", "Open Sans Regular", "DejaVu Sans Book", "Unifont Medium", "unifont Medium";
-@sans_italic:       "Open Sans Semibold Italic", "DejaVu Sans Italic", "Open Sans Regular", "DejaVu Sans Book", "Unifont Medium", "unifont Medium";
-@sans_bold:         "Open Sans Bold", "DejaVu Sans Bold", "Open Sans Regular", "DejaVu Sans Book", "Unifont Medium", "unifont Medium";
-@sans_bold_italic:  "Open Sans Bold Italic", "DejaVu Sans Bold Italic", "Open Sans Regular", "DejaVu Sans Book", "Unifont Medium", "unifont Medium";
+@regular:           'Noto Sans Regular',
+                    'Noto Sans Arabic Regular',
+                    'Noto Sans Armenian Regular',
+                    'Noto Sans CJK JP Regular',
+                    'Noto Sans Georgian Regular',
+                    'Noto Sans Hebrew Regular',
+                    'Noto Sans Khmer Regular',
+                    'Noto Sans Lao Regular',
+                    'Noto Sans Myanmar Regular',
+                    'Noto Sans Tamil Regular',
+                    'Noto Sans Thai Regular',
+                    'Unifont Medium',
+                    'unifont Medium';
+@medium:            'Noto Sans Medium',
+                    'Noto Sans Arabic Medium',
+                    'Noto Sans Armenian Medium',
+                    'Noto Sans CJK JP Medium',
+                    'Noto Sans Georgian Medium',
+                    'Noto Sans Hebrew Medium',
+                    'Noto Sans Khmer Medium',
+                    'Noto Sans Lao Medium',
+                    'Noto Sans Myanmar Medium',
+                    'Noto Sans Tamil Medium',
+                    'Noto Sans Thai Medium',
+                    'Unifont Medium',
+                    'unifont Medium';
+@bold:              'Noto Sans Bold',
+                    'Noto Sans Arabic Bold',
+                    'Noto Sans Armenian Bold',
+                    'Noto Sans CJK JP Bold',
+                    'Noto Sans Georgian Bold',
+                    'Noto Sans Hebrew Bold',
+                    'Noto Sans Khmer Bold',
+                    'Noto Sans Lao Bold',
+                    'Noto Sans Myanmar Bold',
+                    'Noto Sans Tamil Bold',
+                    'Noto Sans Thai Bold',
+                    'Unifont Medium',
+                    'unifont Medium';
 
 /* Some fonts are larger or smaller than others. Use this variable to
    globally increase or decrease the font sizes. */

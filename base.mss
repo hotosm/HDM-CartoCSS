@@ -198,8 +198,8 @@
     line-width: 0.5;
     [zoom>=15] {
       line-width: 1;
-      text-name: "[height]";
-      text-face-name: @sans_lt;
+      text-name: '[height]';
+      text-face-name: @regular;
       text-placement: line;
       text-fill: @contour_line;
       text-halo-fill: @land;
