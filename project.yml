@@ -522,13 +522,13 @@ Layer:
       <<: *postgis
       table: |-
         ( SELECT
-            way, name, COALESCE(amenity, leisure, shop, tourism, office, highway, tags->'emergency', barrier) AS main, man_made, religion,
+            way, name, COALESCE(amenity, leisure, tags->'healthcare', shop, tourism, office, highway, tags->'emergency', barrier) AS main, man_made, religion,
             CASE WHEN shop IS NOT NULL AND shop!='no' THEN shop ELSE NULL END AS shop,
             tags->'craft' as craft, tags->'pump' as pump, tags->'drinking_water' as drinking_water, "tower:type", power, tags->'content' AS content, lower(operator) AS operator
           FROM
             planet_osm_point
           WHERE
-            amenity IS NOT NULL OR shop IS NOT NULL OR tags ? 'craft'
+            amenity IS NOT NULL OR shop IS NOT NULL OR tags ? 'craft' OR tags ? 'healthcare'
             OR tourism IN ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','motel','museum','viewpoint','bed_and_breakfast','information','chalet')
             OR highway IN ('bus_stop','traffic_signals','ford', 'street_lamp')
             OR man_made IN ('mast','water_tower', 'tower', 'water_well', 'watermill', 'storage_tank')
@@ -547,14 +547,14 @@ Layer:
       <<: *postgis
       table: |-
         ( SELECT
-            way, name, COALESCE(amenity, leisure, shop, tourism, office, highway, tags->'emergency', barrier) AS main, man_made, religion,
+            way, name, COALESCE(amenity, leisure, tags->'healthcare', shop, tourism, office, highway, tags->'emergency', barrier) AS main, man_made, religion,
             CASE WHEN shop IS NOT NULL AND shop!='no' THEN shop ELSE NULL END AS shop,
             tags->'craft' as craft, tags->'pump' as pump, tags->'drinking_water' as drinking_water, "tower:type",
             power, tags->'content' AS content, lower(operator) AS operator
           FROM
             planet_osm_polygon
           WHERE
-            amenity IS NOT NULL OR shop IS NOT NULL
+            amenity IS NOT NULL OR shop IS NOT NULL OR tags ? 'healthcare'
             OR tourism IN ('alpine_hut','camp_site','caravan_site','guest_house','hostel','hotel','motel','museum','viewpoint','bed_and_breakfast','information','chalet')
             OR highway IN ('bus_stop','traffic_signals') OR historic in ('memorial','archaeological_site') OR leisure='playground'
             OR power IN ('plant', 'sub_station') OR office IN ('ngo', 'government')

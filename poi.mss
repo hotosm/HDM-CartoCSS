@@ -43,11 +43,17 @@
         [main='post_office'],
         [main='embassy'],
         [main='doctors'],
+        [main='doctor'],
         [main='clinic'],
         [main='hospital'],
+        [main='center'],
         [main='border_control'] {
             marker-file: url('icons/poi/[main].svg');
             marker-clip:false;
+            // healthcare=center
+            [main='center'] {
+                marker-file: url('icons/poi/clinic.svg');
+            }
         }
         [main='government'],
         [main='ngo'] {
