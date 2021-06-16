@@ -32,7 +32,7 @@ do
     for (( y=$N; y<=$S; y++ ))
     do
         FILENAME=srtm_$(printf "%02d" $x)_$(printf "%02d" $y).zip
-        URL=http://srtm.csi.cgiar.org/SRT-ZIP/SRTM_V41/SRTM_Data_GeoTiff/$FILENAME
+        URL=https://srtm.csi.cgiar.org/wp-content/uploads/files/srtm_5x5/TIFF/$FILENAME
         if [ ! -f "$FILENAME" ]
         then
             echo "Downloading $URL"
