@@ -358,7 +358,7 @@ Layer:
             CASE
               WHEN type IN ('motorway', 'trunk', 'trunk_link') THEN 'motorway'
               WHEN type ~ E'\\w+_link$' THEN regexp_replace(type, '_link', '')
-              WHEN type IN ('unclassified', 'road', 'service') THEN 'standard'
+              WHEN type IN ('unclassified', 'road', 'service', 'busway') THEN 'standard'
               WHEN type IN ('residential', 'living_street') THEN 'urban'
               WHEN type IN ('path', 'cycleway', 'footway', 'pedestrian', 'steps', 'bridleway') THEN 'noauto'
               ELSE type
@@ -610,7 +610,7 @@ Layer:
         ( SELECT way, highway AS type, name, CASE WHEN oneway IN ('yes', '-1')
         THEN oneway ELSE 'no' END AS oneway FROM planet_osm_line WHERE (name IS
         NOT NULL OR oneway IN ('yes', '-1')) AND highway IN ('residential',
-        'unclassified', 'road', 'living_street', 'unknown')
+        'unclassified', 'road', 'living_street', 'busway', 'unknown')
 
         ) AS data
     advanced:
